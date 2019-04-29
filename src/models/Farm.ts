@@ -1,6 +1,9 @@
 import Drawable from "./abstract/Drawable"
 import Field from "./Field"
 import Cow from "./animals/Cow"
+import Chickens from "./animals/Chicken"
+import Sheep from "./animals/Sheep"
+
 class Farm extends Drawable {
   fields: Field[] = []
   width: number = 700
@@ -9,7 +12,10 @@ class Farm extends Drawable {
   sheep: any
   chickens: any
   straw: any
+  corn: any
   milk: any
+  wool: any
+  eggs: any
   seeds: any
   constructor(
     cows: any = {
@@ -30,7 +36,22 @@ class Farm extends Drawable {
     straw: any = {
       name: "Straw",
       total: 1000,
-      unit: "bails"
+      unit: "bales"
+    },
+    corn: any = {
+      name: "Corn",
+      total: 1000,
+      unit: "bags"
+    },
+    wool: any = {
+      name: "Wool",
+      total: 0,
+      unit: "bales"
+    },
+    eggs: any = {
+      name: "Eggs",
+      total: 0,
+      unit: "boxes"
     },
     milk: any = {
       name: "Milk",
@@ -48,6 +69,9 @@ class Farm extends Drawable {
     this.sheep = sheep
     this.chickens = chickens
     this.straw = straw
+    this.corn = corn
+    this.wool = wool
+    this.eggs = eggs
     this.milk = milk
     this.seeds = seeds
   }

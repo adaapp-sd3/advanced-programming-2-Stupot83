@@ -15,22 +15,19 @@ class Register extends Component {
       errors: {}
     };
   }
-
-  componentDidMount() {
-    // If logged in and user navigates to Register page, should redirect them to dashboard
-    if (this.props.auth.isAuthenticated) {
-      this.props.history.push("/dashboard");
-    }
-  }
-
-  componentWillReceiveProps(nextProps) {
+componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({
         errors: nextProps.errors
       });
     }
   }
-
+  componentDidMount() {
+    // If logged in and user navigates to Register page, should redirect them to dashboard
+    if (this.props.auth.isAuthenticated) {
+      this.props.history.push("/dashboard");
+    }
+  }
 onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
@@ -42,10 +39,8 @@ const newUser = {
       password: this.state.password,
       password2: this.state.password2
     };
-
-    this.props.registerUser(newUser, this.props.history); 
+this.props.registerUser(newUser, this.props.history); 
   };
-
 render() {
     const { errors } = this.state;
 return (
@@ -142,7 +137,6 @@ return (
     );
   }
 }
-
 Register.propTypes = {
   registerUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,

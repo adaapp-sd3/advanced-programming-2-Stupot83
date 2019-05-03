@@ -15,6 +15,14 @@ class Register extends Component {
       errors: {}
     };
   }
+
+  componentDidMount() {
+    // If logged in and user navigates to Register page, should redirect them to dashboard
+    if (this.props.auth.isAuthenticated) {
+      this.props.history.push("/dashboard");
+    }
+  }
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({
@@ -22,6 +30,7 @@ class Register extends Component {
       });
     }
   }
+
 onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
@@ -33,6 +42,7 @@ const newUser = {
       password: this.state.password,
       password2: this.state.password2
     };
+
     this.props.registerUser(newUser, this.props.history); 
   };
 
@@ -134,17 +144,15 @@ return (
 }
 
 Register.propTypes = {
-    registerUser: PropTypes.func.isRequired,
-    auth: PropTypes.object.isRequired,
-    errors: PropTypes.object.isRequired
-  };
-
+  registerUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
+};
 const mapStateToProps = state => ({
-    auth: state.auth,
-    errors: state.errors
-  });
-
+  auth: state.auth,
+  errors: state.errors
+});
 export default connect(
-    mapStateToProps,
-    { registerUser }
-  )(withRouter(Register));
+  mapStateToProps,
+  { registerUser }
+)(withRouter(Register));

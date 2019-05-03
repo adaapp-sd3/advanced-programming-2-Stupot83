@@ -1,22 +1,23 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const userSchema = new mongoose.Schema({
+const userSchema = new Schema({
   name: {
     type: String,
-    trim: true,
+    required: true
   },
   email: {
     type: String,
-    trim: true,
+    required: true
   },
-  password_hash: {
+  password: {
     type: String,
-    trim: true,
+    required: true
   },
   date: {
     type: Date,
     default: Date.now
-  },
+  }
 });
 
 userSchema.index({
@@ -26,4 +27,4 @@ userSchema.index({
   unique: true
 });
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = User = mongoose.model('users', userSchema);

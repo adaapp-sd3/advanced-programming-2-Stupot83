@@ -27,4 +27,6 @@ userSchema.index({
   unique: true
 });
 
-module.exports = User = mongoose.model('users', userSchema);
+User = mongoose.model('users', userSchema);
+
+module.exports = User;

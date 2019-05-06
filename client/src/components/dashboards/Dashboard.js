@@ -48,7 +48,7 @@ class Dashboard extends Component {
 render() {
     const { user } = this.props.auth;
 return (
-  <div className="App">
+  <div className="Dashboard">
   <div style={{ height: "10vh" }}>
             <button
               style={{
@@ -63,7 +63,7 @@ return (
               Logout
             </button>
       </div>
-  <header className="App-header">
+  <header className="Dashboard-header">
     <h2>
       Dashboard
     </h2>

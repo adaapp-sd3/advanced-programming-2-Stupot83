@@ -1,7 +1,6 @@
 const dotenv = require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
-const User = require('./models/User');
 const bodyParser = require('body-parser');
 const passport = require("passport");
 const users = require("./routes/api/users");

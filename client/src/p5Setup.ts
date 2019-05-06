@@ -1,6 +1,6 @@
-// import Farmer from "./models/Farmer"
-// import Market from "./models/Market"
-// import Farm from "./models/Farm"
+import Farmer from "../src/models/Farmer"
+import Market from "../src/models/Market"
+import Farm from "../src/models/Farm"
 
 const makeFarm = (
   farm: Farm,

@@ -12,3 +12,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+body {
+  overflow-y: hidden;
+}
+
+canvas {
+  position: absolute;
+  height: 100vh;
+  width: calc(100% - 360px);
+  top: 64px;
+  right: 0;
+}
+
+#root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: calc(100% - 1000px);
+}

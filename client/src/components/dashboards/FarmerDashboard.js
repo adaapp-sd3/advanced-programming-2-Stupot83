@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './FarmerDashboard.css';
 
 class FarmerDashboard extends Component {
 

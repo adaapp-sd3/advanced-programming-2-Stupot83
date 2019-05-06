@@ -1,4 +1,5 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
+import './MarketDashboard.css';
 
 class MarketDashboard extends Component {
 

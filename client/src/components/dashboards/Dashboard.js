@@ -2,6 +2,13 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+import FarmManager from "../FarmManager";
+import p5 from "p5";
+import makeFarm from "../../p5Setup";
+import Farm from "../../models/Farm";
+import Farmer from "../../models/Farmer";
+import Market from "../../models/Market";
+import './Dashboard.css';
 
 class Dashboard extends Component {
   onLogoutClick = e => {
@@ -9,19 +16,40 @@ class Dashboard extends Component {
     this.props.logoutUser();
   };
 
+  state = {
+    farmer: new Farmer(),
+    farm: new Farm(),
+    market: new Market()
+  }
+
+  // allow instances to to tell us when they change
+  handleUpdateState = newThing => {
+    this.setState(newThing)
+  }
+
+  //
+  componentDidMount() {
+
+    if (this.props.auth.isAuthenticated) {
+      this.props.history.push("/dashboard");
+    }
+    
+    let sketch = makeFarm(
+      this.state.farm,
+      this.state.farmer,
+      this.state.market,
+      this.handleUpdateState
+    )
+    this.setState({
+      myP5: new p5(sketch, "sketch")
+    });
+  }
+
 render() {
     const { user } = this.props.auth;
 return (
-      <div style={{ height: "75vh" }} className="container valign-wrapper">
-        <div className="row">
-          <div className="col s12 center-align">
-            <h4>
-              <b>Hey there,</b> {user.name.split(" ")[0]}
-              <p className="flow-text grey-text text-darken-1">
-                You are logged into a full-stack{" "}
-                <span style={{ fontFamily: "monospace" }}>MERN</span> app 👏
-              </p>
-            </h4>
+  <div className="App">
+  <div style={{ height: "10vh" }}>
             <button
               style={{
                 width: "150px",
@@ -34,9 +62,14 @@ return (
             >
               Logout
             </button>
-          </div>
-        </div>
       </div>
+  <header className="App-header">
+    <h2>
+      Dashboard
+    </h2>
+  </header>
+  <FarmManager farmer={this.state.farmer} farm={this.state.farm} market={this.state.market} />
+</div>
     );
   }
 }

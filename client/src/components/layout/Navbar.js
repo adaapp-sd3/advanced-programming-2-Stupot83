@@ -14,7 +14,7 @@ class Navbar extends Component {
               }}
               className="col s5 brand-logo center black white-text"
             >
-              <strong>FARM MANAGER</strong>
+              <strong>🚜 FARM MANAGER 🚜</strong>
             </Link>
           </div>
         </nav>

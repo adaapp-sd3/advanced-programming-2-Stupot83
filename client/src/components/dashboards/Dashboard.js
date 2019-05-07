@@ -29,10 +29,6 @@ class Dashboard extends Component {
 
   //
   componentDidMount() {
-
-    if (this.props.auth.isAuthenticated) {
-      this.props.history.push("/dashboard");
-    }
     
     let sketch = makeFarm(
       this.state.farm,
@@ -49,26 +45,34 @@ render() {
     const { user } = this.props.auth;
 return (
   <div className="Dashboard">
-  <div style={{ height: "10vh" }}>
+  <div className="navbar-fixed" style={{ height: "10vh" }}>
+  <nav className="z-depth-0">
+  <div className="nav-wrapper blue-grey darken-3" style={{ height: "10vh" }}>
             <button
               style={{
                 width: "150px",
                 borderRadius: "3px",
                 letterSpacing: "1.5px",
-                marginTop: "1rem"
+                marginTop: "0.7rem",
+                marginLeft: "1rem"
               }}
               onClick={this.onLogoutClick}
-              className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+              className="btn btn-large waves-effect waves-light hoverable blue accent-3 left"
             >
               Logout
             </button>
+            </div>
+            </nav>
       </div>
   <header className="Dashboard-header">
     <h2>
+    <img src="/img/farmer.png" className="Dashboard-logo" alt="logo" />{" "}
       Dashboard
+      {" "}<img src="/img/farmer.png" className="Dashboard-logo" alt="logo" />
     </h2>
   </header>
   <FarmManager farmer={this.state.farmer} farm={this.state.farm} market={this.state.market} />
+  <div id="sketch"></div>
 </div>
     );
   }

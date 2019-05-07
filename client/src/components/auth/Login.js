@@ -52,7 +52,7 @@ return (
             </Link>
             <div className="col s10" style={{ paddingLeft: "11.250px" }}>
               <h4>
-                <b>Login</b> to Farm Manager
+                <b>🚜 Login</b> to Farm Manager 🚜
               </h4>
             </div>
             <form noValidate onSubmit={this.onSubmit}>

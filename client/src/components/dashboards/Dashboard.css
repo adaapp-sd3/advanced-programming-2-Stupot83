@@ -1,5 +1,8 @@
 .Dashboard {
     text-align: center;
+    width: 440px;
+    background-color: white;
+    height: 1000px;
   }
   
   .Dashboard h2 {
@@ -9,11 +12,11 @@
   .Dashboard-logo {
     height: 2rem;
     pointer-events: none;
-    margin-bottom: -0.4rem;
+    margin-bottom: 0.6rem;
   }
   
   .Dashboard-header {
-    background-color: #282c34;
+    background-color: #006064;
     min-height: 3rem;
     display: flex;
     flex-direction: column;
@@ -25,4 +28,19 @@
   
   .Dashboard-link {
     color: #61dafb;
+  }
+
+  canvas {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    overflow: scroll;
+    margin-top: 10vh;
+    border-top: -64px;
+    border-top: 10px dashed #9b958c;
+    border-bottom: 10px dashed #9b958c;
+    border-left: 10px dashed #9b958c;
+    border-right: -10px;
+    border-right: 10px dashed #9b958c;
+    background-color: #665f51;
   }

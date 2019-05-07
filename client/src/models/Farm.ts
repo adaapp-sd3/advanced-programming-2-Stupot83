@@ -7,7 +7,7 @@ import Sheep from "./animals/Sheep"
 class Farm extends Drawable {
   fields: Field[] = []
   width: number = 1000
-  height: number = 710
+  height: number = 1000
   cows: any
   sheeps: any
   chickens: any

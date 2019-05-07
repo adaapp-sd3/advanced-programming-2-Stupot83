@@ -53,7 +53,7 @@ class Register extends Component {
             </Link>
             <div className="col s10" style={{ paddingLeft: "11.250px", paddingBottom: "1rem" }}>
               <h4>
-                <b>Register</b> for Farm Manager
+                <b>🚜 Register</b> for Farm Manager 🚜
               </h4>
             </div>
             <form noValidate onSubmit={this.onSubmit}>

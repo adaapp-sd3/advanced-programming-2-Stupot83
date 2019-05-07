@@ -1,0 +1,10 @@
+.FarmerDashboard {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: 4px dashed black;
+    background-color: white;
+}
+
+.FarmerDashboard > dl {
+    columns: 2;
+}

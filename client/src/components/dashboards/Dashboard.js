@@ -44,7 +44,7 @@ class Dashboard extends Component {
 render() {
     const { user } = this.props.auth;
 return (
-  <div className="Dashboard">
+  <div className="Dashboard cyan darken-4">
   <div className="navbar-fixed" style={{ height: "10vh" }}>
   <nav className="z-depth-0">
   <div className="nav-wrapper blue-grey darken-3" style={{ height: "10vh" }}>

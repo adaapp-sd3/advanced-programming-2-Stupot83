@@ -1,33 +1,28 @@
 body {
   margin: 0;
   padding: 0;
+  height: 100vh;
+  width: auto;
+  overflow-y: scroll;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+  background-image: url(../src/img/farm-manager.jpg);
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+    /* Full height */
+    height: 100%; 
 
-body {
-  overflow-y: scroll;
-}
-
-canvas {
-  position: absolute;
-  top: 64px;
-  right: 0;
-  border: 4px solid black;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #root {
-  position: absolute;
   top: 0;
   left: 0;
   height: 100vh;
-  width: calc(100% - 1000px);
+  width: auto;
 }

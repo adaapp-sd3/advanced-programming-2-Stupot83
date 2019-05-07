@@ -3,18 +3,19 @@ import './Landing.css';
 class Landing extends Component {
   render() {
     return (
-      <div style={{ height: "75vh" }} className="container valign-wrapper">
+      <div style={{ height: "100vh" }} className="container valign-wrapper">
         <div className="row">
-          <div className="col s12 center-align">
+          <div className="col s12 center-align cyan darken-4 white-text z-depth-5">
             <h4>
-              <b>Farm Manager:</b> the goal is to get people thinking practically about the effects of climate change, and to serve as a contemporary, digital re-imagining of the inner-city school trip to the country to meet the cows.{" "}
+              <b>Menu</b>
             </h4>
             <br />
             <a href="/register"
               style={{
                 width: "150px",
                 borderRadius: "3px",
-                letterSpacing: "1.5px"
+                letterSpacing: "1.5px",
+                marginBottom: "2rem"
               }}
               className="btn btn-large waves-effect waves-light hoverable blue accent-3"
             >
@@ -25,9 +26,10 @@ class Landing extends Component {
                 marginLeft: "2rem",
                 width: "150px",
                 borderRadius: "3px",
-                letterSpacing: "1.5px"
+                letterSpacing: "1.5px",
+                marginBottom: "2rem"
               }}
-              className="btn btn-large waves-effect white hoverable black-text"
+              className="btn btn-large waves-effect waves-light hoverable blue accent-3"
             >
               Log In
             </a>

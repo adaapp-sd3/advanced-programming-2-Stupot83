@@ -27,13 +27,13 @@ class FieldDashboard extends Component {
   }
 }
 
-  woolSheeps = () => {
+  woolsheep = () => {
     for (var i=0; i<this.props.field.contents.length; i++) {
       this.props.field.contents[i].yieldLamb()
     }
   }
 
-  lambSheeps = () => {
+  lambsheep = () => {
     for (var i=0; i<this.props.field.contents.length; i++) {
       this.props.field.contents[i].yieldBeef()
   }
@@ -60,10 +60,10 @@ class FieldDashboard extends Component {
               <button onClick={this.chickenChickens}>Collect chicken</button>
             )}
             {this.props.field.contents[0].name === "Sheep" && (
-              <button onClick={this.woolSheeps}>Collect wool</button>
+              <button onClick={this.woolsheep}>Collect wool</button>
             )}
             {this.props.field.contents[0].name === "Sheep" && (
-              <button onClick={this.lambSheeps}>Collect lamb</button>
+              <button onClick={this.lambsheep}>Collect lamb</button>
             )}
           </p>
           

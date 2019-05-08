@@ -9,7 +9,7 @@ class Farm extends Drawable {
   width: number = 1000
   height: number = 710
   cows: any
-  sheeps: any
+  sheep: any
   chickens: any
   straw: any
   corn: any
@@ -23,7 +23,7 @@ class Farm extends Drawable {
       total: 42,
       objects: []
     },
-    sheeps: any = {
+    sheep: any = {
       name: "Sheep",
       total: 42,
       objects: []
@@ -66,7 +66,7 @@ class Farm extends Drawable {
   ) {
     super()
     this.cows = cows
-    this.sheeps = sheeps
+    this.sheep = sheep
     this.chickens = chickens
     this.straw = straw
     this.corn = corn
@@ -124,7 +124,7 @@ class Farm extends Drawable {
         secondFieldW,
         secondFieldH
       )
-      this.sheeps.objects.push(sheep)
+      this.sheep.objects.push(sheep)
     }
 
     this.fields.push(
@@ -133,7 +133,7 @@ class Farm extends Drawable {
         secondFieldY,
         secondFieldW,
         secondFieldH,
-        this.sheeps.objects
+        this.sheep.objects
       )
     )
 

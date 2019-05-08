@@ -1,7 +1,6 @@
 import Drawable from "./abstract/Drawable"
 import Farm from "./Farm"
 import Market from "./Market"
-
 class Farmer extends Drawable {
   myFarm!: Farm
   localMarket!: Market

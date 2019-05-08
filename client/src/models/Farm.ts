@@ -9,29 +9,65 @@ class Farm extends Drawable {
   width: number = 1000
   height: number = 1000
   cows: any
-  sheeps: any
+  beef: any
+  sheep: any
+  lamb: any
   chickens: any
+  chicken: any
   straw: any
   corn: any
   milk: any
   wool: any
   eggs: any
   seeds: any
+  greenGas: any
+  solarPanels: any
+
   constructor(
     cows: any = {
       name: "Cows",
       total: 42,
       objects: []
     },
-    sheeps: any = {
+    beef: any = {
+      name: "Beef",
+      total: 0,
+      unit: "kg"
+    },
+    milk: any = {
+      name: "Milk",
+      total: 0,
+      unit: "pints"
+    },
+    sheep: any = {
       name: "Sheep",
       total: 42,
       objects: []
+    },
+    lamb: any = {
+      name: "Lamb",
+      total: 0,
+      unit: "kg"
+    },
+    wool: any = {
+      name: "Wool",
+      total: 0,
+      unit: "bales"
     },
     chickens: any = {
       name: "Chickens",
       total: 42,
       objects: []
+    },
+    chicken: any = {
+      name: "Chicken",
+      total: 0,
+      unit: "kg"
+    },
+    eggs: any = {
+      name: "Eggs",
+      total: 0,
+      unit: "boxes"
     },
     straw: any = {
       name: "Straw",
@@ -43,37 +79,38 @@ class Farm extends Drawable {
       total: 1000,
       unit: "bags"
     },
-    wool: any = {
-      name: "Wool",
-      total: 0,
-      unit: "bales"
-    },
-    eggs: any = {
-      name: "Eggs",
-      total: 0,
-      unit: "boxes"
-    },
-    milk: any = {
-      name: "Milk",
-      total: 0,
-      unit: "pints"
-    },
     seeds: any = {
       name: "Grass seeds",
       total: 0,
-      unit: "bunches"
+      unit: "packets"
+    },
+    greenGas: any = {
+      name: "Green Gas",
+      total: 0,
+      unit: "ltrs"
+    },
+    solarPanels: any = {
+      name: "Solar Panels",
+      total: 0,
+      unit: "panels"
     }
+
   ) {
     super()
     this.cows = cows
-    this.sheeps = sheeps
+    this.beef = beef
+    this.milk = milk
+    this.sheep = sheep
+    this.lamb = lamb
+    this.wool = wool
     this.chickens = chickens
+    this.chicken = chicken
+    this.eggs = eggs
     this.straw = straw
     this.corn = corn
-    this.wool = wool
-    this.eggs = eggs
-    this.milk = milk
     this.seeds = seeds
+    this.greenGas = greenGas
+    this.solarPanels = solarPanels
   }
 
   public preload() {
@@ -124,7 +161,7 @@ class Farm extends Drawable {
         secondFieldW,
         secondFieldH
       )
-      this.sheeps.objects.push(sheep)
+      this.sheep.objects.push(sheep)
     }
 
     this.fields.push(
@@ -133,7 +170,7 @@ class Farm extends Drawable {
         secondFieldY,
         secondFieldW,
         secondFieldH,
-        this.sheeps.objects
+        this.sheep.objects
       )
     )
 

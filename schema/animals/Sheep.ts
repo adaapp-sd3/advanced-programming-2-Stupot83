@@ -2,7 +2,7 @@ import Animal from "../abstract/Animal"
 import Farm from "../../../../schema/Farm";
 class Sheep extends Animal {
   name: string = "Sheep"
-  genus: string = "Sheeps"
+  genus: string = "sheep"
   imgUrl: string = "/img/twtr/1f411.png"
   eats: string = "straw"
   hunger: number = 5

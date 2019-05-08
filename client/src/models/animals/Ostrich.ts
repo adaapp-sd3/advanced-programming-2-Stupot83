@@ -13,6 +13,16 @@ class Ostrich extends Animal {
     this.farm = farm
   }
 
+  checkHealth(){
+    if(this.hunger >= 5){
+        this.health -= 1
+    }
+    if(this.health <= 0){
+      this.farm.ostriches.objects[0].pop()
+      this.farm.ostriches.total -= 1
+    }
+  }
+
   // if ostrich is hungry, yield less eggs
   yieldOstrichEggs() {
     let amountOfEggsToYield = 5 - this.hunger
@@ -21,8 +31,9 @@ class Ostrich extends Animal {
   }
 
   // if ostrich is thin, yield less ostrich
-  yieldOstrich(): number {
-    return this.hunger > 0 ? 100 / this.hunger : 120
+  yieldOstrich() {
+    this.farm.ostrich.total += this.hunger > 0 ? 100 / this.hunger : 120
+    this.health = 0
   }
 
   eatSeeds() {
@@ -51,6 +62,7 @@ class Ostrich extends Animal {
   public draw(): any {
 
     this.constrainItem()
+    this.checkHealth()
     this.doSomethingOccasionally(() => this.eatSeeds())
     this.stopForFarmer()
 

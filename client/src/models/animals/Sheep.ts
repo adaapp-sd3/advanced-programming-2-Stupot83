@@ -13,6 +13,16 @@ class Sheep extends Animal {
     this.farm = farm
   }
 
+  checkHealth(){
+    if(this.hunger >= 5){
+        this.health -= 1
+    }
+    if(this.health <= 0){
+      this.farm.sheep.objects.pop()
+      this.farm.sheep.total -= 1
+    }
+  }
+
   // if sheep is hungry, yield less wool
   yieldWool() {
     let amountOfWoolToYield = 5 - this.hunger
@@ -21,8 +31,9 @@ class Sheep extends Animal {
   }
 
   // if sheep is thin, yield less lamb
-  yieldLamb(): number {
-    return this.hunger > 0 ? 100 / this.hunger : 120
+  yieldLamb() {
+    this.farm.lamb.total += this.hunger > 0 ? 100 / this.hunger : 120
+    this.health = 0
   }
 
   eatStraw() {
@@ -51,6 +62,7 @@ class Sheep extends Animal {
   public draw(): any {
 
     this.constrainItem()
+    this.checkHealth()
     this.doSomethingOccasionally(() => this.eatStraw())
     this.stopForFarmer()
 

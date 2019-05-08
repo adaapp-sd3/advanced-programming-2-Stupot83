@@ -461,6 +461,33 @@ class MarketDashboard extends Component {
             </dd>
           </div>
         </dl>
+        <h3>Sell Misc Items</h3>
+        <dl>
+          <div className="Misc">
+            <dt>Wool</dt>
+            <dd>
+              <button onClick={() => this.sellMisc("wool")}>
+                Sell wool for {this.props.market.woolPrice}
+              </button>
+            </dd>
+          </div>
+          <div className="Misc">
+            <dt>Green Gas</dt>
+            <dd>
+              <button onClick={() => this.sellMisc("greenGas")}>
+                Sell green gas for {this.props.market.greenGasResalePrice}
+              </button>
+            </dd>
+          </div>
+          <div className="Misc">
+            <dt>Solar Panels</dt>
+            <dd>
+              <button onClick={() => this.sellMisc("solarPanels")}>
+                Sell solar panels for {this.props.market.solarPanelResalePrice}
+              </button>
+            </dd>
+          </div>
+        </dl>
       </div>
     )
   }

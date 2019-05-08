@@ -13,6 +13,16 @@ class Chicken extends Animal {
     this.farm = farm
   }
 
+  checkHealth(){
+    if(this.hunger >= 5){
+        this.health -= 1
+    }
+    if(this.health <= 0){
+      this.farm.chickens.objects.pop()
+      this.farm.chickens.total -= 1
+    }
+  }
+
   // if chicken is hungry, yield less eggs
   yieldEggs() {
     let amountOfEggsToYield = 5 - this.hunger
@@ -21,8 +31,9 @@ class Chicken extends Animal {
   }
 
   // if chicken is thin, yield less chicken
-  yieldChicken(): number {
-    return this.hunger > 0 ? 100 / this.hunger : 120
+  yieldChicken() {
+   this.farm.chicken.total += this.hunger > 0 ? 100 / this.hunger : 120
+    this.health = 0
   }
 
   eatCorn() {
@@ -51,6 +62,7 @@ class Chicken extends Animal {
   public draw(): any {
 
     this.constrainItem()
+    this.checkHealth()
     this.doSomethingOccasionally(() => this.eatCorn())
     this.stopForFarmer()
 

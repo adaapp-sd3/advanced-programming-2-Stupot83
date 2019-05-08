@@ -1,6 +1,5 @@
 import Drawable from "./abstract/Drawable"
 import Farmer from './Farmer';
-import Animal from "./abstract/Animal";
 
 class Market extends Drawable {
   imgUrl = "/img/twtr/1f3e2.png"

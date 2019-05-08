@@ -13,6 +13,16 @@ class Crocodile extends Animal {
     this.farm = farm
   }
 
+  checkHealth(){
+    if(this.hunger >= 5){
+        this.health -= 1
+    }
+    if(this.health <= 0){
+      this.farm.crocodiles.objects.pop()
+      this.farm.crocodiles.total -= 1
+    }
+  }
+
   // if crocodile is hungry, yield less eggs
   yieldCrocEggs() {
     let amountOfEggsToYield = 5 - this.hunger
@@ -21,8 +31,9 @@ class Crocodile extends Animal {
   }
 
   // if crocodile is thin, yield less crocodile
-  yieldCrocodile(): number {
-    return this.hunger > 0 ? 100 / this.hunger : 120
+  yieldCrocodile() {
+    this.farm.crocodile.total += this.hunger > 0 ? 100 / this.hunger : 120
+    this.health = 0
   }
 
   eatFish() {
@@ -51,6 +62,7 @@ class Crocodile extends Animal {
   public draw(): any {
 
     this.constrainItem()
+    this.checkHealth()
     this.doSomethingOccasionally(() => this.eatFish())
     this.stopForFarmer()
 

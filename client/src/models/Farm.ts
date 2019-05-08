@@ -87,7 +87,7 @@ class Farm extends Drawable {
     },
     pigs: any = {
       name: "Pigs",
-      total: 0,
+      total: 42,
       objects: []
     },
     pork: any = {
@@ -97,7 +97,7 @@ class Farm extends Drawable {
     },
     crocodiles: any = {
       name: "Crocodiles",
-      total: 0,
+      total: 42,
       objects: []
     },
     crocodile: any = {
@@ -112,7 +112,7 @@ class Farm extends Drawable {
     },
     ostriches: any = {
       name: "Ostriches",
-      total: 0,
+      total: 42,
       objects: []
     },
     ostrich: any = {
@@ -127,7 +127,7 @@ class Farm extends Drawable {
     },
     salmons: any = {
       name: "Salmons",
-      total: 0,
+      total: 42,
       objects: []
     },
     salmon: any = {
@@ -239,17 +239,17 @@ class Farm extends Drawable {
     let secondFieldW = 350
     let secondFieldH = 125
 
-    for (let i = 0; i < this.cows.total; i++) {
-      let sheep = new Sheep(this)
-      sheep.p5 = this.p5
-      sheep.preload()
-      sheep.setRandomPositionInField(
+    for (let i = 0; i < this.ostriches.total; i++) {
+      let ostrich = new Ostrich(this)
+      ostrich.p5 = this.p5
+      ostrich.preload()
+      ostrich.setRandomPositionInField(
         secondFieldX,
         secondFieldY,
         secondFieldW,
         secondFieldH
       )
-      this.sheep.objects.push(sheep)
+      this.ostriches.objects.push(ostrich)
     }
 
     this.fields.push(
@@ -258,7 +258,7 @@ class Farm extends Drawable {
         secondFieldY,
         secondFieldW,
         secondFieldH,
-        this.sheep.objects
+        this.ostriches.objects
       )
     )
 
@@ -267,17 +267,17 @@ class Farm extends Drawable {
     let thirdFieldW = 300
     let thirdFieldH = 125
 
-    for (let i = 0; i < this.chickens.total; i++) {
-      let chicken = new Chicken(this)
-      chicken.p5 = this.p5
-      chicken.preload()
-      chicken.setRandomPositionInField(
+    for (let i = 0; i < this.salmons.total; i++) {
+      let salmon = new Salmon(this)
+      salmon.p5 = this.p5
+      salmon.preload()
+      salmon.setRandomPositionInField(
         thirdFieldX,
         thirdFieldY,
         thirdFieldW,
         thirdFieldH
       )
-      this.chickens.objects.push(chicken)
+      this.salmons.objects.push(salmon)
     }
 
     this.fields.push(
@@ -286,11 +286,37 @@ class Farm extends Drawable {
         thirdFieldY,
         thirdFieldW,
         thirdFieldH,
-        this.chickens.objects
+        this.salmons.objects
       )
     )
 
-    this.fields.push(new Field(475, 25, 200, 325))
+    let fourthFieldX = 475
+    let fourthFieldY = 25
+    let fourthFieldW = 200
+    let fourthFieldH = 325
+
+    for (let i = 0; i < this.pigs.total; i++) {
+      let pig = new Pig(this)
+      pig.p5 = this.p5
+      pig.preload()
+      pig.setRandomPositionInField(
+        fourthFieldX,
+        fourthFieldY,
+        fourthFieldW,
+        fourthFieldH
+      )
+      this.pigs.objects.push(pig)
+    }
+
+    this.fields.push(
+      new Field(
+        fourthFieldX,
+        fourthFieldY,
+        fourthFieldW,
+        fourthFieldH,
+        this.pigs.objects
+      )
+    )
     
     for (let field of this.fields) {
       field.p5 = this.p5

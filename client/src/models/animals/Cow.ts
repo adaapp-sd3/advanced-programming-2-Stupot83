@@ -5,7 +5,7 @@ class Cow extends Animal {
   genus: string = "Cows"
   imgUrl: string = "img/twtr/1f404.png"
   eats: string = "straw"
-  hunger: number = 5
+  hunger: number = 0
   farm: Farm
   
   constructor(farm: Farm) {

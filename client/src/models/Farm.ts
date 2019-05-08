@@ -3,6 +3,10 @@ import Field from "./Field"
 import Cow from "./animals/Cow"
 import Chicken from "./animals/Chicken"
 import Sheep from "./animals/Sheep"
+import Pig from "./animals/Pig"
+import Crocodile from "./animals/Crocodile"
+import Ostrich from "./animals/Ostrich"
+import Salmon from "./animals/Salmon"
 
 class Farm extends Drawable {
   fields: Field[] = []
@@ -207,17 +211,17 @@ class Farm extends Drawable {
     let firstFieldW = 350
     let firstFieldH = 175
 
-    for (let i = 0; i < this.cows.total; i++) {
-      let cow = new Cow(this)
-      cow.p5 = this.p5
-      cow.preload()
-      cow.setRandomPositionInField(
+    for (let i = 0; i < this.crocodiles.total; i++) {
+      let crocodile = new Crocodile(this)
+      crocodile.p5 = this.p5
+      crocodile.preload()
+      crocodile.setRandomPositionInField(
         firstFieldX,
         firstFieldY,
         firstFieldW,
         firstFieldH
       )
-      this.cows.objects.push(cow)
+      this.crocodiles.objects.push(crocodile)
     }
 
     this.fields.push(
@@ -226,7 +230,7 @@ class Farm extends Drawable {
         firstFieldY,
         firstFieldW,
         firstFieldH,
-        this.cows.objects
+        this.crocodiles.objects
       )
     )
 

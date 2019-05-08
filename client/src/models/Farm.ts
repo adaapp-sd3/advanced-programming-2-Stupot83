@@ -9,16 +9,29 @@ class Farm extends Drawable {
   width: number = 1000
   height: number = 1000
   cows: any
+  milk: any
   beef: any
   sheep: any
   lamb: any
+  wool: any
   chickens: any
   chicken: any
+  eggs: any
+  pigs: any
+  pork: any
+  crocodiles: any
+  crocodile: any
+  croceggs: any
+  ostriches: any
+  ostrich: any
+  ostricheggs: any
+  salmons: any
+  salmon: any
+  salmonmeat: any
   straw: any
   corn: any
-  milk: any
-  wool: any
-  eggs: any
+  fish: any
+  fishfood: any
   seeds: any
   greenGas: any
   solarPanels: any

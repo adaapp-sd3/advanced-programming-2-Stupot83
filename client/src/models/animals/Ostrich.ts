@@ -16,7 +16,7 @@ class Ostrich extends Animal {
   // if ostrich is hungry, yield less eggs
   yieldOstrichEggs() {
     let amountOfEggsToYield = 5 - this.hunger
-    this.farm.ostricheggs.total += Math.abs(amountOfEggsToYield)
+    this.farm.ostrichEggs.total += Math.abs(amountOfEggsToYield)
     this.hunger = 5
   }
 

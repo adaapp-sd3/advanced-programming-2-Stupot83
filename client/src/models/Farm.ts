@@ -21,17 +21,16 @@ class Farm extends Drawable {
   pork: any
   crocodiles: any
   crocodile: any
-  croceggs: any
+  crocEggs: any
   ostriches: any
   ostrich: any
-  ostricheggs: any
+  ostrichEggs: any
   salmons: any
   salmon: any
-  salmonmeat: any
   straw: any
   corn: any
   fish: any
-  fishfood: any
+  fishFood: any
   seeds: any
   greenGas: any
   solarPanels: any
@@ -82,6 +81,56 @@ class Farm extends Drawable {
       total: 0,
       unit: "boxes"
     },
+    pigs: any = {
+      name: "Pigs",
+      total: 0,
+      objects: []
+    },
+    pork: any = {
+      name: "Pork",
+      total: 0,
+      unit: "kg"
+    },
+    crocodiles: any = {
+      name: "Crocodiles",
+      total: 0,
+      objects: []
+    },
+    crocodile: any = {
+      name: "Crocodile",
+      total: 0,
+      unit: "kg"
+    },
+    crocEggs: any = {
+      name: "crocEggs",
+      total: 0,
+      unit: "boxes"
+    },
+    ostriches: any = {
+      name: "Ostriches",
+      total: 0,
+      objects: []
+    },
+    ostrich: any = {
+      name: "Ostrich",
+      total: 0,
+      unit: "kg"
+    },
+    ostrichEggs: any = {
+      name: "ostrichEggs",
+      total: 0,
+      unit: "boxes"
+    },
+    salmons: any = {
+      name: "Salmons",
+      total: 0,
+      objects: []
+    },
+    salmon: any = {
+      name: "Salmon",
+      total: 0,
+      unit: "kg"
+    },
     straw: any = {
       name: "Straw",
       total: 1000,
@@ -90,6 +139,16 @@ class Farm extends Drawable {
     corn: any = {
       name: "Corn",
       total: 1000,
+      unit: "bags"
+    },
+    fish: any = {
+      name: "Fish",
+      total: 0,
+      unit: "kg"
+    },
+    fishFood: any = {
+      name: "fishFood",
+      total: 0,
       unit: "bags"
     },
     seeds: any = {
@@ -119,8 +178,20 @@ class Farm extends Drawable {
     this.chickens = chickens
     this.chicken = chicken
     this.eggs = eggs
+    this.pigs = pigs
+    this.pork = pork
+    this.crocodiles = crocodiles
+    this.crocodile = crocodile
+    this.crocEggs = crocEggs
+    this.ostriches = ostriches
+    this.ostrich = ostrich
+    this.ostrichEggs = ostrichEggs
+    this.salmons = salmons
+    this.salmon = salmon
     this.straw = straw
     this.corn = corn
+    this.fish = fish
+    this.fishFood = fishFood
     this.seeds = seeds
     this.greenGas = greenGas
     this.solarPanels = solarPanels

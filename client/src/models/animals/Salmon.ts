@@ -4,7 +4,7 @@ class Salmon extends Animal {
   name: string = "Salmon"
   genus: string = "Salmons"
   imgUrl: string = "/img/twtr/1f41f.png"
-  eats: string = "fishfood"
+  eats: string = "fishFood"
   hunger: number = 0
   farm: Farm
   
@@ -20,8 +20,8 @@ class Salmon extends Animal {
 
   eatFishFood() {
     if (this.hunger <= 5 && this.hunger !== 0) {
-      if (this.farm.fishfood.total > 0) {
-        this.farm.fishfood.total--
+      if (this.farm.fishFood.total > 0) {
+        this.farm.fishFood.total--
         this.hunger = this.hunger - 1
       } else {
         if (this.hunger < 5) {

@@ -16,7 +16,7 @@ class Crocodile extends Animal {
   // if crocodile is hungry, yield less eggs
   yieldCrocEggs() {
     let amountOfEggsToYield = 5 - this.hunger
-    this.farm.croceggs.total += Math.abs(amountOfEggsToYield)
+    this.farm.crocEggs.total += Math.abs(amountOfEggsToYield)
     this.hunger = 5
   }
 

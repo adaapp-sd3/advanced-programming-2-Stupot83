@@ -1,4 +1,4 @@
-import Drawable from "./abstract/Drawable"
+import Drawable from "./abstract/Drawable";
 
 class Field extends Drawable {
   image: any

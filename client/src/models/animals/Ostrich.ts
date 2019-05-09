@@ -18,7 +18,7 @@ class Ostrich extends Animal {
         this.health -= 1
     }
     if(this.health <= 0){
-      this.farm.ostriches.objects[0].pop()
+      this.farm.ostriches.objects.pop(0)
       this.farm.ostriches.total -= 1
     }
   }

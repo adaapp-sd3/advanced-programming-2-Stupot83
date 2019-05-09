@@ -15,12 +15,12 @@ class Chicken extends Animal {
 
   checkHealth(){
     if(this.hunger >= 5){
-        this.health -= 1
-    }
-    if(this.health <= 0){
-      this.farm.chickens.objects.pop()
-      this.farm.chickens.total -= 1
-    }
+      this.health -= 1
+  }
+  if(this.health <= 0){
+    this.farm.chickens.objects.pop()
+    this.farm.chickens.total -= 1
+  }
   }
 
   // if chicken is hungry, yield less eggs

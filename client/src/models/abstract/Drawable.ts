@@ -17,9 +17,9 @@ abstract class Drawable extends HasUI {
     this.p5 = p5
   }
 
-  set farmerPresent(isHe: boolean) {
-    this.shouldShowUI = isHe
-    this.isFarmerPresent = isHe
+  set farmerPresent(areThey: boolean) {
+    this.shouldShowUI = areThey
+    this.isFarmerPresent = areThey
   }
 
   public containsPoint(x: number, y: number) {

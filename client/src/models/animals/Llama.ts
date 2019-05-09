@@ -1,10 +1,10 @@
 import Animal from "../abstract/Animal"
 import Farm from "../Farm";
 
-class Cow extends Animal {
-  name: string = "Cow"
-  genus: string = "Cows"
-  imgUrl: string = "img/twtr/1f404.png"
+class Llama extends Animal {
+  name: string = "Llama"
+  genus: string = "Llamas"
+  imgUrl: string = "/img/twtr/1f426.png"
   eats: string = "straw"
   hunger: number = 0
   farm: Farm
@@ -19,21 +19,14 @@ class Cow extends Animal {
         this.health -= 1
     }
     if(this.health <= 0){
-      this.farm.cows.objects.pop()
-      this.farm.cows.total -= 1
+      this.farm.llamas.objects.pop(0)
+      this.farm.llamas.total -= 1
     }
   }
 
-  // if cow is hungry, yield less milk
-  yieldMilk() {
-    let amountOfMilkToYield = 5 - this.hunger
-    this.farm.milk.total += Math.abs(amountOfMilkToYield)
-    this.hunger = 5
-  }
-
-  // if cow is thin, yield less beef
-  yieldBeef() {
-    this.farm.beef.total += this.hunger > 0 ? 100 / this.hunger : 120
+  // if ostrich is thin, yield less ostrich
+  yieldLlama() {
+    this.farm.llama.total += this.hunger > 0 ? 100 / this.hunger : 120
     this.health = 0
   }
 
@@ -57,7 +50,7 @@ class Cow extends Animal {
   }
 
   makeSound() {
-    return "Moooo"
+    return "Berrr"
   }
 
   public draw(): any {
@@ -70,4 +63,4 @@ class Cow extends Animal {
   }
 }
 
-export default Cow
+export default Llama

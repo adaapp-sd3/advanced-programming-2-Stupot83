@@ -1,5 +1,6 @@
 import Animal from "../abstract/Animal"
 import Farm from "../Farm";
+
 class Salmon extends Animal {
   name: string = "Salmon"
   genus: string = "Salmons"

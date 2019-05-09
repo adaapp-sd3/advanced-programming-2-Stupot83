@@ -1,5 +1,6 @@
 import Animal from "../abstract/Animal"
 import Farm from "../Farm";
+
 class Pig extends Animal {
   name: string = "Pig"
   genus: string = "Pigs"

@@ -7,6 +7,9 @@ import Pig from "./animals/Pig"
 import Crocodile from "./animals/Crocodile"
 import Ostrich from "./animals/Ostrich"
 import Salmon from "./animals/Salmon"
+import Goose from "./animals/Goose"
+import Duck from "./animals/Duck"
+import Llama from "./animals/Llama"
 
 class Farm extends Drawable {
   fields: Field[] = []
@@ -31,6 +34,15 @@ class Farm extends Drawable {
   ostrichEggs: any
   salmons: any
   salmon: any
+  geese: any
+  goose: any
+  gooseEggs: any
+  ducks: any
+  duck: any
+  duckEggs: any
+  llamas: any
+  llama: any
+  llamaWool: any
   straw: any
   corn: any
   fish: any
@@ -135,6 +147,51 @@ class Farm extends Drawable {
       total: 0,
       unit: "kg"
     },
+    geese: any = {
+      name: "Geese",
+      total: 0,
+      objects: []
+    },
+    goose: any = {
+      name: "Goose",
+      total: 0,
+      unit: "kg"
+    },
+    gooseEggs: any = {
+      name: "gooseEggs",
+      total: 0,
+      unit: "boxes"
+    },
+    ducks: any = {
+      name: "Ducks",
+      total: 0,
+      objects: []
+    },
+    duck: any = {
+      name: "Duck",
+      total: 0,
+      unit: "kg"
+    },
+    duckEggs: any = {
+      name: "duckEggs",
+      total: 0,
+      unit: "boxes"
+    },
+    llamas: any = {
+      name: "Llamas",
+      total: 0,
+      objects: []
+    },
+    llama: any = {
+      name: "Llama",
+      total: 0,
+      unit: "kg"
+    },
+    llamaWool: any = {
+      name: "llamaWool",
+      total: 0,
+      unit: "bales"
+    },
     straw: any = {
       name: "Straw",
       total: 1000,
@@ -192,6 +249,15 @@ class Farm extends Drawable {
     this.ostrichEggs = ostrichEggs
     this.salmons = salmons
     this.salmon = salmon
+    this.geese = geese
+    this.goose = goose
+    this.gooseEggs = gooseEggs
+    this.ducks = ducks
+    this.duck = duck
+    this.duckEggs = duckEggs
+    this.llamas = llamas
+    this.llama = llama
+    this.llamaWool = llamaWool
     this.straw = straw
     this.corn = corn
     this.fish = fish

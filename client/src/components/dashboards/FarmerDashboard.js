@@ -61,6 +61,27 @@ class FarmerDashboard extends Component {
           )}
 
           {this.props.farmer.myFarm && (<>
+            <dt>Total ducks</dt><dd>{this.props.farmer.myFarm.ducks.total} units</dd>
+            <dt>Total duck</dt><dd>{this.props.farmer.myFarm.duck.total} kg</dd>
+            <dt>Total duckEggs</dt><dd>{this.props.farmer.myFarm.duckEggs.total} boxes</dd>
+          </>
+          )}
+
+          {this.props.farmer.myFarm && (<>
+            <dt>Total geese</dt><dd>{this.props.farmer.myFarm.geese.total} units</dd>
+            <dt>Total goose</dt><dd>{this.props.farmer.myFarm.goose.total} kg</dd>
+            <dt>Total gooseEggs</dt><dd>{this.props.farmer.myFarm.gooseEggs.total} boxes</dd>
+          </>
+          )}
+
+          {this.props.farmer.myFarm && (<>
+            <dt>Total llamas</dt><dd>{this.props.farmer.myFarm.llamas.total} units</dd>
+            <dt>Total llama</dt><dd>{this.props.farmer.myFarm.llama.total} kg</dd>
+            <dt>Total llamaWool</dt><dd>{this.props.farmer.myFarm.llamaWool.total} bales</dd>
+          </>
+          )}
+
+          {this.props.farmer.myFarm && (<>
             <dt>Total straw</dt><dd>{this.props.farmer.myFarm.straw.total} bales</dd>
             <dt>Total corn</dt><dd>{this.props.farmer.myFarm.corn.total} bags</dd>
             <dt>Total fish</dt><dd>{this.props.farmer.myFarm.fish.total} bags</dd>

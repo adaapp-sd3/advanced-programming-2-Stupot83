@@ -16,6 +16,9 @@ class Market extends Drawable {
   pricePerCrocodile: number = 100
   pricePerOstrich: number = 60
   pricePerSalmon: number = 40
+  pricePerDuck: number = 40
+  pricePerGoose: number = 40
+  pricePerLlama: number = 40
 
   strawPrice: number = 100
   cornPrice: number = 100
@@ -33,13 +36,19 @@ class Market extends Drawable {
   crocodilePrice: number = 25
   ostrichPrice: number = 25
   salmonPrice: number = 25
+  duckPrice: number = 25
+  goosePrice: number = 25
+  llamaPrice: number = 25
 
   milkPrice: number = 100
   eggsPrice: number = 100
   crocEggsPrice: number = 100
   ostrichEggsPrice: number = 100
+  duckEggsPrice: number = 100
+  gooseEggsPrice: number = 100
 
   woolPrice: number = 100
+  llamaWoolPrice: number = 100
   greenGasResalePrice: number = 5
   solarPanelResalePrice: number = 50
 

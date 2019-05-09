@@ -70,6 +70,33 @@ class MarketDashboard extends Component {
         }
         break;
 
+      case "duck":
+        if (this.props.market.currentFarmer.budget > this.props.market.pricePerDuck) {
+          this.props.market.currentFarmer.myFarm.ducks.total += 1
+          const unit = 1
+          // this.props.market.currentFarmer.myFarm.makeDuck()
+          this.props.market.currentFarmer.budget -= unit * this.props.market.pricePerDuck
+        }
+        break;
+
+      case "goose":
+        if (this.props.market.currentFarmer.budget > this.props.market.pricePerGoose) {
+          this.props.market.currentFarmer.myFarm.geese.total += 1
+          const unit = 1
+          // this.props.market.currentFarmer.myFarm.makeGoose()
+          this.props.market.currentFarmer.budget -= unit * this.props.market.pricePerGoose
+        }
+        break;
+
+      case "llama":
+        if (this.props.market.currentFarmer.budget > this.props.market.pricePerLlama) {
+          this.props.market.currentFarmer.myFarm.llamas.total += 1
+          const unit = 1
+          // this.props.market.currentFarmer.myFarm.makeLlama()
+          this.props.market.currentFarmer.budget -= unit * this.props.market.pricePerLlama
+        }
+        break;
+
       default:
     }
   }
@@ -185,6 +212,21 @@ class MarketDashboard extends Component {
         this.props.market.currentFarmer.myFarm.salmon.total = 0
         break;
 
+      case "duck":
+        this.props.market.currentFarmer.budget += this.props.market.duckPrice * this.props.market.currentFarmer.myFarm.duck.total
+        this.props.market.currentFarmer.myFarm.duck.total = 0
+        break;
+
+      case "goose":
+        this.props.market.currentFarmer.budget += this.props.market.goosePrice * this.props.market.currentFarmer.myFarm.goose.total
+        this.props.market.currentFarmer.myFarm.goose.total = 0
+        break;
+
+      case "llama":
+        this.props.market.currentFarmer.budget += this.props.market.llamaPrice * this.props.market.currentFarmer.myFarm.llama.total
+        this.props.market.currentFarmer.myFarm.llama.total = 0
+        break;
+
       default:
     }
   }
@@ -213,6 +255,16 @@ class MarketDashboard extends Component {
         this.props.market.currentFarmer.myFarm.ostrichEggs.total = 0
         break;
 
+      case "duckEggs":
+        this.props.market.currentFarmer.budget += this.props.market.duckEggsPrice * this.props.market.currentFarmer.myFarm.duckEggs.total
+        this.props.market.currentFarmer.myFarm.duckEggs.total = 0
+        break;
+
+      case "gooseEggs":
+        this.props.market.currentFarmer.budget += this.props.market.gooseEggsPrice * this.props.market.currentFarmer.myFarm.gooseEggs.total
+        this.props.market.currentFarmer.myFarm.gooseEggs.total = 0
+        break;
+
       default:
     }
   }
@@ -224,6 +276,11 @@ class MarketDashboard extends Component {
       case "wool":
         this.props.market.currentFarmer.budget += this.props.market.woolPrice * this.props.market.currentFarmer.myFarm.wool.total
         this.props.market.currentFarmer.myFarm.wool.total = 0
+        break;
+
+      case "llamaWool":
+        this.props.market.currentFarmer.budget += this.props.market.llamaWoolPrice * this.props.market.currentFarmer.myFarm.llamaWool.total
+        this.props.market.currentFarmer.myFarm.llamaWool.total = 0
         break;
 
       case "greenGas":
@@ -303,7 +360,32 @@ class MarketDashboard extends Component {
               </button>
             </dd>
           </div>
+          <div className="Animal">
+            <dt>Duck</dt>
+            <dd>
+              <button onClick={() => this.buyAnimal("duck")}>
+                Buy duck for {this.props.market.pricePerDuck}
+              </button>
+            </dd>
+          </div>
+          <div className="Animal">
+            <dt>Goose</dt>
+            <dd>
+              <button onClick={() => this.buyAnimal("goose")}>
+                Buy goose for {this.props.market.pricePerGoose}
+              </button>
+            </dd>
+          </div>
+          <div className="Animal">
+            <dt>Llama</dt>
+            <dd>
+              <button onClick={() => this.buyAnimal("llama")}>
+                Buy llama for {this.props.market.pricePerLlama}
+              </button>
+            </dd>
+          </div>
         </dl>
+
         <h3>Buy Feed</h3>
         <dl>
           <div className="Feed">
@@ -347,6 +429,7 @@ class MarketDashboard extends Component {
             </dd>
           </div>
         </dl>
+
         <h3>Buy Tech</h3>
         <dl>
           <div className="Tech">
@@ -425,7 +508,32 @@ class MarketDashboard extends Component {
               </button>
             </dd>
           </div>
+          <div className="Meat">
+            <dt>Duck</dt>
+            <dd>
+              <button onClick={() => this.sellMeat("duck")}>
+                Sell duck for {this.props.market.duckPrice}
+              </button>
+            </dd>
+          </div>
+          <div className="Meat">
+            <dt>Goose</dt>
+            <dd>
+              <button onClick={() => this.sellMeat("goose")}>
+                Sell goose for {this.props.market.salmonPrice}
+              </button>
+            </dd>
+          </div>
+          <div className="Meat">
+            <dt>Llama</dt>
+            <dd>
+              <button onClick={() => this.sellMeat("llama")}>
+                Sell llama for {this.props.market.llamaPrice}
+              </button>
+            </dd>
+          </div>
         </dl>
+
         <h3>Sell Dairy</h3>
         <dl>
           <div className="Dairy">
@@ -460,7 +568,24 @@ class MarketDashboard extends Component {
               </button>
             </dd>
           </div>
+          <div className="Dairy">
+            <dt>Duck Eggs</dt>
+            <dd>
+              <button onClick={() => this.sellDairy("duckEggs")}>
+                Sell duck eggs for {this.props.market.duckEggsPrice}
+              </button>
+            </dd>
+          </div>
+          <div className="Dairy">
+            <dt>Goose Eggs</dt>
+            <dd>
+              <button onClick={() => this.sellDairy("gooseEggs")}>
+                Sell goose eggs for {this.props.market.gooseEggsPrice}
+              </button>
+            </dd>
+          </div>
         </dl>
+
         <h3>Sell Misc Items</h3>
         <dl>
           <div className="Misc">
@@ -468,6 +593,14 @@ class MarketDashboard extends Component {
             <dd>
               <button onClick={() => this.sellMisc("wool")}>
                 Sell wool for {this.props.market.woolPrice}
+              </button>
+            </dd>
+          </div>
+          <div className="Misc">
+            <dt>Llama Wool</dt>
+            <dd>
+              <button onClick={() => this.sellMisc("llamaWool")}>
+                Sell llama wool for {this.props.market.llamaWoolPrice}
               </button>
             </dd>
           </div>

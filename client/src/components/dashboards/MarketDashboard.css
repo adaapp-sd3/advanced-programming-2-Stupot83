@@ -1,0 +1,20 @@
+.modal {
+    top: 10vh;
+    left: 325px;
+    max-height: 80vh !important;
+    max-width: 900px !important;
+}
+
+.modal-dialog {
+    height: 70vh !important;
+    max-width: 900px !important;
+    margin: 0;
+}
+
+.tab-content {
+    padding-top: 30px;
+}
+
+.market-list {
+    columns: 2;
+}

@@ -9,9 +9,6 @@ class Navbar extends Component {
           <div className="nav-wrapper white">
             <Link
               to="/"
-              style={{
-                fontFamily: "avenir"
-              }}
               className="col s5 brand-logo center black white-text"
             >
               <strong>🚜 FARM MANAGER 🚜</strong>

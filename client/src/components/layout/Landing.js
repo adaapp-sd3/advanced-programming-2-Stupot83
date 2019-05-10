@@ -7,7 +7,7 @@ class Landing extends Component {
         <div className="row">
           <div className="col s12 center-align cyan darken-4 white-text z-depth-5">
             <h4>
-              <b>Menu</b>
+              <b>Welcome to Farm Manager</b>
             </h4>
             <br />
             <a href="/register"

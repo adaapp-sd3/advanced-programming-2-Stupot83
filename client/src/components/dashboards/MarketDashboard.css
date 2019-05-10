@@ -1,14 +1,43 @@
+.modal-backdrop {
+    background-color: transparent;
+ } 
+
 .modal {
     top: 10vh;
-    left: 325px;
-    max-height: 80vh !important;
-    max-width: 900px !important;
+    left: 440px;
+    max-height: 88vh !important;
+    width: 1000px !important;
+    border-radius: 30px;
+    border: 10px solid black;
+    background-color: darkcyan;
 }
 
 .modal-dialog {
     height: 70vh !important;
-    max-width: 900px !important;
+    max-width: 1000px !important;
     margin: 0;
+    background-color: darkcyan;
+}
+
+.modal-content {
+    padding-bottom: 0;
+    background-color: darkcyan;
+}
+
+.modal-content .modal-header {
+    color: white;
+}
+
+.modal-content .modal-header .modal-title {
+    font-size: 1.6rem;
+}
+
+.modal-content .modal-body {
+    height: 55vh !important;
+}
+
+.modal-content .modal-footer {
+    background-color: darkcyan;
 }
 
 .tab-content {

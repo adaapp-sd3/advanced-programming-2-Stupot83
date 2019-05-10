@@ -43,19 +43,32 @@ return (
   <div className="navbar-fixed" style={{ height: "10vh" }}>
   <nav className="z-depth-0">
   <div className="nav-wrapper blue-grey darken-3" style={{ height: "10vh" }}>
+  
             <a
               style={{
                 width: "150px",
                 borderRadius: "3px",
                 letterSpacing: "1.5px",
                 marginTop: "0.7rem",
-                marginLeft: "1rem"
+                marginLeft: "3rem"
               }}
               href="/dashboard"
               className="btn btn-large waves-effect waves-light hoverable blue accent-3 left"
             >
               Menu
             </a>
+            <button
+              style={{
+                width: "150px",
+                borderRadius: "3px",
+                letterSpacing: "1.5px",
+                marginTop: "0.7rem",
+                marginLeft: "3rem"
+              }}
+              className="btn btn-large waves-effect waves-light hoverable blue accent-3 left"
+            >
+              Save
+            </button>
             </div>
             </nav>
       </div>

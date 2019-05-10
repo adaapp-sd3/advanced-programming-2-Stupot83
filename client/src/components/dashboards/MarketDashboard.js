@@ -318,18 +318,19 @@ class MarketDashboard extends Component {
   }
 
   render() {
-    return (
 
+    return (
       <>
-        <Button variant="primary" onClick={this.handleShow}>
+        <Button variant="primary" onClick={this.handleShow} style={{ marginTop: "0.2rem"}}>
           Visit the Farmers Market
       </Button>
 
-        <Modal show={this.state.show}
-          onHide={this.handleClose}
+        <Modal 
+          backdrop="static"
+          show={this.state.show}
           aria-labelledby="market-modal">
           <Modal.Header>
-            <Modal.Title id="market-modal">Farmers Market</Modal.Title>
+            <Modal.Title id="market-modal">Welcome to the Farmers Market</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <div className="MarketDashboard">

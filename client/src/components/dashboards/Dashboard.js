@@ -52,7 +52,7 @@ class Dashboard extends Component {
                   marginLeft: "1rem",
                   paddingTop: "1.5rem"
                 }}
-                href= '/game'
+                href= '/dashboard'
                 className="btn btn-large waves-effect waves-light hoverable blue accent-3 left"
               >
                 Load Game
@@ -67,7 +67,7 @@ class Dashboard extends Component {
                   marginLeft: "1rem",
                   paddingTop: "1.5rem"
                 }}
-                href= '/game'
+                href= '/dashboard'
                 className="btn btn-large waves-effect waves-light hoverable blue accent-3 left"
               >
                 How to Play

@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
+import "./Register.css";
 class Register extends Component {
   constructor() {
     super();
@@ -46,7 +47,7 @@ class Register extends Component {
     return (
       <div className="container">
         <div className="row" style={{ marginTop: "3rem" }}>
-          <div className="col s8 offset-s2 cyan darken-4 white-text z-depth-5">
+          <div className="col s8 offset-s2 cyan darken-4 white-text z-depth-5 Register">
             <Link to="/" className="btn-flat waves-effect white-text" style={{ marginTop: "1rem" }}>
               <i className="material-icons left">keyboard_backspace</i> Back to
               home
@@ -59,7 +60,7 @@ class Register extends Component {
             <form noValidate onSubmit={this.onSubmit}>
               <div className="input-field col s10">
                 <input
-                  style={{ paddingLeft: "1rem", color: "white" }}
+                  style={{ margin: "0", paddingLeft: "1rem", color: "white" }}
                   onChange={this.onChange}
                   value={this.state.name}
                   error={errors.name}
@@ -74,7 +75,7 @@ class Register extends Component {
               </div>
               <div className="input-field col s10">
                 <input
-                  style={{ paddingLeft: "1rem", color: "white" }}
+                  style={{ margin: "0", paddingLeft: "1rem", color: "white" }}
                   onChange={this.onChange}
                   value={this.state.email}
                   error={errors.email}
@@ -89,7 +90,7 @@ class Register extends Component {
               </div>
               <div className="input-field col s10">
                 <input
-                  style={{ paddingLeft: "1rem", color: "white" }}
+                  style={{ margin: "0", paddingLeft: "1rem", color: "white" }}
                   onChange={this.onChange}
                   value={this.state.password}
                   error={errors.password}
@@ -104,7 +105,7 @@ class Register extends Component {
               </div>
               <div className="input-field col s10">
                 <input
-                  style={{ paddingLeft: "1rem", color: "white" }}
+                  style={{ margin: "0", paddingLeft: "1rem", color: "white" }}
                   onChange={this.onChange}
                   value={this.state.password2}
                   error={errors.password2}
@@ -131,6 +132,11 @@ class Register extends Component {
                 >
                   Sign up
                 </button>
+                <img src="/img/cow.png" style={{ height: "5rem", marginLeft: "2rem" }} alt="logo" />
+                <img src="/img/chicken.png" style={{ height: "5rem", marginLeft: "1rem" }} alt="logo" />
+                <img src="/img/pig.png" style={{ height: "5rem", marginLeft: "1rem" }} alt="logo" />
+                <img src="/img/sheep.png" style={{ height: "5rem", marginLeft: "1rem" }} alt="logo" />
+                <img src="/img/crocodile.png" style={{ height: "5rem", marginLeft: "1rem" }} alt="logo" />
                 <p className="white-text"
                   style={{
                     marginBottom: "2rem",

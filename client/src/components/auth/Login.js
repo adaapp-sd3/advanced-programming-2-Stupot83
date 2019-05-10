@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
 import classnames from "classnames";
+import "./Login.css";
 class Login extends Component {
   constructor() {
     super();
@@ -45,7 +46,7 @@ render() {
 return (
       <div className="container">
         <div style={{ marginTop: "4rem" }} className="row">
-          <div className="col s8 offset-s2 cyan darken-4 white-text z-depth-5">
+          <div className="col s8 offset-s2 cyan darken-4 white-text z-depth-5 Login">
             <Link to="/" className="btn-flat waves-effect white-text" style={{ marginTop: "1rem" }}>
               <i className="material-icons left">keyboard_backspace</i> Back to
               home
@@ -106,6 +107,9 @@ return (
                 >
                   Login
                 </button>
+                <img src="/img/cow.png" style={{ height: "10rem", marginLeft: "1rem" }} alt="logo" />
+                <img src="/img/chicken.png" style={{ height: "10rem", marginLeft: "1rem" }} alt="logo" />
+                <img src="/img/pig.png" style={{ height: "10rem", marginLeft: "1rem" }} alt="logo" />
                 <p className="white-text" 
                       style={{ 
                         marginBottom: "2rem", 

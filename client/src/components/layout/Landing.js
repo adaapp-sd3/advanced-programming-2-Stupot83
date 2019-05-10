@@ -3,13 +3,25 @@ import './Landing.css';
 class Landing extends Component {
   render() {
     return (
-      <div style={{ height: "100vh" }} className="container valign-wrapper">
-        <div className="row">
-          <div className="col s12 center-align cyan darken-4 white-text z-depth-5">
+      <div style={{ height: "100vh" }} className="container">
+        <div className="row" style={{ marginTop: "4rem" }}>
+          <div className="col s12 center-align cyan darken-4 white-text z-depth-5 Landing">
             <h4>
-              <b>Welcome to Farm Manager</b>
+              <b>🚜 Welcome to Farm Manager 🚜</b>
             </h4>
             <br />
+            <div className="row">
+              <img src="/img/cow.png" style={{ height: "10rem", marginLeft: "1rem" }} alt="logo" />
+              <img src="/img/man.png" style={{ height: "10rem", marginLeft: "1rem" }} alt="logo" />
+              <img src="/img/farm.png" style={{ height: "10rem", marginLeft: "1rem" }} alt="logo" />
+              <img src="/img/woman.png" style={{ height: "10rem", marginLeft: "1rem" }} alt="logo" />
+              <img src="/img/sheep.png" style={{ height: "10rem", marginLeft: "1rem" }} alt="logo" />
+            </div>
+            <div className="row" style={{ marginBottom: "2rem" }}>
+              <h4>Take on the role of a farmer in the game <b>Farm Manager!</b> ... Grow crops, 
+                raise livestock and buy and sell goods at the farmers market in an ever-changing economy
+                and climate that is sure to test your decision making skills to the core ... </h4>
+            </div>
             <a href="/register"
               style={{
                 width: "150px",

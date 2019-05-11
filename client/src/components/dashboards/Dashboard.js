@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import Sound from 'react-sound';
+import Song from "../../music/Big-Green-Tractor.mp3";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
@@ -9,6 +11,7 @@ class Dashboard extends Component {
     e.preventDefault();
     this.props.logoutUser();
   };
+
   render() {
     const { user } = this.props.auth;
     return (
@@ -18,6 +21,14 @@ class Dashboard extends Component {
             className="col s8 cyan darken-4 white-text z-depth-5 Dashboard"
             style={{ height: "80vh" }}
           >
+           <Sound
+              url={Song}
+              playStatus={Sound.status.PLAYING}
+              playFromPosition={300 /* in milliseconds */}
+              onLoading={this.handleSongLoading}
+              onPlaying={this.handleSongPlaying}
+              onFinishedPlaying={this.handleSongFinishedPlaying}
+            />
             <header className="Dashboard-header">
               <h2>
                 <img
@@ -131,5 +142,5 @@ const mapStateToProps = state => ({
 });
 export default connect(
   mapStateToProps,
-  { logoutUser }
+  { logoutUser },
 )(Dashboard);

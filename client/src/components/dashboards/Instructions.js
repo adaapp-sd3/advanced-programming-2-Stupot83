@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Button, Modal, Tabs, Tab } from "react-bootstrap";
+import { Player, ControlBar } from "video-react";
+import Video from "../../video/farmer-style.mp4";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import "./Instructions.css";
@@ -89,6 +91,16 @@ class Instructions extends Component {
                       <Tab eventKey="Tech" title="Tech" />
                       <Tab eventKey="Market" title="Market" />
                       <Tab eventKey="Weather" title="Weather" />
+                      <Tab eventKey="Fun" title="Fun">
+                        <div style={{ height: "100px", width: "100px" }}>
+                          <Player
+                            autoPlay
+                            src={Video}
+                          >
+                            <ControlBar disableDefaultControls={true} />
+                          </Player>
+                        </div>
+                      </Tab>
                     </Tabs>
                   </Modal.Body>
                   <Modal.Footer>
@@ -125,7 +137,6 @@ class Instructions extends Component {
   }
 }
 Instructions.propTypes = {
-  logoutUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
 };
 const mapStateToProps = state => ({

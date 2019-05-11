@@ -4,9 +4,18 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const passport = require("passport");
 const users = require("./routes/api/users");
+const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 5000; // process.env.port is Heroku's port if you choose to deploy the app there
 // Bodyparser middleware
+app.use(cors({
+  'allowedHeaders': ['sessionId', 'Content-Type'],
+  'exposedHeaders': ['sessionId'],
+  'origin': '*',
+  'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  'preflightContinue': false
+}));
+
 app.use(
   bodyParser.urlencoded({
     extended: false

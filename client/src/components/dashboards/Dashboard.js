@@ -2,29 +2,38 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
-import './Dashboard.css';
+import "./Dashboard.css";
 
 class Dashboard extends Component {
-
   onLogoutClick = e => {
     e.preventDefault();
     this.props.logoutUser();
   };
-
   render() {
     const { user } = this.props.auth;
     return (
       <div className="container">
         <div className="row" style={{ marginTop: "3rem" }}>
-          <div className="col s8 cyan darken-4 white-text z-depth-5 Dashboard" style={{ height: "80vh" }}>
+          <div
+            className="col s8 cyan darken-4 white-text z-depth-5 Dashboard"
+            style={{ height: "80vh" }}
+          >
             <header className="Dashboard-header">
               <h2>
-                <img src="/img/farmer.png" className="Dashboard-logo" alt="logo" />{" "}
-                Game Menu
-      {" "}<img src="/img/farmer.png" className="Dashboard-logo" alt="logo" />
+                <img
+                  src="/img/farmer.png"
+                  className="Dashboard-logo"
+                  alt="logo"
+                />{" "}
+                Game Menu{" "}
+                <img
+                  src="/img/farmer.png"
+                  className="Dashboard-logo"
+                  alt="logo"
+                />
               </h2>
               <h4>Welcome to Farm Manager </h4>
-                <b>{user.name.split(" ")[0]}</b>
+              <b>{user.name.split(" ")[0]}</b>
             </header>
             <div className="row" style={{ marginTop: "1rem" }}>
               <a
@@ -37,11 +46,11 @@ class Dashboard extends Component {
                   marginLeft: "4rem",
                   paddingTop: "1.5rem"
                 }}
-                href= '/game'
+                href="/game"
                 className="btn btn-large waves-effect waves-light hoverable blue accent-3 left"
               >
                 New Game
-            </a>
+              </a>
               <a
                 style={{
                   width: "200px",
@@ -52,11 +61,11 @@ class Dashboard extends Component {
                   marginLeft: "1rem",
                   paddingTop: "1.5rem"
                 }}
-                href= '/dashboard'
+                href="/dashboard"
                 className="btn btn-large waves-effect waves-light hoverable blue accent-3 left"
               >
                 Load Game
-            </a>
+              </a>
               <a
                 style={{
                   width: "200px",
@@ -67,11 +76,11 @@ class Dashboard extends Component {
                   marginLeft: "1rem",
                   paddingTop: "1.5rem"
                 }}
-                href= '/dashboard'
+                href="/instructions"
                 className="btn btn-large waves-effect waves-light hoverable blue accent-3 left"
               >
                 How to Play
-            </a>
+              </a>
               <button
                 style={{
                   width: "200px",
@@ -85,12 +94,27 @@ class Dashboard extends Component {
                 className="btn btn-large waves-effect waves-light hoverable blue accent-3 left"
               >
                 Logout
-            </button>
+              </button>
             </div>
-            <div className="row"  style={{ marginTop: "3rem" }}>
-            <img src="/img/man.png" className="Dashboard-img" style={{ marginLeft: "8rem" }} alt="logo" />
-            <img src="/img/farm.png" className="Dashboard-img" style={{ marginLeft: "2rem" }} alt="logo" />
-            <img src="/img/woman.png" className="Dashboard-img" style={{ marginLeft: "2rem" }}  alt="logo" />
+            <div className="row" style={{ marginTop: "3rem" }}>
+              <img
+                src="/img/man.png"
+                className="Dashboard-img"
+                style={{ marginLeft: "8rem" }}
+                alt="logo"
+              />
+              <img
+                src="/img/farm.png"
+                className="Dashboard-img"
+                style={{ marginLeft: "2rem" }}
+                alt="logo"
+              />
+              <img
+                src="/img/woman.png"
+                className="Dashboard-img"
+                style={{ marginLeft: "2rem" }}
+                alt="logo"
+              />
             </div>
           </div>
         </div>

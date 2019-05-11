@@ -11,14 +11,14 @@ class Landing extends Component {
             </h4>
             <br />
             <div className="row">
-              <img src="/img/cow.png" style={{ height: "10rem", marginLeft: "1rem" }} alt="logo" />
+              <img src="/img/cow.png" style={{ height: "10rem", marginLeft: "2rem" }} alt="logo" />
               <img src="/img/man.png" style={{ height: "10rem", marginLeft: "1rem" }} alt="logo" />
               <img src="/img/farm.png" style={{ height: "10rem", marginLeft: "1rem" }} alt="logo" />
               <img src="/img/woman.png" style={{ height: "10rem", marginLeft: "1rem" }} alt="logo" />
               <img src="/img/sheep.png" style={{ height: "10rem", marginLeft: "1rem" }} alt="logo" />
             </div>
-            <div className="row" style={{ marginBottom: "2rem" }}>
-              <h4>Take on the role of a farmer in the game <b>Farm Manager!</b> ... Grow crops, 
+            <div className="row Landing-synopsis" style={{ margin: "2rem" }}>
+              <h4 style={{ marginBottom: "2rem"}}>Take on the role of a farmer in the game <b>Farm Manager!</b> ... Grow crops, 
                 raise livestock and buy and sell goods at the farmers market in an ever-changing economy
                 and climate that is sure to test your decision making skills to the core ... </h4>
             </div>

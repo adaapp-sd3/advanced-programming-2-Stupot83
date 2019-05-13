@@ -24,7 +24,8 @@ class Dashboard extends Component {
             <Sound
               url={Song}
               playStatus={Sound.status.PLAYING}
-              playFromPosition={300 /* in milliseconds */}
+              position={148000}
+              loop={true}
               onLoading={this.handleSongLoading}
               onPlaying={this.handleSongPlaying}
               onFinishedPlaying={this.handleSongFinishedPlaying}

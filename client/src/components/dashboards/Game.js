@@ -14,6 +14,7 @@ class Game extends Component {
     farmer: new Farmer(),
     farm: new Farm(),
     market: new Market(),
+    weather: ''
   };
 
   // allow instances to to tell us when they change
@@ -81,6 +82,7 @@ class Game extends Component {
         </header>
         <FarmManager
           farmer={this.state.farmer}
+          weather={this.state.weather}
           farm={this.state.farm}
           market={this.state.market}
         />

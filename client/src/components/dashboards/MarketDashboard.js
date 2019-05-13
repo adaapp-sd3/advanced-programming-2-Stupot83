@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Player, ControlBar } from "video-react";
+import Video from "../../music/Amarillo-Sky.mp3";
 import { Button, Modal, Tabs, Tab } from "react-bootstrap";
 import "./MarketDashboard.css";
 
@@ -457,84 +459,76 @@ class MarketDashboard extends Component {
                 <Tab eventKey="buy animals" title="Buy Animals">
                   <dl className="market-list">
                     <div className="Animal">
-                      <dt>Cow</dt>
                       <dd>
-                        <button onClick={() => this.buyAnimal("cow")}>
+                        <Button onClick={() => this.buyAnimal("cow")}>
                           Buy cow for {this.props.market.pricePerCow}
-                        </button>
+                          <img src="img/twtr/1f404.png" alt="cow" />
+                        </Button>
                       </dd>
                     </div>
                     <div className="Animal">
-                      <dt>Sheep</dt>
                       <dd>
-                        <button onClick={() => this.buyAnimal("sheep")}>
+                        <Button onClick={() => this.buyAnimal("sheep")}>
                           Buy sheep for {this.props.market.pricePerSheep}
-                        </button>
+                          <img src="img/twtr/1f411.png" alt="sheep" />
+                        </Button>
                       </dd>
                     </div>
                     <div className="Animal">
-                      <dt>Chicken</dt>
                       <dd>
-                        <button onClick={() => this.buyAnimal("chicken")}>
+                        <Button onClick={() => this.buyAnimal("chicken")}>
                           Buy chicken for {this.props.market.pricePerChicken}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Animal">
-                      <dt>Pig</dt>
                       <dd>
-                        <button onClick={() => this.buyAnimal("pig")}>
+                        <Button onClick={() => this.buyAnimal("pig")}>
                           Buy pig for {this.props.market.pricePerPig}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Animal">
-                      <dt>Crocodile</dt>
                       <dd>
-                        <button onClick={() => this.buyAnimal("crocodile")}>
+                        <Button onClick={() => this.buyAnimal("crocodile")}>
                           Buy crocodile for{" "}
                           {this.props.market.pricePerCrocodile}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Animal">
-                      <dt>Ostrich</dt>
                       <dd>
-                        <button onClick={() => this.buyAnimal("ostrich")}>
+                        <Button onClick={() => this.buyAnimal("ostrich")}>
                           Buy ostrich for {this.props.market.pricePerOstrich}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Animal">
-                      <dt>Salmon</dt>
                       <dd>
-                        <button onClick={() => this.buyAnimal("salmon")}>
+                        <Button onClick={() => this.buyAnimal("salmon")}>
                           Buy salmon for {this.props.market.pricePerSalmon}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Animal">
-                      <dt>Duck</dt>
                       <dd>
-                        <button onClick={() => this.buyAnimal("duck")}>
+                        <Button onClick={() => this.buyAnimal("duck")}>
                           Buy duck for {this.props.market.pricePerDuck}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Animal">
-                      <dt>Goose</dt>
                       <dd>
-                        <button onClick={() => this.buyAnimal("goose")}>
+                        <Button onClick={() => this.buyAnimal("goose")}>
                           Buy goose for {this.props.market.pricePerGoose}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Animal">
-                      <dt>Llama</dt>
                       <dd>
-                        <button onClick={() => this.buyAnimal("llama")}>
+                        <Button onClick={() => this.buyAnimal("llama")}>
                           Buy llama for {this.props.market.pricePerLlama}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                   </dl>
@@ -543,43 +537,38 @@ class MarketDashboard extends Component {
                 <Tab eventKey="buy feed" title="Buy Feed">
                   <dl className="market-list">
                     <div className="Feed">
-                      <dt>Straw</dt>
                       <dd>
-                        <button onClick={() => this.buyFeed("straw")}>
+                        <Button onClick={() => this.buyFeed("straw")}>
                           Buy straw for {this.props.market.strawPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Feed">
-                      <dt>Corn</dt>
                       <dd>
-                        <button onClick={() => this.buyFeed("corn")}>
+                        <Button onClick={() => this.buyFeed("corn")}>
                           Buy corn for {this.props.market.cornPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Feed">
-                      <dt>Fish</dt>
                       <dd>
-                        <button onClick={() => this.buyFeed("fish")}>
+                        <Button onClick={() => this.buyFeed("fish")}>
                           Buy fish for {this.props.market.fishPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Feed">
-                      <dt>Fish Food</dt>
                       <dd>
-                        <button onClick={() => this.buyFeed("fishFood")}>
+                        <Button onClick={() => this.buyFeed("fishFood")}>
                           Buy fish food for {this.props.market.fishFoodPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Feed">
-                      <dt>Seeds</dt>
                       <dd>
-                        <button onClick={() => this.buyFeed("seeds")}>
+                        <Button onClick={() => this.buyFeed("seeds")}>
                           Buy seeds for {this.props.market.grassSeedPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                   </dl>
@@ -588,20 +577,18 @@ class MarketDashboard extends Component {
                 <Tab eventKey="buy tech" title="Buy Tech">
                   <dl className="market-list">
                     <div className="Tech">
-                      <dt>Green Gas</dt>
                       <dd>
-                        <button onClick={() => this.buyTech("greenGas")}>
+                        <Button onClick={() => this.buyTech("greenGas")}>
                           Buy greenGas for {this.props.market.greenGasPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Tech">
-                      <dt>Solar Panels</dt>
                       <dd>
-                        <button onClick={() => this.buyTech("solarPanels")}>
+                        <Button onClick={() => this.buyTech("solarPanels")}>
                           Buy solar panels for{" "}
                           {this.props.market.solarPanelPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                   </dl>
@@ -610,83 +597,73 @@ class MarketDashboard extends Component {
                 <Tab eventKey="sell meat" title="Sell Meat">
                   <dl className="market-list">
                     <div className="Meat">
-                      <dt>Beef</dt>
                       <dd>
-                        <button onClick={() => this.sellMeat("beef")}>
+                        <Button onClick={() => this.sellMeat("beef")}>
                           Sell beef for {this.props.market.beefPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Meat">
-                      <dt>Lamb</dt>
                       <dd>
-                        <button onClick={() => this.sellMeat("lamb")}>
+                        <Button onClick={() => this.sellMeat("lamb")}>
                           Sell lamb for {this.props.market.lambPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Meat">
-                      <dt>Chicken</dt>
                       <dd>
-                        <button onClick={() => this.sellMeat("chicken")}>
+                        <Button onClick={() => this.sellMeat("chicken")}>
                           Sell chicken for {this.props.market.chickenPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Meat">
-                      <dt>Pork</dt>
                       <dd>
-                        <button onClick={() => this.sellMeat("pork")}>
+                        <Button onClick={() => this.sellMeat("pork")}>
                           Sell pork for {this.props.market.porkPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Meat">
-                      <dt>Crocodile</dt>
                       <dd>
-                        <button onClick={() => this.sellMeat("crocodile")}>
+                        <Button onClick={() => this.sellMeat("crocodile")}>
                           Sell crocodile for {this.props.market.crocodilePrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Meat">
-                      <dt>Ostrich</dt>
                       <dd>
-                        <button onClick={() => this.sellMeat("ostrich")}>
+                        <Button onClick={() => this.sellMeat("ostrich")}>
                           Sell ostrich for {this.props.market.ostrichPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Meat">
-                      <dt>Salmon</dt>
                       <dd>
-                        <button onClick={() => this.sellMeat("salmon")}>
+                        <Button onClick={() => this.sellMeat("salmon")}>
                           Sell salmon for {this.props.market.salmonPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Meat">
-                      <dt>Duck</dt>
                       <dd>
-                        <button onClick={() => this.sellMeat("duck")}>
+                        <Button onClick={() => this.sellMeat("duck")}>
                           Sell duck for {this.props.market.duckPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Meat">
-                      <dt>Goose</dt>
                       <dd>
-                        <button onClick={() => this.sellMeat("goose")}>
+                        <Button onClick={() => this.sellMeat("goose")}>
                           Sell goose for {this.props.market.salmonPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Meat">
-                      <dt>Llama</dt>
                       <dd>
-                        <button onClick={() => this.sellMeat("llama")}>
+                        <Button onClick={() => this.sellMeat("llama")}>
                           Sell llama for {this.props.market.llamaPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                   </dl>
@@ -695,52 +672,46 @@ class MarketDashboard extends Component {
                 <Tab eventKey="sell dairy" title="Sell Dairy">
                   <dl className="market-list">
                     <div className="Dairy">
-                      <dt>Milk</dt>
                       <dd>
-                        <button onClick={() => this.sellDairy("milk")}>
+                        <Button onClick={() => this.sellDairy("milk")}>
                           Sell milk for {this.props.market.milkPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Dairy">
-                      <dt>Eggs</dt>
                       <dd>
-                        <button onClick={() => this.sellDairy("eggs")}>
+                        <Button onClick={() => this.sellDairy("eggs")}>
                           Sell eggs for {this.props.market.eggsPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Dairy">
-                      <dt>Crocodile Eggs</dt>
                       <dd>
-                        <button onClick={() => this.sellDairy("crocEggs")}>
+                        <Button onClick={() => this.sellDairy("crocEggs")}>
                           Sell crocodile for {this.props.market.crocEggsPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Dairy">
-                      <dt>Ostrich Eggs</dt>
                       <dd>
-                        <button onClick={() => this.sellDairy("ostrichEggs")}>
+                        <Button onClick={() => this.sellDairy("ostrichEggs")}>
                           Sell ostrich eggs for{" "}
                           {this.props.market.ostrichEggsPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Dairy">
-                      <dt>Duck Eggs</dt>
                       <dd>
-                        <button onClick={() => this.sellDairy("duckEggs")}>
+                        <Button onClick={() => this.sellDairy("duckEggs")}>
                           Sell duck eggs for {this.props.market.duckEggsPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Dairy">
-                      <dt>Goose Eggs</dt>
                       <dd>
-                        <button onClick={() => this.sellDairy("gooseEggs")}>
+                        <Button onClick={() => this.sellDairy("gooseEggs")}>
                           Sell goose eggs for {this.props.market.gooseEggsPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                   </dl>
@@ -749,40 +720,44 @@ class MarketDashboard extends Component {
                 <Tab eventKey="sell misc" title="Sell Misc">
                   <dl className="market-list">
                     <div className="Misc">
-                      <dt>Wool</dt>
                       <dd>
-                        <button onClick={() => this.sellMisc("wool")}>
+                        <Button onClick={() => this.sellMisc("wool")}>
                           Sell wool for {this.props.market.woolPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Misc">
-                      <dt>Llama Wool</dt>
                       <dd>
-                        <button onClick={() => this.sellMisc("llamaWool")}>
+                        <Button onClick={() => this.sellMisc("llamaWool")}>
                           Sell llama wool for {this.props.market.llamaWoolPrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Misc">
-                      <dt>Green Gas</dt>
                       <dd>
-                        <button onClick={() => this.sellMisc("greenGas")}>
+                        <Button onClick={() => this.sellMisc("greenGas")}>
                           Sell green gas for{" "}
                           {this.props.market.greenGasResalePrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                     <div className="Misc">
-                      <dt>Solar Panels</dt>
                       <dd>
-                        <button onClick={() => this.sellMisc("solarPanels")}>
+                        <Button onClick={() => this.sellMisc("solarPanels")}>
                           Sell solar panels for{" "}
                           {this.props.market.solarPanelResalePrice}
-                        </button>
+                        </Button>
                       </dd>
                     </div>
                   </dl>
+                </Tab>
+                <Tab style={{ display: "none" }}>
+                  <div style={{ height: "100px", width: "100px" }}>
+                    <Player ref="player" autoPlay loop>
+                      <source src={Video} />
+                      <ControlBar disableDefaultControls={true} />
+                    </Player>
+                  </div>
                 </Tab>
               </Tabs>
             </div>

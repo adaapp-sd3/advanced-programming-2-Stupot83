@@ -34,6 +34,7 @@
 
 .modal-content .modal-body {
     height: 55vh !important;
+    overflow-y: scroll;
 }
 
 .modal-content .modal-footer {
@@ -45,5 +46,107 @@
 }
 
 .market-list {
-    columns: 2;
+    columns: 3;
+}
+
+.Animal>dd>Button {
+    margin: 1rem;
+    width: 250px;
+    height: 8rem;
+    background-color: #007bff;
+}
+
+.Animal>dd>Button:hover {
+    margin: 1rem;
+    background-color: blue;
+}
+
+.Animal>dd>Button>img {
+    height: 5rem;
+    width: 7rem;
+}
+
+.Feed>dd>Button {
+    margin: 1rem;
+    width: 250px;
+    height: 8rem;
+    background-color: #007bff;
+}
+
+.Feed>dd>Button:hover {
+    margin: 1rem;
+    background-color: blue;
+}
+
+.Feed>dd>Button>img {
+    height: 5rem;
+    width: 7rem;
+}
+
+.Tech>dd>Button {
+    margin: 1rem;
+    width: 275px;
+    height: 8rem;
+    background-color: #007bff;
+}
+
+.Tech>dd>Button:hover {
+    margin: 1rem;
+    background-color: blue;
+}
+
+.Tech>dd>Button>img {
+    height: 5rem;
+    width: 7rem;
+}
+
+.Meat>dd>Button {
+    margin: 1rem;
+    width: 250px;
+    height: 8rem;
+    background-color: #007bff;
+}
+
+.Meat>dd>Button:hover {
+    margin: 1rem;
+    background-color: blue;
+}
+
+.Meat>dd>Button>img {
+    height: 5rem;
+    width: 7rem;
+}
+
+.Dairy>dd>Button {
+    margin: 1rem;
+    width: 250px;
+    height: 8rem;
+    background-color: #007bff;
+}
+
+.Dairy>dd>Button:hover {
+    margin: 1rem;
+    background-color: blue;
+}
+
+.Dairy>dd>Button>img {
+    height: 5rem;
+    width: 7rem;
+}
+
+.Misc>dd>Button {
+    margin: 1rem;
+    width: 250px;
+    height: 8rem;
+    background-color: #007bff;
+}
+
+.Misc>dd>Button:hover {
+    margin: 1rem;
+    background-color: blue;
+}
+
+.Misc>dd>Button>img {
+    height: 5rem;
+    width: 7rem;
 }

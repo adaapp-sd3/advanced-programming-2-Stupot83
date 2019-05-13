@@ -6,7 +6,7 @@
     background-color: ghostwhite;
 }
 
-.FarmerDashboard > dl {
+.FarmerDashboard>dl {
     columns: 4;
     margin: 0;
     margin-right: 0.5rem;

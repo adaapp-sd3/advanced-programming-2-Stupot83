@@ -1,45 +1,45 @@
 .Game {
-    text-align: center;
-    width: 440px;
-    background-color: white;
-    height: 1077px;
-    border-bottom: 10px dashed #9b958c;
-  }
-  
-  .Game h2 {
-    font-size: 2.4rem;
-    margin: 0;
-  }
-  
-  .Game-logo {
-    height: 2.4rem;
-    pointer-events: none;
-    margin-bottom: 0.6rem;
-  }
-  
-  .Game-header {
-    background-color: #006064;
-    min-height: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-    margin-top: 10px;
-  }
+  text-align: center;
+  width: 440px;
+  background-color: white;
+  height: 1077px;
+  border-bottom: 10px dashed #9b958c;
+}
 
-  canvas {
-    position: absolute;
-    top: 64px;
-    right: 0;
-    overflow: scroll;
-    margin-top: 10vh;
-    border-top: -64px;
-    border-top: 10px dashed #9b958c;
-    border-bottom: 10px dashed #9b958c;
-    border-left: 10px dashed #9b958c;
-    border-right: -10px;
-    border-right: 10px dashed #9b958c;
-    background-color: #665f51;
-  }
+.Game h2 {
+  font-size: 2.4rem;
+  margin: 0;
+}
+
+.Game-logo {
+  height: 2.4rem;
+  pointer-events: none;
+  margin-bottom: 0.6rem;
+}
+
+.Game-header {
+  background-color: #006064;
+  min-height: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  margin-top: 10px;
+}
+
+canvas {
+  position: absolute;
+  top: 64px;
+  right: 0;
+  overflow: scroll;
+  margin-top: 10vh;
+  border-top: -64px;
+  border-top: 10px dashed #9b958c;
+  border-bottom: 10px dashed #9b958c;
+  border-left: 10px dashed #9b958c;
+  border-right: -10px;
+  border-right: 10px dashed #9b958c;
+  background-color: #665f51;
+}

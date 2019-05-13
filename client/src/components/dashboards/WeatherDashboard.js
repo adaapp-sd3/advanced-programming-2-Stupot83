@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
-import './WeatherDashboard.css';
+import React, { Component } from "react";
+import "./WeatherDashboard.css";
 
 class WeatherDashboard extends Component {
-    render() {
-      return (
-          <div></div>
-      )
-    }
+  render() {
+    return <div />;
   }
-  
-  export default WeatherDashboard
+}
+
+export default WeatherDashboard;

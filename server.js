@@ -1,42 +1,44 @@
-const dotenv = require('dotenv').config();
-const express = require('express');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
+const dotenv = require("dotenv").config();
+const express = require("express");
+const mongoose = require("mongoose");
+const bodyParser = require("body-parser");
 const passport = require("passport");
 const users = require("./routes/api/users");
-const cors = require('cors');
+const cors = require("cors");
 const app = express();
 const port = process.env.PORT || 5000; // process.env.port is Heroku's port if you choose to deploy the app there
 // Bodyparser middleware
-app.use(cors({
-  'allowedHeaders': ['sessionId', 'Content-Type'],
-  'exposedHeaders': ['sessionId'],
-  'origin': '*',
-  'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  'preflightContinue': false
-}));
+app.use(
+  cors({
+    allowedHeaders: ["sessionId", "Content-Type"],
+    exposedHeaders: ["sessionId"],
+    origin: "*",
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    preflightContinue: false,
+  })
+);
 
 app.use(
   bodyParser.urlencoded({
-    extended: false
+    extended: false,
   })
 );
 app.use(bodyParser.json());
 
 mongoose.connect(process.env.DATABASE, {
-  useNewUrlParser: true
+  useNewUrlParser: true,
 });
-mongoose.set('useCreateIndex', true);
+mongoose.set("useCreateIndex", true);
 mongoose.Promise = global.Promise;
 mongoose.connection
-  .on('connected', () => {
+  .on("connected", () => {
     console.log(`Mongoose connection open on ${process.env.DATABASE}`);
   })
-  .on('error', (err) => {
+  .on("error", err => {
     console.log(`Connection error: ${err.message}`);
   });
 
-  // Passport middleware
+// Passport middleware
 app.use(passport.initialize());
 // Passport config
 require("./config/passport")(passport);

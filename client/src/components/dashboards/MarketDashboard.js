@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import { Button, Modal, Tabs, Tab } from 'react-bootstrap';
-import './MarketDashboard.css';
+import { Button, Modal, Tabs, Tab } from "react-bootstrap";
+import "./MarketDashboard.css";
 
 class MarketDashboard extends Component {
-
   constructor(props, context) {
     super(props, context);
 
@@ -24,318 +23,437 @@ class MarketDashboard extends Component {
   }
 
   buyAnimal = animal => {
-
     switch (animal) {
-
       case "cow":
-        if (this.props.market.currentFarmer.budget > this.props.market.pricePerCow) {
+        if (
+          this.props.market.currentFarmer.budget > this.props.market.pricePerCow
+        ) {
           this.props.market.currentFarmer.myFarm.cows.total += 1;
           const unit = 1;
           // this.props.market.currentFarmer.myFarm.makeCow();
-          this.props.market.currentFarmer.budget -= unit * this.props.market.pricePerCow;
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.pricePerCow;
         }
         break;
 
       case "sheep":
-        if (this.props.market.currentFarmer.budget > this.props.market.pricePerSheep) {
+        if (
+          this.props.market.currentFarmer.budget >
+          this.props.market.pricePerSheep
+        ) {
           this.props.market.currentFarmer.myFarm.sheep.total += 1;
           const unit = 1;
           // this.props.market.currentFarmer.myFarm.makeSheep();
-          this.props.market.currentFarmer.budget -= unit * this.props.market.pricePerSheep;
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.pricePerSheep;
         }
         break;
 
       case "chicken":
-        if (this.props.market.currentFarmer.budget > this.props.market.pricePerChicken) {
-          this.props.market.currentFarmer.myFarm.chickens.total += 1
-          const unit = 1
+        if (
+          this.props.market.currentFarmer.budget >
+          this.props.market.pricePerChicken
+        ) {
+          this.props.market.currentFarmer.myFarm.chickens.total += 1;
+          const unit = 1;
           // this.props.market.currentFarmer.myFarm.makeChicken()
-          this.props.market.currentFarmer.budget -= unit * this.props.market.pricePerChicken
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.pricePerChicken;
         }
         break;
 
       case "pig":
-        if (this.props.market.currentFarmer.budget > this.props.market.pricePerPig) {
-          this.props.market.currentFarmer.myFarm.pigs.total += 1
-          const unit = 1
+        if (
+          this.props.market.currentFarmer.budget > this.props.market.pricePerPig
+        ) {
+          this.props.market.currentFarmer.myFarm.pigs.total += 1;
+          const unit = 1;
           // this.props.market.currentFarmer.myFarm.makeChicken()
-          this.props.market.currentFarmer.budget -= unit * this.props.market.pricePerPig
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.pricePerPig;
         }
         break;
 
       case "crocodile":
-        if (this.props.market.currentFarmer.budget > this.props.market.pricePerCrocodile) {
-          this.props.market.currentFarmer.myFarm.crocodiles.total += 1
-          const unit = 1
+        if (
+          this.props.market.currentFarmer.budget >
+          this.props.market.pricePerCrocodile
+        ) {
+          this.props.market.currentFarmer.myFarm.crocodiles.total += 1;
+          const unit = 1;
           // this.props.market.currentFarmer.myFarm.makeCrocodile()
-          this.props.market.currentFarmer.budget -= unit * this.props.market.pricePerCrocodile
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.pricePerCrocodile;
         }
         break;
 
       case "ostrich":
-        if (this.props.market.currentFarmer.budget > this.props.market.pricePerOstrich) {
-          this.props.market.currentFarmer.myFarm.ostriches.total += 1
-          const unit = 1
+        if (
+          this.props.market.currentFarmer.budget >
+          this.props.market.pricePerOstrich
+        ) {
+          this.props.market.currentFarmer.myFarm.ostriches.total += 1;
+          const unit = 1;
           // this.props.market.currentFarmer.myFarm.makeOstrich()
-          this.props.market.currentFarmer.budget -= unit * this.props.market.pricePerOstrich
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.pricePerOstrich;
         }
         break;
 
       case "salmon":
-        if (this.props.market.currentFarmer.budget > this.props.market.pricePerSalmon) {
-          this.props.market.currentFarmer.myFarm.salmons.total += 1
-          const unit = 1
+        if (
+          this.props.market.currentFarmer.budget >
+          this.props.market.pricePerSalmon
+        ) {
+          this.props.market.currentFarmer.myFarm.salmons.total += 1;
+          const unit = 1;
           // this.props.market.currentFarmer.myFarm.makeSalmon()
-          this.props.market.currentFarmer.budget -= unit * this.props.market.pricePerSalmon
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.pricePerSalmon;
         }
         break;
 
       case "duck":
-        if (this.props.market.currentFarmer.budget > this.props.market.pricePerDuck) {
-          this.props.market.currentFarmer.myFarm.ducks.total += 1
-          const unit = 1
+        if (
+          this.props.market.currentFarmer.budget >
+          this.props.market.pricePerDuck
+        ) {
+          this.props.market.currentFarmer.myFarm.ducks.total += 1;
+          const unit = 1;
           // this.props.market.currentFarmer.myFarm.makeDuck()
-          this.props.market.currentFarmer.budget -= unit * this.props.market.pricePerDuck
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.pricePerDuck;
         }
         break;
 
       case "goose":
-        if (this.props.market.currentFarmer.budget > this.props.market.pricePerGoose) {
-          this.props.market.currentFarmer.myFarm.geese.total += 1
-          const unit = 1
+        if (
+          this.props.market.currentFarmer.budget >
+          this.props.market.pricePerGoose
+        ) {
+          this.props.market.currentFarmer.myFarm.geese.total += 1;
+          const unit = 1;
           // this.props.market.currentFarmer.myFarm.makeGoose()
-          this.props.market.currentFarmer.budget -= unit * this.props.market.pricePerGoose
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.pricePerGoose;
         }
         break;
 
       case "llama":
-        if (this.props.market.currentFarmer.budget > this.props.market.pricePerLlama) {
-          this.props.market.currentFarmer.myFarm.llamas.total += 1
-          const unit = 1
+        if (
+          this.props.market.currentFarmer.budget >
+          this.props.market.pricePerLlama
+        ) {
+          this.props.market.currentFarmer.myFarm.llamas.total += 1;
+          const unit = 1;
           // this.props.market.currentFarmer.myFarm.makeLlama()
-          this.props.market.currentFarmer.budget -= unit * this.props.market.pricePerLlama
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.pricePerLlama;
         }
         break;
 
       default:
     }
-  }
+  };
 
   buyFeed = feed => {
-
     switch (feed) {
-
       case "straw":
-        if (this.props.market.currentFarmer.budget > this.props.market.strawPrice) {
-          this.props.market.currentFarmer.myFarm.straw.total = Math.floor(this.props.market.currentFarmer.budget / this.props.market.strawPrice)
-          let unit = 100
-          this.props.market.currentFarmer.budget -= unit * this.props.market.strawPrice
+        if (
+          this.props.market.currentFarmer.budget > this.props.market.strawPrice
+        ) {
+          this.props.market.currentFarmer.myFarm.straw.total = Math.floor(
+            this.props.market.currentFarmer.budget /
+              this.props.market.strawPrice
+          );
+          let unit = 100;
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.strawPrice;
         }
         break;
 
       case "corn":
-        if (this.props.market.currentFarmer.budget > this.props.market.cornPrice) {
-          this.props.market.currentFarmer.myFarm.corn.total = Math.floor(this.props.market.currentFarmer.budget / this.props.market.cornPrice)
-          let unit = 100
-          this.props.market.currentFarmer.budget -= unit * this.props.market.cornPrice
+        if (
+          this.props.market.currentFarmer.budget > this.props.market.cornPrice
+        ) {
+          this.props.market.currentFarmer.myFarm.corn.total = Math.floor(
+            this.props.market.currentFarmer.budget / this.props.market.cornPrice
+          );
+          let unit = 100;
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.cornPrice;
         }
         break;
 
       case "fish":
-        if (this.props.market.currentFarmer.budget > this.props.market.fishPrice) {
-          this.props.market.currentFarmer.myFarm.fish.total = Math.floor(this.props.market.currentFarmer.budget / this.props.market.fishPrice)
-          let unit = 100
-          this.props.market.currentFarmer.budget -= unit * this.props.market.fishPrice
+        if (
+          this.props.market.currentFarmer.budget > this.props.market.fishPrice
+        ) {
+          this.props.market.currentFarmer.myFarm.fish.total = Math.floor(
+            this.props.market.currentFarmer.budget / this.props.market.fishPrice
+          );
+          let unit = 100;
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.fishPrice;
         }
         break;
 
       case "fishFood":
-        if (this.props.market.currentFarmer.budget > this.props.market.fishFoodPrice) {
-          this.props.market.currentFarmer.myFarm.fishFood.total = Math.floor(this.props.market.currentFarmer.budget / this.props.market.fishFoodPrice)
-          let unit = 100
-          this.props.market.currentFarmer.budget -= unit * this.props.market.fishFoodPrice
+        if (
+          this.props.market.currentFarmer.budget >
+          this.props.market.fishFoodPrice
+        ) {
+          this.props.market.currentFarmer.myFarm.fishFood.total = Math.floor(
+            this.props.market.currentFarmer.budget /
+              this.props.market.fishFoodPrice
+          );
+          let unit = 100;
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.fishFoodPrice;
         }
         break;
 
       case "seeds":
-        if (this.props.market.currentFarmer.budget > this.props.market.grassSeedPrice) {
-          this.props.market.currentFarmer.myFarm.seeds.total = Math.floor(this.props.market.currentFarmer.budget / this.props.market.grassSeedPrice)
-          let unit = 100
-          this.props.market.currentFarmer.budget -= unit * this.props.market.grassSeedPrice
+        if (
+          this.props.market.currentFarmer.budget >
+          this.props.market.grassSeedPrice
+        ) {
+          this.props.market.currentFarmer.myFarm.seeds.total = Math.floor(
+            this.props.market.currentFarmer.budget /
+              this.props.market.grassSeedPrice
+          );
+          let unit = 100;
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.grassSeedPrice;
         }
         break;
 
       default:
     }
-  }
+  };
 
   buyTech = tech => {
-
     switch (tech) {
-
       case "greenGas":
-        if (this.props.market.currentFarmer.budget > this.props.market.greenGasPrice) {
-          this.props.market.currentFarmer.myFarm.greenGas.total = Math.floor(this.props.market.currentFarmer.budget / this.props.market.greenGasPrice)
-          let amount = Math.floor(this.props.market.currentFarmer.budget / this.props.market.greenGasPrice)
-          this.props.market.currentFarmer.budget -= amount * this.props.market.greenGasPrice
+        if (
+          this.props.market.currentFarmer.budget >
+          this.props.market.greenGasPrice
+        ) {
+          this.props.market.currentFarmer.myFarm.greenGas.total = Math.floor(
+            this.props.market.currentFarmer.budget /
+              this.props.market.greenGasPrice
+          );
+          let amount = Math.floor(
+            this.props.market.currentFarmer.budget /
+              this.props.market.greenGasPrice
+          );
+          this.props.market.currentFarmer.budget -=
+            amount * this.props.market.greenGasPrice;
         }
         break;
 
       case "solarPanels":
-        if (this.props.market.currentFarmer.budget > this.props.market.solarPanelPrice) {
-          this.props.market.currentFarmer.myFarm.solarPanels.total += 1
-          let unit = 1
-          this.props.market.currentFarmer.budget -= unit * this.props.market.solarPanelPrice
+        if (
+          this.props.market.currentFarmer.budget >
+          this.props.market.solarPanelPrice
+        ) {
+          this.props.market.currentFarmer.myFarm.solarPanels.total += 1;
+          let unit = 1;
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.solarPanelPrice;
         }
         break;
 
       default:
     }
-  }
+  };
 
   sellMeat = meat => {
-
     switch (meat) {
-
       case "beef":
-        this.props.market.currentFarmer.budget += this.props.market.beefPrice * this.props.market.currentFarmer.myFarm.beef.total
-        this.props.market.currentFarmer.myFarm.beef.total = 0
+        this.props.market.currentFarmer.budget +=
+          this.props.market.beefPrice *
+          this.props.market.currentFarmer.myFarm.beef.total;
+        this.props.market.currentFarmer.myFarm.beef.total = 0;
         break;
 
       case "lamb":
-        this.props.market.currentFarmer.budget += this.props.market.lambPrice * this.props.market.currentFarmer.myFarm.lamb.total
-        this.props.market.currentFarmer.myFarm.lamb.total = 0
+        this.props.market.currentFarmer.budget +=
+          this.props.market.lambPrice *
+          this.props.market.currentFarmer.myFarm.lamb.total;
+        this.props.market.currentFarmer.myFarm.lamb.total = 0;
         break;
 
       case "chicken":
-        this.props.market.currentFarmer.budget += this.props.market.chickenPrice * this.props.market.currentFarmer.myFarm.chicken.total
-        this.props.market.currentFarmer.myFarm.chicken.total = 0
+        this.props.market.currentFarmer.budget +=
+          this.props.market.chickenPrice *
+          this.props.market.currentFarmer.myFarm.chicken.total;
+        this.props.market.currentFarmer.myFarm.chicken.total = 0;
         break;
 
       case "pork":
-        this.props.market.currentFarmer.budget += this.props.market.porkPrice * this.props.market.currentFarmer.myFarm.pork.total
-        this.props.market.currentFarmer.myFarm.pork.total = 0
+        this.props.market.currentFarmer.budget +=
+          this.props.market.porkPrice *
+          this.props.market.currentFarmer.myFarm.pork.total;
+        this.props.market.currentFarmer.myFarm.pork.total = 0;
         break;
 
       case "crocodile":
-        this.props.market.currentFarmer.budget += this.props.market.crocodilePrice * this.props.market.currentFarmer.myFarm.crocodile.total
-        this.props.market.currentFarmer.myFarm.crocodile.total = 0
+        this.props.market.currentFarmer.budget +=
+          this.props.market.crocodilePrice *
+          this.props.market.currentFarmer.myFarm.crocodile.total;
+        this.props.market.currentFarmer.myFarm.crocodile.total = 0;
         break;
 
       case "ostrich":
-        this.props.market.currentFarmer.budget += this.props.market.ostrichPrice * this.props.market.currentFarmer.myFarm.ostrich.total
-        this.props.market.currentFarmer.myFarm.ostrich.total = 0
+        this.props.market.currentFarmer.budget +=
+          this.props.market.ostrichPrice *
+          this.props.market.currentFarmer.myFarm.ostrich.total;
+        this.props.market.currentFarmer.myFarm.ostrich.total = 0;
         break;
 
       case "salmon":
-        this.props.market.currentFarmer.budget += this.props.market.salmonPrice * this.props.market.currentFarmer.myFarm.salmon.total
-        this.props.market.currentFarmer.myFarm.salmon.total = 0
+        this.props.market.currentFarmer.budget +=
+          this.props.market.salmonPrice *
+          this.props.market.currentFarmer.myFarm.salmon.total;
+        this.props.market.currentFarmer.myFarm.salmon.total = 0;
         break;
 
       case "duck":
-        this.props.market.currentFarmer.budget += this.props.market.duckPrice * this.props.market.currentFarmer.myFarm.duck.total
-        this.props.market.currentFarmer.myFarm.duck.total = 0
+        this.props.market.currentFarmer.budget +=
+          this.props.market.duckPrice *
+          this.props.market.currentFarmer.myFarm.duck.total;
+        this.props.market.currentFarmer.myFarm.duck.total = 0;
         break;
 
       case "goose":
-        this.props.market.currentFarmer.budget += this.props.market.goosePrice * this.props.market.currentFarmer.myFarm.goose.total
-        this.props.market.currentFarmer.myFarm.goose.total = 0
+        this.props.market.currentFarmer.budget +=
+          this.props.market.goosePrice *
+          this.props.market.currentFarmer.myFarm.goose.total;
+        this.props.market.currentFarmer.myFarm.goose.total = 0;
         break;
 
       case "llama":
-        this.props.market.currentFarmer.budget += this.props.market.llamaPrice * this.props.market.currentFarmer.myFarm.llama.total
-        this.props.market.currentFarmer.myFarm.llama.total = 0
+        this.props.market.currentFarmer.budget +=
+          this.props.market.llamaPrice *
+          this.props.market.currentFarmer.myFarm.llama.total;
+        this.props.market.currentFarmer.myFarm.llama.total = 0;
         break;
 
       default:
     }
-  }
+  };
 
   sellDairy = dairy => {
-
     switch (dairy) {
-
       case "milk":
-        this.props.market.currentFarmer.budget += this.props.market.milkPrice * this.props.market.currentFarmer.myFarm.milk.total
-        this.props.market.currentFarmer.myFarm.milk.total = 0
+        this.props.market.currentFarmer.budget +=
+          this.props.market.milkPrice *
+          this.props.market.currentFarmer.myFarm.milk.total;
+        this.props.market.currentFarmer.myFarm.milk.total = 0;
         break;
 
       case "eggs":
-        this.props.market.currentFarmer.budget += this.props.market.eggsPrice * this.props.market.currentFarmer.myFarm.eggs.total
-        this.props.market.currentFarmer.myFarm.eggs.total = 0
+        this.props.market.currentFarmer.budget +=
+          this.props.market.eggsPrice *
+          this.props.market.currentFarmer.myFarm.eggs.total;
+        this.props.market.currentFarmer.myFarm.eggs.total = 0;
         break;
 
       case "crocEggs":
-        this.props.market.currentFarmer.budget += this.props.market.crocEggsPrice * this.props.market.currentFarmer.myFarm.crocEggs.total
-        this.props.market.currentFarmer.myFarm.crocEggs.total = 0
+        this.props.market.currentFarmer.budget +=
+          this.props.market.crocEggsPrice *
+          this.props.market.currentFarmer.myFarm.crocEggs.total;
+        this.props.market.currentFarmer.myFarm.crocEggs.total = 0;
         break;
 
       case "ostrichEggs":
-        this.props.market.currentFarmer.budget += this.props.market.ostrichEggsPrice * this.props.market.currentFarmer.myFarm.ostrichEggs.total
-        this.props.market.currentFarmer.myFarm.ostrichEggs.total = 0
+        this.props.market.currentFarmer.budget +=
+          this.props.market.ostrichEggsPrice *
+          this.props.market.currentFarmer.myFarm.ostrichEggs.total;
+        this.props.market.currentFarmer.myFarm.ostrichEggs.total = 0;
         break;
 
       case "duckEggs":
-        this.props.market.currentFarmer.budget += this.props.market.duckEggsPrice * this.props.market.currentFarmer.myFarm.duckEggs.total
-        this.props.market.currentFarmer.myFarm.duckEggs.total = 0
+        this.props.market.currentFarmer.budget +=
+          this.props.market.duckEggsPrice *
+          this.props.market.currentFarmer.myFarm.duckEggs.total;
+        this.props.market.currentFarmer.myFarm.duckEggs.total = 0;
         break;
 
       case "gooseEggs":
-        this.props.market.currentFarmer.budget += this.props.market.gooseEggsPrice * this.props.market.currentFarmer.myFarm.gooseEggs.total
-        this.props.market.currentFarmer.myFarm.gooseEggs.total = 0
+        this.props.market.currentFarmer.budget +=
+          this.props.market.gooseEggsPrice *
+          this.props.market.currentFarmer.myFarm.gooseEggs.total;
+        this.props.market.currentFarmer.myFarm.gooseEggs.total = 0;
         break;
 
       default:
     }
-  }
+  };
 
   sellMisc = misc => {
-
     switch (misc) {
-
       case "wool":
-        this.props.market.currentFarmer.budget += this.props.market.woolPrice * this.props.market.currentFarmer.myFarm.wool.total
-        this.props.market.currentFarmer.myFarm.wool.total = 0
+        this.props.market.currentFarmer.budget +=
+          this.props.market.woolPrice *
+          this.props.market.currentFarmer.myFarm.wool.total;
+        this.props.market.currentFarmer.myFarm.wool.total = 0;
         break;
 
       case "llamaWool":
-        this.props.market.currentFarmer.budget += this.props.market.llamaWoolPrice * this.props.market.currentFarmer.myFarm.llamaWool.total
-        this.props.market.currentFarmer.myFarm.llamaWool.total = 0
+        this.props.market.currentFarmer.budget +=
+          this.props.market.llamaWoolPrice *
+          this.props.market.currentFarmer.myFarm.llamaWool.total;
+        this.props.market.currentFarmer.myFarm.llamaWool.total = 0;
         break;
 
       case "greenGas":
-        this.props.market.currentFarmer.budget += this.props.market.greenGasResalePrice * this.props.market.currentFarmer.myFarm.greenGas.total
-        this.props.market.currentFarmer.myFarm.greenGas.total = 0
+        this.props.market.currentFarmer.budget +=
+          this.props.market.greenGasResalePrice *
+          this.props.market.currentFarmer.myFarm.greenGas.total;
+        this.props.market.currentFarmer.myFarm.greenGas.total = 0;
         break;
 
       case "solarPanels":
-        this.props.market.currentFarmer.budget += this.props.market.solarPanelResalePrice * this.props.market.currentFarmer.myFarm.solarPanels.total
-        this.props.market.currentFarmer.myFarm.solarPanels.total = 0
+        this.props.market.currentFarmer.budget +=
+          this.props.market.solarPanelResalePrice *
+          this.props.market.currentFarmer.myFarm.solarPanels.total;
+        this.props.market.currentFarmer.myFarm.solarPanels.total = 0;
         break;
 
       default:
     }
-  }
+  };
 
   render() {
-
     return (
       <>
-        <Button variant="primary" onClick={this.handleShow} style={{ marginTop: "0.2rem"}}>
+        <Button
+          variant="primary"
+          onClick={this.handleShow}
+          style={{ marginTop: "0.2rem" }}
+        >
           Visit the Farmers Market
-      </Button>
+        </Button>
 
-        <Modal 
+        <Modal
           backdrop="static"
           show={this.state.show}
-          aria-labelledby="market-modal">
+          aria-labelledby="market-modal"
+        >
           <Modal.Header>
-            <Modal.Title id="market-modal">Welcome to the Farmers Market</Modal.Title>
+            <Modal.Title id="market-modal">
+              Welcome to the Farmers Market
+            </Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <div className="MarketDashboard">
-
-              <Tabs defaultActiveKey="buy animals" transition={false} id="buy-sell-tabs">
+              <Tabs
+                defaultActiveKey="buy animals"
+                transition={false}
+                id="buy-sell-tabs"
+              >
                 <Tab eventKey="buy animals" title="Buy Animals">
                   <dl className="market-list">
                     <div className="Animal">
@@ -374,7 +492,8 @@ class MarketDashboard extends Component {
                       <dt>Crocodile</dt>
                       <dd>
                         <button onClick={() => this.buyAnimal("crocodile")}>
-                          Buy crocodile for {this.props.market.pricePerCrocodile}
+                          Buy crocodile for{" "}
+                          {this.props.market.pricePerCrocodile}
                         </button>
                       </dd>
                     </div>
@@ -480,7 +599,8 @@ class MarketDashboard extends Component {
                       <dt>Solar Panels</dt>
                       <dd>
                         <button onClick={() => this.buyTech("solarPanels")}>
-                          Buy solar panels for {this.props.market.solarPanelPrice}
+                          Buy solar panels for{" "}
+                          {this.props.market.solarPanelPrice}
                         </button>
                       </dd>
                     </div>
@@ -602,7 +722,8 @@ class MarketDashboard extends Component {
                       <dt>Ostrich Eggs</dt>
                       <dd>
                         <button onClick={() => this.sellDairy("ostrichEggs")}>
-                          Sell ostrich eggs for {this.props.market.ostrichEggsPrice}
+                          Sell ostrich eggs for{" "}
+                          {this.props.market.ostrichEggsPrice}
                         </button>
                       </dd>
                     </div>
@@ -647,7 +768,8 @@ class MarketDashboard extends Component {
                       <dt>Green Gas</dt>
                       <dd>
                         <button onClick={() => this.sellMisc("greenGas")}>
-                          Sell green gas for {this.props.market.greenGasResalePrice}
+                          Sell green gas for{" "}
+                          {this.props.market.greenGasResalePrice}
                         </button>
                       </dd>
                     </div>
@@ -655,7 +777,8 @@ class MarketDashboard extends Component {
                       <dt>Solar Panels</dt>
                       <dd>
                         <button onClick={() => this.sellMisc("solarPanels")}>
-                          Sell solar panels for {this.props.market.solarPanelResalePrice}
+                          Sell solar panels for{" "}
+                          {this.props.market.solarPanelResalePrice}
                         </button>
                       </dd>
                     </div>
@@ -667,15 +790,15 @@ class MarketDashboard extends Component {
           <Modal.Footer>
             <Button variant="secondary" onClick={this.handleClose}>
               Close
-          </Button>
+            </Button>
             <Button variant="primary" onClick={this.handleClose}>
               Save Changes
-          </Button>
+            </Button>
           </Modal.Footer>
         </Modal>
       </>
-    )
+    );
   }
 }
 
-export default MarketDashboard
+export default MarketDashboard;

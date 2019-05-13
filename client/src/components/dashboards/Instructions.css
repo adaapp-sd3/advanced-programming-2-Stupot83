@@ -1,41 +1,41 @@
 .Instructions {
-    border-radius: 30px;
-    border: 10px solid black;
-  }
-  
-  .Instructions h2 {
-    font-size: 2.4rem;
-    margin: 1.424rem 0 1.424rem 0;
-  }
-  
-  .Instructions-logo {
-    height: 2.4rem;
-    pointer-events: none;
-    margin-bottom: 0.6rem;
-  }
-  
-  .Instructions-header {
-    background-color: #006064;
-    min-height: 3rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
+  border-radius: 30px;
+  border: 10px solid black;
+}
 
-  .Instructions h4 {
-    color: white;
-    margin: 0;
-  }
+.Instructions h2 {
+  font-size: 2.4rem;
+  margin: 1.424rem 0 1.424rem 0;
+}
 
-  .video-react {
-    padding-top: 0 !important;
-  }
+.Instructions-logo {
+  height: 2.4rem;
+  pointer-events: none;
+  margin-bottom: 0.6rem;
+}
 
-  .video-react-video {
-    padding-top: 0;
-    width: 800px;
-    height: 285px;
-  }
+.Instructions-header {
+  background-color: #006064;
+  min-height: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Instructions h4 {
+  color: white;
+  margin: 0;
+}
+
+.video-react {
+  padding-top: 0 !important;
+}
+
+.video-react-video {
+  padding-top: 0;
+  width: 800px;
+  height: 285px;
+}

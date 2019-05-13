@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Sound from 'react-sound';
+import Sound from "react-sound";
 import Song from "../../music/Big-Green-Tractor.mp3";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
@@ -21,7 +21,7 @@ class Dashboard extends Component {
             className="col s8 cyan darken-4 white-text z-depth-5 Dashboard"
             style={{ height: "80vh" }}
           >
-           <Sound
+            <Sound
               url={Song}
               playStatus={Sound.status.PLAYING}
               playFromPosition={300 /* in milliseconds */}
@@ -55,7 +55,7 @@ class Dashboard extends Component {
                   letterSpacing: "1.5px",
                   marginTop: "0.7rem",
                   marginLeft: "4rem",
-                  paddingTop: "1.5rem"
+                  paddingTop: "1.5rem",
                 }}
                 href="/game"
                 className="btn btn-large waves-effect waves-light hoverable blue accent-3 left"
@@ -70,7 +70,7 @@ class Dashboard extends Component {
                   letterSpacing: "1.5px",
                   marginTop: "0.7rem",
                   marginLeft: "1rem",
-                  paddingTop: "1.5rem"
+                  paddingTop: "1.5rem",
                 }}
                 href="/dashboard"
                 className="btn btn-large waves-effect waves-light hoverable blue accent-3 left"
@@ -85,7 +85,7 @@ class Dashboard extends Component {
                   letterSpacing: "1.5px",
                   marginTop: "0.7rem",
                   marginLeft: "1rem",
-                  paddingTop: "1.5rem"
+                  paddingTop: "1.5rem",
                 }}
                 href="/instructions"
                 className="btn btn-large waves-effect waves-light hoverable blue accent-3 left"
@@ -99,7 +99,7 @@ class Dashboard extends Component {
                   borderRadius: "3px",
                   letterSpacing: "1.5px",
                   marginTop: "0.7rem",
-                  marginLeft: "1rem"
+                  marginLeft: "1rem",
                 }}
                 onClick={this.onLogoutClick}
                 className="btn btn-large waves-effect waves-light hoverable blue accent-3 left"
@@ -135,12 +135,12 @@ class Dashboard extends Component {
 }
 Dashboard.propTypes = {
   logoutUser: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired
+  auth: PropTypes.object.isRequired,
 };
 const mapStateToProps = state => ({
-  auth: state.auth
+  auth: state.auth,
 });
 export default connect(
   mapStateToProps,
-  { logoutUser },
+  { logoutUser }
 )(Dashboard);

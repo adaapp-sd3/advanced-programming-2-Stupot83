@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Sound from 'react-sound';
+import Sound from "react-sound";
 import Song from "../../music/Amarillo-Sky.mp3";
 import "./Landing.css";
 class Landing extends Component {

@@ -471,9 +471,14 @@ class FieldDashboard extends Component {
                 Collect green gas
               </button>
             )}
+            {this.props.field.contents[0].name === "gasGenerators" && (
+              <button onClick={() => this.getMisc("gasGenerators")}>
+                Recycle gasGenerators
+              </button>
+            )}
             {this.props.field.contents[0].name === "solarPanels" && (
-              <button onClick={() => this.getDairy("solarPanels")}>
-                Recycle solar panels
+              <button onClick={() => this.getMisc("solarPanels")}>
+                Recycle solarPanels
               </button>
             )}
           </p>

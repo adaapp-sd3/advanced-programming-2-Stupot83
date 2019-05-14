@@ -26,8 +26,8 @@ class Market extends Drawable {
   fishFoodPrice: number = 100
   grassSeedPrice: number = 100
 
-  greenGasPrice: number = 10
-  solarPanelPrice: number = 10000
+  gasGeneratorPrice: number = 1000
+  solarPanelPrice: number = 1000
 
   beefPrice: number = 25
   lambPrice: number = 25
@@ -49,7 +49,8 @@ class Market extends Drawable {
 
   woolPrice: number = 100
   llamaWoolPrice: number = 100
-  greenGasResalePrice: number = 5
+  greenGasPrice: number = 5
+  gasGeneratorResalePrice: number = 50
   solarPanelResalePrice: number = 50
 
   constructor() {

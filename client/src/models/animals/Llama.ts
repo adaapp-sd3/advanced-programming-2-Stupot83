@@ -4,7 +4,7 @@ import Farm from "../Farm";
 class Llama extends Animal {
   name: string = "Llama";
   genus: string = "Llamas";
-  imgUrl: string = "/img/twtr/1f426.png";
+  imgUrl: string = "/img/twtr/1f999.png";
   eats: string = "straw";
   farm: Farm;
 

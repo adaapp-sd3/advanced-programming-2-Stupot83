@@ -49,6 +49,7 @@ class Farm extends Drawable {
   fishFood: any
   seeds: any
   greenGas: any
+  gasGenerators: any
   solarPanels: any
 
   constructor(
@@ -222,6 +223,11 @@ class Farm extends Drawable {
       total: 0,
       unit: "ltrs"
     },
+    gasGenerators: any = {
+      name: "Gas Generators",
+      total: 0,
+      unit: "generators"
+    },
     solarPanels: any = {
       name: "Solar Panels",
       total: 0,
@@ -264,6 +270,7 @@ class Farm extends Drawable {
     this.fishFood = fishFood
     this.seeds = seeds
     this.greenGas = greenGas
+    this.gasGenerators = gasGenerators
     this.solarPanels = solarPanels
   }
 

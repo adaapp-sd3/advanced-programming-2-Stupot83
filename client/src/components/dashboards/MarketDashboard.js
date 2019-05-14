@@ -168,7 +168,7 @@ class MarketDashboard extends Component {
             this.props.market.currentFarmer.budget /
               this.props.market.strawPrice
           );
-          let unit = 100;
+          let unit = 1;
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.strawPrice;
         }
@@ -181,7 +181,7 @@ class MarketDashboard extends Component {
           this.props.market.currentFarmer.myFarm.corn.total = Math.floor(
             this.props.market.currentFarmer.budget / this.props.market.cornPrice
           );
-          let unit = 100;
+          let unit = 1;
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.cornPrice;
         }
@@ -194,7 +194,7 @@ class MarketDashboard extends Component {
           this.props.market.currentFarmer.myFarm.fish.total = Math.floor(
             this.props.market.currentFarmer.budget / this.props.market.fishPrice
           );
-          let unit = 100;
+          let unit = 1;
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.fishPrice;
         }
@@ -209,7 +209,7 @@ class MarketDashboard extends Component {
             this.props.market.currentFarmer.budget /
               this.props.market.fishFoodPrice
           );
-          let unit = 100;
+          let unit = 1;
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.fishFoodPrice;
         }
@@ -224,7 +224,7 @@ class MarketDashboard extends Component {
             this.props.market.currentFarmer.budget /
               this.props.market.grassSeedPrice
           );
-          let unit = 100;
+          let unit = 1;
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.grassSeedPrice;
         }
@@ -236,21 +236,15 @@ class MarketDashboard extends Component {
 
   buyTech = tech => {
     switch (tech) {
-      case "greenGas":
+      case "gasGenerators":
         if (
           this.props.market.currentFarmer.budget >
-          this.props.market.greenGasPrice
+          this.props.market.gasGeneratorPrice
         ) {
-          this.props.market.currentFarmer.myFarm.greenGas.total = Math.floor(
-            this.props.market.currentFarmer.budget /
-              this.props.market.greenGasPrice
-          );
-          let amount = Math.floor(
-            this.props.market.currentFarmer.budget /
-              this.props.market.greenGasPrice
-          );
+          this.props.market.currentFarmer.myFarm.gasGenerators.total += 1;
+          let unit = 1;
           this.props.market.currentFarmer.budget -=
-            amount * this.props.market.greenGasPrice;
+            unit * this.props.market.gasGeneratorPrice;
         }
         break;
 
@@ -412,9 +406,16 @@ class MarketDashboard extends Component {
 
       case "greenGas":
         this.props.market.currentFarmer.budget +=
-          this.props.market.greenGasResalePrice *
+          this.props.market.greenGasPrice *
           this.props.market.currentFarmer.myFarm.greenGas.total;
         this.props.market.currentFarmer.myFarm.greenGas.total = 0;
+        break;
+
+      case "gasGenerators":
+        this.props.market.currentFarmer.budget +=
+          this.props.market.gasGeneratorResalePrice *
+          this.props.market.currentFarmer.myFarm.gasGenerators.total;
+        this.props.market.currentFarmer.myFarm.gasGenerators.total = 0;
         break;
 
       case "solarPanels":
@@ -478,6 +479,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.buyAnimal("chicken")}>
                           Buy chicken for {this.props.market.pricePerChicken}
+                          <img src="/img/twtr/1f414.png" alt="chicken" />
                         </Button>
                       </dd>
                     </div>
@@ -485,6 +487,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.buyAnimal("pig")}>
                           Buy pig for {this.props.market.pricePerPig}
+                          <img src="/img/twtr/1f416.png" alt="pig" />
                         </Button>
                       </dd>
                     </div>
@@ -493,6 +496,7 @@ class MarketDashboard extends Component {
                         <Button onClick={() => this.buyAnimal("crocodile")}>
                           Buy crocodile for{" "}
                           {this.props.market.pricePerCrocodile}
+                          <img src="/img/twtr/1f40a.png" alt="crocodile" />
                         </Button>
                       </dd>
                     </div>
@@ -500,6 +504,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.buyAnimal("ostrich")}>
                           Buy ostrich for {this.props.market.pricePerOstrich}
+                          <img src="/img/twtr/1f426.png" alt="ostrich" />
                         </Button>
                       </dd>
                     </div>
@@ -507,6 +512,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.buyAnimal("salmon")}>
                           Buy salmon for {this.props.market.pricePerSalmon}
+                          <img src="/img/twtr/1f41f.png" alt="salmon" />
                         </Button>
                       </dd>
                     </div>
@@ -514,6 +520,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.buyAnimal("duck")}>
                           Buy duck for {this.props.market.pricePerDuck}
+                          <img src="/img/twtr/1f986.png" alt="duck" />
                         </Button>
                       </dd>
                     </div>
@@ -521,6 +528,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.buyAnimal("goose")}>
                           Buy goose for {this.props.market.pricePerGoose}
+                          <img src="/img/twtr/1f9a2.png" alt="goose" />
                         </Button>
                       </dd>
                     </div>
@@ -528,6 +536,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.buyAnimal("llama")}>
                           Buy llama for {this.props.market.pricePerLlama}
+                          <img src="/img/twtr/1f999.png" alt="llama" />
                         </Button>
                       </dd>
                     </div>
@@ -540,6 +549,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.buyFeed("straw")}>
                           Buy straw for {this.props.market.strawPrice}
+                          <img src="/img/twtr/straw.png" alt="straw" />
                         </Button>
                       </dd>
                     </div>
@@ -547,6 +557,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.buyFeed("corn")}>
                           Buy corn for {this.props.market.cornPrice}
+                          <img src="/img/twtr/1f37f.png" alt="corn" />
                         </Button>
                       </dd>
                     </div>
@@ -554,6 +565,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.buyFeed("fish")}>
                           Buy fish for {this.props.market.fishPrice}
+                          <img src="/img/twtr/1f41f.png" alt="fish" />
                         </Button>
                       </dd>
                     </div>
@@ -561,6 +573,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.buyFeed("fishFood")}>
                           Buy fish food for {this.props.market.fishFoodPrice}
+                          <img src="/img/twtr/fishfood.png" alt="fishFood" />
                         </Button>
                       </dd>
                     </div>
@@ -568,6 +581,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.buyFeed("seeds")}>
                           Buy seeds for {this.props.market.grassSeedPrice}
+                          <img src="/img/twtr/seeds.png" alt="seeds" />
                         </Button>
                       </dd>
                     </div>
@@ -578,8 +592,10 @@ class MarketDashboard extends Component {
                   <dl className="market-list">
                     <div className="Tech">
                       <dd>
-                        <Button onClick={() => this.buyTech("greenGas")}>
-                          Buy greenGas for {this.props.market.greenGasPrice}
+                        <Button onClick={() => this.buyTech("gasGenerators")}>
+                          Buy generator for{" "}
+                          {this.props.market.gasGeneratorPrice}
+                          <img src="/img/twtr/gasgenerator.png" alt="gasgenerator" />
                         </Button>
                       </dd>
                     </div>
@@ -588,6 +604,7 @@ class MarketDashboard extends Component {
                         <Button onClick={() => this.buyTech("solarPanels")}>
                           Buy solar panels for{" "}
                           {this.props.market.solarPanelPrice}
+                          <img src="/img/twtr/solarpanel.png" alt="solarpanel" />
                         </Button>
                       </dd>
                     </div>
@@ -600,6 +617,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.sellMeat("beef")}>
                           Sell beef for {this.props.market.beefPrice}
+                          <img src="/img/twtr/1f969.png" alt="pork" />
                         </Button>
                       </dd>
                     </div>
@@ -607,6 +625,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.sellMeat("lamb")}>
                           Sell lamb for {this.props.market.lambPrice}
+                          <img src="/img/twtr/1f356.png" alt="lamb" />
                         </Button>
                       </dd>
                     </div>
@@ -614,6 +633,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.sellMeat("chicken")}>
                           Sell chicken for {this.props.market.chickenPrice}
+                          <img src="/img/twtr/1f357.png" alt="chicken" />
                         </Button>
                       </dd>
                     </div>
@@ -621,6 +641,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.sellMeat("pork")}>
                           Sell pork for {this.props.market.porkPrice}
+                          <img src="/img/twtr/1f953.png" alt="pork" />
                         </Button>
                       </dd>
                     </div>
@@ -628,6 +649,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.sellMeat("crocodile")}>
                           Sell crocodile for {this.props.market.crocodilePrice}
+                          <img src="/img/twtr/1f969.png" alt="crocodile" />
                         </Button>
                       </dd>
                     </div>
@@ -635,6 +657,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.sellMeat("ostrich")}>
                           Sell ostrich for {this.props.market.ostrichPrice}
+                          <img src="/img/twtr/1f357.png" alt="ostrich" />
                         </Button>
                       </dd>
                     </div>
@@ -642,6 +665,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.sellMeat("salmon")}>
                           Sell salmon for {this.props.market.salmonPrice}
+                          <img src="/img/twtr/1f363.png" alt="salmon" />
                         </Button>
                       </dd>
                     </div>
@@ -649,6 +673,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.sellMeat("duck")}>
                           Sell duck for {this.props.market.duckPrice}
+                          <img src="/img/twtr/1f357.png" alt="duck" />
                         </Button>
                       </dd>
                     </div>
@@ -656,6 +681,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.sellMeat("goose")}>
                           Sell goose for {this.props.market.salmonPrice}
+                          <img src="/img/twtr/1f357.png" alt="goose" />
                         </Button>
                       </dd>
                     </div>
@@ -663,6 +689,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.sellMeat("llama")}>
                           Sell llama for {this.props.market.llamaPrice}
+                          <img src="/img/twtr/1f969.png" alt="llama" />
                         </Button>
                       </dd>
                     </div>
@@ -675,6 +702,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.sellDairy("milk")}>
                           Sell milk for {this.props.market.milkPrice}
+                          <img src="/img/twtr/1f95b.png" alt="milk" />
                         </Button>
                       </dd>
                     </div>
@@ -682,13 +710,15 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.sellDairy("eggs")}>
                           Sell eggs for {this.props.market.eggsPrice}
+                          <img src="/img/twtr/1f95a.png" alt="eggs" />
                         </Button>
                       </dd>
                     </div>
                     <div className="Dairy">
                       <dd>
                         <Button onClick={() => this.sellDairy("crocEggs")}>
-                          Sell crocodile for {this.props.market.crocEggsPrice}
+                          Sell croc eggs for {this.props.market.crocEggsPrice}
+                          <img src="/img/twtr/1f95a.png" alt="crocEggs" />
                         </Button>
                       </dd>
                     </div>
@@ -697,6 +727,7 @@ class MarketDashboard extends Component {
                         <Button onClick={() => this.sellDairy("ostrichEggs")}>
                           Sell ostrich eggs for{" "}
                           {this.props.market.ostrichEggsPrice}
+                          <img src="/img/twtr/1f95a.png" alt="ostrichEggs" />
                         </Button>
                       </dd>
                     </div>
@@ -704,6 +735,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.sellDairy("duckEggs")}>
                           Sell duck eggs for {this.props.market.duckEggsPrice}
+                          <img src="/img/twtr/1f95a.png" alt="duckEggs" />
                         </Button>
                       </dd>
                     </div>
@@ -711,6 +743,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.sellDairy("gooseEggs")}>
                           Sell goose eggs for {this.props.market.gooseEggsPrice}
+                          <img src="/img/twtr/1f95a.png" alt="gooseEggs" />
                         </Button>
                       </dd>
                     </div>
@@ -723,6 +756,7 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.sellMisc("wool")}>
                           Sell wool for {this.props.market.woolPrice}
+                          <img src="/img/twtr/wool.png" alt="wool" />
                         </Button>
                       </dd>
                     </div>
@@ -730,14 +764,24 @@ class MarketDashboard extends Component {
                       <dd>
                         <Button onClick={() => this.sellMisc("llamaWool")}>
                           Sell llama wool for {this.props.market.llamaWoolPrice}
+                          <img src="/img/twtr/wool.png" alt="llamaWool" />
                         </Button>
                       </dd>
                     </div>
                     <div className="Misc">
                       <dd>
                         <Button onClick={() => this.sellMisc("greenGas")}>
-                          Sell green gas for{" "}
-                          {this.props.market.greenGasResalePrice}
+                          Sell green gas for {this.props.market.greenGasPrice}
+                          <img src="/img/twtr/greengas.png" alt="greengas" />
+                        </Button>
+                      </dd>
+                    </div>
+                    <div className="Misc">
+                      <dd>
+                        <Button onClick={() => this.sellMisc("gasGenerators")}>
+                          Sell generator for{" "}
+                          {this.props.market.gasGeneratorResalePrice}
+                          <img src="/img/twtr/gasgenerator.png" alt="gasgenerator" />
                         </Button>
                       </dd>
                     </div>
@@ -746,6 +790,7 @@ class MarketDashboard extends Component {
                         <Button onClick={() => this.sellMisc("solarPanels")}>
                           Sell solar panels for{" "}
                           {this.props.market.solarPanelResalePrice}
+                          <img src="/img/twtr/solarpanel.png" alt="solarpanel" />
                         </Button>
                       </dd>
                     </div>

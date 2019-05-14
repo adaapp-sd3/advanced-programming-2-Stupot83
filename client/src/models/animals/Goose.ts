@@ -4,7 +4,7 @@ import Farm from "../Farm";
 class Goose extends Animal {
   name: string = "Goose";
   genus: string = "Geese";
-  imgUrl: string = "/img/twtr/1f999.png";
+  imgUrl: string = "/img/twtr/1f9a2.png";
   eats: string = "corn";
   farm: Farm;
 

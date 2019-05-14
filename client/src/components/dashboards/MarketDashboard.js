@@ -234,6 +234,48 @@ class MarketDashboard extends Component {
     }
   };
 
+  buyCrop = crop => {
+    switch (crop) {
+      case "carrotSeeds":
+        if (
+          this.props.market.currentFarmer.budget >
+          this.props.market.carrotSeedPrice
+        ) {
+          this.props.market.currentFarmer.myFarm.carrotSeeds.total += 1;
+          const unit = 1;
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.carrotSeedPrice;
+        }
+        break;
+
+      case "pumpkinSeeds":
+        if (
+          this.props.market.currentFarmer.budget >
+          this.props.market.pumpkinSeedPrice
+        ) {
+          this.props.market.currentFarmer.myFarm.pumpkinSeeds.total += 1;
+          const unit = 1;
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.pumpkinSeedPrice;
+        }
+        break;
+
+      case "wheatSeeds":
+        if (
+          this.props.market.currentFarmer.budget >
+          this.props.market.wheatSeedPrice
+        ) {
+          this.props.market.currentFarmer.myFarm.wheatSeeds.total += 1;
+          const unit = 1;
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.wheatSeeds;
+        }
+        break;
+
+      default:
+    }
+  };
+
   buyTech = tech => {
     switch (tech) {
       case "gasGenerators":
@@ -385,6 +427,33 @@ class MarketDashboard extends Component {
         break;
 
       default:
+    }
+  };
+
+  sellCrop = crop => {
+    switch (crop) {
+      case "carrot":
+        this.props.market.currentFarmer.budget +=
+          this.props.market.carrotPrice *
+          this.props.market.currentFarmer.myFarm.carrots.total;
+        this.props.market.currentFarmer.myFarm.carrots.total = 0;
+        break;
+
+      case "pumpkin":
+        this.props.market.currentFarmer.budget +=
+          this.props.market.pumpkinPrice *
+          this.props.market.currentFarmer.myFarm.pumpkins.total;
+        this.props.market.currentFarmer.myFarm.pumpkins.total = 0;
+        break;
+
+      case "wheat":
+        this.props.market.currentFarmer.budget +=
+          this.props.market.wheatPrice *
+          this.props.market.currentFarmer.myFarm.wheat.total;
+        this.props.market.currentFarmer.myFarm.wheat.total = 0;
+        break;
+
+        default:
     }
   };
 
@@ -588,6 +657,47 @@ class MarketDashboard extends Component {
                   </dl>
                 </Tab>
 
+                <Tab eventKey="buy seeds" title="Buy Seeds">
+                  <dl className="market-list">
+                    <div className="Seed">
+                      <dd>
+                        <Button onClick={() => this.buySeeds("carrotSeeds")}>
+                          Buy carrotSeed for{" "}
+                          {this.props.market.carrotSeedPrice}
+                          <img
+                            src="/img/twtr/carrotseed.png"
+                            alt="carrotseed"
+                          />
+                        </Button>
+                      </dd>
+                    </div>
+                    <div className="Seed">
+                      <dd>
+                        <Button onClick={() => this.buySeeds("pumpkinSeeds")}>
+                          Buy pumpkinSeed for{" "}
+                          {this.props.market.pumpkinSeedPrice}
+                          <img
+                            src="/img/twtr/pumpkinseed.png"
+                            alt="pumpkinseed"
+                          />
+                        </Button>
+                      </dd>
+                    </div>
+                    <div className="Seed">
+                      <dd>
+                        <Button onClick={() => this.buySeeds("wheatSeeds")}>
+                          Buy wheatSeed for{" "}
+                          {this.props.market.wheatSeedPrice}
+                          <img
+                            src="/img/twtr/wheatseed.png"
+                            alt="wheatseed"
+                          />
+                        </Button>
+                      </dd>
+                    </div>
+                  </dl>
+                </Tab>
+
                 <Tab eventKey="buy tech" title="Buy Tech">
                   <dl className="market-list">
                     <div className="Tech">
@@ -595,7 +705,10 @@ class MarketDashboard extends Component {
                         <Button onClick={() => this.buyTech("gasGenerators")}>
                           Buy generator for{" "}
                           {this.props.market.gasGeneratorPrice}
-                          <img src="/img/twtr/gasgenerator.png" alt="gasgenerator" />
+                          <img
+                            src="/img/twtr/gasgenerator.png"
+                            alt="gasgenerator"
+                          />
                         </Button>
                       </dd>
                     </div>
@@ -604,7 +717,10 @@ class MarketDashboard extends Component {
                         <Button onClick={() => this.buyTech("solarPanels")}>
                           Buy solar panels for{" "}
                           {this.props.market.solarPanelPrice}
-                          <img src="/img/twtr/solarpanel.png" alt="solarpanel" />
+                          <img
+                            src="/img/twtr/solarpanel.png"
+                            alt="solarpanel"
+                          />
                         </Button>
                       </dd>
                     </div>
@@ -750,6 +866,35 @@ class MarketDashboard extends Component {
                   </dl>
                 </Tab>
 
+                <Tab eventKey="sell crops" title="Sell Crops">
+                  <dl className="market-list">
+                    <div className="Crop">
+                      <dd>
+                        <Button onClick={() => this.sellCrop("carrot")}>
+                          Sell carrot for {this.props.market.carrotPrice}
+                          <img src="/img/twtr/carrot.png" alt="carrot" />
+                        </Button>
+                      </dd>
+                    </div>
+                    <div className="Crop">
+                      <dd>
+                        <Button onClick={() => this.sellCrop("pumpkin")}>
+                          Sell pumpkin for {this.props.market.pumpkinPrice}
+                          <img src="/img/twtr/pumpkin.png" alt="pumpkin" />
+                        </Button>
+                      </dd>
+                    </div>
+                    <div className="Crop">
+                      <dd>
+                        <Button onClick={() => this.sellMisc("wheat")}>
+                          Sell wheat for {this.props.market.wheatPrice}
+                          <img src="/img/twtr/wheat.png" alt="wheat" />
+                        </Button>
+                      </dd>
+                    </div>
+                  </dl>
+                </Tab>
+
                 <Tab eventKey="sell misc" title="Sell Misc">
                   <dl className="market-list">
                     <div className="Misc">
@@ -781,7 +926,10 @@ class MarketDashboard extends Component {
                         <Button onClick={() => this.sellMisc("gasGenerators")}>
                           Sell generator for{" "}
                           {this.props.market.gasGeneratorResalePrice}
-                          <img src="/img/twtr/gasgenerator.png" alt="gasgenerator" />
+                          <img
+                            src="/img/twtr/gasgenerator.png"
+                            alt="gasgenerator"
+                          />
                         </Button>
                       </dd>
                     </div>
@@ -790,7 +938,10 @@ class MarketDashboard extends Component {
                         <Button onClick={() => this.sellMisc("solarPanels")}>
                           Sell solar panels for{" "}
                           {this.props.market.solarPanelResalePrice}
-                          <img src="/img/twtr/solarpanel.png" alt="solarpanel" />
+                          <img
+                            src="/img/twtr/solarpanel.png"
+                            alt="solarpanel"
+                          />
                         </Button>
                       </dd>
                     </div>

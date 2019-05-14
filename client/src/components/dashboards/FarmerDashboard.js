@@ -36,6 +36,28 @@ class FarmerDashboard extends Component {
 
           {this.props.farmer.myFarm && (
             <>
+              <dt>CarrotSeeds</dt>
+              <dd>{this.props.farmer.myFarm.carrotSeeds.total} units</dd>
+              <dt>PumpkinSeeds</dt>
+              <dd>{this.props.farmer.myFarm.pumpkinSeeds.total} units</dd>
+              <dt>WheatSeeds</dt>
+              <dd>{this.props.farmer.myFarm.wheatSeeds.total} units</dd>
+            </>
+          )}
+
+          {this.props.farmer.myFarm && (
+            <>
+              <dt>Carrots</dt>
+              <dd>{this.props.farmer.myFarm.carrots.total} units</dd>
+              <dt>Pumpkins</dt>
+              <dd>{this.props.farmer.myFarm.pumpkins.total} units</dd>
+              <dt>Wheats</dt>
+              <dd>{this.props.farmer.myFarm.wheats.total} units</dd>
+            </>
+          )}
+
+          {this.props.farmer.myFarm && (
+            <>
               <dt>Beef</dt>
               <dd>{this.props.farmer.myFarm.beef.total} kg</dd>
               <dt>Lamb</dt>
@@ -78,6 +100,17 @@ class FarmerDashboard extends Component {
 
           {this.props.farmer.myFarm && (
             <>
+              <dt>Carrot</dt>
+              <dd>{this.props.farmer.myFarm.carrot.total} bales</dd>
+              <dt>Pumpkin</dt>
+              <dd>{this.props.farmer.myFarm.pumpkin.total} bales</dd>
+              <dt>Wheat</dt>
+              <dd>{this.props.farmer.myFarm.wheat.total} units</dd>
+            </>
+          )}
+
+          {this.props.farmer.myFarm && (
+            <>
               <dt>Wool</dt>
               <dd>{this.props.farmer.myFarm.wool.total} bales</dd>
               <dt>LlamaWool</dt>
@@ -106,7 +139,7 @@ class FarmerDashboard extends Component {
 
           {this.props.farmer.myFarm && (
             <>
-              <dt>GasGenerators</dt>
+              <dt>Generators</dt>
               <dd>{this.props.farmer.myFarm.gasGenerators.total} units</dd>
               <dt>SolarPanels</dt>
               <dd>{this.props.farmer.myFarm.solarPanels.total} units</dd>

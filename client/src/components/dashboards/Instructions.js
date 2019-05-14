@@ -93,7 +93,7 @@ class Instructions extends Component {
                       <Tab eventKey="Weather" title="Weather" />
                       <Tab eventKey="Fun" title="Fun">
                         <div style={{ height: "100px", width: "100px" }}>
-                          <Player playsInline src={Video}>
+                          <Player playsInline autoPlay src={Video}>
                             <ControlBar disableDefaultControls={true} />
                           </Player>
                         </div>

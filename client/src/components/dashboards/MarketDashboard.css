@@ -134,6 +134,40 @@
     width: 7rem;
 }
 
+.Seed>dd>Button {
+    margin: 0.8rem;
+    width: 250px;
+    height: 8rem;
+    background-color: #007bff;
+}
+
+.Seed>dd>Button:hover {
+    margin: 0.8rem;
+    background-color: blue;
+}
+
+.Seed>dd>Button>img {
+    height: 5rem;
+    width: 7rem;
+}
+
+.Crop>dd>Button {
+    margin: 0.8rem;
+    width: 250px;
+    height: 8rem;
+    background-color: #007bff;
+}
+
+.Crop>dd>Button:hover {
+    margin: 0.8rem;
+    background-color: blue;
+}
+
+.Crop>dd>Button>img {
+    height: 5rem;
+    width: 7rem;
+}
+
 .Misc>dd>Button {
     margin: 0.8rem;
     width: 250px;

@@ -1,10 +1,10 @@
 import Crop from '../abstract/Crop';
 import Farm from "../Farm";
 
-class Wheat extends Crop {
-  name: string = "Wheat"
-  genus: string = "Wheats"
-  imgUrl: string = "/img/twtr/wheat.png"
+class Carrot extends Crop {
+  name: string = "Carrot"
+  genus: string = "Carrots"
+  imgUrl: string = "/img/twtr/carrot.png"
   farm: Farm
 
   constructor(farm: Farm) {
@@ -20,4 +20,4 @@ class Wheat extends Crop {
     this.constrainItem()
   }
 }
-export default Wheat;
+export default Carrot;

@@ -10,6 +10,9 @@ import Salmon from "./animals/Salmon"
 import Goose from "./animals/Goose"
 import Duck from "./animals/Duck"
 import Llama from "./animals/Llama"
+import Carrot from "./crops/Carrot"
+import Pumpkin from "./crops/Pumpkin"
+import Wheat from "./crops/Wheat"
 
 class Farm extends Drawable {
   fields: Field[] = []
@@ -43,6 +46,15 @@ class Farm extends Drawable {
   llamas: any
   llama: any
   llamaWool: any
+  carrotSeeds: any
+  pumpkinSeeds: any
+  wheatSeeds: any
+  carrots: any
+  carrot: any
+  pumpkins: any
+  pumpkin: any
+  wheats: any
+  wheat: any 
   straw: any
   corn: any
   fish: any
@@ -193,6 +205,51 @@ class Farm extends Drawable {
       total: 0,
       unit: "bales"
     },
+    carrotSeeds: any = {
+      name: "carrotSeeds",
+      total: 0,
+      unit: "bags"
+    },
+    pumpkinSeeds: any = {
+      name: "pumpkinSeeds",
+      total: 0,
+      unit: "bags"
+    },
+    wheatSeeds: any = {
+      name: "wheatSeeds",
+      total: 0,
+      unit: "bags"
+    },
+    carrots: any = {
+      name: "Carrots",
+      total: 0,
+      objects: []
+    },
+    carrot: any = {
+      name: "Carrot",
+      total: 0,
+      unit: "kg"
+    },
+    pumpkins: any = {
+      name: "Pumpkins",
+      total: 0,
+      objects: []
+    },
+    pumpkin: any = {
+      name: "Pumpkin",
+      total: 0,
+      unit: "kg"
+    },
+    wheats: any = {
+      name: "Wheats",
+      total: 0,
+      objects: []
+    },
+    wheat: any = {
+      name: "Wheat",
+      total: 0,
+      unit: "kg"
+    },
     straw: any = {
       name: "Straw",
       total: 1000,
@@ -264,6 +321,15 @@ class Farm extends Drawable {
     this.llamas = llamas
     this.llama = llama
     this.llamaWool = llamaWool
+    this.carrotSeeds = carrotSeeds
+    this.pumpkinSeeds = pumpkinSeeds
+    this.wheatSeeds = wheatSeeds
+    this.carrots = carrots
+    this.carrot = carrot
+    this.pumpkins = pumpkins
+    this.pumpkin = pumpkin
+    this.wheats = wheats
+    this.wheat = wheat
     this.straw = straw
     this.corn = corn
     this.fish = fish

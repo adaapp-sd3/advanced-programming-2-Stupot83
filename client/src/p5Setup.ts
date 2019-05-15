@@ -33,7 +33,7 @@ const makeFarm = (
     };
 
     p.draw = () => {
-      p.background("#78d361");
+      p.background("#50c878");
       farm.draw();
       market.draw();
       farmer.draw();

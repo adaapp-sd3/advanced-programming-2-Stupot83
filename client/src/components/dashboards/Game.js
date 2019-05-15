@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import axios from "axios";
 import FarmManager from "../FarmManager";
 import p5 from "p5";
 import makeFarm from "../../p5Setup";
@@ -11,12 +12,32 @@ import WeatherDashboard from "./WeatherDashboard";
 import "./Game.css";
 
 class Game extends Component {
-  state = {
-    farmer: new Farmer(),
-    farm: new Farm(),
-    market: new Market(),
-    weather: "",
-  };
+  constructor() {
+    super();
+    this.state = {
+      farmer: new Farmer(),
+      farm: new Farm(),
+      market: new Market(),
+    };
+    this.saveFarm = this.saveFarm.bind(this);
+  }
+
+  saveFarm() {
+    const { user } = this.props.auth;
+
+    console.log(this.state);
+    const farm = {
+      userId: user.id,
+      chickens: this.state.farm.chickens,
+    };
+
+    console.log({ farm });
+
+    axios
+      .post("/api/farms/farm", farm)
+      .then(res => console.log("it works"))
+      .catch(err => console.log(err));
+  }
 
   // allow instances to to tell us when they change
   handleUpdateState = newThing => {
@@ -68,6 +89,7 @@ class Game extends Component {
                   backgroundColor: "#37474f",
                 }}
                 className="btn btn-large waves-effect waves-light hoverable left"
+                onClick={this.saveFarm}
               >
                 Save
               </button>

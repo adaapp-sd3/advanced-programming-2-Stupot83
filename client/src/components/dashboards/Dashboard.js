@@ -44,8 +44,7 @@ class Dashboard extends Component {
                   alt="logo"
                 />
               </h2>
-              <h4>Welcome to Farm Manager </h4>
-              <b>{user.name.split(" ")[0]}</b>
+              <h4>Welcome to Farm Manager <b>{user.name.split(" ")[0]}</b></h4>
             </header>
             <div className="row" style={{ marginTop: "1rem" }}>
               <a

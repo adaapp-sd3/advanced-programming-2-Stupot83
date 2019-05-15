@@ -269,9 +269,27 @@ class FieldDashboard extends Component {
         break;
 
       case "greenGas":
+        for (var i = 0; i < this.props.field.contents.length; i++) {
+          this.props.field.contents[i].yieldGreenGas();
+        }
         break;
 
-      case "solarPanels":
+        case "gasGenerator":
+        for (var i = 0; i < this.props.field.contents.length; i++) {
+          this.props.field.contents[i].yieldGasGenerator();
+        }
+        break;
+
+      case "solarPower":
+        for (var i = 0; i < this.props.field.contents.length; i++) {
+          this.props.field.contents[i].yieldSolarPower();
+        }
+        break;
+
+        case "solarPanel":
+        for (var i = 0; i < this.props.field.contents.length; i++) {
+          this.props.field.contents[i].yieldSolarPanel();
+        }
         break;
 
       default:
@@ -294,7 +312,7 @@ class FieldDashboard extends Component {
                 Collect 1/2 beef
               </button>
             )}
-             {this.props.field.contents[0].name === "Cow" && (
+            {this.props.field.contents[0].name === "Cow" && (
               <button onClick={() => this.getMeat("quarterBeef")}>
                 Collect 1/4 beef
               </button>
@@ -307,7 +325,7 @@ class FieldDashboard extends Component {
                 Collect 1/2 lamb
               </button>
             )}
-             {this.props.field.contents[0].name === "Sheep" && (
+            {this.props.field.contents[0].name === "Sheep" && (
               <button onClick={() => this.getMeat("quarterLamb")}>
                 Collect 1/4 lamb
               </button>
@@ -322,7 +340,7 @@ class FieldDashboard extends Component {
                 Collect 1/2 chicken
               </button>
             )}
-             {this.props.field.contents[0].name === "Chicken" && (
+            {this.props.field.contents[0].name === "Chicken" && (
               <button onClick={() => this.getMeat("quarterChicken")}>
                 Collect 1/4 chicken
               </button>
@@ -335,7 +353,7 @@ class FieldDashboard extends Component {
                 Collect 1/2 pork
               </button>
             )}
-             {this.props.field.contents[0].name === "Pig" && (
+            {this.props.field.contents[0].name === "Pig" && (
               <button onClick={() => this.getMeat("quarterPork")}>
                 Collect 1/4 pork
               </button>
@@ -408,7 +426,7 @@ class FieldDashboard extends Component {
                 Collect 1/2 goose
               </button>
             )}
-             {this.props.field.contents[0].name === "Goose" && (
+            {this.props.field.contents[0].name === "Goose" && (
               <button onClick={() => this.getMeat("quarterGoose")}>
                 Collect 1/4 goose
               </button>
@@ -466,18 +484,23 @@ class FieldDashboard extends Component {
                 Collect llamaWool
               </button>
             )}
-            {this.props.field.contents[0].name === "greenGas" && (
+            {this.props.field.contents[0].name === "GasGenerator" && (
               <button onClick={() => this.getMisc("greenGas")}>
                 Collect green gas
               </button>
             )}
-            {this.props.field.contents[0].name === "gasGenerators" && (
-              <button onClick={() => this.getMisc("gasGenerators")}>
+            {this.props.field.contents[0].name === "SolarPanel" && (
+              <button onClick={() => this.getMisc("solarPower")}>
+                Collect solar power
+              </button>
+            )}
+            {this.props.field.contents[0].name === "GasGenerator" && (
+              <button onClick={() => this.getMisc("gasGenerator")}>
                 Recycle gasGenerators
               </button>
             )}
-            {this.props.field.contents[0].name === "solarPanels" && (
-              <button onClick={() => this.getMisc("solarPanels")}>
+            {this.props.field.contents[0].name === "SolarPanel" && (
+              <button onClick={() => this.getMisc("solarPanel")}>
                 Recycle solarPanels
               </button>
             )}

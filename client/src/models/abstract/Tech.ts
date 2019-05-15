@@ -1,10 +1,10 @@
-import ConstrainedByField from "./ConstrainedByField";
+import ConstrainedByField from './ConstrainedByField';
 
-abstract class Crop extends ConstrainedByField {
-  height = 16;
-  width = 16;
-  health: number = 10;
-  hunger: number = 0;
+abstract class Tech extends ConstrainedByField {
+    height = 16;
+    width = 16;
+    health: number = 10;
+    hunger: number = 0;
 
   farmerExamine() {
     let x;
@@ -27,5 +27,5 @@ abstract class Crop extends ConstrainedByField {
     this.p5.image(this.p5Img, x, y, this.width, this.height);
   }
 }
-
-export default Crop;
+  
+  export default Tech;  

@@ -453,7 +453,7 @@ class MarketDashboard extends Component {
         this.props.market.currentFarmer.myFarm.wheat.total = 0;
         break;
 
-        default:
+      default:
     }
   };
 
@@ -480,18 +480,25 @@ class MarketDashboard extends Component {
         this.props.market.currentFarmer.myFarm.greenGas.total = 0;
         break;
 
+      case "solarPower":
+        this.props.market.currentFarmer.budget +=
+          this.props.market.solarPowerPrice *
+          this.props.market.currentFarmer.myFarm.solarPower.total;
+        this.props.market.currentFarmer.myFarm.solarPower.total = 0;
+        break;
+
       case "gasGenerators":
         this.props.market.currentFarmer.budget +=
           this.props.market.gasGeneratorResalePrice *
-          this.props.market.currentFarmer.myFarm.gasGenerators.total;
-        this.props.market.currentFarmer.myFarm.gasGenerators.total = 0;
+          this.props.market.currentFarmer.myFarm.gasGenerator.total;
+        this.props.market.currentFarmer.myFarm.gasGenerator.total = 0;
         break;
 
       case "solarPanels":
         this.props.market.currentFarmer.budget +=
           this.props.market.solarPanelResalePrice *
-          this.props.market.currentFarmer.myFarm.solarPanels.total;
-        this.props.market.currentFarmer.myFarm.solarPanels.total = 0;
+          this.props.market.currentFarmer.myFarm.solarPanel.total;
+        this.props.market.currentFarmer.myFarm.solarPanel.total = 0;
         break;
 
       default:
@@ -516,7 +523,7 @@ class MarketDashboard extends Component {
         >
           <Modal.Header>
             <Modal.Title id="market-modal">
-              Welcome to the Farmers Market
+            🚜 Welcome to the Farmers Market 🚜
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
@@ -662,8 +669,7 @@ class MarketDashboard extends Component {
                     <div className="Seed">
                       <dd>
                         <Button onClick={() => this.buySeeds("carrotSeeds")}>
-                          Buy carrotSeed for{" "}
-                          {this.props.market.carrotSeedPrice}
+                          Buy carrotSeed for {this.props.market.carrotSeedPrice}
                           <img
                             src="/img/twtr/carrotseed.png"
                             alt="carrotseed"
@@ -686,12 +692,8 @@ class MarketDashboard extends Component {
                     <div className="Seed">
                       <dd>
                         <Button onClick={() => this.buySeeds("wheatSeeds")}>
-                          Buy wheatSeed for{" "}
-                          {this.props.market.wheatSeedPrice}
-                          <img
-                            src="/img/twtr/wheatseed.png"
-                            alt="wheatseed"
-                          />
+                          Buy wheatSeed for {this.props.market.wheatSeedPrice}
+                          <img src="/img/twtr/wheatseed.png" alt="wheatseed" />
                         </Button>
                       </dd>
                     </div>
@@ -923,6 +925,18 @@ class MarketDashboard extends Component {
                     </div>
                     <div className="Misc">
                       <dd>
+                        <Button onClick={() => this.sellMisc("solarPower")}>
+                          Sell solar power for{" "}
+                          {this.props.market.solarPowerPrice}
+                          <img
+                            src="/img/twtr/solarpower.png"
+                            alt="solarpower"
+                          />
+                        </Button>
+                      </dd>
+                    </div>
+                    <div className="Misc">
+                      <dd>
                         <Button onClick={() => this.sellMisc("gasGenerators")}>
                           Sell generator for{" "}
                           {this.props.market.gasGeneratorResalePrice}
@@ -959,10 +973,22 @@ class MarketDashboard extends Component {
             </div>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={this.handleClose}>
+            <Button
+              variant="secondary"
+              onClick={this.handleClose}
+              style={{ marginTop: "2rem", backgroundColor: "#37474f" }}
+            >
               Close
             </Button>
-            <Button variant="primary" onClick={this.handleClose}>
+            <Button
+              variant="primary"
+              onClick={this.handleClose}
+              style={{
+                marginTop: "2rem",
+                marginLeft: "2rem",
+                backgroundColor: "#37474f",
+              }}
+            >
               Save Changes
             </Button>
           </Modal.Footer>

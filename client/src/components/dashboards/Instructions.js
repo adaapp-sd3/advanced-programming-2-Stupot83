@@ -75,7 +75,7 @@ class Instructions extends Component {
                 >
                   <Modal.Header>
                     <Modal.Title id="instructions-modal">
-                      Farm Manager Instructions
+                    🚜 Farm Manager Instructions 🚜
                     </Modal.Title>
                   </Modal.Header>
                   <Modal.Body>
@@ -101,7 +101,14 @@ class Instructions extends Component {
                     </Tabs>
                   </Modal.Body>
                   <Modal.Footer>
-                    <Button variant="secondary" onClick={this.handleClose}>
+                    <Button
+                      variant="secondary"
+                      onClick={this.handleClose}
+                      style={{
+                        marginTop: "2rem",
+                        backgroundColor: "#37474f",
+                      }}
+                    >
                       Close
                     </Button>
                   </Modal.Footer>

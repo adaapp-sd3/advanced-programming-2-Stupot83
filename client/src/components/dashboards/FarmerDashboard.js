@@ -117,8 +117,8 @@ class FarmerDashboard extends Component {
               <dd>{this.props.farmer.myFarm.llamaWool.total} bales</dd>
               <dt>greenGas</dt>
               <dd>{this.props.farmer.myFarm.greenGas.total} units</dd>
-              {/* <dt>solarPower</dt>
-              <dd>{this.props.farmer.myFarm.solarPower.total} units</dd> */}
+              <dt>solarPower</dt>
+              <dd>{this.props.farmer.myFarm.solarPower.total} units</dd>
             </>
           )}
 
@@ -143,6 +143,10 @@ class FarmerDashboard extends Component {
               <dd>{this.props.farmer.myFarm.gasGenerators.total} units</dd>
               <dt>SolarPanels</dt>
               <dd>{this.props.farmer.myFarm.solarPanels.total} units</dd>
+              <dt>OldGen</dt>
+              <dd>{this.props.farmer.myFarm.gasGenerator.total} units</dd>
+              <dt>OldPan</dt>
+              <dd>{this.props.farmer.myFarm.solarPanel.total} units</dd>
             </>
           )}
         </dl>

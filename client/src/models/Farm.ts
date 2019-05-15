@@ -1,68 +1,73 @@
-import Drawable from "./abstract/Drawable"
-import Field from "./Field"
-import Cow from "./animals/Cow"
-import Chicken from "./animals/Chicken"
-import Sheep from "./animals/Sheep"
-import Pig from "./animals/Pig"
-import Crocodile from "./animals/Crocodile"
-import Ostrich from "./animals/Ostrich"
-import Salmon from "./animals/Salmon"
-import Goose from "./animals/Goose"
-import Duck from "./animals/Duck"
-import Llama from "./animals/Llama"
-import Carrot from "./crops/Carrot"
-import Pumpkin from "./crops/Pumpkin"
-import Wheat from "./crops/Wheat"
+import Drawable from "./abstract/Drawable";
+import Field from "./Field";
+import Cow from "./animals/Cow";
+import Chicken from "./animals/Chicken";
+import Sheep from "./animals/Sheep";
+import Pig from "./animals/Pig";
+import Crocodile from "./animals/Crocodile";
+import Ostrich from "./animals/Ostrich";
+import Salmon from "./animals/Salmon";
+import Goose from "./animals/Goose";
+import Duck from "./animals/Duck";
+import Llama from "./animals/Llama";
+import Carrot from "./crops/Carrot";
+import Pumpkin from "./crops/Pumpkin";
+import Wheat from "./crops/Wheat";
+import GasGenerator from "./tech/GasGenerator";
+import SolarPanel from "./tech/SolarPanel";
 
 class Farm extends Drawable {
-  fields: Field[] = []
-  width: number = 1000
-  height: number = 1000
-  cows: any
-  milk: any
-  beef: any
-  sheep: any
-  lamb: any
-  wool: any
-  chickens: any
-  chicken: any
-  eggs: any
-  pigs: any
-  pork: any
-  crocodiles: any
-  crocodile: any
-  crocEggs: any
-  ostriches: any
-  ostrich: any
-  ostrichEggs: any
-  salmons: any
-  salmon: any
-  geese: any
-  goose: any
-  gooseEggs: any
-  ducks: any
-  duck: any
-  duckEggs: any
-  llamas: any
-  llama: any
-  llamaWool: any
-  carrotSeeds: any
-  pumpkinSeeds: any
-  wheatSeeds: any
-  carrots: any
-  carrot: any
-  pumpkins: any
-  pumpkin: any
-  wheats: any
-  wheat: any 
-  straw: any
-  corn: any
-  fish: any
-  fishFood: any
-  seeds: any
-  greenGas: any
-  gasGenerators: any
-  solarPanels: any
+  fields: Field[] = [];
+  width: number = 1000;
+  height: number = 1000;
+  cows: any;
+  milk: any;
+  beef: any;
+  sheep: any;
+  lamb: any;
+  wool: any;
+  chickens: any;
+  chicken: any;
+  eggs: any;
+  pigs: any;
+  pork: any;
+  crocodiles: any;
+  crocodile: any;
+  crocEggs: any;
+  ostriches: any;
+  ostrich: any;
+  ostrichEggs: any;
+  salmons: any;
+  salmon: any;
+  geese: any;
+  goose: any;
+  gooseEggs: any;
+  ducks: any;
+  duck: any;
+  duckEggs: any;
+  llamas: any;
+  llama: any;
+  llamaWool: any;
+  carrotSeeds: any;
+  pumpkinSeeds: any;
+  wheatSeeds: any;
+  carrots: any;
+  carrot: any;
+  pumpkins: any;
+  pumpkin: any;
+  wheats: any;
+  wheat: any ;
+  straw: any;
+  corn: any;
+  fish: any;
+  fishFood: any;
+  seeds: any;
+  greenGas: any;
+  gasGenerators: any;
+  gasGenerator: any;
+  solarPower: any;
+  solarPanels: any;
+  solarPanel: any;
 
   constructor(
     cows: any = {
@@ -282,86 +287,104 @@ class Farm extends Drawable {
     },
     gasGenerators: any = {
       name: "Gas Generators",
+      total: 42,
+      objects: []
+    },
+    gasGenerator: any = {
+      name: "Gas Generator",
       total: 0,
-      unit: "generators"
+      unit: "units"
+    },
+    solarPower: any = {
+      name: "Solar Power",
+      total: 0,
+      unit: "units"
     },
     solarPanels: any = {
       name: "Solar Panels",
+      total: 42,
+      objects: []
+    },
+    solarPanel: any = {
+      name: "Solar Panel",
       total: 0,
-      unit: "panels"
+      unit: "units"
     }
 
   ) {
-    super()
-    this.cows = cows
-    this.beef = beef
-    this.milk = milk
-    this.sheep = sheep
-    this.lamb = lamb
-    this.wool = wool
-    this.chickens = chickens
-    this.chicken = chicken
-    this.eggs = eggs
-    this.pigs = pigs
-    this.pork = pork
-    this.crocodiles = crocodiles
-    this.crocodile = crocodile
-    this.crocEggs = crocEggs
-    this.ostriches = ostriches
-    this.ostrich = ostrich
-    this.ostrichEggs = ostrichEggs
-    this.salmons = salmons
-    this.salmon = salmon
-    this.geese = geese
-    this.goose = goose
-    this.gooseEggs = gooseEggs
-    this.ducks = ducks
-    this.duck = duck
-    this.duckEggs = duckEggs
-    this.llamas = llamas
-    this.llama = llama
-    this.llamaWool = llamaWool
-    this.carrotSeeds = carrotSeeds
-    this.pumpkinSeeds = pumpkinSeeds
-    this.wheatSeeds = wheatSeeds
-    this.carrots = carrots
-    this.carrot = carrot
-    this.pumpkins = pumpkins
-    this.pumpkin = pumpkin
-    this.wheats = wheats
-    this.wheat = wheat
-    this.straw = straw
-    this.corn = corn
-    this.fish = fish
-    this.fishFood = fishFood
-    this.seeds = seeds
-    this.greenGas = greenGas
-    this.gasGenerators = gasGenerators
-    this.solarPanels = solarPanels
+    super();
+    this.cows = cows;
+    this.beef = beef;
+    this.milk = milk;
+    this.sheep = sheep;
+    this.lamb = lamb;
+    this.wool = wool;
+    this.chickens = chickens;
+    this.chicken = chicken;
+    this.eggs = eggs;
+    this.pigs = pigs;
+    this.pork = pork;
+    this.crocodiles = crocodiles;
+    this.crocodile = crocodile;
+    this.crocEggs = crocEggs;
+    this.ostriches = ostriches;
+    this.ostrich = ostrich;
+    this.ostrichEggs = ostrichEggs;
+    this.salmons = salmons;
+    this.salmon = salmon;
+    this.geese = geese;
+    this.goose = goose;
+    this.gooseEggs = gooseEggs;
+    this.ducks = ducks;
+    this.duck = duck;
+    this.duckEggs = duckEggs;
+    this.llamas = llamas;
+    this.llama = llama;
+    this.llamaWool = llamaWool;
+    this.carrotSeeds = carrotSeeds;
+    this.pumpkinSeeds = pumpkinSeeds;
+    this.wheatSeeds = wheatSeeds;
+    this.carrots = carrots;
+    this.carrot = carrot;
+    this.pumpkins = pumpkins;
+    this.pumpkin = pumpkin;
+    this.wheats = wheats;
+    this.wheat = wheat;
+    this.straw = straw;
+    this.corn = corn;
+    this.fish = fish;
+    this.fishFood = fishFood;
+    this.seeds = seeds;
+    this.greenGas = greenGas;
+    this.gasGenerators = gasGenerators;
+    this.gasGenerator = gasGenerator;
+    this.solarPower = solarPower;
+    this.solarPanels = solarPanels;
+    this.solarPanel = solarPanel;
   }
 
   public preload() {
-    this.createBasicFarm()
+    this.createBasicFarm();
   }
 
   private createBasicFarm = () => {
-    let firstFieldX = 25
-    let firstFieldY = 25
-    let firstFieldW = 350
-    let firstFieldH = 175
+    let firstFieldX = 25;
+    let firstFieldY = 25;
+    let firstFieldW = 350;
+    let firstFieldH = 175;
 
-    for (let i = 0; i < this.crocodiles.total; i++) {
-      let crocodile = new Crocodile(this)
-      crocodile.p5 = this.p5
-      crocodile.preload()
-      crocodile.setRandomPositionInField(
+    for (let i = 0; i < this.solarPanels.total; i++) {
+      let solarPanel = new SolarPanel(this);
+      solarPanel.p5 = this.p5;
+      solarPanel.preload();
+      solarPanel.setRandomPositionInField(
         firstFieldX,
         firstFieldY,
         firstFieldW,
         firstFieldH
-      )
-      this.crocodiles.objects.push(crocodile)
-    }
+      );
+      this.solarPanels.objects.push(solarPanel);
+    };
 
     this.fields.push(
       new Field(
@@ -369,27 +392,27 @@ class Farm extends Drawable {
         firstFieldY,
         firstFieldW,
         firstFieldH,
-        this.crocodiles.objects
+        this.solarPanels.objects
       )
-    )
+    );
 
-    let secondFieldX = 25
-    let secondFieldY = 275
-    let secondFieldW = 350
-    let secondFieldH = 125
+    let secondFieldX = 25;
+    let secondFieldY = 275;
+    let secondFieldW = 350;
+    let secondFieldH = 125;
 
-    for (let i = 0; i < this.ostriches.total; i++) {
-      let ostrich = new Ostrich(this)
-      ostrich.p5 = this.p5
-      ostrich.preload()
-      ostrich.setRandomPositionInField(
+    for (let i = 0; i < this.gasGenerators.total; i++) {
+      let gasGenerator = new GasGenerator(this);
+      gasGenerator.p5 = this.p5;
+      gasGenerator.preload();
+      gasGenerator.setRandomPositionInField(
         secondFieldX,
         secondFieldY,
         secondFieldW,
         secondFieldH
-      )
-      this.ostriches.objects.push(ostrich)
-    }
+      );
+      this.gasGenerators.objects.push(gasGenerator);
+    };
 
     this.fields.push(
       new Field(
@@ -397,27 +420,27 @@ class Farm extends Drawable {
         secondFieldY,
         secondFieldW,
         secondFieldH,
-        this.ostriches.objects
+        this.gasGenerators.objects
       )
-    )
+    );
 
-    let thirdFieldX = 25
-    let thirdFieldY = 450
-    let thirdFieldW = 300
-    let thirdFieldH = 125
+    let thirdFieldX = 25;
+    let thirdFieldY = 450;
+    let thirdFieldW = 300;
+    let thirdFieldH = 125;
 
     for (let i = 0; i < this.salmons.total; i++) {
-      let salmon = new Salmon(this)
-      salmon.p5 = this.p5
-      salmon.preload()
+      let salmon = new Salmon(this);
+      salmon.p5 = this.p5;
+      salmon.preload();
       salmon.setRandomPositionInField(
         thirdFieldX,
         thirdFieldY,
         thirdFieldW,
         thirdFieldH
-      )
-      this.salmons.objects.push(salmon)
-    }
+      );
+      this.salmons.objects.push(salmon);
+    };
 
     this.fields.push(
       new Field(
@@ -427,25 +450,25 @@ class Farm extends Drawable {
         thirdFieldH,
         this.salmons.objects
       )
-    )
+    );
 
-    let fourthFieldX = 475
-    let fourthFieldY = 25
-    let fourthFieldW = 200
-    let fourthFieldH = 325
+    let fourthFieldX = 475;
+    let fourthFieldY = 25;
+    let fourthFieldW = 200;
+    let fourthFieldH = 325;
 
     for (let i = 0; i < this.pigs.total; i++) {
-      let pig = new Pig(this)
-      pig.p5 = this.p5
-      pig.preload()
+      let pig = new Pig(this);
+      pig.p5 = this.p5;
+      pig.preload();
       pig.setRandomPositionInField(
         fourthFieldX,
         fourthFieldY,
         fourthFieldW,
         fourthFieldH
-      )
-      this.pigs.objects.push(pig)
-    }
+      );
+      this.pigs.objects.push(pig);
+    };
 
     this.fields.push(
       new Field(
@@ -455,19 +478,19 @@ class Farm extends Drawable {
         fourthFieldH,
         this.pigs.objects
       )
-    )
+    );
     
     for (let field of this.fields) {
-      field.p5 = this.p5
-      field.setHandleUpdate = this.updateUI
+      field.p5 = this.p5;
+      field.setHandleUpdate = this.updateUI;
     }
-  }
+  };
 
   public draw() {
     for (let field of this.fields) {
-      field.draw()
+      field.draw();
     }
-  }
+  };
 }
 
 export default Farm

@@ -1,5 +1,77 @@
 .WeatherDashboard {
-    margin: 10px;
-    border: 4px dashed black;
-    background-color: ghostwhite;
+    height: 10vh;
+    padding-right: 0;
+}
+
+.rw-main.type-today {
+    border-radius: 0px;
+}
+
+.rw-box {
+    height: 10vh;
+}
+
+.rw-box h2 {
+    padding: 1.5rem;
+    font-size: 27px !important;
+}
+
+.rw-main {
+    display: inline-flex;
+}
+
+.rw-main .rw-box-left {
+    display: inline-flex;
+    width: 100%;
+    padding: 0;
+    font-size: 16px;
+}
+
+.rw-main .rw-today {
+    width: 100%;
+    display: inline-flex;
+    padding: 0.5rem;
+}
+
+.rw-main .hr {
+    width: 0%;
+    border-bottom: none;
+    opacity: none;
+    margin: 0;
+}
+
+.rw-main .rw-today .date {
+    display: inline-flex;
+    margin-right: 1.2rem;
+}
+
+.rw-main .rw-today .current {
+    display: inline-flex;
+    margin-right: 1.2rem;
+}
+
+.rw-main .rw-today .range {
+    display: inline-flex;
+    margin-right: 1.2rem;
+    font-size: 16px;
+}
+
+.rw-main .rw-today .desc {
+    display: inline-flex;
+    margin-right: 1.2rem;
+}
+
+.rw-main .rw-today .info {
+    display: inline-flex;
+    margin-right: 1.2rem;
+    margin-top: 1px;
+}
+
+.rw-main .rw-today .info div {
+    display: inline-flex;
+    margin-right: 1.2rem;
+}
+
+.rw-main .rw-box-right {
+    width: 20%;
 }

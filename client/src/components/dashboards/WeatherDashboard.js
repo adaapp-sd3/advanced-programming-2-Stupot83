@@ -6,7 +6,7 @@ import "./WeatherDashboard.css";
 class WeatherDashboard extends Component {
   render() {
     return (
-      <div className="WeatherDashboard">
+      <div className="WeatherDashboard col-md-9">
       <link rel="stylesheet" 
         href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.min.css" 
         type="text/css"/>

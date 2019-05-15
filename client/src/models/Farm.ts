@@ -18,7 +18,7 @@ import SolarPanel from "./tech/SolarPanel";
 
 class Farm extends Drawable {
   fields: Field[] = [];
-  width: number = 1000;
+  width: number = 1065;
   height: number = 1000;
   cows: any;
   milk: any;

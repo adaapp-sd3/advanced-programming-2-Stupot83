@@ -7,6 +7,7 @@ import makeFarm from "../../p5Setup";
 import Farm from "../../models/Farm";
 import Farmer from "../../models/Farmer";
 import Market from "../../models/Market";
+import WeatherDashboard from "./WeatherDashboard";
 import "./Game.css";
 
 class Game extends Component {
@@ -14,7 +15,7 @@ class Game extends Component {
     farmer: new Farmer(),
     farm: new Farm(),
     market: new Market(),
-    weather: ''
+    weather: "",
   };
 
   // allow instances to to tell us when they change
@@ -41,20 +42,18 @@ class Game extends Component {
       <div className="Game cyan darken-4">
         <div className="navbar-fixed" style={{ height: "10vh" }}>
           <nav className="z-depth-0">
-            <div
-              className="nav-wrapper blue-grey darken-3"
-              style={{ height: "10vh" }}
-            >
+            <div className="nav-wrapper" style={{ height: "10vh" }}>
               <a
                 style={{
                   width: "150px",
                   borderRadius: "3px",
                   letterSpacing: "1.5px",
                   marginTop: "0.7rem",
-                  marginLeft: "3rem",
+                  marginLeft: "2rem",
+                  backgroundColor: "#37474f",
                 }}
                 href="/dashboard"
-                className="btn btn-large waves-effect waves-light hoverable blue accent-3 left"
+                className="btn btn-large waves-effect waves-light hoverable left"
               >
                 Menu
               </a>
@@ -65,11 +64,14 @@ class Game extends Component {
                   letterSpacing: "1.5px",
                   marginTop: "0.7rem",
                   marginLeft: "3rem",
+                  marginRight: "1rem",
+                  backgroundColor: "#37474f",
                 }}
-                className="btn btn-large waves-effect waves-light hoverable blue accent-3 left"
+                className="btn btn-large waves-effect waves-light hoverable left"
               >
                 Save
               </button>
+              <WeatherDashboard weather={this.props.weather} />
             </div>
           </nav>
         </div>

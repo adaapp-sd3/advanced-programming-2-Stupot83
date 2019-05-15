@@ -1,6 +1,6 @@
 .Game {
   text-align: center;
-  width: 440px;
+  width: 375px;
   background-color: white;
   height: 1077px;
   border-bottom: 10px dashed #9b958c;
@@ -42,4 +42,10 @@ canvas {
   border-right: -10px;
   border-right: 10px dashed #9b958c;
   background-color: #665f51;
+}
+
+nav .nav-wrapper {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to bottom right, #0181C2, #04A7F9, #4BC4F7);
 }

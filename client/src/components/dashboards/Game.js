@@ -39,12 +39,10 @@ class Game extends Component {
       .catch(err => console.log(err));
   }
 
-  // allow instances to to tell us when they change
   handleUpdateState = newThing => {
     this.setState(newThing);
   };
 
-  //
   componentDidMount() {
     let sketch = makeFarm(
       this.state.farm,

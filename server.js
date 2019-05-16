@@ -7,8 +7,8 @@ const users = require("./routes/api/users");
 const farms = require("./routes/api/farms");
 const cors = require("cors");
 const app = express();
-const port = process.env.PORT || 5000; // process.env.port is Heroku's port if you choose to deploy the app there
-// Bodyparser middleware
+const port = process.env.PORT || 5000;
+
 app.use(
   cors({
     allowedHeaders: ["sessionId", "Content-Type"],
@@ -39,11 +39,10 @@ mongoose.connection
     console.log(`Connection error: ${err.message}`);
   });
 
-// Passport middleware
 app.use(passport.initialize());
-// Passport config
+
 require("./config/passport")(passport);
-// Routes
+
 app.use("/api/users", users);
 app.use("/api/farms", farms);
 

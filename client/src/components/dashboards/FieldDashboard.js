@@ -22,7 +22,7 @@ class FieldDashboard extends Component {
     this.setState({ show: true });
   }
 
-  getMeat = meat => {
+  getMeat(meat) {
     const arrlen = this.props.field.contents.length;
     const arrmid = arrlen / 2;
     const arrqtr = arrlen * 0.75;
@@ -230,9 +230,9 @@ class FieldDashboard extends Component {
 
       default:
     }
-  };
+  }
 
-  getDairy = dairy => {
+  getDairy(dairy) {
     switch (dairy) {
       case "milk":
         for (var i = 0; i < this.props.field.contents.length; i++) {
@@ -272,9 +272,9 @@ class FieldDashboard extends Component {
 
       default:
     }
-  };
+  }
 
-  getMisc = misc => {
+  getMisc(misc) {
     switch (misc) {
       case "wool":
         for (var i = 0; i < this.props.field.contents.length; i++) {
@@ -314,7 +314,7 @@ class FieldDashboard extends Component {
 
       default:
     }
-  };
+  }
 
   render() {
     return (
@@ -322,7 +322,8 @@ class FieldDashboard extends Component {
         {this.props.field.contents[0] && (
           <p>
             <h5>
-              This is a {this.props.field.contents[0].name} Area<br/>
+              This is a {this.props.field.contents[0].name} Area
+              <br />
               (currently with {this.props.field.contents.length}{" "}
               {this.props.field.contents[0].name}s)
             </h5>

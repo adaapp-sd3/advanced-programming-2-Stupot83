@@ -10,12 +10,10 @@ const makeFarm = (
 ): Function => {
   const sketch = (p: any) => {
     p.preload = () => {
-      // Make P5 available to each instance using the Drawable abstract class
       farmer.myP5 = p;
       market.myP5 = p;
       farm.myP5 = p;
 
-      // set the property using the HasUI abstract class
       farmer.setHandleUpdate = setAppState;
       farm.setHandleUpdate = setAppState;
       market.setHandleUpdate = setAppState;
@@ -26,7 +24,7 @@ const makeFarm = (
     };
 
     window.onresize = () => {
-      const height = window.innerHeight;  
+      const height = window.innerHeight;
       const width = window.innerWidth;
       p.resizeCanvas(1065, 555);
       p.height = height;
@@ -51,7 +49,7 @@ const makeFarm = (
       farmer.keyPressed();
     };
   };
-  // return a closure to be used in App.js
+
   return sketch;
 };
 

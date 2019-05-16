@@ -24,7 +24,7 @@ class MarketDashboard extends Component {
     this.setState({ show: true });
   }
 
-  buyAnimal = animal => {
+  buyAnimal(animal) {
     switch (animal) {
       case "cow":
         if (
@@ -156,9 +156,9 @@ class MarketDashboard extends Component {
 
       default:
     }
-  };
+  }
 
-  buyFeed = feed => {
+  buyFeed(feed) {
     switch (feed) {
       case "straw":
         if (
@@ -232,9 +232,9 @@ class MarketDashboard extends Component {
 
       default:
     }
-  };
+  }
 
-  buyCrop = crop => {
+  buyCrop(crop) {
     switch (crop) {
       case "carrotSeeds":
         if (
@@ -274,9 +274,9 @@ class MarketDashboard extends Component {
 
       default:
     }
-  };
+  }
 
-  buyTech = tech => {
+  buyTech(tech) {
     switch (tech) {
       case "gasGenerators":
         if (
@@ -304,9 +304,9 @@ class MarketDashboard extends Component {
 
       default:
     }
-  };
+  }
 
-  sellMeat = meat => {
+  sellMeat(meat) {
     switch (meat) {
       case "beef":
         this.props.market.currentFarmer.budget +=
@@ -380,9 +380,9 @@ class MarketDashboard extends Component {
 
       default:
     }
-  };
+  }
 
-  sellDairy = dairy => {
+  sellDairy(dairy) {
     switch (dairy) {
       case "milk":
         this.props.market.currentFarmer.budget +=
@@ -428,9 +428,9 @@ class MarketDashboard extends Component {
 
       default:
     }
-  };
+  }
 
-  sellCrop = crop => {
+  sellCrop(crop) {
     switch (crop) {
       case "carrot":
         this.props.market.currentFarmer.budget +=
@@ -455,9 +455,9 @@ class MarketDashboard extends Component {
 
       default:
     }
-  };
+  }
 
-  sellMisc = misc => {
+  sellMisc(misc) {
     switch (misc) {
       case "wool":
         this.props.market.currentFarmer.budget +=
@@ -503,7 +503,7 @@ class MarketDashboard extends Component {
 
       default:
     }
-  };
+  }
 
   render() {
     return (
@@ -523,7 +523,7 @@ class MarketDashboard extends Component {
         >
           <Modal.Header>
             <Modal.Title id="market-modal">
-            🚜 Welcome to the Farmers Market 🚜
+              🚜 Welcome to the Farmers Market 🚜
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>

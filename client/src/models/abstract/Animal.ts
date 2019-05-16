@@ -1,4 +1,4 @@
-import ConstrainedByField from './ConstrainedByField';
+import ConstrainedByField from "./ConstrainedByField";
 
 abstract class Animal extends ConstrainedByField {
   abstract makeSound(): void;
@@ -42,7 +42,5 @@ abstract class Animal extends ConstrainedByField {
     this.p5.image(this.p5Img, x, y, this.width, this.height);
   }
 }
-
-
 
 export default Animal;

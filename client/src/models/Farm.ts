@@ -56,7 +56,7 @@ class Farm extends Drawable {
   pumpkins: any;
   pumpkin: any;
   wheats: any;
-  wheat: any ;
+  wheat: any;
   straw: any;
   corn: any;
   fish: any;
@@ -73,244 +73,243 @@ class Farm extends Drawable {
     cows: any = {
       name: "Cows",
       total: 42,
-      objects: []
+      objects: [],
     },
     beef: any = {
       name: "Beef",
       total: 0,
-      unit: "kg"
+      unit: "kg",
     },
     milk: any = {
       name: "Milk",
       total: 0,
-      unit: "pints"
+      unit: "pints",
     },
     sheep: any = {
       name: "Sheep",
       total: 42,
-      objects: []
+      objects: [],
     },
     lamb: any = {
       name: "Lamb",
       total: 0,
-      unit: "kg"
+      unit: "kg",
     },
     wool: any = {
       name: "Wool",
       total: 0,
-      unit: "bales"
+      unit: "bales",
     },
     chickens: any = {
       name: "Chickens",
       total: 42,
-      objects: []
+      objects: [],
     },
     chicken: any = {
       name: "Chicken",
       total: 0,
-      unit: "kg"
+      unit: "kg",
     },
     eggs: any = {
       name: "Eggs",
       total: 0,
-      unit: "boxes"
+      unit: "boxes",
     },
     pigs: any = {
       name: "Pigs",
       total: 42,
-      objects: []
+      objects: [],
     },
     pork: any = {
       name: "Pork",
       total: 0,
-      unit: "kg"
+      unit: "kg",
     },
     crocodiles: any = {
       name: "Crocodiles",
       total: 42,
-      objects: []
+      objects: [],
     },
     crocodile: any = {
       name: "Crocodile",
       total: 0,
-      unit: "kg"
+      unit: "kg",
     },
     crocEggs: any = {
       name: "crocEggs",
       total: 0,
-      unit: "boxes"
+      unit: "boxes",
     },
     ostriches: any = {
       name: "Ostriches",
       total: 42,
-      objects: []
+      objects: [],
     },
     ostrich: any = {
       name: "Ostrich",
       total: 0,
-      unit: "kg"
+      unit: "kg",
     },
     ostrichEggs: any = {
       name: "ostrichEggs",
       total: 0,
-      unit: "boxes"
+      unit: "boxes",
     },
     salmons: any = {
       name: "Salmons",
       total: 42,
-      objects: []
+      objects: [],
     },
     salmon: any = {
       name: "Salmon",
       total: 0,
-      unit: "kg"
+      unit: "kg",
     },
     geese: any = {
       name: "Geese",
       total: 0,
-      objects: []
+      objects: [],
     },
     goose: any = {
       name: "Goose",
       total: 0,
-      unit: "kg"
+      unit: "kg",
     },
     gooseEggs: any = {
       name: "gooseEggs",
       total: 0,
-      unit: "boxes"
+      unit: "boxes",
     },
     ducks: any = {
       name: "Ducks",
       total: 0,
-      objects: []
+      objects: [],
     },
     duck: any = {
       name: "Duck",
       total: 0,
-      unit: "kg"
+      unit: "kg",
     },
     duckEggs: any = {
       name: "duckEggs",
       total: 0,
-      unit: "boxes"
+      unit: "boxes",
     },
     llamas: any = {
       name: "Llamas",
       total: 0,
-      objects: []
+      objects: [],
     },
     llama: any = {
       name: "Llama",
       total: 0,
-      unit: "kg"
+      unit: "kg",
     },
     llamaWool: any = {
       name: "llamaWool",
       total: 0,
-      unit: "bales"
+      unit: "bales",
     },
     carrotSeeds: any = {
       name: "carrotSeeds",
       total: 0,
-      unit: "bags"
+      unit: "bags",
     },
     pumpkinSeeds: any = {
       name: "pumpkinSeeds",
       total: 0,
-      unit: "bags"
+      unit: "bags",
     },
     wheatSeeds: any = {
       name: "wheatSeeds",
       total: 0,
-      unit: "bags"
+      unit: "bags",
     },
     carrots: any = {
       name: "Carrots",
       total: 0,
-      objects: []
+      objects: [],
     },
     carrot: any = {
       name: "Carrot",
       total: 0,
-      unit: "kg"
+      unit: "kg",
     },
     pumpkins: any = {
       name: "Pumpkins",
       total: 0,
-      objects: []
+      objects: [],
     },
     pumpkin: any = {
       name: "Pumpkin",
       total: 0,
-      unit: "kg"
+      unit: "kg",
     },
     wheats: any = {
       name: "Wheats",
       total: 0,
-      objects: []
+      objects: [],
     },
     wheat: any = {
       name: "Wheat",
       total: 0,
-      unit: "kg"
+      unit: "kg",
     },
     straw: any = {
       name: "Straw",
       total: 0,
-      unit: "bales"
+      unit: "bales",
     },
     corn: any = {
       name: "Corn",
       total: 0,
-      unit: "bags"
+      unit: "bags",
     },
     fish: any = {
       name: "Fish",
       total: 0,
-      unit: "kg"
+      unit: "kg",
     },
     fishFood: any = {
       name: "fishFood",
       total: 0,
-      unit: "bags"
+      unit: "bags",
     },
     seeds: any = {
       name: "Grass seeds",
       total: 0,
-      unit: "packets"
+      unit: "packets",
     },
     greenGas: any = {
       name: "Green Gas",
       total: 0,
-      unit: "ltrs"
+      unit: "ltrs",
     },
     gasGenerators: any = {
       name: "Gas Generators",
       total: 42,
-      objects: []
+      objects: [],
     },
     gasGenerator: any = {
       name: "Gas Generator",
       total: 0,
-      unit: "units"
+      unit: "units",
     },
     solarPower: any = {
       name: "Solar Power",
       total: 0,
-      unit: "units"
+      unit: "units",
     },
     solarPanels: any = {
       name: "Solar Panels",
       total: 42,
-      objects: []
+      objects: [],
     },
     solarPanel: any = {
       name: "Solar Panel",
       total: 0,
-      unit: "units"
+      unit: "units",
     }
-
   ) {
     super();
     this.cows = cows;
@@ -384,7 +383,7 @@ class Farm extends Drawable {
         firstFieldH
       );
       this.solarPanels.objects.push(solarPanel);
-    };
+    }
 
     this.fields.push(
       new Field(
@@ -412,7 +411,7 @@ class Farm extends Drawable {
         secondFieldH
       );
       this.gasGenerators.objects.push(gasGenerator);
-    };
+    }
 
     this.fields.push(
       new Field(
@@ -440,7 +439,7 @@ class Farm extends Drawable {
         thirdFieldH
       );
       this.salmons.objects.push(salmon);
-    };
+    }
 
     this.fields.push(
       new Field(
@@ -468,7 +467,7 @@ class Farm extends Drawable {
         fourthFieldH
       );
       this.pigs.objects.push(pig);
-    };
+    }
 
     this.fields.push(
       new Field(
@@ -479,7 +478,7 @@ class Farm extends Drawable {
         this.pigs.objects
       )
     );
-    
+
     for (let field of this.fields) {
       field.p5 = this.p5;
       field.setHandleUpdate = this.updateUI;
@@ -490,7 +489,7 @@ class Farm extends Drawable {
     for (let field of this.fields) {
       field.draw();
     }
-  };
+  }
 }
 
-export default Farm
+export default Farm;

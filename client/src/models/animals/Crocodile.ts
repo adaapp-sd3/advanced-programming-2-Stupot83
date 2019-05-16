@@ -21,12 +21,6 @@ class Crocodile extends Animal {
   }
 
   yieldCrocEggs() {
-    if(this.hunger >= 5)
-      this.health -= 1
-  // if(this.health <= 0){
-  //   this.farm.crocodiles.objects.pop()
-  //   this.farm.crocodiles.total -= 1
-
     let amountOfEggsToYield = 5 - this.hunger;
     this.farm.crocEggs.total += Math.abs(amountOfEggsToYield);
     this.hunger += 1;
@@ -40,14 +34,14 @@ class Crocodile extends Animal {
   eatFish() {
     if (this.hunger <= 5 && this.hunger !== 0) {
       if (this.farm.fish.total > 0) {
-        this.farm.fish.total--
-        this.hunger = this.hunger - 1
+        this.farm.fish.total--;
+        this.hunger = this.hunger - 1;
       } else {
         if (this.hunger < 5) {
-          this.hunger = this.hunger + 1
-        } 
+          this.hunger = this.hunger + 1;
+        }
       }
-    } 
+    }
   }
 
   public preload() {

@@ -1,12 +1,12 @@
 abstract class HasUI {
-  showUI: boolean = false
-  updateUI!: Function
+  showUI: boolean = false;
+  updateUI!: Function;
   set setHandleUpdate(handleUpdate: Function) {
-    this.updateUI = handleUpdate
+    this.updateUI = handleUpdate;
   }
   set shouldShowUI(shouldWe: boolean) {
-    this.showUI = shouldWe
-  } 
+    this.showUI = shouldWe;
+  }
 }
 
-export default HasUI
+export default HasUI;

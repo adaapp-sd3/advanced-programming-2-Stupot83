@@ -1,10 +1,10 @@
-import Drawable from "./abstract/Drawable"
-import Farmer from './Farmer';
+import Drawable from "./abstract/Drawable";
+import Farmer from "./Farmer";
 
 class Market extends Drawable {
   imgUrl = "/img/twtr/1f3e2.png";
   currentFarmer!: Farmer;
-  
+
   greenGasDemand: number = 100;
   solarPowerDemand: number = 100;
   milkDemand: number = 75;
@@ -76,4 +76,4 @@ class Market extends Drawable {
   }
 }
 
-export default Market
+export default Market;

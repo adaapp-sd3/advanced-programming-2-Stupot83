@@ -13,46 +13,52 @@ class Register extends Component {
       email: "",
       password: "",
       password2: "",
-      errors: {}
+      errors: {},
     };
   }
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({
-        errors: nextProps.errors
+        errors: nextProps.errors,
       });
     }
   }
   componentDidMount() {
-    // If logged in and user navigates to Register page, should redirect them to dashboard
     if (this.props.auth.isAuthenticated) {
       this.props.history.push("/dashboard");
     }
   }
-  onChange = e => {
+  onChange(e) {
     this.setState({ [e.target.id]: e.target.value });
-  };
-  onSubmit = e => {
+  }
+  onSubmit(e) {
     e.preventDefault();
     const newUser = {
       name: this.state.name,
       email: this.state.email,
       password: this.state.password,
-      password2: this.state.password2
+      password2: this.state.password2,
     };
     this.props.registerUser(newUser, this.props.history);
-  };
+  }
   render() {
     const { errors } = this.state;
     return (
       <div className="container">
         <div className="row" style={{ marginTop: "3rem" }}>
           <div className="col s8 offset-s2 cyan darken-4 white-text z-depth-5 Register">
-            <Link to="/" className="btn-flat waves-effect white-text" style={{ marginTop: "1rem" }}>
+            <Link
+              to="/"
+              className="btn-flat waves-effect white-text"
+              style={{ marginTop: "1rem" }}
+            >
               <i className="material-icons left">keyboard_backspace</i> Back to
               home
             </Link>
-            <div className="col s10" style={{ paddingLeft: "11.250px", paddingBottom: "1rem" }}>
+            <div
+              className="col s10"
+              style={{ paddingLeft: "11.250px", paddingBottom: "1rem" }}
+            >
               <h4>
                 <b>🚜 Register</b> for Farm Manager 🚜
               </h4>
@@ -67,7 +73,7 @@ class Register extends Component {
                   id="name"
                   type="text"
                   className={classnames("", {
-                    invalid: errors.name
+                    invalid: errors.name,
                   })}
                 />
                 <label htmlFor="name">Name</label>
@@ -82,7 +88,7 @@ class Register extends Component {
                   id="email"
                   type="email"
                   className={classnames("", {
-                    invalid: errors.email
+                    invalid: errors.email,
                   })}
                 />
                 <label htmlFor="email">Email</label>
@@ -97,7 +103,7 @@ class Register extends Component {
                   id="password"
                   type="password"
                   className={classnames("", {
-                    invalid: errors.password
+                    invalid: errors.password,
                   })}
                 />
                 <label htmlFor="password">Password</label>
@@ -112,37 +118,59 @@ class Register extends Component {
                   id="password2"
                   type="password"
                   className={classnames("", {
-                    invalid: errors.password2
+                    invalid: errors.password2,
                   })}
                 />
                 <label htmlFor="password2">Confirm Password</label>
                 <span className="red-text">{errors.password2}</span>
               </div>
-              <div className="col s10" style={{ paddingLeft: "11.250px" }} >
+              <div className="col s10" style={{ paddingLeft: "11.250px" }}>
                 <button
                   style={{
                     width: "150px",
                     borderRadius: "3px",
                     letterSpacing: "1.5px",
                     marginTop: "1rem",
-                    marginBottom: "2rem"
+                    marginBottom: "2rem",
                   }}
                   type="submit"
                   className="btn btn-large waves-effect waves-light hoverable blue accent-3"
                 >
                   Sign up
                 </button>
-                <img src="/img/cow.png" style={{ height: "5rem", marginLeft: "2rem" }} alt="logo" />
-                <img src="/img/chicken.png" style={{ height: "5rem", marginLeft: "1rem" }} alt="logo" />
-                <img src="/img/pig.png" style={{ height: "5rem", marginLeft: "1rem" }} alt="logo" />
-                <img src="/img/sheep.png" style={{ height: "5rem", marginLeft: "1rem" }} alt="logo" />
-                <img src="/img/crocodile.png" style={{ height: "5rem", marginLeft: "1rem" }} alt="logo" />
-                <p className="white-text"
+                <img
+                  src="/img/cow.png"
+                  style={{ height: "5rem", marginLeft: "2rem" }}
+                  alt="logo"
+                />
+                <img
+                  src="/img/chicken.png"
+                  style={{ height: "5rem", marginLeft: "1rem" }}
+                  alt="logo"
+                />
+                <img
+                  src="/img/pig.png"
+                  style={{ height: "5rem", marginLeft: "1rem" }}
+                  alt="logo"
+                />
+                <img
+                  src="/img/sheep.png"
+                  style={{ height: "5rem", marginLeft: "1rem" }}
+                  alt="logo"
+                />
+                <img
+                  src="/img/crocodile.png"
+                  style={{ height: "5rem", marginLeft: "1rem" }}
+                  alt="logo"
+                />
+                <p
+                  className="white-text"
                   style={{
                     marginBottom: "2rem",
                     marginTop: "1rem",
-                    fontSize: "1.4rem"
-                  }}>
+                    fontSize: "1.4rem",
+                  }}
+                >
                   Already have an account? <Link to="/login">Log in</Link>
                 </p>
               </div>
@@ -156,11 +184,11 @@ class Register extends Component {
 Register.propTypes = {
   registerUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired
+  errors: PropTypes.object.isRequired,
 };
 const mapStateToProps = state => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
 });
 export default connect(
   mapStateToProps,

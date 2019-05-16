@@ -1,4 +1,4 @@
-import Crop from '../abstract/Crop';
+import Crop from "../abstract/Crop";
 import Farm from "../Farm";
 
 class Pumpkin extends Crop {
@@ -11,7 +11,7 @@ class Pumpkin extends Crop {
     super();
     this.farm = farm;
   }
-    
+
   public preload() {
     this.p5Img = this.p5.loadImage(this.imgUrl);
   }

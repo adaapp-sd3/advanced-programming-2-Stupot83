@@ -1,7 +1,45 @@
 .FieldDashboard {
-    margin: 10px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     border: 4px dashed black;
-    background-color: ghostwhite;
+    border-top: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right,	#FFFF99, #FFFACD, #FFFFE0);
+}
+
+.FieldDashboard button {
+    background-color: #37474f;
+    margin: 0.5rem;
+}
+
+.FieldDashboard button:hover {
+    background-color: lightslategray;
+}
+
+.modal-body img {
+    height: 20rem;
+    width: 20rem;
+}
+
+.modal-body h3 {
+    color: white;
+    text-align: center;
+}
+
+.modal-body #health {
+    height: 50px;
+    width: auto;
+    margin-right: 1rem;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: lightcoral;
+}
+
+.modal-body #hunger {
+    height: 50px;
+    width: auto;
+    margin-right: 1rem;
+    border: 1px solid white;
+    border-radius: 100%;
+    background-color: lightgreen;
 }

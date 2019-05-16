@@ -1,7 +1,27 @@
 import React, { Component } from "react";
+import { Button, Modal } from "react-bootstrap";
 import "./FieldDashboard.css";
 
 class FieldDashboard extends Component {
+  constructor(props, context) {
+    super(props, context);
+
+    this.handleShow = this.handleShow.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+
+    this.state = {
+      show: false,
+    };
+  }
+
+  handleClose() {
+    this.setState({ show: false });
+  }
+
+  handleShow() {
+    this.setState({ show: true });
+  }
+
   getMeat = meat => {
     const arrlen = this.props.field.contents.length;
     const arrmid = arrlen / 2;
@@ -274,7 +294,7 @@ class FieldDashboard extends Component {
         }
         break;
 
-        case "gasGenerator":
+      case "gasGenerator":
         for (var i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldGasGenerator();
         }
@@ -286,7 +306,7 @@ class FieldDashboard extends Component {
         }
         break;
 
-        case "solarPanel":
+      case "solarPanel":
         for (var i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldSolarPanel();
         }
@@ -299,210 +319,215 @@ class FieldDashboard extends Component {
   render() {
     return (
       <div className="FieldDashboard">
-        <h2>Field</h2>
+        <h2>
+          {this.props.field.contents[0]
+            ? this.props.field.contents[0].name
+            : "Fallow"}
+        </h2>
         {this.props.field.contents[0] && (
           <p>
             In this field you have {this.props.field.contents.length}{" "}
             {this.props.field.contents[0].name}s
+            <br />
             {this.props.field.contents[0].name === "Cow" && (
-              <button onClick={() => this.getMeat("beef")}>Collect beef</button>
+              <Button onClick={() => this.getMeat("beef")}>Collect beef</Button>
             )}
             {this.props.field.contents[0].name === "Cow" && (
-              <button onClick={() => this.getMeat("halfBeef")}>
+              <Button onClick={() => this.getMeat("halfBeef")}>
                 Collect 1/2 beef
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Cow" && (
-              <button onClick={() => this.getMeat("quarterBeef")}>
+              <Button onClick={() => this.getMeat("quarterBeef")}>
                 Collect 1/4 beef
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Sheep" && (
-              <button onClick={() => this.getMeat("lamb")}>Collect lamb</button>
+              <Button onClick={() => this.getMeat("lamb")}>Collect lamb</Button>
             )}
             {this.props.field.contents[0].name === "Sheep" && (
-              <button onClick={() => this.getMeat("halfLamb")}>
+              <Button onClick={() => this.getMeat("halfLamb")}>
                 Collect 1/2 lamb
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Sheep" && (
-              <button onClick={() => this.getMeat("quarterLamb")}>
+              <Button onClick={() => this.getMeat("quarterLamb")}>
                 Collect 1/4 lamb
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Chicken" && (
-              <button onClick={() => this.getMeat("chicken")}>
+              <Button onClick={() => this.getMeat("chicken")}>
                 Collect chicken
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Chicken" && (
-              <button onClick={() => this.getMeat("halfChicken")}>
+              <Button onClick={() => this.getMeat("halfChicken")}>
                 Collect 1/2 chicken
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Chicken" && (
-              <button onClick={() => this.getMeat("quarterChicken")}>
+              <Button onClick={() => this.getMeat("quarterChicken")}>
                 Collect 1/4 chicken
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Pig" && (
-              <button onClick={() => this.getMeat("pork")}>Collect pork</button>
+              <Button onClick={() => this.getMeat("pork")}>Collect pork</Button>
             )}
             {this.props.field.contents[0].name === "Pig" && (
-              <button onClick={() => this.getMeat("halfPork")}>
+              <Button onClick={() => this.getMeat("halfPork")}>
                 Collect 1/2 pork
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Pig" && (
-              <button onClick={() => this.getMeat("quarterPork")}>
+              <Button onClick={() => this.getMeat("quarterPork")}>
                 Collect 1/4 pork
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Crocodile" && (
-              <button onClick={() => this.getMeat("crocodile")}>
+              <Button onClick={() => this.getMeat("crocodile")}>
                 Collect crocodile
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Crocodile" && (
-              <button onClick={() => this.getMeat("halfCrocodile")}>
+              <Button onClick={() => this.getMeat("halfCrocodile")}>
                 Collect 1/2 crocodile
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Crocodile" && (
-              <button onClick={() => this.getMeat("quarterCrocodile")}>
+              <Button onClick={() => this.getMeat("quarterCrocodile")}>
                 Collect 1/4 crocodile
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Ostrich" && (
-              <button onClick={() => this.getMeat("ostrich")}>
+              <Button onClick={() => this.getMeat("ostrich")}>
                 Collect ostrich
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Ostrich" && (
-              <button onClick={() => this.getMeat("halfOstrich")}>
+              <Button onClick={() => this.getMeat("halfOstrich")}>
                 Collect 1/2 ostrich
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Ostrich" && (
-              <button onClick={() => this.getMeat("quarterOstrich")}>
+              <Button onClick={() => this.getMeat("quarterOstrich")}>
                 Collect 1/4 ostrich
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Salmon" && (
-              <button onClick={() => this.getMeat("salmon")}>
+              <Button onClick={() => this.getMeat("salmon")}>
                 Collect salmon
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Salmon" && (
-              <button onClick={() => this.getMeat("halfSalmon")}>
+              <Button onClick={() => this.getMeat("halfSalmon")}>
                 Collect 1/2 salmon
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Salmon" && (
-              <button onClick={() => this.getMeat("quarterSalmon")}>
+              <Button onClick={() => this.getMeat("quarterSalmon")}>
                 Collect 1/4 salmon
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Duck" && (
-              <button onClick={() => this.getMeat("duck")}>Collect duck</button>
+              <Button onClick={() => this.getMeat("duck")}>Collect duck</Button>
             )}
             {this.props.field.contents[0].name === "Duck" && (
-              <button onClick={() => this.getMeat("halfDuck")}>
+              <Button onClick={() => this.getMeat("halfDuck")}>
                 Collect 1/2 duck
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Duck" && (
-              <button onClick={() => this.getMeat("quarterDuck")}>
+              <Button onClick={() => this.getMeat("quarterDuck")}>
                 Collect 1/4 duck
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Goose" && (
-              <button onClick={() => this.getMeat("goose")}>
+              <Button onClick={() => this.getMeat("goose")}>
                 Collect goose
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Goose" && (
-              <button onClick={() => this.getMeat("halfGoose")}>
+              <Button onClick={() => this.getMeat("halfGoose")}>
                 Collect 1/2 goose
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Goose" && (
-              <button onClick={() => this.getMeat("quarterGoose")}>
+              <Button onClick={() => this.getMeat("quarterGoose")}>
                 Collect 1/4 goose
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Llama" && (
-              <button onClick={() => this.getMeat("llama")}>
+              <Button onClick={() => this.getMeat("llama")}>
                 Collect llama
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Llama" && (
-              <button onClick={() => this.getMeat("halfLlama")}>
+              <Button onClick={() => this.getMeat("halfLlama")}>
                 Collect 1/2 llama
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Llama" && (
-              <button onClick={() => this.getMeat("quarterLlama")}>
+              <Button onClick={() => this.getMeat("quarterLlama")}>
                 Collect 1/4 llama
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Cow" && (
-              <button onClick={() => this.getDairy("milk")}>
+              <Button onClick={() => this.getDairy("milk")}>
                 Collect milk
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Chicken" && (
-              <button onClick={() => this.getDairy("eggs")}>
+              <Button onClick={() => this.getDairy("eggs")}>
                 Collect eggs
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Crocodile" && (
-              <button onClick={() => this.getDairy("crocEggs")}>
+              <Button onClick={() => this.getDairy("crocEggs")}>
                 Collect Crocodile eggs
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Ostrich" && (
-              <button onClick={() => this.getDairy("ostrichEggs")}>
+              <Button onClick={() => this.getDairy("ostrichEggs")}>
                 Collect Ostrich eggs
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Duck" && (
-              <button onClick={() => this.getDairy("duckEggs")}>
+              <Button onClick={() => this.getDairy("duckEggs")}>
                 Collect Duck eggs
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Goose" && (
-              <button onClick={() => this.getDairy("gooseEggs")}>
+              <Button onClick={() => this.getDairy("gooseEggs")}>
                 Collect Goose eggs
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "Sheep" && (
-              <button onClick={() => this.getMisc("wool")}>Collect wool</button>
+              <Button onClick={() => this.getMisc("wool")}>Collect wool</Button>
             )}
             {this.props.field.contents[0].name === "Llama" && (
-              <button onClick={() => this.getMisc("llamaWool")}>
+              <Button onClick={() => this.getMisc("llamaWool")}>
                 Collect llamaWool
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "GasGenerator" && (
-              <button onClick={() => this.getMisc("greenGas")}>
+              <Button onClick={() => this.getMisc("greenGas")}>
                 Collect green gas
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "SolarPanel" && (
-              <button onClick={() => this.getMisc("solarPower")}>
+              <Button onClick={() => this.getMisc("solarPower")}>
                 Collect solar power
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "GasGenerator" && (
-              <button onClick={() => this.getMisc("gasGenerator")}>
+              <Button onClick={() => this.getMisc("gasGenerator")}>
                 Recycle gasGenerators
-              </button>
+              </Button>
             )}
             {this.props.field.contents[0].name === "SolarPanel" && (
-              <button onClick={() => this.getMisc("solarPanel")}>
+              <Button onClick={() => this.getMisc("solarPanel")}>
                 Recycle solarPanels
-              </button>
+              </Button>
             )}
           </p>
         )}
@@ -510,15 +535,55 @@ class FieldDashboard extends Component {
           <>
             {item.showUI && (
               <div className="fieldItem">
-                <h3>
-                  <img src={item.imgUrl} alt={item.name} /> {item.name}
-                </h3>
-                <dl>
-                  <dt>Hunger</dt>
-                  <dd>{item.hunger}</dd>
-                  <dt>Health</dt>
-                  <dd>{item.health}</dd>
-                </dl>
+                <Button
+                  variant="primary"
+                  onClick={this.handleShow}
+                  style={{ marginTop: "0.2rem" }}
+                >
+                  Examine {item.name}
+                </Button>
+                <>
+                  <Modal
+                    backdrop="static"
+                    show={this.state.show}
+                    aria-labelledby="field-modal"
+                  >
+                    <Modal.Header>
+                      <Modal.Title id="field-modal">
+                        🚜 You are examining a {item.name} 🚜
+                      </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                      <h3>
+                        <img src={item.imgUrl} alt={item.name} /> {item.name}
+                      </h3>
+                      <dl>
+                        <dt>
+                          <h3>
+                            <img src="/img/twtr/health.png" id="health" alt="health" />
+                            {' '} Health: {item.health}
+                          </h3>
+                        </dt>
+                        <dt>
+                          <h3><img src="/img/twtr/hunger.png" id="hunger" alt="hunger" />
+                          {' '} Hunger: {item.hunger}</h3>
+                        </dt>
+                      </dl>
+                    </Modal.Body>
+                    <Modal.Footer>
+                      <Button
+                        variant="secondary"
+                        onClick={this.handleClose}
+                        style={{
+                          marginTop: "2rem",
+                          backgroundColor: "#37474f",
+                        }}
+                      >
+                        Close
+                      </Button>
+                    </Modal.Footer>
+                  </Modal>
+                </>
               </div>
             )}
           </>

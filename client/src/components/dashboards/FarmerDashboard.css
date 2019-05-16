@@ -1,13 +1,23 @@
 .FarmerDashboard {
-    margin: 10px;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     border: 4px dashed black;
-    background-color: ghostwhite;
+    background-color: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right, #C0C0C0, #DCDCDC, ghostwhite);
+    font-size: 11px;
+}
+
+.FarmerDashboard button {
+    background-color: #37474f;
+}
+
+.FarmerDashboard button:hover {
+    background-color: lightslategray;
 }
 
 .FarmerDashboard>dl {
-    columns: 4;
+    columns: 5;
     margin: 0;
     margin-right: 0.5rem;
+    margin-top: 0.5rem;
 }

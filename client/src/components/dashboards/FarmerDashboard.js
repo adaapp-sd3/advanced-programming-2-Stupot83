@@ -1,10 +1,16 @@
 import React, { Component } from "react";
+import { Button } from "react-bootstrap";
 import "./FarmerDashboard.css";
 
 class FarmerDashboard extends Component {
+  hideUI = () => {
+    this.props.farmer.showUI = !this.props.farmer.showUI;
+  };
+
   render() {
     return (
       <div className="FarmerDashboard">
+      <Button onClick={this.hideUI}>Hide Inventory</Button>
         <dl>
           <dt>Budget</dt>
           <dd>{this.props.farmer.budget}</dd>
@@ -36,9 +42,9 @@ class FarmerDashboard extends Component {
 
           {this.props.farmer.myFarm && (
             <>
-              <dt>CarrotSeeds</dt>
+              <dt>CartSeeds</dt>
               <dd>{this.props.farmer.myFarm.carrotSeeds.total} units</dd>
-              <dt>PumpkinSeeds</dt>
+              <dt>PumpSeeds</dt>
               <dd>{this.props.farmer.myFarm.pumpkinSeeds.total} units</dd>
               <dt>WheatSeeds</dt>
               <dd>{this.props.farmer.myFarm.wheatSeeds.total} units</dd>

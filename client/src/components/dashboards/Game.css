@@ -1,7 +1,7 @@
 .Game {
   text-align: center;
   width: 375px;
-  background-color: white;
+  background-color: #006064;
   height: 1077px;
   border-bottom: 10px dashed #9b958c;
 }
@@ -26,7 +26,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  margin-top: 10px;
 }
 
 canvas {

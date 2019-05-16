@@ -18,8 +18,8 @@ import SolarPanel from "./tech/SolarPanel";
 
 class Farm extends Drawable {
   fields: Field[] = [];
-  width: number = 1065;
-  height: number = 1000;
+  width: number = 2130;
+  height: number = 1110;
   cows: any;
   milk: any;
   beef: any;
@@ -257,12 +257,12 @@ class Farm extends Drawable {
     },
     straw: any = {
       name: "Straw",
-      total: 1000,
+      total: 0,
       unit: "bales"
     },
     corn: any = {
       name: "Corn",
-      total: 1000,
+      total: 0,
       unit: "bags"
     },
     fish: any = {
@@ -397,7 +397,7 @@ class Farm extends Drawable {
     );
 
     let secondFieldX = 25;
-    let secondFieldY = 275;
+    let secondFieldY = 250;
     let secondFieldW = 350;
     let secondFieldH = 125;
 
@@ -425,7 +425,7 @@ class Farm extends Drawable {
     );
 
     let thirdFieldX = 25;
-    let thirdFieldY = 450;
+    let thirdFieldY = 400;
     let thirdFieldW = 300;
     let thirdFieldH = 125;
 

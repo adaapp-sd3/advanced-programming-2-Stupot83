@@ -1,10 +1,65 @@
 .FarmerDashboard {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding-top: 4px;
     border: 4px dashed black;
     background-color: rgba(0, 0, 0, 0.1);
     background: linear-gradient(to bottom right, #C0C0C0, #DCDCDC, ghostwhite);
-    font-size: 11px;
+    font-size: 12px;
+    height: 65vh;
+}
+
+.Budget {
+    color: red;
+    font-weight: bold;
+}
+
+.Animals {
+    color: darkcyan;
+    font-weight: bold;
+}
+
+.Meat {
+    color: darkred;
+    font-weight: bold;
+}
+
+.Dairy {
+    color: blue;
+    font-weight: bold;
+}
+
+.Misc {
+    color: blueviolet;
+    font-weight: bold;
+}
+
+.Seeds {
+    color: darkorange;
+    font-weight: bold;
+}
+
+.Plants {
+    color: darkgreen;
+    font-weight: bold;
+}
+
+.Crop {
+    color: indigo;
+    font-weight: bold;
+}
+
+.Feed {
+    color: purple;
+    font-weight: bold;
+}
+
+.Tech {
+    color: darkslategray;
+    font-weight: bold;
+}
+
+.Energy {
+    color: darkslateblue;
+    font-weight: bold;
 }
 
 .FarmerDashboard button {
@@ -19,5 +74,6 @@
     columns: 5;
     margin: 0;
     margin-right: 0.5rem;
+    margin-left: 0.1rem;
     margin-top: 0.5rem;
 }

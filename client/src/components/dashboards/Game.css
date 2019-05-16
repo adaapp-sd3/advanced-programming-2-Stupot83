@@ -26,13 +26,15 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: fixed !important;
+  width: 375px;
+  margin-top: 0.5rem;
 }
 
 canvas {
-  position: absolute;
+  position: fixed !important;
   top: 64px;
   right: 0;
-  overflow: scroll;
   margin-top: 10vh;
   border-top: -64px;
   border-top: 10px dashed #9b958c;

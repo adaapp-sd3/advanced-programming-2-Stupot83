@@ -25,8 +25,16 @@ const makeFarm = (
       market.preload();
     };
 
+    window.onresize = () => {
+      const height = window.innerHeight;  
+      const width = window.innerWidth;
+      p.resizeCanvas(1065, 555);
+      p.height = height;
+      p.width = width;
+    };
+
     p.setup = () => {
-      p.createCanvas(farm.width, farm.height);
+      p.createCanvas(1065, 555);
       farmer.farm = farm;
       farmer.market = market;
       market.farmer = farmer;

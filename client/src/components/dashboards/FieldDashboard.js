@@ -319,16 +319,14 @@ class FieldDashboard extends Component {
   render() {
     return (
       <div className="FieldDashboard">
-        <h2>
-          {this.props.field.contents[0]
-            ? this.props.field.contents[0].name
-            : "Fallow"}
-        </h2>
         {this.props.field.contents[0] && (
           <p>
-            In this field you have {this.props.field.contents.length}{" "}
-            {this.props.field.contents[0].name}s
-            <br />
+            <h5>
+              This is a {this.props.field.contents[0].name} Area<br/>
+              (currently with {this.props.field.contents.length}{" "}
+              {this.props.field.contents[0].name}s)
+            </h5>
+
             {this.props.field.contents[0].name === "Cow" && (
               <Button onClick={() => this.getMeat("beef")}>Collect beef</Button>
             )}
@@ -538,7 +536,7 @@ class FieldDashboard extends Component {
                 <Button
                   variant="primary"
                   onClick={this.handleShow}
-                  style={{ marginTop: "0.2rem" }}
+                  style={{ marginTop: "0.8rem" }}
                 >
                   Examine {item.name}
                 </Button>
@@ -560,13 +558,23 @@ class FieldDashboard extends Component {
                       <dl>
                         <dt>
                           <h3>
-                            <img src="/img/twtr/health.png" id="health" alt="health" />
-                            {' '} Health: {item.health}
+                            <img
+                              src="/img/twtr/health.png"
+                              id="health"
+                              alt="health"
+                            />{" "}
+                            Health: {item.health}
                           </h3>
                         </dt>
                         <dt>
-                          <h3><img src="/img/twtr/hunger.png" id="hunger" alt="hunger" />
-                          {' '} Hunger: {item.hunger}</h3>
+                          <h3>
+                            <img
+                              src="/img/twtr/hunger.png"
+                              id="hunger"
+                              alt="hunger"
+                            />{" "}
+                            Hunger: {item.hunger}
+                          </h3>
                         </dt>
                       </dl>
                     </Modal.Body>

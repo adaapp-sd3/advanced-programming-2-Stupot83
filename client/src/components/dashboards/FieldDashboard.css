@@ -5,11 +5,28 @@
     border-top: none;
     background-color: rgba(0, 0, 0, 0.1);
     background: linear-gradient(to bottom right,	#FFFF99, #FFFACD, #FFFFE0);
+    display: inline-flex;
+    width: 100vw;
+    position: fixed;
+    margin-left: -188px;
+    height: 10vh;
+}
+
+.FieldDashboard p {
+    display: inline-flex;
+}
+
+.FieldDashboard h5 {
+    margin: 1rem;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 .FieldDashboard button {
     background-color: #37474f;
-    margin: 0.5rem;
+    margin: 0.8rem;
+    margin-top: 0.8rem;
+    font-size: 10px;
 }
 
 .FieldDashboard button:hover {

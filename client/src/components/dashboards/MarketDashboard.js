@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Player, ControlBar } from "video-react";
-import Video from "../../music/Amarillo-Sky.mp3";
+import Song from "../../music/Pasture Road.mp3";
 import { Button, Modal, Tabs, Tab } from "react-bootstrap";
 import "./MarketDashboard.css";
 
@@ -964,7 +964,7 @@ class MarketDashboard extends Component {
                 <Tab style={{ display: "none" }}>
                   <div style={{ height: "100px", width: "100px" }}>
                     <Player ref="player" autoPlay loop>
-                      <source src={Video} />
+                      <source src={Song} />
                       <ControlBar disableDefaultControls={true} />
                     </Player>
                   </div>

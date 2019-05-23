@@ -6,31 +6,41 @@ class Farm extends Drawable {
   width: number = 2130;
   height: number = 1110;
   cows: any;
+  usedCow: any;
   milk: any;
   beef: any;
   sheep: any;
+  usedSheep: any;
   lamb: any;
   wool: any;
   chickens: any;
+  usedChicken: any;
   chicken: any;
   eggs: any;
   pigs: any;
+  usedPig: any;
   pork: any;
   crocodiles: any;
+  usedCrocodile: any;
   crocodile: any;
   crocEggs: any;
   ostriches: any;
+  usedOstrich: any;
   ostrich: any;
   ostrichEggs: any;
   salmons: any;
+  usedSalmon: any;
   salmon: any;
   geese: any;
+  usedGoose: any;
   goose: any;
   gooseEggs: any;
   ducks: any;
+  usedDuck: any;
   duck: any;
   duckEggs: any;
   llamas: any;
+  usedLlama: any;
   llama: any;
   llamaWool: any;
   cabbageSeeds: any;
@@ -81,6 +91,11 @@ class Farm extends Drawable {
       total: 0,
       objects: [],
     },
+    usedCow: any = {
+      name: "used Cow",
+      total: 0,
+      unit: "units"
+    },
     beef: any = {
       name: "Beef",
       total: 0,
@@ -95,6 +110,11 @@ class Farm extends Drawable {
       name: "Sheep",
       total: 0,
       objects: [],
+    },
+    usedSheep: any = {
+      name: "used Sheep",
+      total: 0,
+      unit: "units"
     },
     lamb: any = {
       name: "Lamb",
@@ -111,6 +131,11 @@ class Farm extends Drawable {
       total: 0,
       objects: [],
     },
+    usedChicken: any = {
+      name: "used Chicken",
+      total: 0,
+      unit: "units"
+    },
     chicken: any = {
       name: "Chicken",
       total: 0,
@@ -126,6 +151,11 @@ class Farm extends Drawable {
       total: 0,
       objects: [],
     },
+    usedPig: any = {
+      name: "used Pig",
+      total: 0,
+      unit: "units"
+    },
     pork: any = {
       name: "Pork",
       total: 0,
@@ -135,6 +165,11 @@ class Farm extends Drawable {
       name: "Crocodiles",
       total: 0,
       objects: [],
+    },
+    usedCrocodile: any = {
+      name: "used Crocodile",
+      total: 0,
+      unit: "units"
     },
     crocodile: any = {
       name: "Crocodile",
@@ -151,6 +186,11 @@ class Farm extends Drawable {
       total: 0,
       objects: [],
     },
+    usedOstrich: any = {
+      name: "used Ostrich",
+      total: 0,
+      unit: "units"
+    },
     ostrich: any = {
       name: "Ostrich",
       total: 0,
@@ -166,6 +206,11 @@ class Farm extends Drawable {
       total: 0,
       objects: [],
     },
+    usedSalmon: any = {
+      name: "used Salmon",
+      total: 0,
+      unit: "units"
+    },
     salmon: any = {
       name: "Salmon",
       total: 0,
@@ -175,6 +220,11 @@ class Farm extends Drawable {
       name: "Geese",
       total: 0,
       objects: [],
+    },
+    usedGoose: any = {
+      name: "used Goose",
+      total: 0,
+      unit: "units"
     },
     goose: any = {
       name: "Goose",
@@ -191,6 +241,11 @@ class Farm extends Drawable {
       total: 0,
       objects: [],
     },
+    usedDuck: any = {
+      name: "used Duck",
+      total: 0,
+      unit: "units"
+    },
     duck: any = {
       name: "Duck",
       total: 0,
@@ -205,6 +260,11 @@ class Farm extends Drawable {
       name: "Llamas",
       total: 0,
       objects: [],
+    },
+    usedLlama: any = {
+      name: "used Llama",
+      total: 0,
+      unit: "units"
     },
     llama: any = {
       name: "Llama",
@@ -424,31 +484,41 @@ class Farm extends Drawable {
   ) {
     super();
     this.cows = cows;
+    this.usedCow = usedCow;
     this.beef = beef;
     this.milk = milk;
     this.sheep = sheep;
+    this.usedSheep = usedSheep;
     this.lamb = lamb;
     this.wool = wool;
     this.chickens = chickens;
+    this.usedChicken = usedChicken;
     this.chicken = chicken;
     this.eggs = eggs;
     this.pigs = pigs;
+    this.usedPig = usedPig;
     this.pork = pork;
     this.crocodiles = crocodiles;
+    this.usedCrocodile = usedCrocodile;
     this.crocodile = crocodile;
     this.crocEggs = crocEggs;
     this.ostriches = ostriches;
+    this.usedOstrich = usedOstrich;
     this.ostrich = ostrich;
     this.ostrichEggs = ostrichEggs;
     this.salmons = salmons;
+    this.usedSalmon = usedSalmon;
     this.salmon = salmon;
     this.geese = geese;
+    this.usedGoose = usedGoose;
     this.goose = goose;
     this.gooseEggs = gooseEggs;
     this.ducks = ducks;
+    this.usedDuck = usedDuck;
     this.duck = duck;
     this.duckEggs = duckEggs;
     this.llamas = llamas;
+    this.usedLlama = usedLlama;
     this.llama = llama;
     this.llamaWool = llamaWool;
     this.cabbageSeeds = cabbageSeeds;

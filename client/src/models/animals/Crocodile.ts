@@ -27,7 +27,8 @@ class Crocodile extends Animal {
   }
 
   yieldCrocodile() {
-    this.farm.crocodile.total += this.hunger > 0 ? 100 / this.hunger : 120;
+    this.farm.crocodile.total += 750;
+    this.farm.usedCrocodile.total -=1;
     this.health = 0;
   }
 

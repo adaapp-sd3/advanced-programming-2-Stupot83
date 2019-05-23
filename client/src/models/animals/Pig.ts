@@ -24,7 +24,8 @@ class Pig extends Animal {
   }
 
   yieldPork() {
-    this.farm.pork.total += this.hunger > 0 ? 100 / this.hunger : 120;
+    this.farm.pork.total += 750;
+    this.farm.usedPig.total -=1;
     this.health = 0;
   }
 

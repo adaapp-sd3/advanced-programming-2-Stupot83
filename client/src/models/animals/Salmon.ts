@@ -24,7 +24,8 @@ class Salmon extends Animal {
   }
 
   yieldSalmon() {
-    this.farm.salmon.total += this.hunger > 0 ? 100 / this.hunger : 120;
+    this.farm.salmon.total += 750;
+    this.farm.usedSalmon.total -=1;
     this.health = 0;
   }
 

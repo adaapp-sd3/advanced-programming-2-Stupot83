@@ -17,6 +17,11 @@
     font-weight: bold;
 }
 
+.UsedAnimal {
+    color: green;
+    font-weight: bold;
+}
+
 .Meat {
     color: darkred;
     font-weight: bold;
@@ -71,7 +76,16 @@
 }
 
 #farmer-dashboard-tabpane-animals>dl {
-    columns: 5;
+    columns: 4;
+    margin: 0;
+    margin-right: 0.5rem;
+    margin-left: 0.1rem;
+    margin-top: 0.5rem;
+    font-size: 12px;
+}
+
+#farmer-dashboard-tabpane-produce>dl {
+    columns: 4;
     margin: 0;
     margin-right: 0.5rem;
     margin-left: 0.1rem;
@@ -97,6 +111,6 @@
     font-size: 16px;
 }
 
-#farmer-dashboard-tab-animals, #farmer-dashboard-tab-crops, #farmer-dashboard-tab-tech {
-    width: 8rem;
+#farmer-dashboard-tab-animals, #farmer-dashboard-tab-produce, #farmer-dashboard-tab-crops, #farmer-dashboard-tab-tech {
+    width: 6rem;
 }

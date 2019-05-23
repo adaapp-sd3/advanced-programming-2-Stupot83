@@ -30,7 +30,8 @@ class Sheep extends Animal {
   }
 
   yieldLamb() {
-    this.farm.lamb.total += this.hunger > 0 ? 100 / this.hunger : 120;
+    this.farm.lamb.total += 750;
+    this.farm.usedSheep.total -=1;
     this.health = 0;
   }
 

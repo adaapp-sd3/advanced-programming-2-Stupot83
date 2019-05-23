@@ -48,104 +48,107 @@ class Field extends Drawable {
     this.p5.fill("#b58969");
     this.p5.rect(this.x, this.y, this.width, this.height, 10);
 
-    for (var item of this.contents) {
+    this.contents.forEach(item => {
       item.draw();
-    }
+      if (item.fieldX == null || item.fieldY == null) {
+        item.setRandomPositionInField(this.x, this.y, this.width, this.height);
+      }
+    });
   }
 
   placeCow(x: number, y: number, farm: Farm) {
-    console.log("new cow")
-    let cow = new Cow(farm)
-    cow.p5 = this.p5
-    cow.preload()
-    cow.placeCow(x, y)
-    this.contents.push(cow)
+    console.log("new cow");
+    let cow = new Cow(farm);
+    cow.p5 = this.p5;
+    cow.preload();
+    cow.draw();
+    this.contents.push(cow);
   }
 
   placeSheep(x: number, y: number, farm: Farm) {
-    console.log("new sheep")
-    let sheep = new Sheep(farm)
-    sheep.p5 = this.p5
-    sheep.preload()
-    sheep.placeSheep(x, y)
-    this.contents.push(sheep)
+    console.log("new sheep");
+    let sheep = new Sheep(farm);
+    sheep.p5 = this.p5;
+    sheep.preload();
+    sheep.draw();
+    this.contents.push(sheep);
   }
 
   placeChicken(x: number, y: number, farm: Farm) {
-    console.log("new chicken")
-    let chicken = new Chicken(farm)
-    chicken.p5 = this.p5
-    chicken.preload()
-    chicken.placeChicken(x, y)
-    this.contents.push(chicken)
+    console.log("new chicken");
+    let chicken = new Chicken(farm);
+    chicken.p5 = this.p5;
+    chicken.preload();
+    chicken.draw();
+    this.contents.push(chicken);
   }
 
   placePig(x: number, y: number, farm: Farm) {
-    console.log("new pig")
-    let pig = new Pig(farm)
-    pig.p5 = this.p5
-    pig.preload()
-    pig.placePig(x, y)
-    this.contents.push(pig)
+    console.log("new pig");
+    let pig = new Pig(farm);
+    pig.p5 = this.p5;
+    pig.preload();
+    pig.draw();
+    this.contents.push(pig);
   }
 
   placeCrocodile(x: number, y: number, farm: Farm) {
-    console.log("new crocodile")
-    let crocodile = new Crocodile(farm)
-    crocodile.p5 = this.p5
-    crocodile.preload()
-    crocodile.placeCrocodile(x, y)
-    this.contents.push(crocodile)
+    console.log("new crocodile");
+    let crocodile = new Crocodile(farm);
+    crocodile.p5 = this.p5;
+    crocodile.preload();
+    crocodile.draw();
+    this.contents.push(crocodile);
   }
 
   placeOstrich(x: number, y: number, farm: Farm) {
-    console.log("new ostrich")
-    let ostrich = new Ostrich(farm)
-    ostrich.p5 = this.p5
-    ostrich.preload()
-    ostrich.placeOstrich(x, y)
-    this.contents.push(ostrich)
+    console.log("new ostrich");
+    let ostrich = new Ostrich(farm);
+    ostrich.p5 = this.p5;
+    ostrich.preload();
+    ostrich.draw();
+    this.contents.push(ostrich);
   }
 
   placeSalmon(x: number, y: number, farm: Farm) {
-    console.log("new salmon")
-    let salmon = new Salmon(farm)
-    salmon.p5 = this.p5
-    salmon.preload()
-    salmon.placeSalmon(x, y)
-    this.contents.push(salmon)
+    console.log("new salmon");
+    let salmon = new Salmon(farm);
+    salmon.p5 = this.p5;
+    salmon.preload();
+    salmon.draw();
+    this.contents.push(salmon);
   }
 
   placeDuck(x: number, y: number, farm: Farm) {
-    console.log("new duck")
-    let duck = new Duck(farm)
-    duck.p5 = this.p5
-    duck.preload()
-    duck.placeDuck(x, y)
-    this.contents.push(duck)
+    console.log("new duck");
+    let duck = new Duck(farm);
+    duck.p5 = this.p5;
+    duck.preload();
+    duck.draw();
+    this.contents.push(duck);
   }
 
   placeGoose(x: number, y: number, farm: Farm) {
-    console.log("new goose")
-    let goose = new Goose(farm)
-    goose.p5 = this.p5
-    goose.preload()
-    goose.placeGoose(x, y)
-    this.contents.push(goose)
+    console.log("new goose");
+    let goose = new Goose(farm);
+    goose.p5 = this.p5;
+    goose.preload();
+    goose.draw();
+    this.contents.push(goose);
   }
 
   placeLlama(x: number, y: number, farm: Farm) {
-    console.log("new llama")
-    let llama = new Llama(farm)
-    llama.p5 = this.p5
-    llama.preload()
-    llama.placeLlama(x, y)
-    this.contents.push(llama)
+    console.log("new llama");
+    let llama = new Llama(farm);
+    llama.p5 = this.p5;
+    llama.preload();
+    llama.draw();
+    this.contents.push(llama);
   }
 
   plantCabbage(x: number, y: number, farm: Farm) {
     console.log("new cabbage");
-    let cabbage= new Cabbage(farm);
+    let cabbage = new Cabbage(farm);
     cabbage.p5 = this.p5;
     cabbage.preload();
     cabbage.plantCabbage(x, y);
@@ -187,7 +190,6 @@ class Field extends Drawable {
     pea.plantPea(x, y);
     this.contents.push(pea);
   }
-
 
   plantPotato(x: number, y: number, farm: Farm) {
     console.log("new potato");
@@ -235,21 +237,21 @@ class Field extends Drawable {
   }
 
   placeGasGenerator(x: number, y: number, farm: Farm) {
-    console.log("new gas generator")
-    let gasGenerator = new GasGenerator(farm)
-    gasGenerator.p5 = this.p5
-    gasGenerator.preload()
-    gasGenerator.placeGasGenerator(x, y)
-    this.contents.push(gasGenerator)
+    console.log("new gas generator");
+    let gasGenerator = new GasGenerator(farm);
+    gasGenerator.p5 = this.p5;
+    gasGenerator.preload();
+    gasGenerator.placeGasGenerator(x, y);
+    this.contents.push(gasGenerator);
   }
 
   placeSolarPanel(x: number, y: number, farm: Farm) {
-    console.log("new solar panel")
-    let solarPanel = new SolarPanel(farm)
-    solarPanel.p5 = this.p5
-    solarPanel.preload()
-    solarPanel.placeSolarPanel(x, y)
-    this.contents.push(solarPanel)
+    console.log("new solar panel");
+    let solarPanel = new SolarPanel(farm);
+    solarPanel.p5 = this.p5;
+    solarPanel.preload();
+    solarPanel.placeSolarPanel(x, y);
+    this.contents.push(solarPanel);
   }
 }
 

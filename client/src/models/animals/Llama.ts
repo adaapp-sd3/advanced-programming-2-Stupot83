@@ -30,7 +30,8 @@ class Llama extends Animal {
   }
 
   yieldLlama() {
-    this.farm.llama.total += this.hunger > 0 ? 100 / this.hunger : 120;
+    this.farm.llama.total += 750;
+    this.farm.usedLlama.total -=1;
     this.health = 0;
   }
 

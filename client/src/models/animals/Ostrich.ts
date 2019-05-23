@@ -30,7 +30,8 @@ class Ostrich extends Animal {
   }
 
   yieldOstrich() {
-    this.farm.ostrich.total += this.hunger > 0 ? 100 / this.hunger : 120;
+    this.farm.ostrich.total += 750;
+    this.farm.usedOstrich.total -=1;
     this.health = 0;
   }
 

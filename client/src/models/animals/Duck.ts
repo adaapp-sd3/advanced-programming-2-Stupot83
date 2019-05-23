@@ -30,7 +30,8 @@ class Duck extends Animal {
   }
 
   yieldDuck() {
-    this.farm.duck.total += this.hunger > 0 ? 100 / this.hunger : 120;
+    this.farm.duck.total += 750;
+    this.farm.usedDuck.total -=1;
     this.health = 0;
   }
 

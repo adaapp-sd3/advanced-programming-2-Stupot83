@@ -30,7 +30,8 @@ class Goose extends Animal {
   }
 
   yieldGoose() {
-    this.farm.goose.total += this.hunger > 0 ? 100 / this.hunger : 120;
+    this.farm.goose.total += 750;
+    this.farm.usedGoose.total -=1;
     this.health = 0;
   }
 

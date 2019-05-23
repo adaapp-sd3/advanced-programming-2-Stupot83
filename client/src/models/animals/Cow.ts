@@ -13,15 +13,15 @@ class Cow extends Animal {
     this.farm = farm;
   }
 
-  checkHealth() {
-    if (this.hunger >= 5) {
-      this.health -= 1;
-    }
-    if (this.health <= 0) {
-      this.farm.cows.objects.pop();
-      this.farm.cows.total -= 1;
-    }
-  }
+  // checkHealth() {
+  //   if (this.hunger >= 5) {
+  //     this.health -= 1;
+  //   }
+  //   if (this.health <= 0) {
+  //     this.farm.cows.objects.pop();
+  //     this.farm.cows.total -= 1;
+  //   }
+  // }
 
   yieldMilk() {
     let amountOfMilkToYield = 5 - this.hunger;
@@ -30,8 +30,9 @@ class Cow extends Animal {
   }
 
   yieldBeef() {
-    this.farm.cows.objects.pop();
-    this.farm.cows.total = 0;
+    this.farm.beef.total += 750;
+    this.farm.cows.total -=1;
+    this.health = 0;
   }
 
   eatStraw() {
@@ -60,7 +61,6 @@ class Cow extends Animal {
     this.constrainItem();
     this.doSomethingOccasionally(() => this.eatStraw());
     this.stopForFarmer();
-    this.checkHealth();
   }
 
   placeCow(fieldX: number, fieldY: number) {

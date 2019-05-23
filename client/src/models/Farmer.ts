@@ -28,16 +28,16 @@ class Farmer extends Drawable {
   }
 
   private update() {
-    if (this.p5.keyIsDown(this.p5.RIGHT_ARROW)) {
+    if (this.p5.keyIsDown(68)) {
       this.x = this.x + 3;
     }
-    if (this.p5.keyIsDown(this.p5.LEFT_ARROW)) {
+    if (this.p5.keyIsDown(65)) {
       this.x = this.x - 3;
     }
-    if (this.p5.keyIsDown(this.p5.DOWN_ARROW)) {
+    if (this.p5.keyIsDown(83)) {
       this.y = this.y + 3;
     }
-    if (this.p5.keyIsDown(this.p5.UP_ARROW)) {
+    if (this.p5.keyIsDown(87)) {
       this.y = this.y - 3;
     }
   }
@@ -56,80 +56,119 @@ class Farmer extends Drawable {
           if (this.myFarm.cows.total > 0) {
             if (this.p5.keyIsDown(this.p5.ENTER)) {
               if (this.myFarm.cows.total != field.contents.length) {
-              field.placeCow(this.x, this.y, this.myFarm);
-              }   
+                field.placeCow(this.x, this.y, this.myFarm);
+              }
+              else if (this.myFarm.cows.total === field.contents.length) {
+                alert("You have placed all available cows in this area")
             }
           }
         }
+      }
         if (!field.contents[0] || field.contents[0].name === "Sheep") {
           if (this.myFarm.sheep.total > 0) {
             if (this.p5.keyIsDown(this.p5.ENTER)) {
-              field.placeSheep(this.x + 50, this.y + 50, this.myFarm);
-              this.myFarm.sheep.total -= 1;
+              if (this.myFarm.sheep.total != field.contents.length) {
+                field.placeSheep(this.x + 50, this.y + 50, this.myFarm);
+              }
+              else if (this.myFarm.sheep.total === field.contents.length) {
+                alert("You have placed all available sheep in this area")
             }
           }
         }
+      }
         if (!field.contents[0] || field.contents[0].name === "Chicken") {
           if (this.myFarm.chickens.total > 0) {
             if (this.p5.keyIsDown(this.p5.ENTER)) {
-              field.placeChicken(this.x + 50, this.y + 50, this.myFarm);
-              this.myFarm.chickens.total -= 1;
+              if (this.myFarm.chickens.total != field.contents.length) {
+                field.placeChicken(this.x + 50, this.y + 50, this.myFarm);
+              }
+              else if (this.myFarm.chickens.total === field.contents.length) {
+                alert("You have placed all available chickens in this area")
             }
           }
         }
+      }
         if (!field.contents[0] || field.contents[0].name === "Pig") {
           if (this.myFarm.pigs.total > 0) {
             if (this.p5.keyIsDown(this.p5.ENTER)) {
-              field.placePig(this.x + 50, this.y + 50, this.myFarm);
-              this.myFarm.pigs.total -= 1;
+              if (this.myFarm.pigs.total != field.contents.length) {
+                field.placePig(this.x + 50, this.y + 50, this.myFarm);
+              }
+              else if (this.myFarm.pigs.total === field.contents.length) {
+                alert("You have placed all available pigs in this area")
             }
           }
         }
+      }
         if (!field.contents[0] || field.contents[0].name === "Crocodile") {
           if (this.myFarm.crocodiles.total > 0) {
             if (this.p5.keyIsDown(this.p5.ENTER)) {
-              field.placeCrocodile(this.x + 50, this.y + 50, this.myFarm);
-              this.myFarm.crocodiles.total -= 1;
+              if (this.myFarm.crocodiles.total != field.contents.length) {
+                field.placeCrocodile(this.x + 50, this.y + 50, this.myFarm);
+              }
+              else if (this.myFarm.crocodiles.total === field.contents.length) {
+                alert("You have placed all available crocodiles in this area")
             }
           }
         }
+      }
         if (!field.contents[0] || field.contents[0].name === "Ostrich") {
           if (this.myFarm.ostriches.total > 0) {
             if (this.p5.keyIsDown(this.p5.ENTER)) {
-              field.placeOstrich(this.x + 50, this.y + 50, this.myFarm);
-              this.myFarm.ostriches.total -= 1;
+              if (this.myFarm.ostriches.total != field.contents.length) {
+                field.placeOstrich(this.x + 50, this.y + 50, this.myFarm);
+              }
+              else if (this.myFarm.ostriches.total === field.contents.length) {
+                alert("You have placed all available ostriches in this area")
             }
           }
         }
+      }
         if (!field.contents[0] || field.contents[0].name === "Salmon") {
           if (this.myFarm.salmons.total > 0) {
             if (this.p5.keyIsDown(this.p5.ENTER)) {
-              field.placeSalmon(this.x + 50, this.y + 50, this.myFarm);
-              this.myFarm.salmons.total -= 1;
+              if (this.myFarm.salmons.total != field.contents.length) {
+                field.placeSalmon(this.x + 50, this.y + 50, this.myFarm);
+              }
+              else if (this.myFarm.salmons.total === field.contents.length) {
+                alert("You have placed all available salmons in this area")
+              }
             }
           }
         }
         if (!field.contents[0] || field.contents[0].name === "Duck") {
           if (this.myFarm.ducks.total > 0) {
             if (this.p5.keyIsDown(this.p5.ENTER)) {
-              field.placeDuck(this.x + 50, this.y + 50, this.myFarm);
-              this.myFarm.ducks.total -= 1;
+              if (this.myFarm.ducks.total != field.contents.length) {
+                field.placeDuck(this.x + 50, this.y + 50, this.myFarm);
+              }
+              else if (this.myFarm.ducks.total === field.contents.length) {
+                alert("You have placed all available ducks in this area")
+              }
             }
           }
         }
         if (!field.contents[0] || field.contents[0].name === "Goose") {
           if (this.myFarm.geese.total > 0) {
             if (this.p5.keyIsDown(this.p5.ENTER)) {
-              field.placeGoose(this.x + 50, this.y + 50, this.myFarm);
-              this.myFarm.geese.total -= 1;
+              if (this.myFarm.geese.total != field.contents.length) {
+                field.placeGoose(this.x + 50, this.y + 50, this.myFarm);
+              }
+              else if (this.myFarm.geese.total === field.contents.length) {
+                alert("You have placed all available geese in this area")
+              }
             }
           }
         }
         if (!field.contents[0] || field.contents[0].name === "Llama") {
           if (this.myFarm.llamas.total > 0) {
             if (this.p5.keyIsDown(this.p5.ENTER)) {
-              field.placeLlama(this.x + 50, this.y + 50, this.myFarm);
-              this.myFarm.llamas.total -= 1;
+              if (this.myFarm.llamas.total != field.contents.length) {
+                field.placeLlama(this.x + 50, this.y + 50, this.myFarm);
+              }
+              else if (this.myFarm.llamas.total === field.contents.length) {
+                alert("You have placed all available llamas in this area")
+              }
             }
           }
         }
@@ -138,7 +177,7 @@ class Farmer extends Drawable {
             if (this.p5.keyIsDown(this.p5.ENTER)) {
               field.plantCarrot(this.x + 50, this.y + 50, this.myFarm);
               this.myFarm.carrotSeeds.total -= 1;
-              this.myFarm.carrots.total +=1;
+              this.myFarm.carrots.total += 1;
             }
           }
         }
@@ -147,7 +186,7 @@ class Farmer extends Drawable {
             if (this.p5.keyIsDown(this.p5.ENTER)) {
               field.plantPumpkin(this.x + 50, this.y + 50, this.myFarm);
               this.myFarm.pumpkinSeeds.total -= 1;
-              this.myFarm.pumpkins.total +=1;
+              this.myFarm.pumpkins.total += 1;
             }
           }
         }
@@ -156,7 +195,7 @@ class Farmer extends Drawable {
             if (this.p5.keyIsDown(this.p5.ENTER)) {
               field.plantWheat(this.x + 50, this.y + 50, this.myFarm);
               this.myFarm.wheatSeeds.total -= 1;
-              this.myFarm.wheats.total +=1;
+              this.myFarm.wheats.total += 1;
             }
           }
         }
@@ -164,8 +203,8 @@ class Farmer extends Drawable {
           if (this.myFarm.gasGenerators.total > 0) {
             if (this.p5.keyIsDown(this.p5.ENTER)) {
               field.placeGasGenerator(this.x + 50, this.y + 50, this.myFarm);
-              this.myFarm.gasGenerators.total -=1;
-              this.myFarm.gasGenerator.total+=1;
+              this.myFarm.gasGenerators.total -= 1;
+              this.myFarm.gasGenerator.total += 1;
             }
           }
         }
@@ -173,8 +212,8 @@ class Farmer extends Drawable {
           if (this.myFarm.solarPanels.total > 0) {
             if (this.p5.keyIsDown(this.p5.ENTER)) {
               field.placeSolarPanel(this.x + 50, this.y + 50, this.myFarm);
-              this.myFarm.solarPanels.total -=1;
-              this.myFarm.solarPanel.total +=1;
+              this.myFarm.solarPanels.total -= 1;
+              this.myFarm.solarPanel.total += 1;
             }
           }
         }

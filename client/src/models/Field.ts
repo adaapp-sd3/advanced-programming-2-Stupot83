@@ -9,8 +9,15 @@ import Salmon from "./animals/Salmon";
 import Duck from "./animals/Duck";
 import Goose from "./animals/Goose";
 import Llama from "./animals/Llama";
+import Cabbage from "./crops/Cabbage";
 import Carrot from "./crops/Carrot";
+import Kale from "./crops/Kale";
+import Lettuce from "./crops/Lettuce";
+import Pea from "./crops/Pea";
+import Potato from "./crops/Potato";
 import Pumpkin from "./crops/Pumpkin";
+import Rapeseed from "./crops/Rapeseed";
+import Sugarbeet from "./crops/Sugarbeet";
 import Wheat from "./crops/Wheat";
 import Farm from "./Farm";
 import SolarPanel from "./tech/SolarPanel";
@@ -136,6 +143,15 @@ class Field extends Drawable {
     this.contents.push(llama)
   }
 
+  plantCabbage(x: number, y: number, farm: Farm) {
+    console.log("new cabbage");
+    let cabbage= new Cabbage(farm);
+    cabbage.p5 = this.p5;
+    cabbage.preload();
+    cabbage.plantCabbage(x, y);
+    this.contents.push(cabbage);
+  }
+
   plantCarrot(x: number, y: number, farm: Farm) {
     console.log("new carrot");
     let carrot = new Carrot(farm);
@@ -145,6 +161,43 @@ class Field extends Drawable {
     this.contents.push(carrot);
   }
 
+  plantKale(x: number, y: number, farm: Farm) {
+    console.log("new kale");
+    let kale = new Kale(farm);
+    kale.p5 = this.p5;
+    kale.preload();
+    kale.plantKale(x, y);
+    this.contents.push(kale);
+  }
+
+  plantLettuce(x: number, y: number, farm: Farm) {
+    console.log("new lettuce");
+    let lettuce = new Lettuce(farm);
+    lettuce.p5 = this.p5;
+    lettuce.preload();
+    lettuce.plantLettuce(x, y);
+    this.contents.push(lettuce);
+  }
+
+  plantPea(x: number, y: number, farm: Farm) {
+    console.log("new pea");
+    let pea = new Pea(farm);
+    pea.p5 = this.p5;
+    pea.preload();
+    pea.plantPea(x, y);
+    this.contents.push(pea);
+  }
+
+
+  plantPotato(x: number, y: number, farm: Farm) {
+    console.log("new potato");
+    let potato = new Potato(farm);
+    potato.p5 = this.p5;
+    potato.preload();
+    potato.plantPotato(x, y);
+    this.contents.push(potato);
+  }
+
   plantPumpkin(x: number, y: number, farm: Farm) {
     console.log("new pumpkin");
     let pumpkin = new Pumpkin(farm);
@@ -152,6 +205,24 @@ class Field extends Drawable {
     pumpkin.preload();
     pumpkin.plantPumpkin(x, y);
     this.contents.push(pumpkin);
+  }
+
+  plantRapeseed(x: number, y: number, farm: Farm) {
+    console.log("new rapeseed");
+    let rapeseed = new Rapeseed(farm);
+    rapeseed.p5 = this.p5;
+    rapeseed.preload();
+    rapeseed.plantRapeseed(x, y);
+    this.contents.push(rapeseed);
+  }
+
+  plantSugarbeet(x: number, y: number, farm: Farm) {
+    console.log("new sugarbeet");
+    let sugarbeet = new Sugarbeet(farm);
+    sugarbeet.p5 = this.p5;
+    sugarbeet.preload();
+    sugarbeet.plantSugarbeet(x, y);
+    this.contents.push(sugarbeet);
   }
 
   plantWheat(x: number, y: number, farm: Farm) {

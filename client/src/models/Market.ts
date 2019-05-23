@@ -5,11 +5,6 @@ class Market extends Drawable {
   imgUrl = "/img/twtr/market.png";
   currentFarmer!: Farmer;
 
-  greenGasDemand: number = 100;
-  solarPowerDemand: number = 100;
-  milkDemand: number = 75;
-  beefDemand: number = 75;
-
   pricePerCow: number = 60;
   pricePerSheep: number = 40;
   pricePerChicken: number = 20;
@@ -21,12 +16,26 @@ class Market extends Drawable {
   pricePerGoose: number = 40;
   pricePerLlama: number = 40;
 
+  cabbagePrice: number = 10;
   carrotPrice: number = 10;
+  kalePrice: number = 10;
+  lettucePrice: number = 10;
+  peaPrice: number = 10;
+  potatoPrice: number = 10;
   pumpkinPrice: number = 10;
+  rapeseedPrice: number = 10;
+  sugarbeetPrice: number = 10;
   wheatPrice: number = 10;
 
+  cabbageSeedPrice: number = 10;
   carrotSeedPrice: number = 10;
+  kaleSeedPrice: number = 10;
+  lettuceSeedPrice: number = 10;
+  peaSeedPrice: number = 10;
+  potatoSeedPrice: number = 10;
   pumpkinSeedPrice: number = 10;
+  rapeseedSeedPrice: number = 10;
+  sugarbeetSeedPrice: number = 10;
   wheatSeedPrice: number = 10;
 
   strawPrice: number = 100;

@@ -193,13 +193,41 @@ class FarmerDashboard extends Component {
                 <>
                   <dt>Budget</dt>
                   <dd className="Budget">£{this.props.farmer.budget}</dd>
+                  <dt>CabSeeds</dt>
+                  <dd className="Seeds">
+                    {this.props.farmer.myFarm.cabbageSeeds.total} pkts
+                  </dd>
                   <dt>CarSeeds</dt>
                   <dd className="Seeds">
                     {this.props.farmer.myFarm.carrotSeeds.total} pkts
                   </dd>
+                  <dt>KaleSeeds</dt>
+                  <dd className="Seeds">
+                    {this.props.farmer.myFarm.kaleSeeds.total} pkts
+                  </dd>
+                  <dt>LetSeeds</dt>
+                  <dd className="Seeds">
+                    {this.props.farmer.myFarm.lettuceSeeds.total} pkts
+                  </dd>
+                  <dt>PeaSeeds</dt>
+                  <dd className="Seeds">
+                    {this.props.farmer.myFarm.peaSeeds.total} pkts
+                  </dd>
+                  <dt>PotSeeds</dt>
+                  <dd className="Seeds">
+                    {this.props.farmer.myFarm.potatoSeeds.total} pkts
+                  </dd>
                   <dt>PumSeeds</dt>
                   <dd className="Seeds">
                     {this.props.farmer.myFarm.pumpkinSeeds.total} pkts
+                  </dd>
+                  <dt>RapeSeeds</dt>
+                  <dd className="Seeds">
+                    {this.props.farmer.myFarm.rapeseedSeeds.total} pkts
+                  </dd>
+                  <dt>SugSeeds</dt>
+                  <dd className="Seeds">
+                    {this.props.farmer.myFarm.sugarbeetSeeds.total} pkts
                   </dd>
                   <dt>WhtSeeds</dt>
                   <dd className="Seeds">
@@ -210,13 +238,41 @@ class FarmerDashboard extends Component {
 
               {this.props.farmer.myFarm && (
                 <>
+                  <dt>Cabbages</dt>
+                  <dd className="Plants">
+                    {this.props.farmer.myFarm.cabbages.total} units
+                  </dd>
                   <dt>Carrots</dt>
                   <dd className="Plants">
                     {this.props.farmer.myFarm.carrots.total} units
                   </dd>
+                  <dt>Kales</dt>
+                  <dd className="Plants">
+                    {this.props.farmer.myFarm.kales.total} units
+                  </dd>
+                  <dt>Lettuces</dt>
+                  <dd className="Plants">
+                    {this.props.farmer.myFarm.lettuces.total} units
+                  </dd>
+                  <dt>Peas</dt>
+                  <dd className="Plants">
+                    {this.props.farmer.myFarm.peas.total} units
+                  </dd>
+                  <dt>Potatoes</dt>
+                  <dd className="Plants">
+                    {this.props.farmer.myFarm.potatoes.total} units
+                  </dd>
                   <dt>Pumpkins</dt>
                   <dd className="Plants">
                     {this.props.farmer.myFarm.pumpkins.total} units
+                  </dd>
+                  <dt>Rapeseeds</dt>
+                  <dd className="Plants">
+                    {this.props.farmer.myFarm.rapeseeds.total} units
+                  </dd>
+                  <dt>Sugarbeets</dt>
+                  <dd className="Plants">
+                    {this.props.farmer.myFarm.sugarbeets.total} units
                   </dd>
                   <dt>Wheats</dt>
                   <dd className="Plants">
@@ -227,13 +283,41 @@ class FarmerDashboard extends Component {
 
               {this.props.farmer.myFarm && (
                 <>
+                  <dt>Cabbage</dt>
+                  <dd className="Crop">
+                    {this.props.farmer.myFarm.cabbage.total} kg
+                  </dd>
                   <dt>Carrot</dt>
                   <dd className="Crop">
                     {this.props.farmer.myFarm.carrot.total} kg
                   </dd>
+                  <dt>Kale</dt>
+                  <dd className="Crop">
+                    {this.props.farmer.myFarm.kale.total} kg
+                  </dd>
+                  <dt>Lettuce</dt>
+                  <dd className="Crop">
+                    {this.props.farmer.myFarm.lettuce.total} kg
+                  </dd>
+                  <dt>Pea</dt>
+                  <dd className="Crop">
+                    {this.props.farmer.myFarm.pea.total} kg
+                  </dd>
+                  <dt>Potato</dt>
+                  <dd className="Crop">
+                    {this.props.farmer.myFarm.potato.total} kg
+                  </dd>
                   <dt>Pumpkin</dt>
                   <dd className="Crop">
                     {this.props.farmer.myFarm.pumpkin.total} kg
+                  </dd>
+                  <dt>Rapeseed</dt>
+                  <dd className="Crop">
+                    {this.props.farmer.myFarm.rapeseed.total} kg
+                  </dd>
+                  <dt>Sugarbeet</dt>
+                  <dd className="Crop">
+                    {this.props.farmer.myFarm.sugarbeet.total} kg
                   </dd>
                   <dt>Wheat</dt>
                   <dd className="Crop">

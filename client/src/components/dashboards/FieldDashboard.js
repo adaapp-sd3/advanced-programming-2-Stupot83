@@ -285,16 +285,65 @@ class FieldDashboard extends Component {
 
   getCrops(crops) {
     switch (crops) {
-      case "carrots":
+      case "cabbages":
+        for (var i = 0; i < this.props.field.contents.length; i++) {
+          this.props.field.contents[i].yieldCabbage();
+          this.props.field.contents.pop();
+        }
+        break;
+      
+        case "carrots":
         for (var i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldCarrot();
           this.props.field.contents.pop();
         }
         break;
 
-      case "pumpkins":
+        case "kales":
+        for (var i = 0; i < this.props.field.contents.length; i++) {
+          this.props.field.contents[i].yieldKale();
+          this.props.field.contents.pop();
+        }
+        break;
+
+        case "lettuces":
+        for (var i = 0; i < this.props.field.contents.length; i++) {
+          this.props.field.contents[i].yieldLettuce();
+          this.props.field.contents.pop();
+        }
+        break;
+
+        case "peas":
+        for (var i = 0; i < this.props.field.contents.length; i++) {
+          this.props.field.contents[i].yieldPea();
+          this.props.field.contents.pop();
+        }
+        break;
+
+        case "potatoes":
+        for (var i = 0; i < this.props.field.contents.length; i++) {
+          this.props.field.contents[i].yieldPotato();
+          this.props.field.contents.pop();
+        }
+        break;
+
+        case "pumpkins":
         for (var i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldPumpkin();
+          this.props.field.contents.pop();
+        }
+        break;
+
+        case "rapeseeds":
+        for (var i = 0; i < this.props.field.contents.length; i++) {
+          this.props.field.contents[i].yieldRapeseed();
+          this.props.field.contents.pop();
+        }
+        break;
+
+      case "sugarbeets":
+        for (var i = 0; i < this.props.field.contents.length; i++) {
+          this.props.field.contents[i].yieldSugarbeet();
           this.props.field.contents.pop();
         }
         break;
@@ -538,14 +587,49 @@ class FieldDashboard extends Component {
                 Collect Goose eggs
               </Button>
             )}
+             {this.props.field.contents[0].name === "Cabbage" && (
+              <Button onClick={() => this.getCrops("cabbages")}>
+                Collect Cabbages
+              </Button>
+            )}
             {this.props.field.contents[0].name === "Carrot" && (
               <Button onClick={() => this.getCrops("carrots")}>
                 Collect Carrots
               </Button>
             )}
+             {this.props.field.contents[0].name === "Kale" && (
+              <Button onClick={() => this.getCrops("kales")}>
+                Collect Kales
+              </Button>
+            )}
+             {this.props.field.contents[0].name === "Lettuce" && (
+              <Button onClick={() => this.getCrops("lettuces")}>
+                Collect Lettuces
+              </Button>
+            )}
+             {this.props.field.contents[0].name === "Pea" && (
+              <Button onClick={() => this.getCrops("peas")}>
+                Collect Peas
+              </Button>
+            )}
+             {this.props.field.contents[0].name === "Potato" && (
+              <Button onClick={() => this.getCrops("potatoes")}>
+                Collect Potatoes
+              </Button>
+            )}
             {this.props.field.contents[0].name === "Pumpkin" && (
               <Button onClick={() => this.getCrops("pumpkins")}>
                 Collect Pumpkins
+              </Button>
+            )}
+             {this.props.field.contents[0].name === "Rapeseed" && (
+              <Button onClick={() => this.getCrops("rapeseeds")}>
+                Collect Rapeseeds
+              </Button>
+            )}
+             {this.props.field.contents[0].name === "Sugarbeet" && (
+              <Button onClick={() => this.getCrops("sugarbeets")}>
+                Collect Sugarbeets
               </Button>
             )}
             {this.props.field.contents[0].name === "Wheat" && (

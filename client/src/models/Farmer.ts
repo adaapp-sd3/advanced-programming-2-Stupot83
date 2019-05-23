@@ -172,6 +172,15 @@ class Farmer extends Drawable {
             }
           }
         }
+        if (!field.contents[0] || field.contents[0].name === "Cabbage") {
+          if (this.myFarm.cabbageSeeds.total > 0) {
+            if (this.p5.keyIsDown(this.p5.ENTER)) {
+              field.plantCabbage(this.x + 50, this.y + 50, this.myFarm);
+              this.myFarm.cabbageSeeds.total -= 1;
+              this.myFarm.cabbages.total += 1;
+            }
+          }
+        }
         if (!field.contents[0] || field.contents[0].name === "Carrot") {
           if (this.myFarm.carrotSeeds.total > 0) {
             if (this.p5.keyIsDown(this.p5.ENTER)) {
@@ -181,12 +190,66 @@ class Farmer extends Drawable {
             }
           }
         }
+        if (!field.contents[0] || field.contents[0].name === "Kale") {
+          if (this.myFarm.kaleSeeds.total > 0) {
+            if (this.p5.keyIsDown(this.p5.ENTER)) {
+              field.plantKale(this.x + 50, this.y + 50, this.myFarm);
+              this.myFarm.kaleSeeds.total -= 1;
+              this.myFarm.kales.total += 1;
+            }
+          }
+        }
+        if (!field.contents[0] || field.contents[0].name === "Lettuce") {
+          if (this.myFarm.lettuceSeeds.total > 0) {
+            if (this.p5.keyIsDown(this.p5.ENTER)) {
+              field.plantLettuce(this.x + 50, this.y + 50, this.myFarm);
+              this.myFarm.lettuceSeeds.total -= 1;
+              this.myFarm.lettuces.total += 1;
+            }
+          }
+        }
+        if (!field.contents[0] || field.contents[0].name === "Pea") {
+          if (this.myFarm.peaSeeds.total > 0) {
+            if (this.p5.keyIsDown(this.p5.ENTER)) {
+              field.plantPea(this.x + 50, this.y + 50, this.myFarm);
+              this.myFarm.peaSeeds.total -= 1;
+              this.myFarm.peas.total += 1;
+            }
+          }
+        }
+        if (!field.contents[0] || field.contents[0].name === "Potato") {
+          if (this.myFarm.potatoSeeds.total > 0) {
+            if (this.p5.keyIsDown(this.p5.ENTER)) {
+              field.plantPotato(this.x + 50, this.y + 50, this.myFarm);
+              this.myFarm.potatoSeeds.total -= 1;
+              this.myFarm.potatoes.total += 1;
+            }
+          }
+        }
         if (!field.contents[0] || field.contents[0].name === "Pumpkin") {
           if (this.myFarm.pumpkinSeeds.total > 0) {
             if (this.p5.keyIsDown(this.p5.ENTER)) {
               field.plantPumpkin(this.x + 50, this.y + 50, this.myFarm);
               this.myFarm.pumpkinSeeds.total -= 1;
               this.myFarm.pumpkins.total += 1;
+            }
+          }
+        }
+        if (!field.contents[0] || field.contents[0].name === "Rapeseed") {
+          if (this.myFarm.rapeseedSeeds.total > 0) {
+            if (this.p5.keyIsDown(this.p5.ENTER)) {
+              field.plantRapeseed(this.x + 50, this.y + 50, this.myFarm);
+              this.myFarm.rapeseedSeeds.total -= 1;
+              this.myFarm.rapeseeds.total += 1;
+            }
+          }
+        }
+        if (!field.contents[0] || field.contents[0].name === "Sugarbeet") {
+          if (this.myFarm.sugarbeetSeeds.total > 0) {
+            if (this.p5.keyIsDown(this.p5.ENTER)) {
+              field.plantSugarbeet(this.x + 50, this.y + 50, this.myFarm);
+              this.myFarm.sugarbeetSeeds.total -= 1;
+              this.myFarm.sugarbeets.total += 1;
             }
           }
         }

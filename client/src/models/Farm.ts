@@ -33,13 +33,34 @@ class Farm extends Drawable {
   llamas: any;
   llama: any;
   llamaWool: any;
+  cabbageSeeds: any;
   carrotSeeds: any;
+  kaleSeeds: any;
+  lettuceSeeds: any;
+  peaSeeds: any;
+  potatoSeeds: any;
   pumpkinSeeds: any;
+  rapeseedSeeds: any;
+  sugarbeetSeeds: any;
   wheatSeeds: any;
+  cabbages: any;
+  cabbage: any;
   carrots: any;
   carrot: any;
+  kales: any;
+  kale: any;
+  lettuces: any;
+  lettuce: any;
+  peas: any;
+  pea: any;
+  potatoes: any;
+  potato: any;
   pumpkins: any;
   pumpkin: any;
+  rapeseeds: any;
+  rapeseed: any;
+  sugarbeets: any;
+  sugarbeet: any;
   wheats: any;
   wheat: any;
   straw: any;
@@ -195,8 +216,33 @@ class Farm extends Drawable {
       total: 0,
       unit: "bales",
     },
+    cabbageSeeds: any = {
+      name: "cabbageSeeds",
+      total: 0,
+      unit: "bags",
+    },
     carrotSeeds: any = {
       name: "carrotSeeds",
+      total: 0,
+      unit: "bags",
+    },
+    kaleSeeds: any = {
+      name: "kaleSeeds",
+      total: 0,
+      unit: "bags",
+    },
+    lettuceSeeds: any = {
+      name: "lettuceSeeds",
+      total: 0,
+      unit: "bags",
+    },
+    peaSeeds: any = {
+      name: "peaSeeds",
+      total: 0,
+      unit: "bags",
+    },
+    potatoSeeds: any = {
+      name: "potatoSeeds",
       total: 0,
       unit: "bags",
     },
@@ -205,10 +251,30 @@ class Farm extends Drawable {
       total: 0,
       unit: "bags",
     },
+    rapeseedSeeds: any = {
+      name: "rapeseedSeeds",
+      total: 0,
+      unit: "bags",
+    },
+    sugarbeetSeeds: any = {
+      name: "sugarbeetSeeds",
+      total: 0,
+      unit: "bags",
+    },
     wheatSeeds: any = {
       name: "wheatSeeds",
       total: 0,
       unit: "bags",
+    },
+    cabbages: any = {
+      name: "Cabbages",
+      total: 0,
+      objects: [],
+    },
+    cabbage: any = {
+      name: "Cabbage",
+      total: 0,
+      unit: "kg",
     },
     carrots: any = {
       name: "Carrots",
@@ -220,6 +286,46 @@ class Farm extends Drawable {
       total: 0,
       unit: "kg",
     },
+    kales: any = {
+      name: "Kales",
+      total: 0,
+      objects: [],
+    },
+    kale: any = {
+      name: "Kale",
+      total: 0,
+      unit: "kg",
+    },
+    lettuces: any = {
+      name: "Lettuces",
+      total: 0,
+      objects: [],
+    },
+    lettuce: any = {
+      name: "Lettuce",
+      total: 0,
+      unit: "kg",
+    },
+    peas: any = {
+      name: "Peas",
+      total: 0,
+      objects: [],
+    },
+    pea: any = {
+      name: "Pea",
+      total: 0,
+      unit: "kg",
+    },
+    potatoes: any = {
+      name: "Potatoes",
+      total: 0,
+      objects: [],
+    },
+    potato: any = {
+      name: "Potato",
+      total: 0,
+      unit: "kg",
+    },
     pumpkins: any = {
       name: "Pumpkins",
       total: 0,
@@ -227,6 +333,26 @@ class Farm extends Drawable {
     },
     pumpkin: any = {
       name: "Pumpkin",
+      total: 0,
+      unit: "kg",
+    },
+    rapeseeds: any = {
+      name: "Rapeseeds",
+      total: 0,
+      objects: [],
+    },
+    rapeseed: any = {
+      name: "Rapeseed",
+      total: 0,
+      unit: "kg",
+    },
+    sugarbeets: any = {
+      name: "Sugarbeets",
+      total: 0,
+      objects: [],
+    },
+    sugarbeet: any = {
+      name: "Sugarbeet",
       total: 0,
       unit: "kg",
     },
@@ -325,13 +451,34 @@ class Farm extends Drawable {
     this.llamas = llamas;
     this.llama = llama;
     this.llamaWool = llamaWool;
+    this.cabbageSeeds = cabbageSeeds;
     this.carrotSeeds = carrotSeeds;
+    this.kaleSeeds = kaleSeeds;
+    this.lettuceSeeds = lettuceSeeds;
+    this.peaSeeds = peaSeeds;
+    this.potatoSeeds = potatoSeeds;
     this.pumpkinSeeds = pumpkinSeeds;
+    this.rapeseedSeeds = rapeseedSeeds;
+    this.sugarbeetSeeds = sugarbeetSeeds;
     this.wheatSeeds = wheatSeeds;
+    this.cabbages = cabbages;
+    this.cabbage = cabbage;
     this.carrots = carrots;
     this.carrot = carrot;
+    this.kales = kales;
+    this.kale = kale;
+    this.lettuces = lettuces;
+    this.lettuce = lettuce;
+    this.peas = peas;
+    this.pea = pea;
+    this.potatoes = potatoes;
+    this.potato = potato;
     this.pumpkins = pumpkins;
     this.pumpkin = pumpkin;
+    this.rapeseeds = rapeseeds;
+    this.rapeseed = rapeseed;
+    this.sugarbeets = sugarbeets;
+    this.sugarbeet = sugarbeet;
     this.wheats = wheats;
     this.wheat = wheat;
     this.straw = straw;

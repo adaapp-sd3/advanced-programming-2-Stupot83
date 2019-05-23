@@ -226,6 +226,18 @@ class MarketDashboard extends Component {
 
   buySeeds(seeds) {
     switch (seeds) {
+      case "cabbageSeeds":
+      if (
+        this.props.market.currentFarmer.budget >
+        this.props.market.cabbageSeedPrice
+      ) {
+        this.props.market.currentFarmer.myFarm.cabbageSeeds.total += 1;
+        const unit = 1;
+        this.props.market.currentFarmer.budget -=
+          unit * this.props.market.cabbageSeedPrice;
+      }
+      break;
+
       case "carrotSeeds":
         if (
           this.props.market.currentFarmer.budget >
@@ -235,6 +247,54 @@ class MarketDashboard extends Component {
           const unit = 1;
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.carrotSeedPrice;
+        }
+        break;
+
+      case "kaleSeeds":
+        if (
+          this.props.market.currentFarmer.budget >
+          this.props.market.kaleSeedPrice
+        ) {
+          this.props.market.currentFarmer.myFarm.kaleSeeds.total += 1;
+          const unit = 1;
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.kaleSeedPrice;
+        }
+        break;
+
+      case "lettuceSeeds":
+        if (
+          this.props.market.currentFarmer.budget >
+          this.props.market.lettuceSeedPrice
+        ) {
+          this.props.market.currentFarmer.myFarm.lettuceSeeds.total += 1;
+          const unit = 1;
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.lettuceSeedPrice;
+        }
+        break;
+
+        case "peaSeeds":
+        if (
+          this.props.market.currentFarmer.budget >
+          this.props.market.peaSeedPrice
+        ) {
+          this.props.market.currentFarmer.myFarm.peaSeeds.total += 1;
+          const unit = 1;
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.peaSeedPrice;
+        }
+        break;
+
+      case "potatoSeeds":
+        if (
+          this.props.market.currentFarmer.budget >
+          this.props.market.potatoSeedPrice
+        ) {
+          this.props.market.currentFarmer.myFarm.potatoSeeds.total += 1;
+          const unit = 1;
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.potatoSeedPrice;
         }
         break;
 
@@ -249,6 +309,30 @@ class MarketDashboard extends Component {
             unit * this.props.market.pumpkinSeedPrice;
         }
         break;
+
+      case "rapeseedSeeds":
+        if (
+          this.props.market.currentFarmer.budget >
+          this.props.market.rapeseedSeedPrice
+        ) {
+          this.props.market.currentFarmer.myFarm.rapeseedSeeds.total += 1;
+          const unit = 1;
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.rapeseedSeedPrice;
+        }
+        break;
+       
+        case "sugarbeetSeeds":
+        if (
+          this.props.market.currentFarmer.budget >
+          this.props.market.sugarbeetSeedPrice
+        ) {
+          this.props.market.currentFarmer.myFarm.sugarbeetSeeds.total += 1;
+          const unit = 1;
+          this.props.market.currentFarmer.budget -=
+            unit * this.props.market.sugarbeetSeedPrice;
+        }
+        break; 
 
       case "wheatSeeds":
         if (
@@ -422,6 +506,13 @@ class MarketDashboard extends Component {
 
   sellCrop(crop) {
     switch (crop) {
+      case "cabbage":
+        this.props.market.currentFarmer.budget +=
+          this.props.market.cabbagePrice *
+          this.props.market.currentFarmer.myFarm.cabbages.total;
+          this.props.market.currentFarmer.myFarm.cabbges.total = 0;
+          break;
+
       case "carrot":
         this.props.market.currentFarmer.budget +=
           this.props.market.carrotPrice *
@@ -429,11 +520,53 @@ class MarketDashboard extends Component {
         this.props.market.currentFarmer.myFarm.carrots.total = 0;
         break;
 
+        case "kale":
+        this.props.market.currentFarmer.budget +=
+          this.props.market.kalePrice *
+          this.props.market.currentFarmer.myFarm.kales.total;
+        this.props.market.currentFarmer.myFarm.kales.total = 0;
+        break;
+
+        case "lettuce":
+        this.props.market.currentFarmer.budget +=
+          this.props.market.lettucePrice *
+          this.props.market.currentFarmer.myFarm.lettuces.total;
+        this.props.market.currentFarmer.myFarm.lettuces.total = 0;
+        break;
+
+        case "pea":
+        this.props.market.currentFarmer.budget +=
+          this.props.market.peaPrice *
+          this.props.market.currentFarmer.myFarm.peas.total;
+        this.props.market.currentFarmer.myFarm.peas.total = 0;
+        break;
+
+        case "potato":
+        this.props.market.currentFarmer.budget +=
+          this.props.market.potatoPrice *
+          this.props.market.currentFarmer.myFarm.potatoes.total;
+        this.props.market.currentFarmer.myFarm.potatoes.total = 0;
+        break;
+
       case "pumpkin":
         this.props.market.currentFarmer.budget +=
           this.props.market.pumpkinPrice *
           this.props.market.currentFarmer.myFarm.pumpkins.total;
         this.props.market.currentFarmer.myFarm.pumpkins.total = 0;
+        break;
+
+        case "rapeseed":
+        this.props.market.currentFarmer.budget +=
+          this.props.market.rapeseedPrice *
+          this.props.market.currentFarmer.myFarm.rapeseeds.total;
+        this.props.market.currentFarmer.myFarm.rapeseeds.total = 0;
+        break;
+
+        case "sugarbeet":
+        this.props.market.currentFarmer.budget +=
+          this.props.market.sugarbeetPrice *
+          this.props.market.currentFarmer.myFarm.sugarbeets.total;
+        this.props.market.currentFarmer.myFarm.sugarbeets.total = 0;
         break;
 
       case "wheat":
@@ -658,6 +791,17 @@ class MarketDashboard extends Component {
 
                 <Tab eventKey="buy seeds" title="Buy Seeds">
                   <dl className="market-list">
+                  <div className="Seed">
+                      <dd>
+                        <Button onClick={() => this.buySeeds("cabbageSeeds")}>
+                          Buy cabbageSeed for {this.props.market.cabbageSeedPrice}
+                          <img
+                            src="/img/twtr/cabbageseed.png"
+                            alt="cabbageseed"
+                          />
+                        </Button>
+                      </dd>
+                    </div>
                     <div className="Seed">
                       <dd>
                         <Button onClick={() => this.buySeeds("carrotSeeds")}>
@@ -671,12 +815,78 @@ class MarketDashboard extends Component {
                     </div>
                     <div className="Seed">
                       <dd>
+                        <Button onClick={() => this.buySeeds("kaleSeeds")}>
+                          Buy kaleSeed for {this.props.market.kaleSeedPrice}
+                          <img
+                            src="/img/twtr/kaleseed.png"
+                            alt="kaleseed"
+                          />
+                        </Button>
+                      </dd>
+                    </div>
+                    <div className="Seed">
+                      <dd>
+                        <Button onClick={() => this.buySeeds("lettuceSeeds")}>
+                          Buy lettuceSeed for {this.props.market.lettuceSeedPrice}
+                          <img
+                            src="/img/twtr/lettuceseed.png"
+                            alt="lettuceseed"
+                          />
+                        </Button>
+                      </dd>
+                    </div>
+                    <div className="Seed">
+                      <dd>
+                        <Button onClick={() => this.buySeeds("peaSeeds")}>
+                          Buy peaSeed for {this.props.market.peaSeedPrice}
+                          <img
+                            src="/img/twtr/peaseed.png"
+                            alt="peaseed"
+                          />
+                        </Button>
+                      </dd>
+                    </div>
+                    <div className="Seed">
+                      <dd>
+                        <Button onClick={() => this.buySeeds("potatoSeeds")}>
+                          Buy potatoSeed for {this.props.market.potatoSeedPrice}
+                          <img
+                            src="/img/twtr/potatoseed.png"
+                            alt="potatoseed"
+                          />
+                        </Button>
+                      </dd>
+                    </div>
+                    <div className="Seed">
+                      <dd>
                         <Button onClick={() => this.buySeeds("pumpkinSeeds")}>
                           Buy pumpkinSeed for{" "}
                           {this.props.market.pumpkinSeedPrice}
                           <img
                             src="/img/twtr/pumpkinseed.png"
                             alt="pumpkinseed"
+                          />
+                        </Button>
+                      </dd>
+                    </div>
+                    <div className="Seed">
+                      <dd>
+                        <Button onClick={() => this.buySeeds("rapeseedSeeds")}>
+                          Buy rapeseedSeed for {this.props.market.rapeseedSeedPrice}
+                          <img
+                            src="/img/twtr/rapeseedseed.png"
+                            alt="rapeseedseed"
+                          />
+                        </Button>
+                      </dd>
+                    </div>
+                    <div className="Seed">
+                      <dd>
+                        <Button onClick={() => this.buySeeds("sugarbeetSeeds")}>
+                          Buy sugarbeetSeed for {this.props.market.sugarbeetSeedPrice}
+                          <img
+                            src="/img/twtr/sugarbeetseed.png"
+                            alt="sugarbeetseed"
                           />
                         </Button>
                       </dd>
@@ -862,6 +1072,14 @@ class MarketDashboard extends Component {
 
                 <Tab eventKey="sell crops" title="Sell Crops">
                   <dl className="market-list">
+                  <div className="Crop">
+                      <dd>
+                        <Button onClick={() => this.sellCrop("cabbage")}>
+                          Sell cabbage for {this.props.market.cabbagePrice}
+                          <img src="/img/twtr/cabbage.png" alt="cabbage" />
+                        </Button>
+                      </dd>
+                    </div>
                     <div className="Crop">
                       <dd>
                         <Button onClick={() => this.sellCrop("carrot")}>
@@ -872,9 +1090,57 @@ class MarketDashboard extends Component {
                     </div>
                     <div className="Crop">
                       <dd>
+                        <Button onClick={() => this.sellCrop("kale")}>
+                          Sell kale for {this.props.market.kalePrice}
+                          <img src="/img/twtr/kale.png" alt="kale" />
+                        </Button>
+                      </dd>
+                    </div>
+                    <div className="Crop">
+                      <dd>
+                        <Button onClick={() => this.sellCrop("lettuce")}>
+                          Sell lettuce for {this.props.market.lettucePrice}
+                          <img src="/img/twtr/lettuce.png" alt="lettuce" />
+                        </Button>
+                      </dd>
+                    </div>
+                    <div className="Crop">
+                      <dd>
+                        <Button onClick={() => this.sellCrop("pea")}>
+                          Sell pea for {this.props.market.peaPrice}
+                          <img src="/img/twtr/pea.png" alt="pea" />
+                        </Button>
+                      </dd>
+                    </div>
+                    <div className="Crop">
+                      <dd>
+                        <Button onClick={() => this.sellCrop("potato")}>
+                          Sell potato for {this.props.market.potatoPrice}
+                          <img src="/img/twtr/potato.png" alt="potato" />
+                        </Button>
+                      </dd>
+                    </div>
+                    <div className="Crop">
+                      <dd>
                         <Button onClick={() => this.sellCrop("pumpkin")}>
                           Sell pumpkin for {this.props.market.pumpkinPrice}
                           <img src="/img/twtr/pumpkin.png" alt="pumpkin" />
+                        </Button>
+                      </dd>
+                    </div>
+                    <div className="Crop">
+                      <dd>
+                        <Button onClick={() => this.sellCrop("rapeseed")}>
+                          Sell rapeseed for {this.props.market.rapeseedPrice}
+                          <img src="/img/twtr/rapeseed.png" alt="rapeseed" />
+                        </Button>
+                      </dd>
+                    </div>
+                    <div className="Crop">
+                      <dd>
+                        <Button onClick={() => this.sellCrop("sugarbeet")}>
+                          Sell sugarbeet for {this.props.market.sugarbeetPrice}
+                          <img src="/img/twtr/sugarbeet.png" alt="sugarbeet" />
                         </Button>
                       </dd>
                     </div>

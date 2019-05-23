@@ -62,6 +62,11 @@ class Chicken extends Animal {
     this.stopForFarmer();
     this.checkHealth();
   }
+
+  placeChicken(fieldX: number, fieldY: number) {
+    this.x = fieldX;
+    this.y = fieldY;
+  }
 }
 
 export default Chicken;

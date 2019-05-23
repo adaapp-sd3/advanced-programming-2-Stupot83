@@ -32,7 +32,6 @@ class MarketDashboard extends Component {
         ) {
           this.props.market.currentFarmer.myFarm.cows.total += 1;
           const unit = 1;
-          // this.props.market.currentFarmer.myFarm.makeCow();
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.pricePerCow;
         }
@@ -45,7 +44,6 @@ class MarketDashboard extends Component {
         ) {
           this.props.market.currentFarmer.myFarm.sheep.total += 1;
           const unit = 1;
-          // this.props.market.currentFarmer.myFarm.makeSheep();
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.pricePerSheep;
         }
@@ -58,7 +56,6 @@ class MarketDashboard extends Component {
         ) {
           this.props.market.currentFarmer.myFarm.chickens.total += 1;
           const unit = 1;
-          // this.props.market.currentFarmer.myFarm.makeChicken()
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.pricePerChicken;
         }
@@ -70,7 +67,6 @@ class MarketDashboard extends Component {
         ) {
           this.props.market.currentFarmer.myFarm.pigs.total += 1;
           const unit = 1;
-          // this.props.market.currentFarmer.myFarm.makeChicken()
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.pricePerPig;
         }
@@ -83,7 +79,6 @@ class MarketDashboard extends Component {
         ) {
           this.props.market.currentFarmer.myFarm.crocodiles.total += 1;
           const unit = 1;
-          // this.props.market.currentFarmer.myFarm.makeCrocodile()
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.pricePerCrocodile;
         }
@@ -96,7 +91,6 @@ class MarketDashboard extends Component {
         ) {
           this.props.market.currentFarmer.myFarm.ostriches.total += 1;
           const unit = 1;
-          // this.props.market.currentFarmer.myFarm.makeOstrich()
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.pricePerOstrich;
         }
@@ -109,7 +103,6 @@ class MarketDashboard extends Component {
         ) {
           this.props.market.currentFarmer.myFarm.salmons.total += 1;
           const unit = 1;
-          // this.props.market.currentFarmer.myFarm.makeSalmon()
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.pricePerSalmon;
         }
@@ -122,7 +115,6 @@ class MarketDashboard extends Component {
         ) {
           this.props.market.currentFarmer.myFarm.ducks.total += 1;
           const unit = 1;
-          // this.props.market.currentFarmer.myFarm.makeDuck()
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.pricePerDuck;
         }
@@ -135,7 +127,6 @@ class MarketDashboard extends Component {
         ) {
           this.props.market.currentFarmer.myFarm.geese.total += 1;
           const unit = 1;
-          // this.props.market.currentFarmer.myFarm.makeGoose()
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.pricePerGoose;
         }
@@ -148,7 +139,6 @@ class MarketDashboard extends Component {
         ) {
           this.props.market.currentFarmer.myFarm.llamas.total += 1;
           const unit = 1;
-          // this.props.market.currentFarmer.myFarm.makeLlama()
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.pricePerLlama;
         }
@@ -234,8 +224,8 @@ class MarketDashboard extends Component {
     }
   }
 
-  buyCrop(crop) {
-    switch (crop) {
+  buySeeds(seeds) {
+    switch (seeds) {
       case "carrotSeeds":
         if (
           this.props.market.currentFarmer.budget >
@@ -268,7 +258,7 @@ class MarketDashboard extends Component {
           this.props.market.currentFarmer.myFarm.wheatSeeds.total += 1;
           const unit = 1;
           this.props.market.currentFarmer.budget -=
-            unit * this.props.market.wheatSeeds;
+            unit * this.props.market.wheatSeedPrice;
         }
         break;
 
@@ -490,15 +480,15 @@ class MarketDashboard extends Component {
       case "gasGenerators":
         this.props.market.currentFarmer.budget +=
           this.props.market.gasGeneratorResalePrice *
-          this.props.market.currentFarmer.myFarm.gasGenerator.total;
-        this.props.market.currentFarmer.myFarm.gasGenerator.total = 0;
+          this.props.market.currentFarmer.myFarm.gasGenerators.total;
+        this.props.market.currentFarmer.myFarm.gasGenerators.total = 0;
         break;
 
       case "solarPanels":
         this.props.market.currentFarmer.budget +=
           this.props.market.solarPanelResalePrice *
-          this.props.market.currentFarmer.myFarm.solarPanel.total;
-        this.props.market.currentFarmer.myFarm.solarPanel.total = 0;
+          this.props.market.currentFarmer.myFarm.solarPanels.total;
+        this.props.market.currentFarmer.myFarm.solarPanels.total = 0;
         break;
 
       default:
@@ -508,13 +498,15 @@ class MarketDashboard extends Component {
   render() {
     return (
       <>
-        <Button
-          variant="primary"
-          onClick={this.handleShow}
-          style={{ marginTop: "0.2rem" }}
-        >
-          Visit the Farmers Market
-        </Button>
+        <div className="MarketButton">
+          <Button
+            variant="primary"
+            onClick={this.handleShow}
+            style={{ margin: "0.8rem", marginLeft: "4rem" }}
+          >
+            Visit the Farmers Market
+          </Button>
+        </div>
 
         <Modal
           backdrop="static"

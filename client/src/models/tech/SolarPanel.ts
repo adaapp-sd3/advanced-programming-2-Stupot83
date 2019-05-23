@@ -12,21 +12,15 @@ class SolarPanel extends Tech {
     this.farm = farm;
   }
 
-  checkWear() {
-    if (this.health <= 0) {
-      this.farm.solarPanels.objects.pop();
-      this.farm.solarPanels.total -= 1;
-    }
-  }
-
   yieldSolarPower() {
-    let amountOfSolarPowerToYield = 5 - this.hunger;
+    let amountOfSolarPowerToYield = 5 - this.health;
     this.farm.solarPower.total += Math.abs(amountOfSolarPowerToYield);
-    this.hunger += 1;
+    this.health -= 1;
   }
 
   yieldSolarPanel() {
-    this.farm.solarPanel.total = this.farm.solarPanels.total;
+    this.farm.solarPanels.total +=1;
+    this.farm.solarPanel.total -=1;
     this.health = 0;
   }
 
@@ -38,7 +32,11 @@ class SolarPanel extends Tech {
   public draw(): any {
     this.constrainItem();
     this.farmerExamine();
-    this.checkWear();
+  }
+
+  placeSolarPanel(fieldX: number, fieldY: number) {
+    this.x = fieldX;
+    this.y = fieldY;
   }
 }
 

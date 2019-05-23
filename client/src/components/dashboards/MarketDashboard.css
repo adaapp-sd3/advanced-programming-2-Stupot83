@@ -1,3 +1,17 @@
+.MarketButton {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border: 4px dashed black;
+    border-top: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right,	#FFFF99, #FFFACD, #FFFFE0);
+    display: inline-flex;
+    width: 100vw;
+    position: fixed;
+    margin-left: -188px;
+    height: 12vh;
+}
+
 .modal-backdrop {
     background-color: transparent;
 }

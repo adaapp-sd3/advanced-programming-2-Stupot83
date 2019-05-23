@@ -1,20 +1,5 @@
 import Drawable from "./abstract/Drawable";
 import Field from "./Field";
-import Cow from "./animals/Cow";
-import Chicken from "./animals/Chicken";
-import Sheep from "./animals/Sheep";
-import Pig from "./animals/Pig";
-import Crocodile from "./animals/Crocodile";
-import Ostrich from "./animals/Ostrich";
-import Salmon from "./animals/Salmon";
-import Goose from "./animals/Goose";
-import Duck from "./animals/Duck";
-import Llama from "./animals/Llama";
-import Carrot from "./crops/Carrot";
-import Pumpkin from "./crops/Pumpkin";
-import Wheat from "./crops/Wheat";
-import GasGenerator from "./tech/GasGenerator";
-import SolarPanel from "./tech/SolarPanel";
 
 class Farm extends Drawable {
   fields: Field[] = [];
@@ -72,7 +57,7 @@ class Farm extends Drawable {
   constructor(
     cows: any = {
       name: "Cows",
-      total: 42,
+      total: 0,
       objects: [],
     },
     beef: any = {
@@ -87,7 +72,7 @@ class Farm extends Drawable {
     },
     sheep: any = {
       name: "Sheep",
-      total: 42,
+      total: 0,
       objects: [],
     },
     lamb: any = {
@@ -102,7 +87,7 @@ class Farm extends Drawable {
     },
     chickens: any = {
       name: "Chickens",
-      total: 42,
+      total: 0,
       objects: [],
     },
     chicken: any = {
@@ -117,7 +102,7 @@ class Farm extends Drawable {
     },
     pigs: any = {
       name: "Pigs",
-      total: 42,
+      total: 0,
       objects: [],
     },
     pork: any = {
@@ -127,7 +112,7 @@ class Farm extends Drawable {
     },
     crocodiles: any = {
       name: "Crocodiles",
-      total: 42,
+      total: 0,
       objects: [],
     },
     crocodile: any = {
@@ -142,7 +127,7 @@ class Farm extends Drawable {
     },
     ostriches: any = {
       name: "Ostriches",
-      total: 42,
+      total: 0,
       objects: [],
     },
     ostrich: any = {
@@ -157,7 +142,7 @@ class Farm extends Drawable {
     },
     salmons: any = {
       name: "Salmons",
-      total: 42,
+      total: 0,
       objects: [],
     },
     salmon: any = {
@@ -287,7 +272,7 @@ class Farm extends Drawable {
     },
     gasGenerators: any = {
       name: "Gas Generators",
-      total: 42,
+      total: 0,
       objects: [],
     },
     gasGenerator: any = {
@@ -302,7 +287,7 @@ class Farm extends Drawable {
     },
     solarPanels: any = {
       name: "Solar Panels",
-      total: 42,
+      total: 0,
       objects: [],
     },
     solarPanel: any = {
@@ -367,117 +352,16 @@ class Farm extends Drawable {
   }
 
   private createBasicFarm = () => {
-    let firstFieldX = 25;
-    let firstFieldY = 25;
-    let firstFieldW = 350;
-    let firstFieldH = 175;
-
-    for (let i = 0; i < this.solarPanels.total; i++) {
-      let solarPanel = new SolarPanel(this);
-      solarPanel.p5 = this.p5;
-      solarPanel.preload();
-      solarPanel.setRandomPositionInField(
-        firstFieldX,
-        firstFieldY,
-        firstFieldW,
-        firstFieldH
-      );
-      this.solarPanels.objects.push(solarPanel);
-    }
-
-    this.fields.push(
-      new Field(
-        firstFieldX,
-        firstFieldY,
-        firstFieldW,
-        firstFieldH,
-        this.solarPanels.objects
-      )
-    );
-
-    let secondFieldX = 25;
-    let secondFieldY = 250;
-    let secondFieldW = 350;
-    let secondFieldH = 125;
-
-    for (let i = 0; i < this.gasGenerators.total; i++) {
-      let gasGenerator = new GasGenerator(this);
-      gasGenerator.p5 = this.p5;
-      gasGenerator.preload();
-      gasGenerator.setRandomPositionInField(
-        secondFieldX,
-        secondFieldY,
-        secondFieldW,
-        secondFieldH
-      );
-      this.gasGenerators.objects.push(gasGenerator);
-    }
-
-    this.fields.push(
-      new Field(
-        secondFieldX,
-        secondFieldY,
-        secondFieldW,
-        secondFieldH,
-        this.gasGenerators.objects
-      )
-    );
-
-    let thirdFieldX = 25;
-    let thirdFieldY = 400;
-    let thirdFieldW = 300;
-    let thirdFieldH = 125;
-
-    for (let i = 0; i < this.salmons.total; i++) {
-      let salmon = new Salmon(this);
-      salmon.p5 = this.p5;
-      salmon.preload();
-      salmon.setRandomPositionInField(
-        thirdFieldX,
-        thirdFieldY,
-        thirdFieldW,
-        thirdFieldH
-      );
-      this.salmons.objects.push(salmon);
-    }
-
-    this.fields.push(
-      new Field(
-        thirdFieldX,
-        thirdFieldY,
-        thirdFieldW,
-        thirdFieldH,
-        this.salmons.objects
-      )
-    );
-
-    let fourthFieldX = 475;
-    let fourthFieldY = 25;
-    let fourthFieldW = 200;
-    let fourthFieldH = 325;
-
-    for (let i = 0; i < this.pigs.total; i++) {
-      let pig = new Pig(this);
-      pig.p5 = this.p5;
-      pig.preload();
-      pig.setRandomPositionInField(
-        fourthFieldX,
-        fourthFieldY,
-        fourthFieldW,
-        fourthFieldH
-      );
-      this.pigs.objects.push(pig);
-    }
-
-    this.fields.push(
-      new Field(
-        fourthFieldX,
-        fourthFieldY,
-        fourthFieldW,
-        fourthFieldH,
-        this.pigs.objects
-      )
-    );
+    this.fields.push(new Field(10, 10, 200, 250));
+    this.fields.push(new Field(10, 290, 200, 250));
+    this.fields.push(new Field(230, 290, 200, 250));
+    this.fields.push(new Field(230, 10, 200, 250));
+    this.fields.push(new Field(800, 10, 250, 200));
+    this.fields.push(new Field(700, 415, 350, 125));
+    this.fields.push(new Field(720, 250, 250, 125));
+    this.fields.push(new Field(450, 10, 300, 125));
+    this.fields.push(new Field(460, 340, 210, 200));
+    this.fields.push(new Field(480, 170, 200, 125));
 
     for (let field of this.fields) {
       field.p5 = this.p5;

@@ -274,6 +274,33 @@ class FieldDashboard extends Component {
     }
   }
 
+  getCrops(crops) {
+    switch (crops) {
+      case "carrots":
+        for (var i = 0; i < this.props.field.contents.length; i++) {
+          this.props.field.contents[i].yieldCarrot();
+          this.props.field.contents.pop();
+        }
+        break;
+
+      case "pumpkins":
+        for (var i = 0; i < this.props.field.contents.length; i++) {
+          this.props.field.contents[i].yieldPumpkin();
+          this.props.field.contents.pop();
+        }
+        break;
+
+      case "wheats":
+        for (var i = 0; i < this.props.field.contents.length; i++) {
+          this.props.field.contents[i].yieldWheat();
+          this.props.field.contents.pop();
+        }
+        break;
+
+      default:
+    }
+  }
+
   getMisc(misc) {
     switch (misc) {
       case "wool":
@@ -297,6 +324,7 @@ class FieldDashboard extends Component {
       case "gasGenerator":
         for (var i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldGasGenerator();
+          this.props.field.contents.pop();
         }
         break;
 
@@ -309,6 +337,7 @@ class FieldDashboard extends Component {
       case "solarPanel":
         for (var i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldSolarPanel();
+          this.props.field.contents.pop();
         }
         break;
 
@@ -498,6 +527,21 @@ class FieldDashboard extends Component {
             {this.props.field.contents[0].name === "Goose" && (
               <Button onClick={() => this.getDairy("gooseEggs")}>
                 Collect Goose eggs
+              </Button>
+            )}
+            {this.props.field.contents[0].name === "Carrot" && (
+              <Button onClick={() => this.getCrops("carrots")}>
+                Collect Carrots
+              </Button>
+            )}
+            {this.props.field.contents[0].name === "Pumpkin" && (
+              <Button onClick={() => this.getCrops("pumpkins")}>
+                Collect Pumpkins
+              </Button>
+            )}
+            {this.props.field.contents[0].name === "Wheat" && (
+              <Button onClick={() => this.getCrops("wheats")}>
+                Collect Wheats
               </Button>
             )}
             {this.props.field.contents[0].name === "Sheep" && (

@@ -56,6 +56,11 @@ class Pig extends Animal {
     this.stopForFarmer();
     this.checkHealth();
   }
+
+  placePig(fieldX: number, fieldY: number) {
+    this.x = fieldX;
+    this.y = fieldY;
+  }
 }
 
 export default Pig;

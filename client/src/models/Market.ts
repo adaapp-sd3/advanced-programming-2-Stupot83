@@ -2,7 +2,7 @@ import Drawable from "./abstract/Drawable";
 import Farmer from "./Farmer";
 
 class Market extends Drawable {
-  imgUrl = "/img/twtr/1f3e2.png";
+  imgUrl = "/img/twtr/market.png";
   currentFarmer!: Farmer;
 
   greenGasDemand: number = 100;
@@ -20,6 +20,14 @@ class Market extends Drawable {
   pricePerDuck: number = 40;
   pricePerGoose: number = 40;
   pricePerLlama: number = 40;
+
+  carrotPrice: number = 10;
+  pumpkinPrice: number = 10;
+  wheatPrice: number = 10;
+
+  carrotSeedPrice: number = 10;
+  pumpkinSeedPrice: number = 10;
+  wheatSeedPrice: number = 10;
 
   strawPrice: number = 100;
   cornPrice: number = 100;
@@ -58,7 +66,7 @@ class Market extends Drawable {
   constructor() {
     super();
     this.x = 1000;
-    this.y = 400;
+    this.y = 275;
     this.width = 60;
     this.height = 60;
   }

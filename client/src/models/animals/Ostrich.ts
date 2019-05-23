@@ -62,6 +62,11 @@ class Ostrich extends Animal {
     this.stopForFarmer();
     this.checkHealth();
   }
+
+  placeOstrich(fieldX: number, fieldY: number) {
+    this.x = fieldX;
+    this.y = fieldY;
+  }
 }
 
 export default Ostrich;

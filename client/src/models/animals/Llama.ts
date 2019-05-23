@@ -62,6 +62,11 @@ class Llama extends Animal {
     this.doSomethingOccasionally(() => this.eatStraw());
     this.stopForFarmer();
   }
+
+  placeLlama(fieldX: number, fieldY: number) {
+    this.x = fieldX;
+    this.y = fieldY;
+  }
 }
 
 export default Llama;

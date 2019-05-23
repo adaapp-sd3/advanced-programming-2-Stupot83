@@ -62,6 +62,11 @@ class Goose extends Animal {
     this.stopForFarmer();
     this.checkHealth();
   }
+
+  placeGoose(fieldX: number, fieldY: number) {
+    this.x = fieldX;
+    this.y = fieldY;
+  }
 }
 
 export default Goose;

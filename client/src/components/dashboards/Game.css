@@ -1,8 +1,8 @@
 .Game {
   text-align: center;
-  width: 375px;
+  width: 26.041666666666668vw;
   background-color: #006064;
-  height: 1077px;
+  height: 65vh;
   border-bottom: 10px dashed #9b958c;
 }
 
@@ -43,6 +43,7 @@ canvas {
   border-right: -10px;
   border-right: 10px dashed #9b958c;
   background-color: #665f51;
+  height: 72vh !important;
 }
 
 nav .nav-wrapper {

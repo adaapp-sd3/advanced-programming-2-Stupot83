@@ -56,6 +56,11 @@ class Salmon extends Animal {
     this.stopForFarmer();
     this.checkHealth();
   }
+
+  placeSalmon(fieldX: number, fieldY: number) {
+    this.x = fieldX;
+    this.y = fieldY;
+  }
 }
 
 export default Salmon;

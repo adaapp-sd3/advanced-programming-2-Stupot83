@@ -59,6 +59,11 @@ class Crocodile extends Animal {
     this.stopForFarmer();
     this.healthStatus();
   }
+
+  placeCrocodile(fieldX: number, fieldY: number) {
+    this.x = fieldX;
+    this.y = fieldY;
+  }
 }
 
 export default Crocodile;

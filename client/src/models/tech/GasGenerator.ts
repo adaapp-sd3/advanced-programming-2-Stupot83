@@ -12,21 +12,15 @@ class GasGenerator extends Tech {
     this.farm = farm;
   }
 
-  checkWear() {
-    if (this.health <= 0) {
-      this.farm.gasGenerators.objects.pop();
-      this.farm.gasGenerators.total -= 1;
-    }
-  }
-
   yieldGreenGas() {
-    let amountOfGreenGasToYield = 5 - this.hunger;
+    let amountOfGreenGasToYield = 5 - this.health;
     this.farm.greenGas.total += Math.abs(amountOfGreenGasToYield);
-    this.hunger += 1;
+    this.health = 1;
   }
 
   yieldGasGenerator() {
-    this.farm.gasGenerator.total = this.farm.gasGenerators.total;
+    this.farm.gasGenerators.total +=1;
+    this.farm.gasGenerator.total -=1;
     this.health = 0;
   }
 
@@ -38,7 +32,11 @@ class GasGenerator extends Tech {
   public draw(): any {
     this.constrainItem();
     this.farmerExamine();
-    this.checkWear();
+  }
+
+  placeGasGenerator(fieldX: number, fieldY: number) {
+    this.x = fieldX;
+    this.y = fieldY;
   }
 }
 

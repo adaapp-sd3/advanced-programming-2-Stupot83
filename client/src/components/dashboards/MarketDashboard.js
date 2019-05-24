@@ -1,8 +1,16 @@
 import React, { Component } from "react";
+import CryptoCard from "./Crypto-Card";
 import { Player, ControlBar } from "video-react";
 import Song from "../../music/Pasture Road.mp3";
 import { Button, Modal, Tabs, Tab } from "react-bootstrap";
 import "./MarketDashboard.css";
+
+const coinData = {
+  name: 'Bitcoin',
+  symbol: 'BTC',
+  image: '/img/twtr/bitcoin.png'
+};
+console.log(coinData.image);
 
 class MarketDashboard extends Component {
   constructor(props, context) {
@@ -1222,6 +1230,13 @@ class MarketDashboard extends Component {
                       </dd>
                     </div>
                   </dl>
+                </Tab>
+                <Tab eventKey="cryptoex" title="CryptoEx">
+                  <CryptoCard
+                    name={coinData.name}
+                    symbol={coinData.symbol}
+                    logo={coinData.image}
+                  />
                 </Tab>
                 <Tab style={{ display: "none" }}>
                   <div style={{ height: "100px", width: "100px" }}>

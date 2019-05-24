@@ -7,15 +7,15 @@ class FarmerDashboard extends Component {
     super(props);
 
     this.state = {
-      selectedIndex: 0,
+      selectedindex: 0,
     };
 
     this.handleSelected = this.handleSelected.bind(this);
   }
 
-  handleSelected(index, last) {
+  handleSelected(index) {
     this.setState({
-      selectedIndex: index,
+      selectedindex: index,
     });
   }
 
@@ -24,7 +24,7 @@ class FarmerDashboard extends Component {
       <div className="FarmerDashboard">
         <Tabs
           onSelect={this.handleSelected}
-          selectedIndex={this.state.selectedIndex}
+          selectedindex={this.state.selectedindex}
           defaultActiveKey="animals"
           transition={false}
           id="farmer-dashboard"

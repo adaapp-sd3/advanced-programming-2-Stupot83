@@ -32,14 +32,14 @@ class Login extends Component {
   onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
-onSubmit = e => {
+  onSubmit = e => {
     e.preventDefault();
     const userData = {
       email: this.state.email,
       password: this.state.password,
     };
     this.props.loginUser(userData); // since we handle the redirect within our component, we don't need to pass in this.props.history as a parameter
-  }
+  };
   render() {
     const { errors } = this.state;
     return (
@@ -56,7 +56,16 @@ onSubmit = e => {
             </Link>
             <div className="col s10" style={{ paddingLeft: "11.250px" }}>
               <h4>
-                <b>🚜 Login</b> to Farm Manager 🚜
+                <b>
+                  <span role="img" aria-label="Tractor">
+                    🚜
+                  </span>{" "}
+                  Login
+                </b>{" "}
+                to Farm Manager{" "}
+                <span role="img" aria-label="Tractor">
+                  🚜
+                </span>
               </h4>
             </div>
             <form noValidate onSubmit={this.onSubmit}>

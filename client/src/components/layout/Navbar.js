@@ -8,7 +8,15 @@ class Navbar extends Component {
         <nav className="z-depth-0">
           <div className="nav-wrapper white">
             <Link to="/" className="col s5 brand-logo center black white-text">
-              <strong>🚜 FARM MANAGER 🚜</strong>
+              <strong>
+                <span role="img" aria-label="Tractor">
+                  🚜
+                </span>{" "}
+                FARM MANAGER{" "}
+                <span role="img" aria-label="Tractor">
+                  🚜
+                </span>
+              </strong>
             </Link>
           </div>
         </nav>

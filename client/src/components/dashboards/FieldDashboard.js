@@ -28,210 +28,210 @@ class FieldDashboard extends Component {
 
     switch (meat) {
       case "beef":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldBeef();
         }
         this.props.field.contents.pop();
         break;
 
       case "halfBeef":
-        for (var i = 0; i < arrmid; i++) {
+        for (let i = 0; i < arrmid; i++) {
           this.props.field.contents[i].yieldBeef();
           this.props.field.contents.pop();
         }
         break;
 
       case "quarterBeef":
-        for (var i = 0; i < arrqtr; i++) {
+        for (let i = 0; i < arrqtr; i++) {
           this.props.field.contents[i].yieldBeef();
           this.props.field.contents.pop();
         }
         break;
 
       case "lamb":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldLamb();
         }
         this.props.field.contents.pop();
         break;
 
       case "halfLamb":
-        for (var i = 0; i < arrmid; i++) {
+        for (let i = 0; i < arrmid; i++) {
           this.props.field.contents[i].yieldLamb();
           this.props.field.contents.pop();
         }
         break;
 
       case "quarterLamb":
-        for (var i = 0; i < arrqtr; i++) {
+        for (let i = 0; i < arrqtr; i++) {
           this.props.field.contents[i].yieldLamb();
           this.props.field.contents.pop();
         }
         break;
 
       case "chicken":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldChicken();
         }
         this.props.field.contents.pop();
         break;
 
       case "halfChicken":
-        for (var i = 0; i < arrmid; i++) {
+        for (let i = 0; i < arrmid; i++) {
           this.props.field.contents[i].yieldChicken();
           this.props.field.contents.pop();
         }
         break;
 
       case "quarterChicken":
-        for (var i = 0; i < arrqtr; i++) {
+        for (let i = 0; i < arrqtr; i++) {
           this.props.field.contents[i].yieldChicken();
           this.props.field.contents.pop();
         }
         break;
 
       case "pork":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldPork();
         }
         this.props.field.contents.pop();
         break;
 
       case "halfPork":
-        for (var i = 0; i < arrmid; i++) {
+        for (let i = 0; i < arrmid; i++) {
           this.props.field.contents[i].yieldPork();
           this.props.field.contents.pop();
         }
         break;
 
       case "quarterPork":
-        for (var i = 0; i < arrqtr; i++) {
+        for (let i = 0; i < arrqtr; i++) {
           this.props.field.contents[i].yieldPork();
           this.props.field.contents.pop();
         }
         break;
 
       case "crocodile":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldCrocodile();
         }
         this.props.field.contents.pop();
         break;
 
       case "halfCrocodile":
-        for (var i = 0; i < arrmid; i++) {
+        for (let i = 0; i < arrmid; i++) {
           this.props.field.contents[i].yieldCrocodile();
           this.props.field.contents.pop();
         }
         break;
 
       case "quarterCrocodile":
-        for (var i = 0; i < arrqtr; i++) {
+        for (let i = 0; i < arrqtr; i++) {
           this.props.field.contents[i].yieldCrocodile();
           this.props.field.contents.pop();
         }
         break;
 
       case "ostrich":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldOstrich();
         }
         this.props.field.contents.pop();
         break;
 
       case "halfOstrich":
-        for (var i = 0; i < arrmid; i++) {
+        for (let i = 0; i < arrmid; i++) {
           this.props.field.contents[i].yieldOstrich();
           this.props.field.contents.pop();
         }
         break;
 
       case "quarterOstrich":
-        for (var i = 0; i < arrqtr; i++) {
+        for (let i = 0; i < arrqtr; i++) {
           this.props.field.contents[i].yieldOstrich();
           this.props.field.contents.pop();
         }
         break;
 
       case "salmon":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldSalmon();
         }
         this.props.field.contents.pop();
         break;
 
       case "halfSalmon":
-        for (var i = 0; i < arrmid; i++) {
+        for (let i = 0; i < arrmid; i++) {
           this.props.field.contents[i].yieldSalmon();
           this.props.field.contents.pop();
         }
         break;
 
       case "quarterSalmon":
-        for (var i = 0; i < arrqtr; i++) {
+        for (let i = 0; i < arrqtr; i++) {
           this.props.field.contents[i].yieldSalmon();
           this.props.field.contents.pop();
         }
         break;
 
       case "duck":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldDuck();
         }
         this.props.field.contents.pop();
         break;
 
       case "halfDuck":
-        for (var i = 0; i < arrmid; i++) {
+        for (let i = 0; i < arrmid; i++) {
           this.props.field.contents[i].yieldDuck();
           this.props.field.contents.pop();
         }
         break;
 
       case "quarterDuck":
-        for (var i = 0; i < arrqtr; i++) {
+        for (let i = 0; i < arrqtr; i++) {
           this.props.field.contents[i].yieldDuck();
           this.props.field.contents.pop();
         }
         break;
 
       case "goose":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldGoose();
         }
         this.props.field.contents.pop();
         break;
 
       case "halfGoose":
-        for (var i = 0; i < arrmid; i++) {
+        for (let i = 0; i < arrmid; i++) {
           this.props.field.contents[i].yieldGoose();
           this.props.field.contents.pop();
         }
         break;
 
       case "quarterGoose":
-        for (var i = 0; i < arrqtr; i++) {
+        for (let i = 0; i < arrqtr; i++) {
           this.props.field.contents[i].yieldGoose();
           this.props.field.contents.pop();
         }
         break;
 
       case "llama":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldLlama();
         }
         this.props.field.contents.pop();
         break;
 
       case "halfLlama":
-        for (var i = 0; i < arrmid; i++) {
+        for (let i = 0; i < arrmid; i++) {
           this.props.field.contents[i].yieldLlama();
           this.props.field.contents.pop();
         }
         break;
 
       case "quarterLlama":
-        for (var i = 0; i < arrqtr; i++) {
+        for (let i = 0; i < arrqtr; i++) {
           this.props.field.contents[i].yieldLlama();
           this.props.field.contents.pop();
         }
@@ -244,37 +244,37 @@ class FieldDashboard extends Component {
   getDairy(dairy) {
     switch (dairy) {
       case "milk":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldMilk();
         }
         break;
 
       case "eggs":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldEggs();
         }
         break;
 
       case "crocEggs":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldCrocEggs();
         }
         break;
 
       case "ostrichEggs":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldOstrichEggs();
         }
         break;
 
       case "duckEggs":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldDuckEggs();
         }
         break;
 
       case "gooseEggs":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldGooseEggs();
         }
         break;
@@ -286,70 +286,70 @@ class FieldDashboard extends Component {
   getCrops(crops) {
     switch (crops) {
       case "cabbages":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldCabbage();
           this.props.field.contents.pop();
         }
         break;
-      
-        case "carrots":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+
+      case "carrots":
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldCarrot();
           this.props.field.contents.pop();
         }
         break;
 
-        case "kales":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+      case "kales":
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldKale();
           this.props.field.contents.pop();
         }
         break;
 
-        case "lettuces":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+      case "lettuces":
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldLettuce();
           this.props.field.contents.pop();
         }
         break;
 
-        case "peas":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+      case "peas":
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldPea();
           this.props.field.contents.pop();
         }
         break;
 
-        case "potatoes":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+      case "potatoes":
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldPotato();
           this.props.field.contents.pop();
         }
         break;
 
-        case "pumpkins":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+      case "pumpkins":
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldPumpkin();
           this.props.field.contents.pop();
         }
         break;
 
-        case "rapeseeds":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+      case "rapeseeds":
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldRapeseed();
           this.props.field.contents.pop();
         }
         break;
 
       case "sugarbeets":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldSugarbeet();
           this.props.field.contents.pop();
         }
         break;
 
       case "wheats":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldWheat();
           this.props.field.contents.pop();
         }
@@ -362,38 +362,38 @@ class FieldDashboard extends Component {
   getMisc(misc) {
     switch (misc) {
       case "wool":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldWool();
         }
         break;
 
       case "llamaWool":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldLlamaWool();
         }
         break;
 
       case "greenGas":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldGreenGas();
         }
         break;
 
       case "gasGenerator":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldGasGenerator();
           this.props.field.contents.pop();
         }
         break;
 
       case "solarPower":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldSolarPower();
         }
         break;
 
       case "solarPanel":
-        for (var i = 0; i < this.props.field.contents.length; i++) {
+        for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldSolarPanel();
           this.props.field.contents.pop();
         }
@@ -587,7 +587,7 @@ class FieldDashboard extends Component {
                 Collect Goose eggs
               </Button>
             )}
-             {this.props.field.contents[0].name === "Cabbage" && (
+            {this.props.field.contents[0].name === "Cabbage" && (
               <Button onClick={() => this.getCrops("cabbages")}>
                 Collect Cabbages
               </Button>
@@ -597,22 +597,22 @@ class FieldDashboard extends Component {
                 Collect Carrots
               </Button>
             )}
-             {this.props.field.contents[0].name === "Kale" && (
+            {this.props.field.contents[0].name === "Kale" && (
               <Button onClick={() => this.getCrops("kales")}>
                 Collect Kales
               </Button>
             )}
-             {this.props.field.contents[0].name === "Lettuce" && (
+            {this.props.field.contents[0].name === "Lettuce" && (
               <Button onClick={() => this.getCrops("lettuces")}>
                 Collect Lettuces
               </Button>
             )}
-             {this.props.field.contents[0].name === "Pea" && (
+            {this.props.field.contents[0].name === "Pea" && (
               <Button onClick={() => this.getCrops("peas")}>
                 Collect Peas
               </Button>
             )}
-             {this.props.field.contents[0].name === "Potato" && (
+            {this.props.field.contents[0].name === "Potato" && (
               <Button onClick={() => this.getCrops("potatoes")}>
                 Collect Potatoes
               </Button>
@@ -622,12 +622,12 @@ class FieldDashboard extends Component {
                 Collect Pumpkins
               </Button>
             )}
-             {this.props.field.contents[0].name === "Rapeseed" && (
+            {this.props.field.contents[0].name === "Rapeseed" && (
               <Button onClick={() => this.getCrops("rapeseeds")}>
                 Collect Rapeseeds
               </Button>
             )}
-             {this.props.field.contents[0].name === "Sugarbeet" && (
+            {this.props.field.contents[0].name === "Sugarbeet" && (
               <Button onClick={() => this.getCrops("sugarbeets")}>
                 Collect Sugarbeets
               </Button>
@@ -672,7 +672,7 @@ class FieldDashboard extends Component {
             {item.showUI && (
               <div className="fieldItem">
                 <Button
-                  variant="primary"
+                  letiant="primary"
                   onClick={this.handleShow}
                   style={{ marginTop: "0.8rem" }}
                 >
@@ -686,7 +686,13 @@ class FieldDashboard extends Component {
                   >
                     <Modal.Header>
                       <Modal.Title id="field-modal">
-                        🚜 You are examining a {item.name} 🚜
+                        <span role="img" aria-label="Tractor">
+                          🚜
+                        </span>{" "}
+                        You are examining a {item.name}{" "}
+                        <span role="img" aria-label="Tractor">
+                          🚜
+                        </span>
                       </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
@@ -718,7 +724,7 @@ class FieldDashboard extends Component {
                     </Modal.Body>
                     <Modal.Footer>
                       <Button
-                        variant="secondary"
+                        letiant="secondary"
                         onClick={this.handleClose}
                         style={{
                           marginTop: "2rem",

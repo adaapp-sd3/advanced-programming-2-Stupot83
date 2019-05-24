@@ -75,7 +75,13 @@ class Instructions extends Component {
                 >
                   <Modal.Header>
                     <Modal.Title id="instructions-modal">
-                      🚜 Farm Manager Instructions 🚜
+                      <span role="img" aria-label="Tractor">
+                        🚜
+                      </span>{" "}
+                      Farm Manager Instructions{" "}
+                      <span role="img" aria-label="Tractor">
+                        🚜
+                      </span>
                     </Modal.Title>
                   </Modal.Header>
                   <Modal.Body>

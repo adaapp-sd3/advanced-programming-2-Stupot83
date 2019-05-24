@@ -31,7 +31,7 @@ class Register extends Component {
   onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
-onSubmit = e => {
+  onSubmit = e => {
     e.preventDefault();
     const newUser = {
       name: this.state.name,
@@ -40,7 +40,7 @@ onSubmit = e => {
       password2: this.state.password2,
     };
     this.props.registerUser(newUser, this.props.history);
-  }
+  };
   render() {
     const { errors } = this.state;
     return (
@@ -60,7 +60,16 @@ onSubmit = e => {
               style={{ paddingLeft: "11.250px", paddingBottom: "1rem" }}
             >
               <h4>
-                <b>🚜 Register</b> for Farm Manager 🚜
+                <b>
+                  <span role="img" aria-label="Tractor">
+                    🚜
+                  </span>{" "}
+                  Register
+                </b>{" "}
+                for Farm Manager{" "}
+                <span role="img" aria-label="Tractor">
+                  🚜
+                </span>
               </h4>
             </div>
             <form noValidate onSubmit={this.onSubmit}>

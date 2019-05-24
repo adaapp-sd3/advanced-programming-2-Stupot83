@@ -18,7 +18,15 @@ class Landing extends Component {
               onFinishedPlaying={this.handleSongFinishedPlaying}
             />
             <h4>
-              <b>🚜 Welcome to Farm Manager 🚜</b>
+              <b>
+                <span role="img" aria-label="Tractor">
+                  🚜
+                </span>{" "}
+                Welcome to Farm Manager{" "}
+                <span role="img" aria-label="Tractor">
+                  🚜
+                </span>
+              </b>
             </h4>
             <br />
             <div className="row">

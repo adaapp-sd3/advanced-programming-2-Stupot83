@@ -55,7 +55,7 @@ class Farmer extends Drawable {
         if (!field.contents[0] || field.contents[0].name === "Cow") {
           if (this.myFarm.cows.total > 0) {
             if (this.p5.keyIsDown(84)) {
-              if (this.myFarm.cows.total != field.contents.length) {
+              if (this.myFarm.cows.total !== field.contents.length) {
                 field.placeCow(this.x, this.y, this.myFarm);
                 this.myFarm.cows.total -= 1;
                 this.myFarm.usedCow.total += 1;
@@ -66,7 +66,7 @@ class Farmer extends Drawable {
         if (!field.contents[0] || field.contents[0].name === "Sheep") {
           if (this.myFarm.sheep.total > 0) {
             if (this.p5.keyIsDown(89)) {
-              if (this.myFarm.sheep.total != field.contents.length) {
+              if (this.myFarm.sheep.total !== field.contents.length) {
                 field.placeSheep(this.x + 50, this.y + 50, this.myFarm);
               this.myFarm.sheep.total -= 1;
               this.myFarm.usedSheep.total += 1;
@@ -77,7 +77,7 @@ class Farmer extends Drawable {
         if (!field.contents[0] || field.contents[0].name === "Chicken") {
           if (this.myFarm.chickens.total > 0) {
             if (this.p5.keyIsDown(85)) {
-              if (this.myFarm.chickens.total != field.contents.length) {
+              if (this.myFarm.chickens.total !== field.contents.length) {
                 field.placeChicken(this.x + 50, this.y + 50, this.myFarm);
                 this.myFarm.chickens.total -= 1;
                 this.myFarm.usedChicken.total += 1;
@@ -88,7 +88,7 @@ class Farmer extends Drawable {
         if (!field.contents[0] || field.contents[0].name === "Pig") {
           if (this.myFarm.pigs.total > 0) {
             if (this.p5.keyIsDown(73)) {
-              if (this.myFarm.pigs.total != field.contents.length) {
+              if (this.myFarm.pigs.total !== field.contents.length) {
                 field.placePig(this.x + 50, this.y + 50, this.myFarm);
                 this.myFarm.pigs.total -= 1;
                 this.myFarm.usedPig.total += 1;
@@ -99,7 +99,7 @@ class Farmer extends Drawable {
         if (!field.contents[0] || field.contents[0].name === "Crocodile") {
           if (this.myFarm.crocodiles.total > 0) {
             if (this.p5.keyIsDown(79)) {
-              if (this.myFarm.crocodiles.total != field.contents.length) {
+              if (this.myFarm.crocodiles.total !== field.contents.length) {
                 field.placeCrocodile(this.x + 50, this.y + 50, this.myFarm);
                 this.myFarm.crocodiles.total -= 1;
                 this.myFarm.usedCrocodile.total += 1;
@@ -110,7 +110,7 @@ class Farmer extends Drawable {
         if (!field.contents[0] || field.contents[0].name === "Ostrich") {
           if (this.myFarm.ostriches.total > 0) {
             if (this.p5.keyIsDown(80)) {
-              if (this.myFarm.ostriches.total != field.contents.length) {
+              if (this.myFarm.ostriches.total !== field.contents.length) {
                 field.placeOstrich(this.x + 50, this.y + 50, this.myFarm);
                 this.myFarm.ostriches.total -= 1;
                 this.myFarm.usedOstrich.total += 1;
@@ -121,7 +121,7 @@ class Farmer extends Drawable {
         if (!field.contents[0] || field.contents[0].name === "Salmon") {
           if (this.myFarm.salmons.total > 0) {
             if (this.p5.keyIsDown(71)) {
-              if (this.myFarm.salmons.total != field.contents.length) {
+              if (this.myFarm.salmons.total !== field.contents.length) {
                 field.placeSalmon(this.x + 50, this.y + 50, this.myFarm);
                 this.myFarm.salmons.total -= 1;
                 this.myFarm.usedSalmon.total += 1;
@@ -132,7 +132,7 @@ class Farmer extends Drawable {
         if (!field.contents[0] || field.contents[0].name === "Duck") {
           if (this.myFarm.ducks.total > 0) {
             if (this.p5.keyIsDown(72)) {
-              if (this.myFarm.ducks.total != field.contents.length) {
+              if (this.myFarm.ducks.total !== field.contents.length) {
                 field.placeDuck(this.x + 50, this.y + 50, this.myFarm);
                 this.myFarm.ducks.total -= 1;
                 this.myFarm.usedDuck.total += 1;
@@ -143,7 +143,7 @@ class Farmer extends Drawable {
         if (!field.contents[0] || field.contents[0].name === "Goose") {
           if (this.myFarm.geese.total > 0) {
             if (this.p5.keyIsDown(74)) {
-              if (this.myFarm.geese.total != field.contents.length) {
+              if (this.myFarm.geese.total !== field.contents.length) {
                 field.placeGoose(this.x + 50, this.y + 50, this.myFarm);
                 this.myFarm.geese.total -= 1;
                 this.myFarm.usedGoose.total += 1;
@@ -154,7 +154,7 @@ class Farmer extends Drawable {
         if (!field.contents[0] || field.contents[0].name === "Llama") {
           if (this.myFarm.llamas.total > 0) {
             if (this.p5.keyIsDown(75)) {
-              if (this.myFarm.llamas.total != field.contents.length) {
+              if (this.myFarm.llamas.total !== field.contents.length) {
                 field.placeLlama(this.x + 50, this.y + 50, this.myFarm);
                 this.myFarm.llamas.total -= 1;
                 this.myFarm.usedLlama.total += 1;

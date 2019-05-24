@@ -29,10 +29,10 @@ class Login extends Component {
       this.props.history.push("/dashboard");
     }
   }
-  onChange(e) {
+  onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
-  }
-  onSubmit(e) {
+  };
+onSubmit = e => {
     e.preventDefault();
     const userData = {
       email: this.state.email,

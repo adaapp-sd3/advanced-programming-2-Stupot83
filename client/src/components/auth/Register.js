@@ -28,10 +28,10 @@ class Register extends Component {
       this.props.history.push("/dashboard");
     }
   }
-  onChange(e) {
+  onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
-  }
-  onSubmit(e) {
+  };
+onSubmit = e => {
     e.preventDefault();
     const newUser = {
       name: this.state.name,

@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import fetch from "isomorphic-fetch";
+import withUnmounted from '@ishawnwang/withunmounted';
 import "./CryptoCard.css";
 
 class CryptoCard extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -16,6 +18,8 @@ class CryptoCard extends Component {
     this.pollPrice = this.pollPrice.bind(this);
   }
 
+  hasUnmounted = false;
+
   componentDidMount() {
     this.pollPrice();
     setInterval(this.pollPrice, 10000);
@@ -28,7 +32,9 @@ class CryptoCard extends Component {
       `https://min-api.cryptocompare.com/data/price?fsym=${symbol}&tsyms=${symbol},USD`
     )
       .then(resp => resp.json())
-      .then(json => {
+      .then(json => { if (this.hasUnmounted) {
+        return;
+      }
         this.setState(prevState => ({
           price: json.USD,
           lastPrice:
@@ -51,31 +57,31 @@ class CryptoCard extends Component {
     const gainloss = lastPrice > price ? "Loss" : "Gain";
 
     return (
-        <div className={`Card ${gainloss}`}>
-          <div className="Top">
-            <div className="Name">
-              {name}
-              <span>({symbol})</span>
-            </div>
-
-            <div className={`Percentage ${gainloss}`}>
-              {this.priceChange(lastPrice, price)}%
-            </div>
+      <div className={`Card ${gainloss}`}>
+        <div className="Top">
+          <div className="Name">
+            {name}
+            <span>({symbol})</span>
           </div>
 
-          <div className="Bottom">
-            <div className="Logo">
-              <img src={`${logo}`} alt={symbol} />
-            </div>
-
-            <div className={`Price ${gainloss}`}>
-              ${price}
-              <span className={`Triangle`} />
-            </div>
+          <div className={`Percentage ${gainloss}`}>
+            {this.priceChange(lastPrice, price)}%
           </div>
         </div>
+
+        <div className="Bottom">
+          <div className="Logo">
+            <img src={`${logo}`} alt={symbol} />
+          </div>
+
+          <div className={`Price ${gainloss}`}>
+            ${price}
+            <span className={`Triangle`} />
+          </div>
+        </div>
+      </div>
     );
   }
 }
 
-export default CryptoCard;
+export default withUnmounted(CryptoCard);

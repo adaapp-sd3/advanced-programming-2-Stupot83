@@ -60,3 +60,30 @@
     border-radius: 100%;
     background-color: lightgreen;
 }
+
+.CropStats {
+    display: inline-flex;
+    margin: 1.2rem;
+}
+
+.CropStatsReady {
+    display: inline-flex;
+    margin-bottom: 2rem;
+}
+
+.CropStats p {
+    margin-left: 1rem;
+    color: blue;
+    font-weight: bold;
+}
+
+.CropStatsReady p {
+    margin-left: 1rem;
+    color: green;
+    font-weight: bold;
+}
+
+.CropStatsReady>p>button {
+    margin-top: -0.4rem;
+    margin-left: 2.4rem;
+}

@@ -18,8 +18,8 @@ class Cabbage extends Crop {
     this.p5Img = this.p5.loadImage(this.imgUrl);
   }
 
-  public cropAge() {
-    return Math.floor((this.age += 0.05));
+  public plantAge() {
+    return Math.floor((this.age += 0.04));
   }
 
   public draw(): any {

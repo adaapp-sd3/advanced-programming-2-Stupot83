@@ -1,112 +1,91 @@
-.CardContainer {
-    height: 45vh;
-    background-color: rgba(0, 0, 0, 0.1);
-    background: linear-gradient(to bottom right, #C0C0C0, #DCDCDC, ghostwhite);
-    border: 10px dashed black;
-    border-radius: 30px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-.CardContainer h2 {
-    text-align: center;
-    color: whitesmoke;
-    border: 1px solid black;
-    border-radius: 100px;
-    background-color: black;
-    margin-top: 0.2rem;
-    margin-left: 8rem;
-    margin-right: 8rem;
-    padding-bottom: 0.5rem;
-}
-
 .Card .Logo img {
     height: 50px;
     width: 50px;
     margin-bottom: 0.8rem;
 }
 
-
 .Card {
-    width: 200px;
-    height: 100px;
+    width: 14.5rem;
+    height: 7.5rem;
     border-radius: 4px;
     background-color: whitesmoke;
-  }
-  
-  .Card.Gain {
+}
+
+.Card.Gain {
     border: 1px solid #00b518;
-  }
-  
-  .Card.Loss {
+}
+
+.Card.Loss {
     border: 1px solid #e60000;
-  }
-  
-  .Top, .Bottom {
+}
+
+.Top,
+.Bottom {
     display: flex;
     flex: 1;
     width: 100%;
-  }
-  
-  .Card .Name {
+}
+
+.Card .Name {
     padding: 8px 12px;
     font-weight: bold;
     width: 60%;
-  }
-  
-  .Card .Name span {
+}
+
+.Card .Name span {
     margin: 0px 0px 0px 4px;
     font-weight: normal;
     font-size: 0.8em;
-  }
-  
-  .Card .Percent {
+}
+
+.Card .Percent {
     font-size: 0.9em;
     width: 40%;
     margin: 8px;
     text-align: right;
-  }
-  
-  .Card .Logo {
+}
+
+.Card .Logo {
     width: 30%;
     text-align: center;
     margin: 5px;
-  }
-  
-  .Card .Price {
+}
+
+.Card .Price {
     width: 70%;
     margin: 8px 0;
     font-size: 1.4em;
-  }
-  
-  .Card .Percentage.Gain,
-  .Card .Price.Gain {
+}
+
+.Card .Percentage.Gain,
+.Card .Price.Gain {
     color: #00b518;
     margin-top: 0.5rem;
-  }
-  
-  .Card .Triangle {
+}
+
+.Card .Triangle {
     width: 0;
     height: 0;
     border-style: solid;
     position: relative;
-  }
-  
-  .Card .Price.Gain .Triangle {
+}
+
+.Card .Price.Gain .Triangle {
     top: -17px;
     left: 8px;
     border-width: 0 5px 8.7px 5px;
     border-color: transparent transparent #00b518 transparent;
-  }
-  
-  .Card .Price.Loss .Triangle {
+}
+
+.Card .Price.Loss .Triangle {
     top: 17px;
     left: 8px;
     border-width: 8.7px 5px 0 5px;
     border-color: #e60000 transparent transparent transparent;
-  }
-  
-  .Card .Percentage.Loss,
-  .Card .Price.Loss {
+}
+
+.Card .Percentage.Loss,
+.Card .Price.Loss {
     color: #e60000;
-  }
+    margin-top: 0.5rem;
+}

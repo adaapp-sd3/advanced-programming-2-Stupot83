@@ -4,7 +4,7 @@
     border: 4px dashed black;
     border-top: none;
     background-color: rgba(0, 0, 0, 0.1);
-    background: linear-gradient(to bottom right,	#FFFF99, #FFFACD, #FFFFE0);
+    background: linear-gradient(to bottom right, #FFFF99, #FFFACD, #FFFFE0);
     display: inline-flex;
     width: 100vw;
     position: fixed;
@@ -67,12 +67,14 @@
     margin: 0.8rem;
     width: 250px;
     height: 10rem;
-    background-color: #007bff;
+    background-color: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right, #0181C2, #04A7F9, #4BC4F7);
 }
 
 .Animal>dd>Button:hover {
     margin: 0.8rem;
-    background-color: blue;
+    background: #7F00FF;
+    background: linear-gradient(to right, #E100FF, #7F00FF);
 }
 
 .Animal>dd>Button>img {
@@ -84,12 +86,14 @@
     margin: 0.8rem;
     width: 250px;
     height: 10rem;
-    background-color: #007bff;
+    background-color: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right, #0181C2, #04A7F9, #4BC4F7);
 }
 
 .Feed>dd>Button:hover {
     margin: 0.8rem;
-    background-color: blue;
+    background: #7F00FF;
+    background: linear-gradient(to right, #E100FF, #7F00FF);
 }
 
 .Feed>dd>Button>img {
@@ -101,12 +105,14 @@
     margin: 0.8rem;
     width: 275px;
     height: 10rem;
-    background-color: #007bff;
+    background-color: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right, #0181C2, #04A7F9, #4BC4F7);
 }
 
 .Tech>dd>Button:hover {
     margin: 0.8rem;
-    background-color: blue;
+    background: #7F00FF;
+    background: linear-gradient(to right, #E100FF, #7F00FF);
 }
 
 .Tech>dd>Button>img {
@@ -118,12 +124,14 @@
     margin: 0.8rem;
     width: 250px;
     height: 10rem;
-    background-color: #007bff;
+    background-color: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right, #0181C2, #04A7F9, #4BC4F7);
 }
 
 .Meat>dd>Button:hover {
     margin: 0.8rem;
-    background-color: blue;
+    background: #7F00FF;
+    background: linear-gradient(to right, #E100FF, #7F00FF);
 }
 
 .Meat>dd>Button>img {
@@ -135,12 +143,14 @@
     margin: 0.8rem;
     width: 250px;
     height: 10rem;
-    background-color: #007bff;
+    background-color: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right, #0181C2, #04A7F9, #4BC4F7);
 }
 
 .Dairy>dd>Button:hover {
     margin: 0.8rem;
-    background-color: blue;
+    background: #7F00FF;
+    background: linear-gradient(to right, #E100FF, #7F00FF);
 }
 
 .Dairy>dd>Button>img {
@@ -152,12 +162,14 @@
     margin: 0.8rem;
     width: 250px;
     height: 10rem;
-    background-color: #007bff;
+    background-color: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right, #0181C2, #04A7F9, #4BC4F7);
 }
 
 .Seed>dd>Button:hover {
     margin: 0.8rem;
-    background-color: blue;
+    background: #7F00FF;
+    background: linear-gradient(to right, #E100FF, #7F00FF);
 }
 
 .Seed>dd>Button>img {
@@ -169,12 +181,14 @@
     margin: 0.8rem;
     width: 250px;
     height: 10rem;
-    background-color: #007bff;
+    background-color: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right, #0181C2, #04A7F9, #4BC4F7);
 }
 
 .Crop>dd>Button:hover {
     margin: 0.8rem;
-    background-color: blue;
+    background: #7F00FF;
+    background: linear-gradient(to right, #E100FF, #7F00FF);
 }
 
 .Crop>dd>Button>img {
@@ -186,12 +200,14 @@
     margin: 0.8rem;
     width: 250px;
     height: 10rem;
-    background-color: #007bff;
+    background-color: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right, #0181C2, #04A7F9, #4BC4F7);
 }
 
 .Misc>dd>Button:hover {
     margin: 0.8rem;
-    background-color: blue;
+    background: #7F00FF;
+    background: linear-gradient(to right, #E100FF, #7F00FF);
 }
 
 .Misc>dd>Button>img {
@@ -212,9 +228,38 @@
     border: 1px solid black;
 }
 
-.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
     background-color: white;
     border: 1px solid black;
     font-weight: bold;
-    color: black; 
+    color: black;
+}
+
+.CardContainer {
+    height: 45vh;
+    background-color: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right, #C0C0C0, #DCDCDC, ghostwhite);
+    border: 10px dashed black;
+    border-radius: 30px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.CardContainer h2 {
+    text-align: center;
+    color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 100px;
+    background-color: black;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    padding-bottom: 0.5rem;
+}
+
+.CryptoCard {
+    display: inline-flex;
+    margin: 0.5rem;
 }

@@ -5,12 +5,53 @@ import Song from "../../music/Pasture Road.mp3";
 import { Button, Modal, Tabs, Tab } from "react-bootstrap";
 import "./MarketDashboard.css";
 
-const coinData = {
-  name: 'Bitcoin',
-  symbol: 'BTC',
-  image: '/img/twtr/bitcoin.png'
+const bitcoinData = {
+  name: "Bitcoin",
+  symbol: "BTC",
+  image: "/img/twtr/bitcoin.png",
 };
-console.log(coinData.image);
+
+const bitcoincashData = {
+  name: "Bit Cash",
+  symbol: "BCH",
+  image: "/img/twtr/bitcoincash.png",
+};
+
+const ethereumData = {
+  name: "Ethereum",
+  symbol: "ETH",
+  image: "/img/twtr/ethereum.png",
+};
+
+const dashData = {
+  name: "Dash",
+  symbol: "DASH",
+  image: "/img/twtr/dash.png",
+};
+
+const litecoinData = {
+  name: "Litecoin",
+  symbol: "LTC",
+  image: "/img/twtr/litecoin.png",
+};
+
+const bitcoinsvData = {
+  name: "Bit SV",
+  symbol: "BSV",
+  image: "/img/twtr/bitcoinsv.png",
+};
+
+const moneroData = {
+  name: "Monero",
+  symbol: "XMR",
+  image: "/img/twtr/monero.png",
+};
+
+const zcashData = {
+  name: "ZCash",
+  symbol: "ZEC",
+  image: "/img/twtr/zcash.png",
+};
 
 class MarketDashboard extends Component {
   constructor(props, context) {
@@ -1232,11 +1273,67 @@ class MarketDashboard extends Component {
                   </dl>
                 </Tab>
                 <Tab eventKey="cryptoex" title="CryptoEx">
-                  <CryptoCard
-                    name={coinData.name}
-                    symbol={coinData.symbol}
-                    logo={coinData.image}
-                  />
+                  <div className="CardContainer">
+                    <h2>Crypto Currency Exchange</h2>
+                    <div className="CardDisplay">
+                      <div className="CryptoCard">
+                        <CryptoCard
+                          name={bitcoinData.name}
+                          symbol={bitcoinData.symbol}
+                          logo={bitcoinData.image}
+                        />
+                      </div>
+                      <div className="CryptoCard">
+                        <CryptoCard
+                          name={bitcoincashData.name}
+                          symbol={bitcoincashData.symbol}
+                          logo={bitcoincashData.image}
+                        />
+                      </div>
+                      <div className="CryptoCard">
+                        <CryptoCard
+                          name={ethereumData.name}
+                          symbol={ethereumData.symbol}
+                          logo={ethereumData.image}
+                        />
+                      </div>
+                      <div className="CryptoCard">
+                        <CryptoCard
+                          name={dashData.name}
+                          symbol={dashData.symbol}
+                          logo={dashData.image}
+                        />
+                      </div>
+                      <div className="CryptoCard">
+                        <CryptoCard
+                          name={litecoinData.name}
+                          symbol={litecoinData.symbol}
+                          logo={litecoinData.image}
+                        />
+                      </div>
+                      <div className="CryptoCard">
+                        <CryptoCard
+                          name={bitcoinsvData.name}
+                          symbol={bitcoinsvData.symbol}
+                          logo={bitcoinsvData.image}
+                        />
+                      </div>
+                      <div className="CryptoCard">
+                        <CryptoCard
+                          name={moneroData.name}
+                          symbol={moneroData.symbol}
+                          logo={moneroData.image}
+                        />
+                      </div>
+                      <div className="CryptoCard">
+                        <CryptoCard
+                          name={zcashData.name}
+                          symbol={zcashData.symbol}
+                          logo={zcashData.image}
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </Tab>
                 <Tab style={{ display: "none" }}>
                   <div style={{ height: "100px", width: "100px" }}>

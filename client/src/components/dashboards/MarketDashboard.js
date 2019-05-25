@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import CryptoCard from "./Crypto-Card";
+import CryptoCard from "./CryptoCard";
 import { Player, ControlBar } from "video-react";
 import Song from "../../music/Pasture Road.mp3";
 import { Button, Modal, Tabs, Tab } from "react-bootstrap";
@@ -203,10 +203,7 @@ class MarketDashboard extends Component {
         if (
           this.props.market.currentFarmer.budget > this.props.market.strawPrice
         ) {
-          this.props.market.currentFarmer.myFarm.straw.total = Math.floor(
-            this.props.market.currentFarmer.budget /
-              this.props.market.strawPrice
-          );
+          this.props.market.currentFarmer.myFarm.straw.total += 1;
           let unit = 1;
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.strawPrice;
@@ -217,9 +214,7 @@ class MarketDashboard extends Component {
         if (
           this.props.market.currentFarmer.budget > this.props.market.cornPrice
         ) {
-          this.props.market.currentFarmer.myFarm.corn.total = Math.floor(
-            this.props.market.currentFarmer.budget / this.props.market.cornPrice
-          );
+          this.props.market.currentFarmer.myFarm.corn.total += 1;
           let unit = 1;
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.cornPrice;
@@ -230,9 +225,7 @@ class MarketDashboard extends Component {
         if (
           this.props.market.currentFarmer.budget > this.props.market.fishPrice
         ) {
-          this.props.market.currentFarmer.myFarm.fish.total = Math.floor(
-            this.props.market.currentFarmer.budget / this.props.market.fishPrice
-          );
+          this.props.market.currentFarmer.myFarm.fish.total += 1;
           let unit = 1;
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.fishPrice;
@@ -244,10 +237,7 @@ class MarketDashboard extends Component {
           this.props.market.currentFarmer.budget >
           this.props.market.fishFoodPrice
         ) {
-          this.props.market.currentFarmer.myFarm.fishFood.total = Math.floor(
-            this.props.market.currentFarmer.budget /
-              this.props.market.fishFoodPrice
-          );
+          this.props.market.currentFarmer.myFarm.fishFood.total += 1;
           let unit = 1;
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.fishFoodPrice;
@@ -259,10 +249,7 @@ class MarketDashboard extends Component {
           this.props.market.currentFarmer.budget >
           this.props.market.grassSeedPrice
         ) {
-          this.props.market.currentFarmer.myFarm.seeds.total = Math.floor(
-            this.props.market.currentFarmer.budget /
-              this.props.market.grassSeedPrice
-          );
+          this.props.market.currentFarmer.myFarm.seeds.total += 1;
           let unit = 1;
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.grassSeedPrice;
@@ -1261,7 +1248,7 @@ class MarketDashboard extends Component {
                     <div className="Misc">
                       <dd>
                         <Button onClick={() => this.sellMisc("solarPanels")}>
-                          Sell solar panels for{" "}
+                          Sell panels for{" "}
                           {this.props.market.solarPanelResalePrice}
                           <img
                             src="/img/twtr/solarpanel.png"

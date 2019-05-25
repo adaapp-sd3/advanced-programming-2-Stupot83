@@ -13,16 +13,6 @@ class Chicken extends Animal {
     this.farm = farm;
   }
 
-  checkHealth() {
-    if (this.hunger >= 5) {
-      this.health -= 1;
-    }
-    if (this.health <= 0) {
-      this.farm.chickens.objects.pop();
-      this.farm.chickens.total -= 1;
-    }
-  }
-
   yieldEggs() {
     let amountOfEggsToYield = 5 - this.hunger;
     this.farm.eggs.total += Math.abs(amountOfEggsToYield);
@@ -30,7 +20,7 @@ class Chicken extends Animal {
   }
 
   yieldChicken() {
-    this.farm.chicken.total += 750;
+    this.farm.chicken.total += 2;
     this.farm.usedChicken.total -=1;
     this.health = 0;
   }
@@ -61,7 +51,6 @@ class Chicken extends Animal {
     this.constrainItem();
     this.doSomethingOccasionally(() => this.eatCorn());
     this.stopForFarmer();
-    this.checkHealth();
   }
 
   placeChicken(fieldX: number, fieldY: number) {

@@ -87,3 +87,30 @@
     margin-top: -0.4rem;
     margin-left: 2.4rem;
 }
+
+.AnimalHunger {
+    display: inline-flex;
+    margin: 1.2rem;
+}
+
+.AnimalsHungry {
+    display: inline-flex;
+    margin-bottom: 2rem;
+}
+
+.AnimalHunger p {
+    margin-left: 1rem;
+    color: blue;
+    font-weight: bold;
+}
+
+.AnimalsHungry p {
+    margin-left: 1rem;
+    color: green;
+    font-weight: bold;
+}
+
+.AnimalsHungry>p>button {
+    margin-top: -0.4rem;
+    margin-left: 2.4rem;
+}

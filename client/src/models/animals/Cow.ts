@@ -14,14 +14,14 @@ class Cow extends Animal {
   }
 
   yieldMilk() {
-    let amountOfMilkToYield = 5 - this.hunger;
-    this.farm.milk.total += Math.abs(amountOfMilkToYield);
+    let amountOfMilkToYield = 5;
+    this.farm.milk.total += amountOfMilkToYield;
     this.hunger += 1;
   }
 
   yieldBeef() {
     this.farm.beef.total += 750;
-    this.farm.usedCow.total -=1;
+    this.farm.usedCow.total -= 1;
     this.health = 0;
   }
 

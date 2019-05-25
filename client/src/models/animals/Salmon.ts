@@ -13,18 +13,8 @@ class Salmon extends Animal {
     this.farm = farm;
   }
 
-  checkHealth() {
-    if (this.hunger >= 5) {
-      this.health -= 1;
-    }
-    if (this.health <= 0) {
-      this.farm.salmons.objects.pop();
-      this.farm.salmons.total -= 1;
-    }
-  }
-
   yieldSalmon() {
-    this.farm.salmon.total += 750;
+    this.farm.salmon.total += 26;
     this.farm.usedSalmon.total -=1;
     this.health = 0;
   }
@@ -55,7 +45,6 @@ class Salmon extends Animal {
     this.constrainItem();
     this.doSomethingOccasionally(() => this.eatFishFood());
     this.stopForFarmer();
-    this.checkHealth();
   }
 
   placeSalmon(fieldX: number, fieldY: number) {

@@ -13,16 +13,6 @@ class Sheep extends Animal {
     this.farm = farm;
   }
 
-  checkHealth() {
-    if (this.hunger >= 5) {
-      this.health -= 1;
-    }
-    if (this.health <= 0) {
-      this.farm.sheep.objects.pop();
-      this.farm.sheep.total -= 1;
-    }
-  }
-
   yieldWool() {
     let amountOfWoolToYield = 5 - this.hunger;
     this.farm.wool.total += Math.abs(amountOfWoolToYield);
@@ -30,7 +20,7 @@ class Sheep extends Animal {
   }
 
   yieldLamb() {
-    this.farm.lamb.total += 750;
+    this.farm.lamb.total += 150;
     this.farm.usedSheep.total -=1;
     this.health = 0;
   }
@@ -61,7 +51,6 @@ class Sheep extends Animal {
     this.constrainItem();
     this.doSomethingOccasionally(() => this.eatStraw());
     this.stopForFarmer();
-    this.checkHealth();
   }
 
   placeSheep(fieldX: number, fieldY: number) {

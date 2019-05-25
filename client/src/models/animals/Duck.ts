@@ -13,15 +13,6 @@ class Duck extends Animal {
     this.farm = farm;
   }
 
-  checkHealth() {
-    if (this.hunger >= 5) {
-      this.health -= 1;
-    }
-    if (this.health <= 0) {
-      this.farm.ducks.objects.pop(0);
-      this.farm.ducks.total -= 1;
-    }
-  }
 
   yieldDuckEggs() {
     let amountOfEggsToYield = 5 - this.hunger;
@@ -30,7 +21,7 @@ class Duck extends Animal {
   }
 
   yieldDuck() {
-    this.farm.duck.total += 750;
+    this.farm.duck.total += 2.5;
     this.farm.usedDuck.total -=1;
     this.health = 0;
   }
@@ -61,7 +52,6 @@ class Duck extends Animal {
     this.constrainItem();
     this.doSomethingOccasionally(() => this.eatCorn());
     this.stopForFarmer();
-    this.checkHealth();
   }
 
   placeDuck(fieldX: number, fieldY: number) {

@@ -12,6 +12,16 @@
     height: 12vh;
 }
 
+.MarketButton button {
+    background-color: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right, #0181C2, #04A7F9, #4BC4F7);
+}
+
+.MarketButton button:hover {
+    background: #7F00FF;
+    background: linear-gradient(to right, #E100FF, #7F00FF);
+}
+
 .modal-backdrop {
     background-color: transparent;
 }

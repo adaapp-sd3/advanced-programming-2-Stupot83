@@ -24,8 +24,16 @@ class FieldDashboard extends Component {
 
   cropAge() {
     return (
-      this.props.field.contents.reduce(
-        (a, b) => a + b.plantAge(), 0 ) / this.props.field.contents.length).toFixed(0);
+      this.props.field.contents.reduce((a, b) => a + b.plantAge(), 0) /
+      this.props.field.contents.length
+    ).toFixed(0);
+  }
+
+  animalHunger() {
+    return (
+      this.props.field.contents.reduce((a, b) => a + b.hunger, 0) /
+      this.props.field.contents.length
+    ).toFixed(1);
   }
 
   getMeat(meat) {
@@ -422,6 +430,18 @@ class FieldDashboard extends Component {
             </h5>
 
             {this.props.field.contents[0].name === "Cow" && (
+              <div className="AnimalHunger">
+                <p>Average Hunger: {this.animalHunger()}</p>
+                <div className="AnimalsHungry">
+                  {this.animalHunger() > 4.8 ? (
+                    <p>Feed the {this.props.field.contents[0].name}s</p>
+                  ) : (
+                    <p />
+                  )}
+                </div>
+              </div>
+            )}
+            {this.props.field.contents[0].name === "Cow" && (
               <Button onClick={() => this.getMeat("beef")}>Collect beef</Button>
             )}
             {this.props.field.contents[0].name === "Cow" && (
@@ -435,6 +455,18 @@ class FieldDashboard extends Component {
               </Button>
             )}
             {this.props.field.contents[0].name === "Sheep" && (
+              <div className="AnimalHunger">
+                <p>Average Hunger: {this.animalHunger()}</p>
+                <div className="AnimalsHungry">
+                  {this.animalHunger() > 4.8 ? (
+                    <p>Feed the {this.props.field.contents[0].name}s</p>
+                  ) : (
+                    <p />
+                  )}
+                </div>
+              </div>
+            )}
+            {this.props.field.contents[0].name === "Sheep" && (
               <Button onClick={() => this.getMeat("lamb")}>Collect lamb</Button>
             )}
             {this.props.field.contents[0].name === "Sheep" && (
@@ -446,6 +478,18 @@ class FieldDashboard extends Component {
               <Button onClick={() => this.getMeat("quarterLamb")}>
                 Collect 1/4 lamb
               </Button>
+            )}
+            {this.props.field.contents[0].name === "Chicken" && (
+              <div className="AnimalHunger">
+                <p>Average Hunger: {this.animalHunger()}</p>
+                <div className="AnimalsHungry">
+                  {this.animalHunger() > 4.8 ? (
+                    <p>Feed the {this.props.field.contents[0].name}s</p>
+                  ) : (
+                    <p />
+                  )}
+                </div>
+              </div>
             )}
             {this.props.field.contents[0].name === "Chicken" && (
               <Button onClick={() => this.getMeat("chicken")}>
@@ -463,6 +507,18 @@ class FieldDashboard extends Component {
               </Button>
             )}
             {this.props.field.contents[0].name === "Pig" && (
+              <div className="AnimalHunger">
+                <p>Average Hunger: {this.animalHunger()}</p>
+                <div className="AnimalsHungry">
+                  {this.animalHunger() > 4.8 ? (
+                    <p>Feed the {this.props.field.contents[0].name}s</p>
+                  ) : (
+                    <p />
+                  )}
+                </div>
+              </div>
+            )}
+            {this.props.field.contents[0].name === "Pig" && (
               <Button onClick={() => this.getMeat("pork")}>Collect pork</Button>
             )}
             {this.props.field.contents[0].name === "Pig" && (
@@ -474,6 +530,18 @@ class FieldDashboard extends Component {
               <Button onClick={() => this.getMeat("quarterPork")}>
                 Collect 1/4 pork
               </Button>
+            )}
+            {this.props.field.contents[0].name === "Crocodile" && (
+              <div className="AnimalHunger">
+                <p>Average Hunger: {this.animalHunger()}</p>
+                <div className="AnimalsHungry">
+                  {this.animalHunger() > 4.8 ? (
+                    <p>Feed the {this.props.field.contents[0].name}s</p>
+                  ) : (
+                    <p />
+                  )}
+                </div>
+              </div>
             )}
             {this.props.field.contents[0].name === "Crocodile" && (
               <Button onClick={() => this.getMeat("crocodile")}>
@@ -491,6 +559,18 @@ class FieldDashboard extends Component {
               </Button>
             )}
             {this.props.field.contents[0].name === "Ostrich" && (
+              <div className="AnimalHunger">
+                <p>Average Hunger: {this.animalHunger()}</p>
+                <div className="AnimalsHungry">
+                  {this.animalHunger() > 4.8 ? (
+                    <p>Feed the {this.props.field.contents[0].name}s</p>
+                  ) : (
+                    <p />
+                  )}
+                </div>
+              </div>
+            )}
+            {this.props.field.contents[0].name === "Ostrich" && (
               <Button onClick={() => this.getMeat("ostrich")}>
                 Collect ostrich
               </Button>
@@ -504,6 +584,18 @@ class FieldDashboard extends Component {
               <Button onClick={() => this.getMeat("quarterOstrich")}>
                 Collect 1/4 ostrich
               </Button>
+            )}
+            {this.props.field.contents[0].name === "Salmon" && (
+              <div className="AnimalHunger">
+                <p>Average Hunger: {this.animalHunger()}</p>
+                <div className="AnimalsHungry">
+                  {this.animalHunger() > 4.8 ? (
+                    <p>Feed the {this.props.field.contents[0].name}s</p>
+                  ) : (
+                    <p />
+                  )}
+                </div>
+              </div>
             )}
             {this.props.field.contents[0].name === "Salmon" && (
               <Button onClick={() => this.getMeat("salmon")}>
@@ -521,6 +613,18 @@ class FieldDashboard extends Component {
               </Button>
             )}
             {this.props.field.contents[0].name === "Duck" && (
+              <div className="AnimalHunger">
+                <p>Average Hunger: {this.animalHunger()}</p>
+                <div className="AnimalsHungry">
+                  {this.animalHunger() > 4.8 ? (
+                    <p>Feed the {this.props.field.contents[0].name}s</p>
+                  ) : (
+                    <p />
+                  )}
+                </div>
+              </div>
+            )}
+            {this.props.field.contents[0].name === "Duck" && (
               <Button onClick={() => this.getMeat("duck")}>Collect duck</Button>
             )}
             {this.props.field.contents[0].name === "Duck" && (
@@ -532,6 +636,18 @@ class FieldDashboard extends Component {
               <Button onClick={() => this.getMeat("quarterDuck")}>
                 Collect 1/4 duck
               </Button>
+            )}
+            {this.props.field.contents[0].name === "Goose" && (
+              <div className="AnimalHunger">
+                <p>Average Hunger: {this.animalHunger()}</p>
+                <div className="AnimalsHungry">
+                  {this.animalHunger() > 4.8 ? (
+                    <p>Feed the {this.props.field.contents[0].name}s</p>
+                  ) : (
+                    <p />
+                  )}
+                </div>
+              </div>
             )}
             {this.props.field.contents[0].name === "Goose" && (
               <Button onClick={() => this.getMeat("goose")}>
@@ -547,6 +663,18 @@ class FieldDashboard extends Component {
               <Button onClick={() => this.getMeat("quarterGoose")}>
                 Collect 1/4 goose
               </Button>
+            )}
+            {this.props.field.contents[0].name === "Llama" && (
+              <div className="AnimalHunger">
+                <p>Average Hunger: {this.animalHunger()}</p>
+                <div className="AnimalsHungry">
+                  {this.animalHunger() > 4.8 ? (
+                    <p>Feed the {this.props.field.contents[0].name}s</p>
+                  ) : (
+                    <p />
+                  )}
+                </div>
+              </div>
             )}
             {this.props.field.contents[0].name === "Llama" && (
               <Button onClick={() => this.getMeat("llama")}>
@@ -598,10 +726,11 @@ class FieldDashboard extends Component {
                 <p>Average Cabbage age: {this.cropAge()} days</p>
                 {this.cropAge() > 70 ? (
                   <div className="CropStatsReady">
-                    <p>Cabbages are ready to be harvested
-                    <Button onClick={() => this.getCrops("cabbages")}>
-                      Collect Cabbages
-                    </Button>
+                    <p>
+                      Cabbages are ready to be harvested
+                      <Button onClick={() => this.getCrops("cabbages")}>
+                        Collect Cabbages
+                      </Button>
                     </p>
                   </div>
                 ) : (
@@ -610,148 +739,157 @@ class FieldDashboard extends Component {
               </div>
             )}
             {this.props.field.contents[0].name === "Carrot" && (
-               <div className="CropStats">
-               <p>Average Carrot age: {this.cropAge()} days</p>
-               {this.cropAge() > 80 ? (
-                 <div className="CropStatsReady">
-                   <p>Carrots are ready to be harvested
-                   <Button onClick={() => this.getCrops("carrots")}>
-                Collect Carrots
-              </Button>
-                   </p>
-                 </div>
-               ) : (
-                 <p>Carrots are growing and cannot be harvested yet</p>
-               )}
-             </div>
+              <div className="CropStats">
+                <p>Average Carrot age: {this.cropAge()} days</p>
+                {this.cropAge() > 80 ? (
+                  <div className="CropStatsReady">
+                    <p>
+                      Carrots are ready to be harvested
+                      <Button onClick={() => this.getCrops("carrots")}>
+                        Collect Carrots
+                      </Button>
+                    </p>
+                  </div>
+                ) : (
+                  <p>Carrots are growing and cannot be harvested yet</p>
+                )}
+              </div>
             )}
             {this.props.field.contents[0].name === "Kale" && (
-               <div className="CropStats">
-               <p>Average Kale age: {this.cropAge()} days</p>
-               {this.cropAge() > 60 ? (
-                 <div className="CropStatsReady">
-                   <p>Kales are ready to be harvested
-                   <Button onClick={() => this.getCrops("kales")}>
-                Collect Kales
-              </Button>
-                   </p>
-                 </div>
-               ) : (
-                 <p>Kales are growing and cannot be harvested yet</p>
-               )}
-             </div>
+              <div className="CropStats">
+                <p>Average Kale age: {this.cropAge()} days</p>
+                {this.cropAge() > 60 ? (
+                  <div className="CropStatsReady">
+                    <p>
+                      Kales are ready to be harvested
+                      <Button onClick={() => this.getCrops("kales")}>
+                        Collect Kales
+                      </Button>
+                    </p>
+                  </div>
+                ) : (
+                  <p>Kales are growing and cannot be harvested yet</p>
+                )}
+              </div>
             )}
             {this.props.field.contents[0].name === "Lettuce" && (
-               <div className="CropStats">
-               <p>Average Lettuce age: {this.cropAge()} days</p>
-               {this.cropAge() > 55 ? (
-                 <div className="CropStatsReady">
-                   <p>Lettuces are ready to be harvested
-                   <Button onClick={() => this.getCrops("lettuces")}>
-                Collect Lettuces
-              </Button>
-                   </p>
-                 </div>
-               ) : (
-                 <p>Lettuces are growing and cannot be harvested yet</p>
-               )}
-             </div>
+              <div className="CropStats">
+                <p>Average Lettuce age: {this.cropAge()} days</p>
+                {this.cropAge() > 55 ? (
+                  <div className="CropStatsReady">
+                    <p>
+                      Lettuces are ready to be harvested
+                      <Button onClick={() => this.getCrops("lettuces")}>
+                        Collect Lettuces
+                      </Button>
+                    </p>
+                  </div>
+                ) : (
+                  <p>Lettuces are growing and cannot be harvested yet</p>
+                )}
+              </div>
             )}
             {this.props.field.contents[0].name === "Pea" && (
               <div className="CropStats">
-              <p>Average Pea age: {this.cropAge()} days</p>
-              {this.cropAge() > 42 ? (
-                <div className="CropStatsReady">
-                  <p>Peas are ready to be harvested
-                  <Button onClick={() => this.getCrops("peas")}>
-                Collect Peas
-              </Button>
-                  </p>
-                </div>
-              ) : (
-                <p>Peas are growing and cannot be harvested yet</p>
-              )}
-            </div>
+                <p>Average Pea age: {this.cropAge()} days</p>
+                {this.cropAge() > 42 ? (
+                  <div className="CropStatsReady">
+                    <p>
+                      Peas are ready to be harvested
+                      <Button onClick={() => this.getCrops("peas")}>
+                        Collect Peas
+                      </Button>
+                    </p>
+                  </div>
+                ) : (
+                  <p>Peas are growing and cannot be harvested yet</p>
+                )}
+              </div>
             )}
             {this.props.field.contents[0].name === "Potato" && (
               <div className="CropStats">
-              <p>Average Potato age: {this.cropAge()} days</p>
-              {this.cropAge() > 84 ? (
-                <div className="CropStatsReady">
-                  <p>Potatoes are ready to be harvested
-                  <Button onClick={() => this.getCrops("potatoes")}>
-                Collect Potatoes
-              </Button>
-                  </p>
-                </div>
-              ) : (
-                <p>Potatoes are growing and cannot be harvested yet</p>
-              )}
-            </div>
+                <p>Average Potato age: {this.cropAge()} days</p>
+                {this.cropAge() > 84 ? (
+                  <div className="CropStatsReady">
+                    <p>
+                      Potatoes are ready to be harvested
+                      <Button onClick={() => this.getCrops("potatoes")}>
+                        Collect Potatoes
+                      </Button>
+                    </p>
+                  </div>
+                ) : (
+                  <p>Potatoes are growing and cannot be harvested yet</p>
+                )}
+              </div>
             )}
             {this.props.field.contents[0].name === "Pumpkin" && (
               <div className="CropStats">
-              <p>Average Pumpkin age: {this.cropAge()} days</p>
-              {this.cropAge() > 120 ? (
-                <div className="CropStatsReady">
-                  <p>Pumpkins are ready to be harvested
-                  <Button onClick={() => this.getCrops("pumpkins")}>
-                Collect Pumpkins
-              </Button>
-                  </p>
-                </div>
-              ) : (
-                <p>Pumpkins are growing and cannot be harvested yet</p>
-              )}
-            </div>
+                <p>Average Pumpkin age: {this.cropAge()} days</p>
+                {this.cropAge() > 120 ? (
+                  <div className="CropStatsReady">
+                    <p>
+                      Pumpkins are ready to be harvested
+                      <Button onClick={() => this.getCrops("pumpkins")}>
+                        Collect Pumpkins
+                      </Button>
+                    </p>
+                  </div>
+                ) : (
+                  <p>Pumpkins are growing and cannot be harvested yet</p>
+                )}
+              </div>
             )}
             {this.props.field.contents[0].name === "Rapeseed" && (
-               <div className="CropStats">
-               <p>Average Rapeseed age: {this.cropAge()} days</p>
-               {this.cropAge() > 60 ? (
-                 <div className="CropStatsReady">
-                   <p>Rapeseeds are ready to be harvested
-                   <Button onClick={() => this.getCrops("rapeseeds")}>
-                Collect Rapeseeds
-              </Button>
-                   </p>
-                 </div>
-               ) : (
-                 <p>Rapeseeds are growing and cannot be harvested yet</p>
-               )}
-             </div>
+              <div className="CropStats">
+                <p>Average Rapeseed age: {this.cropAge()} days</p>
+                {this.cropAge() > 60 ? (
+                  <div className="CropStatsReady">
+                    <p>
+                      Rapeseeds are ready to be harvested
+                      <Button onClick={() => this.getCrops("rapeseeds")}>
+                        Collect Rapeseeds
+                      </Button>
+                    </p>
+                  </div>
+                ) : (
+                  <p>Rapeseeds are growing and cannot be harvested yet</p>
+                )}
+              </div>
             )}
             {this.props.field.contents[0].name === "Sugarbeet" && (
               <div className="CropStats">
-              <p>Average Sugarbeet age: {this.cropAge()} days</p>
-              {this.cropAge() > 90 ? (
-                <div className="CropStatsReady">
-                  <p>Sugarbeets are ready to be harvested
-                  <Button onClick={() => this.getCrops("sugarbeets")}>
-                Collect Sugarbeets
-              </Button>
-                  </p>
-                </div>
-              ) : (
-                <p>Sugarbeets are growing and cannot be harvested yet</p>
-              )}
-            </div>
+                <p>Average Sugarbeet age: {this.cropAge()} days</p>
+                {this.cropAge() > 90 ? (
+                  <div className="CropStatsReady">
+                    <p>
+                      Sugarbeets are ready to be harvested
+                      <Button onClick={() => this.getCrops("sugarbeets")}>
+                        Collect Sugarbeets
+                      </Button>
+                    </p>
+                  </div>
+                ) : (
+                  <p>Sugarbeets are growing and cannot be harvested yet</p>
+                )}
+              </div>
             )}
             {this.props.field.contents[0].name === "Wheat" && (
-               <div className="CropStats">
-               <p>Average Wheat age: {this.cropAge()} days</p>
-               {this.cropAge() > 250 ? (
-                 <div className="CropStatsReady">
-                   <p>Wheats are ready to be harvested
-                   <Button onClick={() => this.getCrops("wheats")}>
-                Collect Wheats
-              </Button>
-                   </p>
-                 </div>
-               ) : (
-                 <p>Wheats are growing and cannot be harvested yet</p>
-               )}
-             </div>
+              <div className="CropStats">
+                <p>Average Wheat age: {this.cropAge()} days</p>
+                {this.cropAge() > 250 ? (
+                  <div className="CropStatsReady">
+                    <p>
+                      Wheats are ready to be harvested
+                      <Button onClick={() => this.getCrops("wheats")}>
+                        Collect Wheats
+                      </Button>
+                    </p>
+                  </div>
+                ) : (
+                  <p>Wheats are growing and cannot be harvested yet</p>
+                )}
+              </div>
             )}
             {this.props.field.contents[0].name === "Sheep" && (
               <Button onClick={() => this.getMisc("wool")}>Collect wool</Button>

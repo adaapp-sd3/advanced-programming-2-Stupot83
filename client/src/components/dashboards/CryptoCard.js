@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import fetch from "isomorphic-fetch";
-import withUnmounted from '@ishawnwang/withunmounted';
+import withUnmounted from "@ishawnwang/withunmounted";
 import "./CryptoCard.css";
 
 class CryptoCard extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -32,9 +31,10 @@ class CryptoCard extends Component {
       `https://min-api.cryptocompare.com/data/price?fsym=${symbol}&tsyms=${symbol},USD`
     )
       .then(resp => resp.json())
-      .then(json => { if (this.hasUnmounted) {
-        return;
-      }
+      .then(json => {
+        if (this.hasUnmounted) {
+          return;
+        }
         this.setState(prevState => ({
           price: json.USD,
           lastPrice:

@@ -13,15 +13,6 @@ class Llama extends Animal {
     this.farm = farm;
   }
 
-  checkHealth() {
-    if (this.hunger >= 5) {
-      this.health -= 1;
-    }
-    if (this.health <= 0) {
-      this.farm.llamas.objects.pop(0);
-      this.farm.llamas.total -= 1;
-    }
-  }
 
   yieldLlamaWool() {
     let amountOfWoolToYield = 5 - this.hunger;
@@ -30,7 +21,7 @@ class Llama extends Animal {
   }
 
   yieldLlama() {
-    this.farm.llama.total += 750;
+    this.farm.llama.total += 200;
     this.farm.usedLlama.total -=1;
     this.health = 0;
   }
@@ -59,7 +50,6 @@ class Llama extends Animal {
 
   public draw(): any {
     this.constrainItem();
-    this.checkHealth();
     this.doSomethingOccasionally(() => this.eatStraw());
     this.stopForFarmer();
   }

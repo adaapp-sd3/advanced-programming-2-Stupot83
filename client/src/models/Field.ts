@@ -285,6 +285,8 @@ class Field extends Drawable {
 
   placeGasGenerator(x: number, y: number, farm: Farm) {
     console.log("new gas generator");
+    this.fieldDecor = "#ecd3a7";
+    this.fieldName = FieldClass.Tech;
     let gasGenerator = new GasGenerator(farm);
     gasGenerator.p5 = this.p5;
     gasGenerator.preload();
@@ -294,6 +296,8 @@ class Field extends Drawable {
 
   placeSolarPanel(x: number, y: number, farm: Farm) {
     console.log("new solar panel");
+    this.fieldDecor = "#ecd3a7";
+    this.fieldName = FieldClass.Tech;
     let solarPanel = new SolarPanel(farm);
     solarPanel.p5 = this.p5;
     solarPanel.preload();

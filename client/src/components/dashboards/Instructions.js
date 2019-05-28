@@ -90,13 +90,64 @@ class Instructions extends Component {
                       transition={false}
                       id="instructions-tabs"
                     >
-                      <Tab eventKey="Tractor" title="Tractor" />
-                      <Tab eventKey="Fields" title="Fields" />
-                      <Tab eventKey="Animals" title="Animals" />
-                      <Tab eventKey="Crops" title="Crops" />
-                      <Tab eventKey="Tech" title="Tech" />
-                      <Tab eventKey="Market" title="Market" />
-                      <Tab eventKey="Weather" title="Weather" />
+                      <Tab eventKey="Tractor" title="Tractor">
+                      <div className="Instruction-Panel">
+                      <ol className="Instruction-List">
+                      <li>To drive the tractor, click on the game screen, and then use the 'w' key for up, 'a' key for left, 's' key for down, and 'd' key for right</li>
+                      </ol>
+                      </div>
+                      </Tab>
+                      <Tab eventKey="Fields" title="Fields">
+                      <div className="Instruction-Panel">
+                      <ol className="Instruction-List">
+                      <li>Fields come in a number of types: "Fallow" to start with, then can be set to "Grazing", "Arable", "LakeLand", "FishFarm", or "Tech"</li>
+                      <li>The type of field can only be set when it is empty, and is done so when a type of animal, plant or tech is placed in that field</li>
+                      <li>For example, if you place a cow in an empty field, the field will be set to "Grazing" for "Cows"</li>
+                      <li>The exception is the petting zoo type, which can only be set once a type is already in place, at a cost of £10000. For example, a "Grazing" field for "Cows", can become a "Petting Zoo" for "Cows"</li>
+                      <li>A petting zoo can also be changed back to the previous field type, again at a cost of £10000</li>
+                      <li>The colours of the fields will change dependent on the type of field chosen and the type of animal, plant or tech placed inside</li>
+                    </ol>
+                      </div>
+                      </Tab>
+                      <Tab eventKey="Animals" title="Animals">
+                      <div className="Instruction-Panel">
+                      <ol className="Instruction-List">
+                      <li>There are ten different types of animal you can farm in the game</li>
+                      <li>These are cows, sheep, chickens, pigs, crocodiles, ostriches, salmons, ducks, geese and llamas</li>
+                      </ol>
+                      </div>
+                      </Tab>
+                      <Tab eventKey="Crops" title="Crops">
+                      <div className="Instruction-Panel">
+                      <ol className="Instruction-List"></ol>
+                      <li>There are also ten different types of crop you can farm in the game</li>
+                      <li>These are cabbages, carrots, kales, lettuces, peas, potatoes, pumpkins, rapeseeds, sugarbeets and wheats</li>
+                      <li>They can only exist in areas designated for "Arable"</li>
+                      </div>
+                      </Tab>
+                      <Tab eventKey="Tech" title="Tech">
+                      <div className="Instruction-Panel">
+                      <ol className="Instruction-List"></ol>
+                      <li>There are two types of tech setups you can choose for your farm</li>
+                      <li>These are gas generators and solar panels</li>
+                      <li>They can only exists in areas designated for "Tech"</li>
+                      <li>Gas generators can be used to generate green gas, which can be sold at the market. They will wear out, and can be sold once so at a second hand rate</li>
+                      <li>Solar Panels can be used to generate solar power, which can also be sold at the market. They will also wear out, and can be sold once so at a second hand rate</li>
+                      <li>Green gas and solar panel are more eco-friendly options and return a tidy profit</li>
+                      </div>
+                      </Tab>
+                      <Tab eventKey="Market" title="Market">
+                      <div className="Instruction-Panel">
+                      <ol className="Instruction-List"></ol>
+                      </div>
+                      </Tab>
+                      <Tab eventKey="Weather" title="Weather">
+                      <div className="Instruction-Panel">
+                      <ol className="Instruction-List">
+                      <li>The weather API provides real weather information for the City of London</li>
+                      </ol>
+                      </div>
+                      </Tab>
                       <Tab eventKey="Fun" title="Fun">
                         <div style={{ height: "100px", width: "100px" }}>
                           <Player playsInline autoPlay src={Video}>

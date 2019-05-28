@@ -1,7 +1,19 @@
-# Time Sheet
+# Time Sheet (Total hours approx 90 hours)
+
+## Things to Note
+
+I decided to re-build the farm app from scratch using a MERN stack setup (Mongodb database, express server, react and nodejs). Through extensive reading and research, I was able to implement a system to run an express/node backend concurrently with a react frontend connected to a mongoDB database. I was able to implement a redux store setup with reducers to allow the user to be created in the database and persisted once logged in, meaning even if you accidentally clicked away, you would still be recognised as the user data was persisted in localStorage. I attempted to set up allowing the game state to be converted and saved into the mongoDB database, meaning you could click the button to save your current game, and load it at a later stage if you came back to it. This proved to be too much due to the circular references of the various interdependent parts of the farm game. If I had another 20 hours dev time I would certainly like to revisit this as I believe it is something eventually that I could get working.
+
+For the game itself, I spent some time researching Typescript and P5, to thoroughly get to grips with the inheritance of classes and advanced features such as enums, which I managed to implement as a way of changing the class of the field area in which the tractor is visiting. I have implemented 10 different animal types and ten different plant types, as well as some greener options with solar panels and green gas generators for the eco-friendly among us. I also added the option to change an area to a petting zoo for that type of animal and then back again if no longer required.  I decided to stay with class components rather than react hooks as this is all a new language to me and was better to implement this way.
+
+I also added in a Weather Api, making use of React-Open-Weather, which uses the APIXU weather Api. With more time, I would have liked to have been able to make this affect crop growth, health etc, and use P5 to draw weather effects on the screen based on the real weather. I also made a Crypto Currency Exchange, which hooks into real-time data. The plan would have been to make this something you could exchange goods and cash for to make trading more interesting. I am proud that through the marketplace you are able to buy and sell goods, and see the budget and inventories change accordingly. I researched the use of modals to make the marketplace more interactive and also used this for the game instructions. 
+
+I spent extensive time refactoring the visual side of the game especially the dashboards, and adding fun music and video to parts such as the marketplace, intermediary screens etc. I was able to learn how to use various additional resources such as react-sound and video-react. For the styling of the app, I researched and then used react-bootstrap and materialize, as well as standard css tricks I have learnt across the last year. There is still plenty more I would like to add to the game if I was to have more dev time to do so, such as maybe making it more fun with additional classes such as dinosaurs to give you a Jurassic Park option. I would also have liked to have been able to add more sound effects into the game, such as the noise of the tractor when it moves.
+
+If I had more time, I would also like to extensively test the app with unit testing and continuous integration. This would allow me to further iron out any subtle nuances and improve the play and feel of the game. 
 
 
-## Day 16
+## Day 15 (approx 5 hours)
 
 
 ### (commit 146d6e321c908e8711c96fa3229d3c305b64a8be, 28th May)
@@ -17,7 +29,7 @@
 …etting it up, add pettingzoo and income when with customers in the field ⚗️🚧💄
 
 
-## Day 14
+## Day 14 (approx 5 hours)
 
 
 ### (commit f8e3ed2cddc701f9ec308410d423a67181f6ecea, 25th May)
@@ -37,7 +49,7 @@
 💄⚗️ Finish crypto exchange for market including images and styling ⚗️💄
 
 
-## Day 13
+## Day 13 (approx 5 hours)
 
 
 ### (commit d940c11331e3ce32e243cafc428735a123bedbf5, 24th May)
@@ -53,7 +65,7 @@
 :clown: Emergency code changes as login and register disabled :clown:
 
 
-## Day 12
+## Day 12 (approx 5 hours)
 
 
 ### (commit 8fa237d69258f112c2236ccd2bd7d8a8b7ee93c6, 23rd May)
@@ -81,7 +93,7 @@
 …ce and recycle tech and update styling ⚗️🚧💄
 
 
-## Day 11
+## Day 11 (approx 5 hours)
 
 
 ### (commit 130ebbb6da5354f95b0bad45ed93d75bbdec27a1, 16th May)
@@ -107,7 +119,7 @@
 💄🚧 Finish restyling market modal and add new song to it 🚧💄
 
 
-## Day 10
+## Day 10 (approx 5 hours)
 
 
 ### (commit 64427a6278242e6773eaf17ef831e49c2f5356a8, 15th May)
@@ -127,7 +139,7 @@
 …r tech and crop abstraction and initial tech and crop models 🚧💄
 
 
-## Day 9
+## Day 9 (approx 5 hours)
 
 
 ### (commit 6b7cba0ccb27ab9e4ffb3b60c34703684898565f, 14th May)
@@ -139,7 +151,7 @@
 💄🚧 Further styling and images for market dashboard 🚧💄
 
 
-## Day 8
+## Day 8 (approx 5 hours)
 
 
 ### (commit 3fc810548fd7e934decede1e2eff8fd8aa42b131, 13th May)
@@ -165,7 +177,7 @@
 🎨 Format all files with prettier 🎨
 
 
-## Day 7
+## Day 7 (approx 5 hours)
 
 
 ### (commit 90ce7e03d59aee8b13a10d56ba604f573a231dc4, 11th May)
@@ -185,7 +197,7 @@
 …me instructions 🚧💄
 
 
-## Day 6
+## Day 6 (approx 5 hours)
 
 
 ### (commit 85d1b2a4a62d9fa83bc47e560d3179cb0bee5b0a, 10th May)
@@ -205,7 +217,7 @@
 …al styling for altered and new screens 🚧💄
 
 
-## Day 5
+## Day 5 (approx 5 hours)
 
 
 ### (commit 3eb3dbe08466be553e32b1bc2a206537147f9de1, 9th May)
@@ -239,7 +251,7 @@
 ♻️
 
 
-## Day 4
+## Day 4 (approx 5 hours)
 
 
 ### (commit b049ddcf926793325d3454064c7f20d8015a4a10, 8th May)
@@ -275,7 +287,7 @@
 🚧 Add extra fields for animals, greengas and solar panels 🚧
 
 
-## Day 3
+## Day 3 (approx 5 hours)
 
 
 ### (commit a6997fd0423b585f4ae6fe1779e40a9346e79df8, 7th May)
@@ -295,7 +307,7 @@
 …nus 💄🚧
 
 
-## Day 2
+## Day 2 (approx 5 hours)
 
 
 ### (commit bfa34d309bba4ae1061edfbcefd5d7cc8e2e3769, 6th May)
@@ -331,7 +343,7 @@
 🏗 Add p5setup, tsconfig, favicon image and react-app-env from original 🏗
 
 
-## Day 1
+## Day 1 (approx 5 hours)
 
 
 ### (commit f33a6c4771facd4f0ddb7571609c1e6dbb587bd0, 3rd May)

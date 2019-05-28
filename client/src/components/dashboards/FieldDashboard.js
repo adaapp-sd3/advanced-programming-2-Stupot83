@@ -429,6 +429,10 @@ class FieldDashboard extends Component {
       case "greenGas":
         for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldGreenGas();
+          this.props.field.contents[i].checkGasGeneratorHealth();
+          if (this.props.field.contents[i].health <= 0) {
+            this.props.field.contents.pop();
+          }
         }
         break;
 
@@ -442,6 +446,10 @@ class FieldDashboard extends Component {
       case "solarPower":
         for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldSolarPower();
+          this.props.field.contents[i].checkSolarPanelHealth();
+          if (this.props.field.contents[i].health <= 0) {
+            this.props.field.contents.pop();
+          }
         }
         break;
 

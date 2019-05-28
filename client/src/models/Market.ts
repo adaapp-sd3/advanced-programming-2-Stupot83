@@ -67,8 +67,8 @@ class Market extends Drawable {
 
   woolPrice: number = 3;
   llamaWoolPrice: number = 8;
-  greenGasPrice: number = 700;
-  solarPowerPrice: number = 700;
+  greenGasPrice: number = 200;
+  solarPowerPrice: number = 200;
   gasGeneratorResalePrice: number = 3000;
   solarPanelResalePrice: number = 3000;
 

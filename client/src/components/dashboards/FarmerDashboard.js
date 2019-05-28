@@ -385,11 +385,11 @@ class FarmerDashboard extends Component {
                 <>
                   <dt>Budget</dt>
                   <dd className="Budget">£{this.props.farmer.budget.toFixed(0)}</dd>
-                  <dt>New Gen</dt>
+                  <dt>Generators</dt>
                   <dd className="Tech">
                     {this.props.farmer.myFarm.gasGenerators.total.toFixed(0)} units
                   </dd>
-                  <dt>New Pan</dt>
+                  <dt>Solar Panels</dt>
                   <dd className="Tech">
                     {this.props.farmer.myFarm.solarPanels.total.toFixed(0)} units
                   </dd>

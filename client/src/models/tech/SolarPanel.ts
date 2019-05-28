@@ -12,10 +12,22 @@ class SolarPanel extends Tech {
     this.farm = farm;
   }
 
+  checkSolarPanelHealth() {
+    if (this.health <= 2 && this.health > 0) {
+      alert("Your Solar Panels are almost exhausted, collect more solar energy to wear them out permanently or consider recycling them");
+    }
+    return this.health;
+  }
+
   yieldSolarPower() {
     let amountOfSolarPowerToYield = 5 - this.health;
     this.farm.solarPower.total += Math.abs(amountOfSolarPowerToYield);
-    this.health -= 1;
+    this.health -=1;
+    if ((this.health <= 0) && (this.farm.solarPanel.total !== 0)) {
+      this.farm.solarPanels.total += 1;
+      this.farm.solarPanel.total -= 1;
+      this.health = 0;
+    }
   }
 
   yieldSolarPanel() {

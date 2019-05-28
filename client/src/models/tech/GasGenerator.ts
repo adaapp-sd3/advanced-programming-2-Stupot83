@@ -12,10 +12,22 @@ class GasGenerator extends Tech {
     this.farm = farm;
   }
 
+  checkGasGeneratorHealth() {
+    if (this.health <= 2 && this.health > 0) {
+      alert("Your Gas Generators are almost exhausted, collect more green gas to wear them out permanently or consider recycling them");
+    }
+    return this.health;
+  }
+
   yieldGreenGas() {
     let amountOfGreenGasToYield = 5 - this.health;
     this.farm.greenGas.total += Math.abs(amountOfGreenGasToYield);
-    this.health = 1;
+    this.health -=1;
+    if ((this.health <= 0) && (this.farm.gasGenerator.total !== 0)) {
+      this.farm.gasGenerators.total += 1;
+      this.farm.gasGenerator.total -= 1;
+      this.health = 0;
+    }
   }
 
   yieldGasGenerator() {

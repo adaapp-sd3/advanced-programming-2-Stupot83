@@ -1,5 +1,6 @@
 import Drawable from "./abstract/Drawable";
 import Field from "./Field";
+import FieldClass from "./abstract/FieldClass";
 
 class Farm extends Drawable {
   fields: Field[] = [];
@@ -569,16 +570,16 @@ class Farm extends Drawable {
   }
 
   private createBasicFarm = () => {
-    this.fields.push(new Field(10, 10, 200, 250));
-    this.fields.push(new Field(10, 290, 200, 250));
-    this.fields.push(new Field(230, 290, 200, 250));
-    this.fields.push(new Field(230, 10, 200, 250));
-    this.fields.push(new Field(800, 10, 250, 200));
-    this.fields.push(new Field(700, 415, 350, 125));
-    this.fields.push(new Field(720, 250, 250, 125));
-    this.fields.push(new Field(450, 10, 300, 125));
-    this.fields.push(new Field(460, 340, 210, 200));
-    this.fields.push(new Field(480, 170, 200, 125));
+    this.fields.push(new Field(10, 10, 200, 250,  "#C19A6B", FieldClass.Fallow));
+    this.fields.push(new Field(10, 290, 200, 250, "#C19A6B", FieldClass.Fallow));
+    this.fields.push(new Field(230, 290, 200, 250, "#C19A6B", FieldClass.Fallow));
+    this.fields.push(new Field(230, 10, 200, 250, "#C19A6B", FieldClass.Fallow));
+    this.fields.push(new Field(800, 10, 250, 200, "#C19A6B", FieldClass.Fallow));
+    this.fields.push(new Field(700, 415, 350, 125, "#C19A6B", FieldClass.Fallow));
+    this.fields.push(new Field(720, 250, 250, 125, "#C19A6B", FieldClass.Fallow));
+    this.fields.push(new Field(450, 10, 300, 125, "#C19A6B", FieldClass.Fallow));
+    this.fields.push(new Field(460, 340, 210, 200, "#C19A6B", FieldClass.Fallow));
+    this.fields.push(new Field(480, 170, 200, 125, "#C19A6B", FieldClass.Fallow));
 
     for (let field of this.fields) {
       field.p5 = this.p5;

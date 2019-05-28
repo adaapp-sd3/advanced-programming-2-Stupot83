@@ -423,7 +423,7 @@ class FieldDashboard extends Component {
         {this.props.field.contents[0] && (
           <p>
             <h5>
-              This is a {this.props.field.contents[0].name} Area
+              {this.props.field.fieldName} Area for {this.props.field.contents[0].name}s
               <br />
               (currently with {this.props.field.contents.length}{" "}
               {this.props.field.contents[0].name}s)

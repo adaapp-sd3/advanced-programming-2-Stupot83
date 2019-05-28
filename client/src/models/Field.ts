@@ -22,9 +22,12 @@ import Wheat from "./crops/Wheat";
 import Farm from "./Farm";
 import SolarPanel from "./tech/SolarPanel";
 import GasGenerator from "./tech/GasGenerator";
+import FieldClass from "./abstract/FieldClass";
 
 class Field extends Drawable {
   image: any;
+  fieldDecor: string = "";
+  fieldName: FieldClass = FieldClass.Grazing;
   contents: any[];
 
   constructor(
@@ -32,32 +35,38 @@ class Field extends Drawable {
     yPos: number,
     w: number,
     h: number,
-    initalContents: any[] = []
+    fieldDecor: string = "#b58969",
+    fieldName: FieldClass = FieldClass.Fallow,
+    initalContents: any[] = [],
   ) {
     super();
     this.width = w;
     this.height = h;
     this.x = xPos;
     this.y = yPos;
+    this.fieldDecor = fieldDecor;
+    this.fieldName = fieldName;
     this.contents = initalContents;
   }
 
   public draw() {
     this.p5.stroke("#7c4011");
     this.p5.strokeWeight(10);
-    this.p5.fill("#b58969");
+    this.p5.fill(this.fieldDecor);
     this.p5.rect(this.x, this.y, this.width, this.height, 10);
 
-    this.contents.forEach(item => {
-      item.draw();
-      if (item.fieldX == null || item.fieldY == null) {
-        item.setRandomPositionInField(this.x, this.y, this.width, this.height);
+    this.contents.forEach(object => {
+      object.draw();
+      if (object.fieldX == null || object.fieldY == null) {
+        object.setRandomPositionInField(this.x, this.y, this.width, this.height);
       }
     });
   }
 
   placeCow(x: number, y: number, farm: Farm) {
     console.log("new cow");
+    this.fieldDecor = "#065535";
+    this.fieldName = FieldClass.Grazing;
     let cow = new Cow(farm);
     cow.p5 = this.p5;
     cow.preload();
@@ -67,6 +76,8 @@ class Field extends Drawable {
 
   placeSheep(x: number, y: number, farm: Farm) {
     console.log("new sheep");
+    this.fieldDecor = "#065535";
+    this.fieldName = FieldClass.Grazing;
     let sheep = new Sheep(farm);
     sheep.p5 = this.p5;
     sheep.preload();
@@ -76,6 +87,8 @@ class Field extends Drawable {
 
   placeChicken(x: number, y: number, farm: Farm) {
     console.log("new chicken");
+    this.fieldDecor = "#9c673d";
+    this.fieldName = FieldClass.Grazing;
     let chicken = new Chicken(farm);
     chicken.p5 = this.p5;
     chicken.preload();
@@ -85,6 +98,8 @@ class Field extends Drawable {
 
   placePig(x: number, y: number, farm: Farm) {
     console.log("new pig");
+    this.fieldDecor = "#9c673d";
+    this.fieldName = FieldClass.Grazing;
     let pig = new Pig(farm);
     pig.p5 = this.p5;
     pig.preload();
@@ -94,6 +109,8 @@ class Field extends Drawable {
 
   placeCrocodile(x: number, y: number, farm: Farm) {
     console.log("new crocodile");
+    this.fieldDecor = "#c7e3c6";
+    this.fieldName = FieldClass.Lakeland;
     let crocodile = new Crocodile(farm);
     crocodile.p5 = this.p5;
     crocodile.preload();
@@ -103,6 +120,8 @@ class Field extends Drawable {
 
   placeOstrich(x: number, y: number, farm: Farm) {
     console.log("new ostrich");
+    this.fieldDecor = "#065535";
+    this.fieldName = FieldClass.Grazing;
     let ostrich = new Ostrich(farm);
     ostrich.p5 = this.p5;
     ostrich.preload();
@@ -112,6 +131,8 @@ class Field extends Drawable {
 
   placeSalmon(x: number, y: number, farm: Farm) {
     console.log("new salmon");
+    this.fieldDecor = "#cad1da";
+    this.fieldName = FieldClass.FishFarm;
     let salmon = new Salmon(farm);
     salmon.p5 = this.p5;
     salmon.preload();
@@ -121,6 +142,8 @@ class Field extends Drawable {
 
   placeDuck(x: number, y: number, farm: Farm) {
     console.log("new duck");
+    this.fieldDecor = "#04a3f5";
+    this.fieldName = FieldClass.Lakeland;
     let duck = new Duck(farm);
     duck.p5 = this.p5;
     duck.preload();
@@ -130,6 +153,8 @@ class Field extends Drawable {
 
   placeGoose(x: number, y: number, farm: Farm) {
     console.log("new goose");
+    this.fieldDecor = "#04a3f5";
+    this.fieldName = FieldClass.Lakeland;
     let goose = new Goose(farm);
     goose.p5 = this.p5;
     goose.preload();
@@ -139,6 +164,8 @@ class Field extends Drawable {
 
   placeLlama(x: number, y: number, farm: Farm) {
     console.log("new llama");
+    this.fieldDecor = "#065535";
+    this.fieldName = FieldClass.Grazing;
     let llama = new Llama(farm);
     llama.p5 = this.p5;
     llama.preload();
@@ -148,6 +175,8 @@ class Field extends Drawable {
 
   plantCabbage(x: number, y: number, farm: Farm) {
     console.log("new cabbage");
+    this.fieldDecor = "#b58969";
+    this.fieldName = FieldClass.Arable;
     let cabbage = new Cabbage(farm);
     cabbage.p5 = this.p5;
     cabbage.preload();
@@ -157,6 +186,8 @@ class Field extends Drawable {
 
   plantCarrot(x: number, y: number, farm: Farm) {
     console.log("new carrot");
+    this.fieldDecor = "#b58969";
+    this.fieldName = FieldClass.Arable;
     let carrot = new Carrot(farm);
     carrot.p5 = this.p5;
     carrot.preload();
@@ -166,6 +197,8 @@ class Field extends Drawable {
 
   plantKale(x: number, y: number, farm: Farm) {
     console.log("new kale");
+    this.fieldDecor = "#b58969";
+    this.fieldName = FieldClass.Arable;
     let kale = new Kale(farm);
     kale.p5 = this.p5;
     kale.preload();
@@ -175,6 +208,8 @@ class Field extends Drawable {
 
   plantLettuce(x: number, y: number, farm: Farm) {
     console.log("new lettuce");
+    this.fieldDecor = "#b58969";
+    this.fieldName = FieldClass.Arable;
     let lettuce = new Lettuce(farm);
     lettuce.p5 = this.p5;
     lettuce.preload();
@@ -184,6 +219,8 @@ class Field extends Drawable {
 
   plantPea(x: number, y: number, farm: Farm) {
     console.log("new pea");
+    this.fieldDecor = "#b58969";
+    this.fieldName = FieldClass.Arable;
     let pea = new Pea(farm);
     pea.p5 = this.p5;
     pea.preload();
@@ -193,6 +230,8 @@ class Field extends Drawable {
 
   plantPotato(x: number, y: number, farm: Farm) {
     console.log("new potato");
+    this.fieldDecor = "#b58969";
+    this.fieldName = FieldClass.Arable;
     let potato = new Potato(farm);
     potato.p5 = this.p5;
     potato.preload();
@@ -202,6 +241,8 @@ class Field extends Drawable {
 
   plantPumpkin(x: number, y: number, farm: Farm) {
     console.log("new pumpkin");
+    this.fieldDecor = "#b58969";
+    this.fieldName = FieldClass.Arable;
     let pumpkin = new Pumpkin(farm);
     pumpkin.p5 = this.p5;
     pumpkin.preload();
@@ -211,6 +252,8 @@ class Field extends Drawable {
 
   plantRapeseed(x: number, y: number, farm: Farm) {
     console.log("new rapeseed");
+    this.fieldDecor = "#b58969";
+    this.fieldName = FieldClass.Arable;
     let rapeseed = new Rapeseed(farm);
     rapeseed.p5 = this.p5;
     rapeseed.preload();
@@ -220,6 +263,8 @@ class Field extends Drawable {
 
   plantSugarbeet(x: number, y: number, farm: Farm) {
     console.log("new sugarbeet");
+    this.fieldDecor = "#b58969";
+    this.fieldName = FieldClass.Arable;
     let sugarbeet = new Sugarbeet(farm);
     sugarbeet.p5 = this.p5;
     sugarbeet.preload();
@@ -229,6 +274,8 @@ class Field extends Drawable {
 
   plantWheat(x: number, y: number, farm: Farm) {
     console.log("new wheat");
+    this.fieldDecor = "#b58969";
+    this.fieldName = FieldClass.Arable;
     let wheat = new Wheat(farm);
     wheat.p5 = this.p5;
     wheat.preload();

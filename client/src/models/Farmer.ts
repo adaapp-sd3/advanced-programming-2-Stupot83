@@ -1,11 +1,12 @@
 import Drawable from "./abstract/Drawable";
 import Farm from "./Farm";
 import Market from "./Market";
+import FieldClass from "./abstract/FieldClass";
 
 class Farmer extends Drawable {
   myFarm!: Farm;
   localMarket!: Market;
-  budget: number = 1000000;
+  budget: number = 100000;
   showUI: boolean = true;
   currentLocation: any;
   imgUrl = "img/farmer.png";
@@ -56,24 +57,66 @@ class Farmer extends Drawable {
           if (this.myFarm.cows.total > 0) {
             if (this.p5.keyIsDown(84)) {
               if (this.myFarm.cows.total !== field.contents.length) {
-                field.placeCow(this.x, this.y, this.myFarm);
+                field.placeCow(this.x + 50, this.y + 50, this.myFarm);
                 this.myFarm.cows.total -= 1;
                 this.myFarm.usedCow.total += 1;
               }
+            }
+          }
+          if (field.fieldName === FieldClass.Grazing) {
+            if (this.p5.keyIsDown(90)) {
+              field.fieldName = FieldClass.PettingZoo;
+              field.fieldDecor = "#cb4154";
+              this.budget = this.budget - 10000;
+              alert(
+                "You have changed this area to a petting zoo for cows at a cost of £10000"
+              );
+            }
+          }
+          if (field.fieldName === FieldClass.PettingZoo) {
+            if (this.p5.keyIsDown(88)) {
+              field.fieldName = FieldClass.Grazing;
+              field.fieldDecor = "#065535";
+              this.budget = this.budget - 10000;
+              alert(
+                "You have changed this area back to grazing for cows at a cost of £10000"
+              );
+            }
+            this.budget += 0.1;
           }
         }
-      }
         if (!field.contents[0] || field.contents[0].name === "Sheep") {
           if (this.myFarm.sheep.total > 0) {
             if (this.p5.keyIsDown(89)) {
               if (this.myFarm.sheep.total !== field.contents.length) {
                 field.placeSheep(this.x + 50, this.y + 50, this.myFarm);
-              this.myFarm.sheep.total -= 1;
-              this.myFarm.usedSheep.total += 1;
+                this.myFarm.sheep.total -= 1;
+                this.myFarm.usedSheep.total += 1;
               }
+            }
+          }
+          if (field.fieldName === FieldClass.Grazing) {
+            if (this.p5.keyIsDown(90)) {
+              field.fieldName = FieldClass.PettingZoo;
+              field.fieldDecor = "#cb4154";
+              this.budget = this.budget - 10000;
+              alert(
+                "You have changed this area to a petting zoo for sheep at a cost of £10000"
+              );
+            }
+          }
+          if (field.fieldName === FieldClass.PettingZoo) {
+            if (this.p5.keyIsDown(88)) {
+              field.fieldName = FieldClass.Grazing;
+              field.fieldDecor = "#065535";
+              this.budget = this.budget - 10000;
+              alert(
+                "You have changed this area back to grazing for sheep at a cost of £10000"
+              );
+            }
+            this.budget += 0.1;
           }
         }
-      }
         if (!field.contents[0] || field.contents[0].name === "Chicken") {
           if (this.myFarm.chickens.total > 0) {
             if (this.p5.keyIsDown(85)) {
@@ -82,9 +125,30 @@ class Farmer extends Drawable {
                 this.myFarm.chickens.total -= 1;
                 this.myFarm.usedChicken.total += 1;
               }
+            }
+          }
+          if (field.fieldName === FieldClass.Grazing) {
+            if (this.p5.keyIsDown(90)) {
+              field.fieldName = FieldClass.PettingZoo;
+              field.fieldDecor = "#cb4154";
+              this.budget = this.budget - 10000;
+              alert(
+                "You have changed this area to a petting zoo for chickens at a cost of £10000"
+              );
+            }
+          }
+          if (field.fieldName === FieldClass.PettingZoo) {
+            if (this.p5.keyIsDown(88)) {
+              field.fieldName = FieldClass.Grazing;
+              field.fieldDecor = "#065535";
+              this.budget = this.budget - 10000;
+              alert(
+                "You have changed this area back to grazing for chickens at a cost of £10000"
+              );
+            }
+            this.budget += 0.1;
           }
         }
-      }
         if (!field.contents[0] || field.contents[0].name === "Pig") {
           if (this.myFarm.pigs.total > 0) {
             if (this.p5.keyIsDown(73)) {
@@ -93,9 +157,30 @@ class Farmer extends Drawable {
                 this.myFarm.pigs.total -= 1;
                 this.myFarm.usedPig.total += 1;
               }
+            }
+          }
+          if (field.fieldName === FieldClass.Grazing) {
+            if (this.p5.keyIsDown(90)) {
+              field.fieldName = FieldClass.PettingZoo;
+              field.fieldDecor = "#cb4154";
+              this.budget = this.budget - 10000;
+              alert(
+                "You have changed this area to a petting zoo for pigs at a cost of £10000"
+              );
+            }
+          }
+          if (field.fieldName === FieldClass.PettingZoo) {
+            if (this.p5.keyIsDown(88)) {
+              field.fieldName = FieldClass.Grazing;
+              field.fieldDecor = "#065535";
+              this.budget = this.budget - 10000;
+              alert(
+                "You have changed this area back to grazing for pigs at a cost of £10000"
+              );
+            }
+            this.budget += 0.1;
           }
         }
-      }
         if (!field.contents[0] || field.contents[0].name === "Crocodile") {
           if (this.myFarm.crocodiles.total > 0) {
             if (this.p5.keyIsDown(79)) {
@@ -104,9 +189,30 @@ class Farmer extends Drawable {
                 this.myFarm.crocodiles.total -= 1;
                 this.myFarm.usedCrocodile.total += 1;
               }
+            }
+          }
+          if (field.fieldName === FieldClass.Lakeland) {
+            if (this.p5.keyIsDown(90)) {
+              field.fieldName = FieldClass.PettingZoo;
+              field.fieldDecor = "#cb4154";
+              this.budget = this.budget - 10000;
+              alert(
+                "You have changed this area to a petting zoo for crocodiles at a cost of £10000"
+              );
+            }
+          }
+          if (field.fieldName === FieldClass.PettingZoo) {
+            if (this.p5.keyIsDown(88)) {
+              field.fieldName = FieldClass.Lakeland;
+              field.fieldDecor = "#065535";
+              this.budget = this.budget - 10000;
+              alert(
+                "You have changed this area back to lakeland for crocodiles at a cost of £10000"
+              );
+            }
+            this.budget += 0.1;
           }
         }
-      }
         if (!field.contents[0] || field.contents[0].name === "Ostrich") {
           if (this.myFarm.ostriches.total > 0) {
             if (this.p5.keyIsDown(80)) {
@@ -115,9 +221,30 @@ class Farmer extends Drawable {
                 this.myFarm.ostriches.total -= 1;
                 this.myFarm.usedOstrich.total += 1;
               }
+            }
+          }
+          if (field.fieldName === FieldClass.Grazing) {
+            if (this.p5.keyIsDown(90)) {
+              field.fieldName = FieldClass.PettingZoo;
+              field.fieldDecor = "#cb4154";
+              this.budget = this.budget - 10000;
+              alert(
+                "You have changed this area to a petting zoo for ostriches at a cost of £10000"
+              );
+            }
+          }
+          if (field.fieldName === FieldClass.PettingZoo) {
+            if (this.p5.keyIsDown(88)) {
+              field.fieldName = FieldClass.Grazing;
+              field.fieldDecor = "#065535";
+              this.budget = this.budget - 10000;
+              alert(
+                "You have changed this area back to grazing for ostriches at a cost of £10000"
+              );
+            }
+            this.budget += 0.1;
           }
         }
-      }
         if (!field.contents[0] || field.contents[0].name === "Salmon") {
           if (this.myFarm.salmons.total > 0) {
             if (this.p5.keyIsDown(71)) {
@@ -127,6 +254,27 @@ class Farmer extends Drawable {
                 this.myFarm.usedSalmon.total += 1;
               }
             }
+          }
+          if (field.fieldName === FieldClass.FishFarm) {
+            if (this.p5.keyIsDown(90)) {
+              field.fieldName = FieldClass.PettingZoo;
+              field.fieldDecor = "#cb4154";
+              this.budget = this.budget - 10000;
+              alert(
+                "You have changed this area to a petting zoo for salmons at a cost of £10000"
+              );
+            }
+          }
+          if (field.fieldName === FieldClass.PettingZoo) {
+            if (this.p5.keyIsDown(88)) {
+              field.fieldName = FieldClass.FishFarm;
+              field.fieldDecor = "#065535";
+              this.budget = this.budget - 10000;
+              alert(
+                "You have changed this area back to a fishfarm for salmons at a cost of £10000"
+              );
+            }
+            this.budget += 0.1;
           }
         }
         if (!field.contents[0] || field.contents[0].name === "Duck") {
@@ -139,6 +287,27 @@ class Farmer extends Drawable {
               }
             }
           }
+          if (field.fieldName === FieldClass.Lakeland) {
+            if (this.p5.keyIsDown(90)) {
+              field.fieldName = FieldClass.PettingZoo;
+              field.fieldDecor = "#cb4154";
+              this.budget = this.budget - 10000;
+              alert(
+                "You have changed this area to a petting zoo for ducks at a cost of £10000"
+              );
+            }
+          }
+          if (field.fieldName === FieldClass.PettingZoo) {
+            if (this.p5.keyIsDown(88)) {
+              field.fieldName = FieldClass.Lakeland;
+              field.fieldDecor = "#065535";
+              this.budget = this.budget - 10000;
+              alert(
+                "You have changed this area back to lakeland for ducks at a cost of £10000"
+              );
+            }
+            this.budget += 0.1;
+          }
         }
         if (!field.contents[0] || field.contents[0].name === "Goose") {
           if (this.myFarm.geese.total > 0) {
@@ -150,6 +319,27 @@ class Farmer extends Drawable {
               }
             }
           }
+          if (field.fieldName === FieldClass.Lakeland) {
+            if (this.p5.keyIsDown(90)) {
+              field.fieldName = FieldClass.PettingZoo;
+              field.fieldDecor = "#cb4154";
+              this.budget = this.budget - 10000;
+              alert(
+                "You have changed this area to a petting zoo for geese at a cost of £10000"
+              );
+            }
+          }
+          if (field.fieldName === FieldClass.PettingZoo) {
+            if (this.p5.keyIsDown(88)) {
+              field.fieldName = FieldClass.Lakeland;
+              field.fieldDecor = "#065535";
+              this.budget = this.budget - 10000;
+              alert(
+                "You have changed this area back to lakeland for geese at a cost of £10000"
+              );
+            }
+            this.budget += 0.1;
+          }
         }
         if (!field.contents[0] || field.contents[0].name === "Llama") {
           if (this.myFarm.llamas.total > 0) {
@@ -160,6 +350,27 @@ class Farmer extends Drawable {
                 this.myFarm.usedLlama.total += 1;
               }
             }
+          }
+          if (field.fieldName === FieldClass.Grazing) {
+            if (this.p5.keyIsDown(90)) {
+              field.fieldName = FieldClass.PettingZoo;
+              field.fieldDecor = "#cb4154";
+              this.budget = this.budget - 10000;
+              alert(
+                "You have changed this area to a petting zoo for llamas at a cost of £10000"
+              );
+            }
+          }
+          if (field.fieldName === FieldClass.PettingZoo) {
+            if (this.p5.keyIsDown(88)) {
+              field.fieldName = FieldClass.Grazing;
+              field.fieldDecor = "#065535";
+              this.budget = this.budget - 10000;
+              alert(
+                "You have changed this area back to grazing for llamas at a cost of £10000"
+              );
+            }
+            this.budget += 0.1;
           }
         }
         if (!field.contents[0] || field.contents[0].name === "Cabbage") {

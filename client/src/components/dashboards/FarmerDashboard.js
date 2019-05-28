@@ -34,7 +34,7 @@ class FarmerDashboard extends Component {
               {this.props.farmer.myFarm && (
                 <>
                   <dt>Budget</dt>
-                  <dd className="Budget">£{this.props.farmer.budget}</dd>
+                  <dd className="Budget">£{this.props.farmer.budget.toFixed(0)}</dd>
                   <dt>Cows</dt>
                   <dd className="Animals">
                     {this.props.farmer.myFarm.cows.total} units
@@ -155,7 +155,7 @@ class FarmerDashboard extends Component {
               {this.props.farmer.myFarm && (
                 <>
                   <dt>Budget</dt>
-                  <dd className="Budget">£{this.props.farmer.budget}</dd>
+                  <dd className="Budget">£{this.props.farmer.budget.toFixed(0)}</dd>
                   <dt>Beef</dt>
                   <dd className="Meat">
                     {this.props.farmer.myFarm.beef.total} kg
@@ -243,7 +243,7 @@ class FarmerDashboard extends Component {
               {this.props.farmer.myFarm && (
                 <>
                   <dt>Budget</dt>
-                  <dd className="Budget">£{this.props.farmer.budget}</dd>
+                  <dd className="Budget">£{this.props.farmer.budget.toFixed(0)}</dd>
                   <dt>CabSeeds</dt>
                   <dd className="Seeds">
                     {this.props.farmer.myFarm.cabbageSeeds.total} pkts
@@ -384,7 +384,7 @@ class FarmerDashboard extends Component {
               {this.props.farmer.myFarm && (
                 <>
                   <dt>Budget</dt>
-                  <dd className="Budget">£{this.props.farmer.budget}</dd>
+                  <dd className="Budget">£{this.props.farmer.budget.toFixed(0)}</dd>
                   <dt>New Gen</dt>
                   <dd className="Tech">
                     {this.props.farmer.myFarm.gasGenerators.total} units

@@ -203,8 +203,8 @@ class MarketDashboard extends Component {
         if (
           this.props.market.currentFarmer.budget > this.props.market.strawPrice
         ) {
-          this.props.market.currentFarmer.myFarm.straw.total += 1;
-          let unit = 1;
+          this.props.market.currentFarmer.myFarm.straw.total += 100;
+          let unit = 100;
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.strawPrice;
         }
@@ -214,8 +214,8 @@ class MarketDashboard extends Component {
         if (
           this.props.market.currentFarmer.budget > this.props.market.cornPrice
         ) {
-          this.props.market.currentFarmer.myFarm.corn.total += 1;
-          let unit = 1;
+          this.props.market.currentFarmer.myFarm.corn.total += 100;
+          let unit = 100;
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.cornPrice;
         }
@@ -225,8 +225,8 @@ class MarketDashboard extends Component {
         if (
           this.props.market.currentFarmer.budget > this.props.market.fishPrice
         ) {
-          this.props.market.currentFarmer.myFarm.fish.total += 1;
-          let unit = 1;
+          this.props.market.currentFarmer.myFarm.fish.total += 100;
+          let unit = 100;
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.fishPrice;
         }
@@ -237,8 +237,8 @@ class MarketDashboard extends Component {
           this.props.market.currentFarmer.budget >
           this.props.market.fishFoodPrice
         ) {
-          this.props.market.currentFarmer.myFarm.fishFood.total += 1;
-          let unit = 1;
+          this.props.market.currentFarmer.myFarm.fishFood.total += 100;
+          let unit = 100;
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.fishFoodPrice;
         }

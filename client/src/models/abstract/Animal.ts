@@ -6,6 +6,7 @@ abstract class Animal extends ConstrainedByField {
   width = 16;
   health: number = 10;
   hunger: number = 0;
+  timeHungry: number = 0;
   move(): string {
     return "roaming the earth...";
   }
@@ -18,6 +19,10 @@ abstract class Animal extends ConstrainedByField {
       let chanceOfStayingStill = Math.random();
       this.velocityX = chanceOfStayingStill >= 0.1 ? 0 : this.velocityX;
       this.velocityY = chanceOfStayingStill >= 0.1 ? 0 : this.velocityY;
+      this.hunger += 0.005
+      if(this.health > 0) {
+        this.health -= 0.005
+      }
     }
   }
 

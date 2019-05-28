@@ -64,7 +64,7 @@ class Farmer extends Drawable {
             }
           }
           if (field.fieldName === FieldClass.Grazing) {
-            if (this.p5.keyIsDown(90)) {
+            if (this.p5.keyIsDown(90) && this.budget >= 10000) {
               field.fieldName = FieldClass.PettingZoo;
               field.fieldDecor = "#cb4154";
               this.budget = this.budget - 10000;
@@ -74,7 +74,7 @@ class Farmer extends Drawable {
             }
           }
           if (field.fieldName === FieldClass.PettingZoo) {
-            if (this.p5.keyIsDown(88)) {
+            if (this.p5.keyIsDown(88) && this.budget >= 10000) {
               field.fieldName = FieldClass.Grazing;
               field.fieldDecor = "#065535";
               this.budget = this.budget - 10000;
@@ -96,7 +96,7 @@ class Farmer extends Drawable {
             }
           }
           if (field.fieldName === FieldClass.Grazing) {
-            if (this.p5.keyIsDown(90)) {
+            if (this.p5.keyIsDown(90) && this.budget >= 10000) {
               field.fieldName = FieldClass.PettingZoo;
               field.fieldDecor = "#cb4154";
               this.budget = this.budget - 10000;
@@ -106,7 +106,7 @@ class Farmer extends Drawable {
             }
           }
           if (field.fieldName === FieldClass.PettingZoo) {
-            if (this.p5.keyIsDown(88)) {
+            if (this.p5.keyIsDown(88) && this.budget >= 10000) {
               field.fieldName = FieldClass.Grazing;
               field.fieldDecor = "#065535";
               this.budget = this.budget - 10000;
@@ -128,7 +128,7 @@ class Farmer extends Drawable {
             }
           }
           if (field.fieldName === FieldClass.Grazing) {
-            if (this.p5.keyIsDown(90)) {
+            if (this.p5.keyIsDown(90) && this.budget >= 10000) {
               field.fieldName = FieldClass.PettingZoo;
               field.fieldDecor = "#cb4154";
               this.budget = this.budget - 10000;
@@ -138,7 +138,7 @@ class Farmer extends Drawable {
             }
           }
           if (field.fieldName === FieldClass.PettingZoo) {
-            if (this.p5.keyIsDown(88)) {
+            if (this.p5.keyIsDown(88) && this.budget >= 10000) {
               field.fieldName = FieldClass.Grazing;
               field.fieldDecor = "#065535";
               this.budget = this.budget - 10000;
@@ -160,7 +160,7 @@ class Farmer extends Drawable {
             }
           }
           if (field.fieldName === FieldClass.Grazing) {
-            if (this.p5.keyIsDown(90)) {
+            if (this.p5.keyIsDown(90) && this.budget >= 10000) {
               field.fieldName = FieldClass.PettingZoo;
               field.fieldDecor = "#cb4154";
               this.budget = this.budget - 10000;
@@ -170,7 +170,7 @@ class Farmer extends Drawable {
             }
           }
           if (field.fieldName === FieldClass.PettingZoo) {
-            if (this.p5.keyIsDown(88)) {
+            if (this.p5.keyIsDown(88) && this.budget >= 10000) {
               field.fieldName = FieldClass.Grazing;
               field.fieldDecor = "#065535";
               this.budget = this.budget - 10000;
@@ -192,7 +192,7 @@ class Farmer extends Drawable {
             }
           }
           if (field.fieldName === FieldClass.Lakeland) {
-            if (this.p5.keyIsDown(90)) {
+            if (this.p5.keyIsDown(90) && this.budget >= 10000) {
               field.fieldName = FieldClass.PettingZoo;
               field.fieldDecor = "#cb4154";
               this.budget = this.budget - 10000;
@@ -202,7 +202,7 @@ class Farmer extends Drawable {
             }
           }
           if (field.fieldName === FieldClass.PettingZoo) {
-            if (this.p5.keyIsDown(88)) {
+            if (this.p5.keyIsDown(88) && this.budget >= 10000) {
               field.fieldName = FieldClass.Lakeland;
               field.fieldDecor = "#065535";
               this.budget = this.budget - 10000;
@@ -224,7 +224,7 @@ class Farmer extends Drawable {
             }
           }
           if (field.fieldName === FieldClass.Grazing) {
-            if (this.p5.keyIsDown(90)) {
+            if (this.p5.keyIsDown(90) && this.budget >= 10000) {
               field.fieldName = FieldClass.PettingZoo;
               field.fieldDecor = "#cb4154";
               this.budget = this.budget - 10000;
@@ -234,7 +234,7 @@ class Farmer extends Drawable {
             }
           }
           if (field.fieldName === FieldClass.PettingZoo) {
-            if (this.p5.keyIsDown(88)) {
+            if (this.p5.keyIsDown(88) && this.budget >= 10000) {
               field.fieldName = FieldClass.Grazing;
               field.fieldDecor = "#065535";
               this.budget = this.budget - 10000;
@@ -256,7 +256,7 @@ class Farmer extends Drawable {
             }
           }
           if (field.fieldName === FieldClass.FishFarm) {
-            if (this.p5.keyIsDown(90)) {
+            if (this.p5.keyIsDown(90) && this.budget >= 10000) {
               field.fieldName = FieldClass.PettingZoo;
               field.fieldDecor = "#cb4154";
               this.budget = this.budget - 10000;
@@ -266,7 +266,7 @@ class Farmer extends Drawable {
             }
           }
           if (field.fieldName === FieldClass.PettingZoo) {
-            if (this.p5.keyIsDown(88)) {
+            if (this.p5.keyIsDown(88) && this.budget >= 10000) {
               field.fieldName = FieldClass.FishFarm;
               field.fieldDecor = "#065535";
               this.budget = this.budget - 10000;
@@ -288,7 +288,7 @@ class Farmer extends Drawable {
             }
           }
           if (field.fieldName === FieldClass.Lakeland) {
-            if (this.p5.keyIsDown(90)) {
+            if (this.p5.keyIsDown(90) && this.budget >= 10000) {
               field.fieldName = FieldClass.PettingZoo;
               field.fieldDecor = "#cb4154";
               this.budget = this.budget - 10000;
@@ -298,7 +298,7 @@ class Farmer extends Drawable {
             }
           }
           if (field.fieldName === FieldClass.PettingZoo) {
-            if (this.p5.keyIsDown(88)) {
+            if (this.p5.keyIsDown(88) && this.budget >= 10000) {
               field.fieldName = FieldClass.Lakeland;
               field.fieldDecor = "#065535";
               this.budget = this.budget - 10000;
@@ -320,7 +320,7 @@ class Farmer extends Drawable {
             }
           }
           if (field.fieldName === FieldClass.Lakeland) {
-            if (this.p5.keyIsDown(90)) {
+            if (this.p5.keyIsDown(90) && this.budget >= 10000) {
               field.fieldName = FieldClass.PettingZoo;
               field.fieldDecor = "#cb4154";
               this.budget = this.budget - 10000;
@@ -330,7 +330,7 @@ class Farmer extends Drawable {
             }
           }
           if (field.fieldName === FieldClass.PettingZoo) {
-            if (this.p5.keyIsDown(88)) {
+            if (this.p5.keyIsDown(88) && this.budget >= 10000) {
               field.fieldName = FieldClass.Lakeland;
               field.fieldDecor = "#065535";
               this.budget = this.budget - 10000;
@@ -352,7 +352,7 @@ class Farmer extends Drawable {
             }
           }
           if (field.fieldName === FieldClass.Grazing) {
-            if (this.p5.keyIsDown(90)) {
+            if (this.p5.keyIsDown(90) && this.budget >= 10000) {
               field.fieldName = FieldClass.PettingZoo;
               field.fieldDecor = "#cb4154";
               this.budget = this.budget - 10000;
@@ -362,7 +362,7 @@ class Farmer extends Drawable {
             }
           }
           if (field.fieldName === FieldClass.PettingZoo) {
-            if (this.p5.keyIsDown(88)) {
+            if (this.p5.keyIsDown(88) && this.budget >= 10000) {
               field.fieldName = FieldClass.Grazing;
               field.fieldDecor = "#065535";
               this.budget = this.budget - 10000;

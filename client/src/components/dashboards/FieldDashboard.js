@@ -26,14 +26,21 @@ class FieldDashboard extends Component {
     return (
       this.props.field.contents.reduce((a, b) => a + b.plantAge(), 0) /
       this.props.field.contents.length
-    ).toFixed(0);
+    ).toFixed(2);
   }
 
   animalHunger() {
     return (
       this.props.field.contents.reduce((a, b) => a + b.hunger, 0) /
       this.props.field.contents.length
-    ).toFixed(1);
+    ).toFixed(2);
+  }
+
+  animalHealth() {
+    return (
+      this.props.field.contents.reduce((a, b) => a + b.health, 0) /
+      this.props.field.contents.length
+    ).toFixed(2);
   }
 
   getMeat(meat) {
@@ -260,36 +267,60 @@ class FieldDashboard extends Component {
       case "milk":
         for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldMilk();
+          this.props.field.contents[i].checkCowHealth();
+          if (this.props.field.contents[i].health <= 0) {
+            this.props.field.contents.pop();
+          }
         }
         break;
 
       case "eggs":
         for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldEggs();
+          this.props.field.contents[i].checkChickenHealth();
+          if (this.props.field.contents[i].health <= 0) {
+            this.props.field.contents.pop();
+          }
         }
         break;
 
       case "crocEggs":
         for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldCrocEggs();
+          this.props.field.contents[i].checkCrocodileHealth();
+          if (this.props.field.contents[i].health <= 0) {
+            this.props.field.contents.pop();
+          }
         }
         break;
 
       case "ostrichEggs":
         for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldOstrichEggs();
+          this.props.field.contents[i].checkOstrichHealth();
+          if (this.props.field.contents[i].health <= 0) {
+            this.props.field.contents.pop();
+          }
         }
         break;
 
       case "duckEggs":
         for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldDuckEggs();
+          this.props.field.contents[i].checkDuckHealth();
+          if (this.props.field.contents[i].health <= 0) {
+            this.props.field.contents.pop();
+          }
         }
         break;
 
       case "gooseEggs":
         for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldGooseEggs();
+          this.props.field.contents[i].checkGooseHealth();
+          if (this.props.field.contents[i].health <= 0) {
+            this.props.field.contents.pop();
+          }
         }
         break;
 
@@ -378,12 +409,20 @@ class FieldDashboard extends Component {
       case "wool":
         for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldWool();
+          this.props.field.contents[i].checkSheepHealth();
+          if (this.props.field.contents[i].health <= 0) {
+            this.props.field.contents.pop();
+          }
         }
         break;
 
       case "llamaWool":
         for (let i = 0; i < this.props.field.contents.length; i++) {
           this.props.field.contents[i].yieldLlamaWool();
+          this.props.field.contents[i].checkLlamaHealth();
+          if (this.props.field.contents[i].health <= 0) {
+            this.props.field.contents.pop();
+          }
         }
         break;
 
@@ -423,7 +462,8 @@ class FieldDashboard extends Component {
         {this.props.field.contents[0] && (
           <p>
             <h5>
-              {this.props.field.fieldName} Area for {this.props.field.contents[0].name}s
+              {this.props.field.fieldName} Area for{" "}
+              {this.props.field.contents[0].name}s
               <br />
               (currently with {this.props.field.contents.length}{" "}
               {this.props.field.contents[0].name}s)
@@ -431,11 +471,15 @@ class FieldDashboard extends Component {
 
             {this.props.field.contents[0].name === "Cow" && (
               <div className="AnimalHunger">
-                <p>Average Hunger: {this.animalHunger()}</p>
+              <p>
+                  Avg Health: {this.animalHealth()}
+                </p>
+                <p>
+                  Avg Hunger: {this.animalHunger()}   </p>
                 <div className="AnimalsHungry">
                   {this.animalHunger() > 4.8 ? (
                     <p>Feed the {this.props.field.contents[0].name}s</p>
-                  ) : (
+                  ):  (
                     <p />
                   )}
                 </div>
@@ -455,12 +499,16 @@ class FieldDashboard extends Component {
               </Button>
             )}
             {this.props.field.contents[0].name === "Sheep" && (
-              <div className="AnimalHunger">
-                <p>Average Hunger: {this.animalHunger()}</p>
+               <div className="AnimalHunger">
+               <p>
+                   Avg Health: {this.animalHealth()}
+                 </p>
+                 <p>
+                   Avg Hunger: {this.animalHunger()}   </p>
                 <div className="AnimalsHungry">
                   {this.animalHunger() > 4.8 ? (
                     <p>Feed the {this.props.field.contents[0].name}s</p>
-                  ) : (
+                  ):  (
                     <p />
                   )}
                 </div>
@@ -481,11 +529,15 @@ class FieldDashboard extends Component {
             )}
             {this.props.field.contents[0].name === "Chicken" && (
               <div className="AnimalHunger">
-                <p>Average Hunger: {this.animalHunger()}</p>
+              <p>
+                  Avg Health: {this.animalHealth()}
+                </p>
+                <p>
+                  Avg Hunger: {this.animalHunger()}   </p>
                 <div className="AnimalsHungry">
                   {this.animalHunger() > 4.8 ? (
                     <p>Feed the {this.props.field.contents[0].name}s</p>
-                  ) : (
+                  ):  (
                     <p />
                   )}
                 </div>
@@ -507,12 +559,16 @@ class FieldDashboard extends Component {
               </Button>
             )}
             {this.props.field.contents[0].name === "Pig" && (
-              <div className="AnimalHunger">
-                <p>Average Hunger: {this.animalHunger()}</p>
+               <div className="AnimalHunger">
+               <p>
+                   Avg Health: {this.animalHealth()}
+                 </p>
+                 <p>
+                   Avg Hunger: {this.animalHunger()}   </p>
                 <div className="AnimalsHungry">
                   {this.animalHunger() > 4.8 ? (
                     <p>Feed the {this.props.field.contents[0].name}s</p>
-                  ) : (
+                  ):  (
                     <p />
                   )}
                 </div>
@@ -532,12 +588,16 @@ class FieldDashboard extends Component {
               </Button>
             )}
             {this.props.field.contents[0].name === "Crocodile" && (
-              <div className="AnimalHunger">
-                <p>Average Hunger: {this.animalHunger()}</p>
+               <div className="AnimalHunger">
+               <p>
+                   Avg Health: {this.animalHealth()}
+                 </p>
+                 <p>
+                   Avg Hunger: {this.animalHunger()}   </p>
                 <div className="AnimalsHungry">
                   {this.animalHunger() > 4.8 ? (
                     <p>Feed the {this.props.field.contents[0].name}s</p>
-                  ) : (
+                  ):  (
                     <p />
                   )}
                 </div>
@@ -560,11 +620,15 @@ class FieldDashboard extends Component {
             )}
             {this.props.field.contents[0].name === "Ostrich" && (
               <div className="AnimalHunger">
-                <p>Average Hunger: {this.animalHunger()}</p>
+              <p>
+                  Avg Health: {this.animalHealth()}
+                </p>
+                <p>
+                  Avg Hunger: {this.animalHunger()}   </p>
                 <div className="AnimalsHungry">
                   {this.animalHunger() > 4.8 ? (
                     <p>Feed the {this.props.field.contents[0].name}s</p>
-                  ) : (
+                  ):  (
                     <p />
                   )}
                 </div>
@@ -587,11 +651,15 @@ class FieldDashboard extends Component {
             )}
             {this.props.field.contents[0].name === "Salmon" && (
               <div className="AnimalHunger">
-                <p>Average Hunger: {this.animalHunger()}</p>
+              <p>
+                  Avg Health: {this.animalHealth()}
+                </p>
+                <p>
+                  Avg Hunger: {this.animalHunger()}   </p>
                 <div className="AnimalsHungry">
                   {this.animalHunger() > 4.8 ? (
                     <p>Feed the {this.props.field.contents[0].name}s</p>
-                  ) : (
+                  ):  (
                     <p />
                   )}
                 </div>
@@ -614,11 +682,16 @@ class FieldDashboard extends Component {
             )}
             {this.props.field.contents[0].name === "Duck" && (
               <div className="AnimalHunger">
+              <p>
+                  Avg Health: {this.animalHealth()}
+                </p>
+                <p>
+                  Avg Hunger: {this.animalHunger()}   </p>
                 <p>Average Hunger: {this.animalHunger()}</p>
                 <div className="AnimalsHungry">
                   {this.animalHunger() > 4.8 ? (
                     <p>Feed the {this.props.field.contents[0].name}s</p>
-                  ) : (
+                  ):  (
                     <p />
                   )}
                 </div>
@@ -638,12 +711,16 @@ class FieldDashboard extends Component {
               </Button>
             )}
             {this.props.field.contents[0].name === "Goose" && (
-              <div className="AnimalHunger">
-                <p>Average Hunger: {this.animalHunger()}</p>
+               <div className="AnimalHunger">
+               <p>
+                   Avg Health: {this.animalHealth()}
+                 </p>
+                 <p>
+                   Avg Hunger: {this.animalHunger()}   </p>
                 <div className="AnimalsHungry">
                   {this.animalHunger() > 4.8 ? (
                     <p>Feed the {this.props.field.contents[0].name}s</p>
-                  ) : (
+                  ):  (
                     <p />
                   )}
                 </div>
@@ -666,11 +743,15 @@ class FieldDashboard extends Component {
             )}
             {this.props.field.contents[0].name === "Llama" && (
               <div className="AnimalHunger">
-                <p>Average Hunger: {this.animalHunger()}</p>
+              <p>
+                  Avg Health: {this.animalHealth()}
+                </p>
+                <p>
+                  Avg Hunger: {this.animalHunger()}   </p>
                 <div className="AnimalsHungry">
                   {this.animalHunger() > 4.8 ? (
                     <p>Feed the {this.props.field.contents[0].name}s</p>
-                  ) : (
+                  ):  (
                     <p />
                   )}
                 </div>
@@ -733,7 +814,7 @@ class FieldDashboard extends Component {
                       </Button>
                     </p>
                   </div>
-                ) : (
+                ):  (
                   <p>Cabbages are growing and cannot be harvested yet</p>
                 )}
               </div>
@@ -750,7 +831,7 @@ class FieldDashboard extends Component {
                       </Button>
                     </p>
                   </div>
-                ) : (
+                ):  (
                   <p>Carrots are growing and cannot be harvested yet</p>
                 )}
               </div>
@@ -767,7 +848,7 @@ class FieldDashboard extends Component {
                       </Button>
                     </p>
                   </div>
-                ) : (
+                ):  (
                   <p>Kales are growing and cannot be harvested yet</p>
                 )}
               </div>
@@ -784,7 +865,7 @@ class FieldDashboard extends Component {
                       </Button>
                     </p>
                   </div>
-                ) : (
+                ):  (
                   <p>Lettuces are growing and cannot be harvested yet</p>
                 )}
               </div>
@@ -801,7 +882,7 @@ class FieldDashboard extends Component {
                       </Button>
                     </p>
                   </div>
-                ) : (
+                ):  (
                   <p>Peas are growing and cannot be harvested yet</p>
                 )}
               </div>
@@ -818,7 +899,7 @@ class FieldDashboard extends Component {
                       </Button>
                     </p>
                   </div>
-                ) : (
+                ):  (
                   <p>Potatoes are growing and cannot be harvested yet</p>
                 )}
               </div>
@@ -835,7 +916,7 @@ class FieldDashboard extends Component {
                       </Button>
                     </p>
                   </div>
-                ) : (
+                ):  (
                   <p>Pumpkins are growing and cannot be harvested yet</p>
                 )}
               </div>
@@ -852,7 +933,7 @@ class FieldDashboard extends Component {
                       </Button>
                     </p>
                   </div>
-                ) : (
+                ):  (
                   <p>Rapeseeds are growing and cannot be harvested yet</p>
                 )}
               </div>
@@ -869,7 +950,7 @@ class FieldDashboard extends Component {
                       </Button>
                     </p>
                   </div>
-                ) : (
+                ):  (
                   <p>Sugarbeets are growing and cannot be harvested yet</p>
                 )}
               </div>
@@ -886,7 +967,7 @@ class FieldDashboard extends Component {
                       </Button>
                     </p>
                   </div>
-                ) : (
+                ):  (
                   <p>Wheats are growing and cannot be harvested yet</p>
                 )}
               </div>
@@ -961,7 +1042,7 @@ class FieldDashboard extends Component {
                               id="health"
                               alt="health"
                             />{" "}
-                            Health: {item.health}
+                            Health: {item.health.toFixed(2)}
                           </h3>
                         </dt>
                         <dt>
@@ -971,7 +1052,7 @@ class FieldDashboard extends Component {
                               id="hunger"
                               alt="hunger"
                             />{" "}
-                            Hunger: {item.hunger}
+                            Hunger: {item.hunger.toFixed(2)}
                           </h3>
                         </dt>
                       </dl>

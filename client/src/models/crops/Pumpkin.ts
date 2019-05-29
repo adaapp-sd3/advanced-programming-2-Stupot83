@@ -14,6 +14,12 @@ class Pumpkin extends Crop {
     this.farm = farm;
   }
 
+  maxAge() {
+    if(this.age >= 121) {
+      this.age = 121
+    }
+  }
+
   public preload() {
     this.p5Img = this.p5.loadImage(this.imgUrl);
   }
@@ -25,6 +31,7 @@ class Pumpkin extends Crop {
   public draw(): any {
     this.constrainItem();
     this.farmerExamine();
+    this.maxAge();
   }
 
   yieldPumpkin() {

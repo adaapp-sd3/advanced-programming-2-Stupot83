@@ -375,7 +375,7 @@ class Farmer extends Drawable {
         }
         if (!field.contents[0] || field.contents[0].name === "Cabbage") {
           if (this.myFarm.cabbageSeeds.total > 0) {
-            if (this.p5.keyIsDown(this.p5.ENTER)) {
+            if (this.p5.keyIsDown(49)) {
               field.plantCabbage(this.x + 50, this.y + 50, this.myFarm);
               this.myFarm.cabbageSeeds.total -= 1;
               this.myFarm.cabbages.total += 1;
@@ -384,7 +384,7 @@ class Farmer extends Drawable {
         }
         if (!field.contents[0] || field.contents[0].name === "Carrot") {
           if (this.myFarm.carrotSeeds.total > 0) {
-            if (this.p5.keyIsDown(this.p5.ENTER)) {
+            if (this.p5.keyIsDown(50)) {
               field.plantCarrot(this.x + 50, this.y + 50, this.myFarm);
               this.myFarm.carrotSeeds.total -= 1;
               this.myFarm.carrots.total += 1;
@@ -393,7 +393,7 @@ class Farmer extends Drawable {
         }
         if (!field.contents[0] || field.contents[0].name === "Kale") {
           if (this.myFarm.kaleSeeds.total > 0) {
-            if (this.p5.keyIsDown(this.p5.ENTER)) {
+            if (this.p5.keyIsDown(51)) {
               field.plantKale(this.x + 50, this.y + 50, this.myFarm);
               this.myFarm.kaleSeeds.total -= 1;
               this.myFarm.kales.total += 1;
@@ -402,7 +402,7 @@ class Farmer extends Drawable {
         }
         if (!field.contents[0] || field.contents[0].name === "Lettuce") {
           if (this.myFarm.lettuceSeeds.total > 0) {
-            if (this.p5.keyIsDown(this.p5.ENTER)) {
+            if (this.p5.keyIsDown(52)) {
               field.plantLettuce(this.x + 50, this.y + 50, this.myFarm);
               this.myFarm.lettuceSeeds.total -= 1;
               this.myFarm.lettuces.total += 1;
@@ -411,7 +411,7 @@ class Farmer extends Drawable {
         }
         if (!field.contents[0] || field.contents[0].name === "Pea") {
           if (this.myFarm.peaSeeds.total > 0) {
-            if (this.p5.keyIsDown(this.p5.ENTER)) {
+            if (this.p5.keyIsDown(53)) {
               field.plantPea(this.x + 50, this.y + 50, this.myFarm);
               this.myFarm.peaSeeds.total -= 1;
               this.myFarm.peas.total += 1;
@@ -420,7 +420,7 @@ class Farmer extends Drawable {
         }
         if (!field.contents[0] || field.contents[0].name === "Potato") {
           if (this.myFarm.potatoSeeds.total > 0) {
-            if (this.p5.keyIsDown(this.p5.ENTER)) {
+            if (this.p5.keyIsDown(54)) {
               field.plantPotato(this.x + 50, this.y + 50, this.myFarm);
               this.myFarm.potatoSeeds.total -= 1;
               this.myFarm.potatoes.total += 1;
@@ -429,7 +429,7 @@ class Farmer extends Drawable {
         }
         if (!field.contents[0] || field.contents[0].name === "Pumpkin") {
           if (this.myFarm.pumpkinSeeds.total > 0) {
-            if (this.p5.keyIsDown(this.p5.ENTER)) {
+            if (this.p5.keyIsDown(55)) {
               field.plantPumpkin(this.x + 50, this.y + 50, this.myFarm);
               this.myFarm.pumpkinSeeds.total -= 1;
               this.myFarm.pumpkins.total += 1;
@@ -438,7 +438,7 @@ class Farmer extends Drawable {
         }
         if (!field.contents[0] || field.contents[0].name === "Rapeseed") {
           if (this.myFarm.rapeseedSeeds.total > 0) {
-            if (this.p5.keyIsDown(this.p5.ENTER)) {
+            if (this.p5.keyIsDown(56)) {
               field.plantRapeseed(this.x + 50, this.y + 50, this.myFarm);
               this.myFarm.rapeseedSeeds.total -= 1;
               this.myFarm.rapeseeds.total += 1;
@@ -447,7 +447,7 @@ class Farmer extends Drawable {
         }
         if (!field.contents[0] || field.contents[0].name === "Sugarbeet") {
           if (this.myFarm.sugarbeetSeeds.total > 0) {
-            if (this.p5.keyIsDown(this.p5.ENTER)) {
+            if (this.p5.keyIsDown(57)) {
               field.plantSugarbeet(this.x + 50, this.y + 50, this.myFarm);
               this.myFarm.sugarbeetSeeds.total -= 1;
               this.myFarm.sugarbeets.total += 1;
@@ -456,7 +456,7 @@ class Farmer extends Drawable {
         }
         if (!field.contents[0] || field.contents[0].name === "Wheat") {
           if (this.myFarm.wheatSeeds.total > 0) {
-            if (this.p5.keyIsDown(this.p5.ENTER)) {
+            if (this.p5.keyIsDown(48)) {
               field.plantWheat(this.x + 50, this.y + 50, this.myFarm);
               this.myFarm.wheatSeeds.total -= 1;
               this.myFarm.wheats.total += 1;
@@ -465,7 +465,7 @@ class Farmer extends Drawable {
         }
         if (!field.contents[0] || field.contents[0].name === "GasGenerator") {
           if (this.myFarm.gasGenerators.total > 0) {
-            if (this.p5.keyIsDown(this.p5.ENTER)) {
+            if (this.p5.keyIsDown(66)) {
               field.placeGasGenerator(this.x + 50, this.y + 50, this.myFarm);
               this.myFarm.gasGenerators.total -= 1;
               this.myFarm.gasGenerator.total += 1;
@@ -474,7 +474,7 @@ class Farmer extends Drawable {
         }
         if (!field.contents[0] || field.contents[0].name === "SolarPanel") {
           if (this.myFarm.solarPanels.total > 0) {
-            if (this.p5.keyIsDown(this.p5.ENTER)) {
+            if (this.p5.keyIsDown(78)) {
               field.placeSolarPanel(this.x + 50, this.y + 50, this.myFarm);
               this.myFarm.solarPanels.total -= 1;
               this.myFarm.solarPanel.total += 1;

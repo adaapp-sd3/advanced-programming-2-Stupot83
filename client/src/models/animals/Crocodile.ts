@@ -20,6 +20,12 @@ class Crocodile extends Animal {
     return this.health;
   }
 
+  maxHealth() {
+    if(this.health >= 10) {
+      this.health = 10
+    }
+  }
+
   yieldCrocEggs() {
     let amountOfCrocEggsToYield = 5 - this.hunger;
     this.farm.crocEggs.total += Math.abs(amountOfCrocEggsToYield);
@@ -48,7 +54,7 @@ class Crocodile extends Animal {
         this.farm.fish.total--;
         this.hunger = this.hunger - 1;
         this.health = this.health + 1;
-      } else if ((this.farm.straw.total === 0) && (this.health !== 0) && (this.health !== 10)) {
+      } else if ((this.farm.fish.total === 0) && (this.health !== 0) && (this.health !== 10)) {
           this.hunger = this.hunger + 0.01
           this.health = this.health - 0.01
         }
@@ -58,7 +64,7 @@ class Crocodile extends Animal {
           this.farm.fish.total -= 0.1;
           this.health = this.health + 0.1;
           this.hunger = this.hunger = 0;
-        } else if ((this.farm.straw.total === 0) && (this.health !== 0) && (this.health !== 10)) {
+        } else if ((this.farm.fish.total === 0) && (this.health !== 0) && (this.health !== 10)) {
             this.hunger = this.hunger + 0.01;
             this.health = this.health - 0.01;
         }
@@ -78,6 +84,7 @@ class Crocodile extends Animal {
     this.constrainItem();
     this.doSomethingOccasionally(() => this.eatFish());
     this.stopForFarmer();
+    this.maxHealth();
   }
 
   placeCrocodile(fieldX: number, fieldY: number) {

@@ -249,8 +249,8 @@ class MarketDashboard extends Component {
           this.props.market.currentFarmer.budget >
           this.props.market.grassSeedPrice
         ) {
-          this.props.market.currentFarmer.myFarm.seeds.total += 1;
-          let unit = 1;
+          this.props.market.currentFarmer.myFarm.seeds.total += 100;
+          let unit = 100;
           this.props.market.currentFarmer.budget -=
             unit * this.props.market.grassSeedPrice;
         }
@@ -545,63 +545,63 @@ class MarketDashboard extends Component {
       case "cabbage":
         this.props.market.currentFarmer.budget +=
           this.props.market.cabbagePrice *
-          this.props.market.currentFarmer.myFarm.cabbages.total;
-        this.props.market.currentFarmer.myFarm.cabbges.total = 0;
+          this.props.market.currentFarmer.myFarm.cabbage.total;
+        this.props.market.currentFarmer.myFarm.cabbage.total = 0;
         break;
 
       case "carrot":
         this.props.market.currentFarmer.budget +=
           this.props.market.carrotPrice *
-          this.props.market.currentFarmer.myFarm.carrots.total;
-        this.props.market.currentFarmer.myFarm.carrots.total = 0;
+          this.props.market.currentFarmer.myFarm.carrot.total;
+        this.props.market.currentFarmer.myFarm.carrot.total = 0;
         break;
 
       case "kale":
         this.props.market.currentFarmer.budget +=
           this.props.market.kalePrice *
-          this.props.market.currentFarmer.myFarm.kales.total;
-        this.props.market.currentFarmer.myFarm.kales.total = 0;
+          this.props.market.currentFarmer.myFarm.kale.total;
+        this.props.market.currentFarmer.myFarm.kale.total = 0;
         break;
 
       case "lettuce":
         this.props.market.currentFarmer.budget +=
           this.props.market.lettucePrice *
-          this.props.market.currentFarmer.myFarm.lettuces.total;
-        this.props.market.currentFarmer.myFarm.lettuces.total = 0;
+          this.props.market.currentFarmer.myFarm.lettuce.total;
+        this.props.market.currentFarmer.myFarm.lettuce.total = 0;
         break;
 
       case "pea":
         this.props.market.currentFarmer.budget +=
           this.props.market.peaPrice *
-          this.props.market.currentFarmer.myFarm.peas.total;
-        this.props.market.currentFarmer.myFarm.peas.total = 0;
+          this.props.market.currentFarmer.myFarm.pea.total;
+        this.props.market.currentFarmer.myFarm.pea.total = 0;
         break;
 
       case "potato":
         this.props.market.currentFarmer.budget +=
           this.props.market.potatoPrice *
-          this.props.market.currentFarmer.myFarm.potatoes.total;
-        this.props.market.currentFarmer.myFarm.potatoes.total = 0;
+          this.props.market.currentFarmer.myFarm.potato.total;
+        this.props.market.currentFarmer.myFarm.potato.total = 0;
         break;
 
       case "pumpkin":
         this.props.market.currentFarmer.budget +=
           this.props.market.pumpkinPrice *
-          this.props.market.currentFarmer.myFarm.pumpkins.total;
+          this.props.market.currentFarmer.myFarm.pumpkin.total;
         this.props.market.currentFarmer.myFarm.pumpkins.total = 0;
         break;
 
       case "rapeseed":
         this.props.market.currentFarmer.budget +=
           this.props.market.rapeseedPrice *
-          this.props.market.currentFarmer.myFarm.rapeseeds.total;
+          this.props.market.currentFarmer.myFarm.rapeseed.total;
         this.props.market.currentFarmer.myFarm.rapeseeds.total = 0;
         break;
 
       case "sugarbeet":
         this.props.market.currentFarmer.budget +=
           this.props.market.sugarbeetPrice *
-          this.props.market.currentFarmer.myFarm.sugarbeets.total;
+          this.props.market.currentFarmer.myFarm.sugarbeet.total;
         this.props.market.currentFarmer.myFarm.sugarbeets.total = 0;
         break;
 

@@ -20,6 +20,12 @@ class Cow extends Animal {
     return this.health;
   }
 
+  maxHealth() {
+    if(this.health >= 10) {
+      this.health = 10
+    }
+  }
+
   yieldMilk() {
     let amountOfMilkToYield = 5 - this.hunger;
     this.farm.milk.total += Math.abs(amountOfMilkToYield);
@@ -78,6 +84,7 @@ class Cow extends Animal {
     this.constrainItem();
     this.doSomethingOccasionally(() => this.eatStraw());
     this.stopForFarmer();
+    this.maxHealth();
   }
 
   placeCow(fieldX: number, fieldY: number) {

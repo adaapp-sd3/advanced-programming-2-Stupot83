@@ -14,6 +14,12 @@ class Pea extends Crop {
     this.farm = farm;
   }
 
+  maxAge() {
+    if(this.age >= 43) {
+      this.age = 43
+    }
+  }
+
   public preload() {
     this.p5Img = this.p5.loadImage(this.imgUrl);
   }
@@ -25,6 +31,7 @@ class Pea extends Crop {
   public draw(): any {
     this.constrainItem();
     this.farmerExamine();
+    this.maxAge();
   }
 
   yieldPea() {

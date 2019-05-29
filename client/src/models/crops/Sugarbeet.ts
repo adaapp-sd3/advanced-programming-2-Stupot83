@@ -14,6 +14,12 @@ class Sugarbeet extends Crop {
     this.farm = farm;
   }
 
+  maxAge() {
+    if(this.age >= 91) {
+      this.age = 91
+    }
+  }
+
   public preload() {
     this.p5Img = this.p5.loadImage(this.imgUrl);
   }
@@ -25,6 +31,7 @@ class Sugarbeet extends Crop {
   public draw(): any {
     this.constrainItem();
     this.farmerExamine();
+    this.maxAge();
   }
 
   yieldSugarbeet() {

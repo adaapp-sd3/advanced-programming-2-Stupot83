@@ -20,6 +20,12 @@ class Llama extends Animal {
     return this.health;
   }
 
+  maxHealth() {
+    if(this.health >= 10) {
+      this.health = 10
+    }
+  }
+
   yieldLlamaWool() {
     let amountOfLlamaWoolToYield = 5 - this.hunger;
     this.farm.llamaWool.total += Math.abs(amountOfLlamaWoolToYield);
@@ -78,6 +84,7 @@ class Llama extends Animal {
     this.constrainItem();
     this.doSomethingOccasionally(() => this.eatStraw());
     this.stopForFarmer();
+    this.maxHealth();
   }
 
   placeLlama(fieldX: number, fieldY: number) {

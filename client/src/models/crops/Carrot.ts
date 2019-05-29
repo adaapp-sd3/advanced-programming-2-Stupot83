@@ -14,6 +14,12 @@ class Carrot extends Crop {
     this.farm = farm;
   }
 
+  maxAge() {
+    if(this.age >= 81) {
+      this.age = 81
+    }
+  }
+
   public preload() {
     this.p5Img = this.p5.loadImage(this.imgUrl);
   }
@@ -25,6 +31,7 @@ class Carrot extends Crop {
   public draw(): any {
     this.constrainItem();
     this.farmerExamine();
+    this.maxAge();
   }
 
   yieldCarrot() {

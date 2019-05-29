@@ -13,6 +13,12 @@ class Pig extends Animal {
     this.farm = farm;
   }
 
+  maxHealth() {
+    if(this.health >= 10) {
+      this.health = 10
+    }
+  }
+
   yieldPork() {
     if(this.farm.usedPig.total !== 0) {
     this.farm.pork.total += 80;
@@ -27,7 +33,7 @@ eatCorn() {
       this.farm.corn.total--;
       this.hunger = this.hunger - 1;
       this.health = this.health + 1;
-    } else if ((this.farm.straw.total === 0) && (this.health !== 0) && (this.health !== 10)) {
+    } else if ((this.farm.corn.total === 0) && (this.health !== 0) && (this.health !== 10)) {
         this.hunger = this.hunger + 0.01
         this.health = this.health - 0.01
       }
@@ -37,7 +43,7 @@ eatCorn() {
         this.farm.corn.total -= 0.1;
         this.health = this.health + 0.1;
         this.hunger = this.hunger = 0;
-      } else if ((this.farm.straw.total === 0) && (this.health !== 0) && (this.health !== 10)) {
+      } else if ((this.farm.corn.total === 0) && (this.health !== 0) && (this.health !== 10)) {
           this.hunger = this.hunger + 0.01;
           this.health = this.health - 0.01;
       }
@@ -57,6 +63,7 @@ eatCorn() {
     this.constrainItem();
     this.doSomethingOccasionally(() => this.eatCorn());
     this.stopForFarmer();
+    this.maxHealth();
   }
 
   placePig(fieldX: number, fieldY: number) {

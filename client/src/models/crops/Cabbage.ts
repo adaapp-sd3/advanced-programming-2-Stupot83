@@ -14,6 +14,12 @@ class Cabbage extends Crop {
     this.farm = farm;
   }
 
+  maxAge() {
+    if(this.age >= 71) {
+      this.age = 71
+    }
+  }
+
   public preload() {
     this.p5Img = this.p5.loadImage(this.imgUrl);
   }
@@ -25,6 +31,7 @@ class Cabbage extends Crop {
   public draw(): any {
     this.constrainItem();
     this.farmerExamine();
+    this.maxAge();
   }
 
   yieldCabbage() {

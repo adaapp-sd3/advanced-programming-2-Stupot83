@@ -19,9 +19,9 @@ abstract class Animal extends ConstrainedByField {
       let chanceOfStayingStill = Math.random();
       this.velocityX = chanceOfStayingStill >= 0.1 ? 0 : this.velocityX;
       this.velocityY = chanceOfStayingStill >= 0.1 ? 0 : this.velocityY;
-      this.hunger += 0.005
+      this.hunger += 0.01
       if(this.health > 0) {
-        this.health -= 0.005
+        this.health -= 0.01
       }
     }
   }

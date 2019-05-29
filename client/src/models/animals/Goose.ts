@@ -20,6 +20,12 @@ class Goose extends Animal {
     return this.health;
   }
 
+  maxHealth() {
+    if(this.health >= 10) {
+      this.health = 10
+    }
+  }
+
   yieldGooseEggs() {
     let amountOfGooseEggsToYield = 5 - this.hunger;
     this.farm.gooseEggs.total += Math.abs(amountOfGooseEggsToYield);
@@ -48,7 +54,7 @@ class Goose extends Animal {
         this.farm.corn.total--;
         this.hunger = this.hunger - 1;
         this.health = this.health + 1;
-      } else if ((this.farm.straw.total === 0) && (this.health !== 0) && (this.health !== 10)) {
+      } else if ((this.farm.corn.total === 0) && (this.health !== 0) && (this.health !== 10)) {
           this.hunger = this.hunger + 0.01
           this.health = this.health - 0.01
         }
@@ -58,7 +64,7 @@ class Goose extends Animal {
           this.farm.corn.total -= 0.1;
           this.health = this.health + 0.1;
           this.hunger = this.hunger = 0;
-        } else if ((this.farm.straw.total === 0) && (this.health !== 0) && (this.health !== 10)) {
+        } else if ((this.farm.corn.total === 0) && (this.health !== 0) && (this.health !== 10)) {
             this.hunger = this.hunger + 0.01;
             this.health = this.health - 0.01;
         }
@@ -78,6 +84,7 @@ class Goose extends Animal {
     this.constrainItem();
     this.doSomethingOccasionally(() => this.eatCorn());
     this.stopForFarmer();
+    this.maxHealth();
   }
 
   placeGoose(fieldX: number, fieldY: number) {

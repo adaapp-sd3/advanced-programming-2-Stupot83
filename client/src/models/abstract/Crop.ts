@@ -4,6 +4,7 @@ abstract class Crop extends ConstrainedByField {
   height = 16;
   width = 16;
   health: number = 10;
+  hunger: number = 0;
 
   farmerExamine() {
     let x;

@@ -14,6 +14,12 @@ class Lettuce extends Crop {
     this.farm = farm;
   }
 
+  maxAge() {
+    if(this.age >= 56) {
+      this.age = 56
+    }
+  }
+
   public preload() {
     this.p5Img = this.p5.loadImage(this.imgUrl);
   }
@@ -25,6 +31,7 @@ class Lettuce extends Crop {
   public draw(): any {
     this.constrainItem();
     this.farmerExamine();
+    this.maxAge();
   }
 
   yieldLettuce() {

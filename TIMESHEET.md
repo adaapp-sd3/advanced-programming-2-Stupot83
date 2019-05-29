@@ -13,6 +13,18 @@ I spent extensive time refactoring the visual side of the game especially the da
 If I had more time, I would also like to extensively test the app with unit testing and continuous integration. This would allow me to further iron out any subtle nuances and improve the play and feel of the game. 
 
 
+## Day 16 (approx 5 hours)
+
+
+### (commit 79233e0fa48b54b0ea7e734974937fea81529d23, 29th May)
+
+📝 Update readme for new users to be able to use the app 📝
+
+### (commit 037719c95fbdb148c7d4997c8a6bf6a84097c088, 29th May)
+
+🎉 Final re-working of code to make sure everything works correctly 🎉
+
+
 ## Day 15 (approx 5 hours)
 
 
